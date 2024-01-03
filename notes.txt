@@ -2,3 +2,11 @@
 ## Aufruf GDB mit epebench
 ## Muss im Debug Ordner aufgerufen werden!
 gdb --args epebench -m dadd -t 1 -a 1 -n 1
+
+Befehle in "leerem" Ubunto:
+sudo apt install git
+sudo apt update 
+-- bei alter Version von ubunto: sudo sed -i -re 's/([a-z]{2}\.)?archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+# Bei Ubuntu 19.04 ist GCC 8.3.0 verfügbar, in dieser Version funktioniert auch epEBench aus dem Debug-Ordner.
+
+
