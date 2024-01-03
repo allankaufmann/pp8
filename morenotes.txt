@@ -1,0 +1,19 @@
+
+
+Megaherz und CPUs anzeigen:
+cat /proc/cpuinfo | grep MHz
+
+cpupower frequency-set -u 400mhz
+
+
+Standard auf Latitude:
+allan@allan-Latitude-5500:~$ cat /proc/cpuinfo | grep MHz
+cpu MHz		: 1900.000
+cpu MHz		: 1176.271
+cpu MHz		: 1000.246
+cpu MHz		: 1110.538
+cpu MHz		: 1084.445
+cpu MHz		: 1016.209
+cpu MHz		: 1900.000
+cpu MHz		: 1117.895
+
