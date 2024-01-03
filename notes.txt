@@ -1,0 +1,4 @@
+
+## Aufruf GDB mit epebench
+## Muss im Debug Ordner aufgerufen werden!
+gdb --args epebench -m dadd -t 1 -a 1 -n 1
