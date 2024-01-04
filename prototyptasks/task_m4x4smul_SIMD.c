@@ -11,10 +11,11 @@
 
 volatile int imemBuf[MEM_SIZE];
 volatile float fmemBuf[MEM_SIZE];
-extern volatile int done0;
+extern volatile int done0 = 0;
 #define CNT_DIV 0.000020
 
-extern volatile double instcnt, max_instcnt;
+extern volatile double instcnt = 0;
+extern volatile double max_instcnt = 0;
 
 typedef float __m128 __attribute__ ((__vector_size__ (16), __may_alias__));
 
