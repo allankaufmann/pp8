@@ -1,0 +1,3 @@
+C:/dev/fernuni/pp8/prototyptaskscpp/cmake-build-debug/CMakeFiles/prototyptaskscpp.dir
+C:/dev/fernuni/pp8/prototyptaskscpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/dev/fernuni/pp8/prototyptaskscpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
