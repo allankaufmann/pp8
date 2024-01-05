@@ -17,15 +17,17 @@ int main(int argc,char *argv[]) {
         {
             printf("run_dadd");
             run_dadd(1);
+            printf("wurde ausgeführt\n");
         }
         else if (strcmp(argv[1], "m4x4smul_SIMD") == 0)
         {
             printf("run_m4x4smul_SIMD");
             run_m4x4smul_SIMD(1);
+            printf("wurde ausgeführt\n");
         }
         else /* default: */
         {
-            printf("Parameter was [%s]", argv[1]);
+            printf("Unbekannter Wert, der Wert war: [%s]", argv[1]);
         }
 
     } else {
