@@ -1,22 +1,18 @@
 #!/bin/bash
-tasks=("dadd", "m4x4smul_SIMD", "v1x4smul_SIMD")
+tasks=('dadd' 'm4x4smul_SIMD' 'v1x4smul_SIMD')
+stops=(1085,   137,            202)
 
-declare -A lastLine
+echo 'Tasks werden nun nacheinander ausgeführt'
+for ((i = 0; i <${#tasks[@]}; i++)); do
+  	echo "Task mit Index " $i ":" ${tasks[i]}
+	echo ${tasks[i]} ${stops[i]}
+        cd ..
+	cd build
+	./prototyptaskscpp ${tasks[i]}
+	cd ..
+	cd tasks
 
-lastLine[dadd]=1085
-lastLine[m4x4smul_SIMD]=137
-lastLine[v1x4smul_SIMD]=202
-
-
-#for key in "${!lastLine[@]}"; do
- # echo "$key"
-#done
-
-for str in ${tasks[@]}; do
-  echo $str
 done
 
-#for val in "${lastLine[@]}"; do
- # echo "$val"
-#done
+
 
