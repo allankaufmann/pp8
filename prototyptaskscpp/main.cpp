@@ -15,16 +15,23 @@ int main(int argc,char *argv[]) {
         printf("Es wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\n");
         if (strcmp(argv[1], "dadd") == 0)
         {
-            printf("run_dadd");
+            printf("run_dadd ");
             run_dadd(1);
             printf("wurde ausgeführt\n");
         }
         else if (strcmp(argv[1], "m4x4smul_SIMD") == 0)
         {
-            printf("run_m4x4smul_SIMD");
+            printf("run_m4x4smul_SIMD ");
             run_m4x4smul_SIMD(1);
             printf("wurde ausgeführt\n");
         }
+        else if (strcmp(argv[1], "v1x4smul_SIMD") == 0)
+        {
+            printf("run_v1x4smul_SIMD");
+            run_v1x4smul_SIMD(1);
+            printf("wurde ausgeführt\n");
+        }
+
         else /* default: */
         {
             printf("Unbekannter Wert, der Wert war: [%s]", argv[1]);
