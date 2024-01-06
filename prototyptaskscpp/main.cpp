@@ -14,6 +14,8 @@ static const char *const smul32_SIMD = "smul32_SIMD";
 
 static const char *const ssub32_SIMD = "ssub32_SIMD";
 
+static const char *const dsub64_SIMD = "dsub64_SIMD";
+
 
 
 int main(int argc, char *argv[]) {
@@ -57,6 +59,11 @@ int main(int argc, char *argv[]) {
         {
             run_ssub32_SIMD(1);
             printf("run_%s wurde ausgefuehrt", ssub32_SIMD);
+        }
+        else if (strcmp(taskname, dsub64_SIMD) == 0)
+        {
+            run_dsub64_SIMD(1);
+            printf("run_%s wurde ausgefuehrt", dsub64_SIMD);
         }
 
 
