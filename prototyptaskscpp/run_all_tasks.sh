@@ -1,6 +1,6 @@
 #!/bin/bash
-tasks=('dadd' 'm4x4smul_SIMD' 'v1x4smul_SIMD')
-stops=(1085    137            202)
+tasks=('dadd' 'm4x4smul_SIMD' 'v1x4smul_SIMD' 'dmul64_SIMD' 'smul32_SIMD' 'ssub32_SIMD' 'dsub64_SIMD')
+stops=(1085    137            202              234          266           300           334)
 
 gcc -g main.cpp -o main
 
