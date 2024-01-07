@@ -13,3 +13,9 @@ tests/test.c
 tests/test.seq
 sampleapp/.idea/
 sampleapp/cmake-build-debug/
+sampleapp/sampleapp
+sampleapp/CMakeFiles/
+sampleapp/ci.py
+sampleapp/sampleapp.gdb
+sampleapp/sampleapp.gdb.log
+sampleapp/sampleapp.seq
