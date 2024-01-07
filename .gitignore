@@ -1,2 +1,7 @@
 epEBench/
 GDBInstructionScanner/
+prototyptaskscpp/build/
+prototyptaskscpp/ci.py
+prototyptaskscpp/gdb/
+prototyptaskscpp/main
+prototyptaskscpp/seq/
