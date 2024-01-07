@@ -5,3 +5,7 @@ prototyptaskscpp/ci.py
 prototyptaskscpp/gdb/
 prototyptaskscpp/main
 prototyptaskscpp/seq/
+tests/ci.py
+tests/myprog
+tests/test.c
+tests/test.seq

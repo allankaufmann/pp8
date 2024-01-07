@@ -1,6 +1,7 @@
-git clone https://github.com/RobertMueller/epEBench.git
+git -C epEBench pull || git clone https://github.com/RobertMueller/epEBench.git
 cd epEBench
 make
 cd ..
-git clone https://gitlab.abo.fi/sholmbac/GDBInstructionScanner.git
+git -C GDBInstructionScanner pull || git clone https://gitlab.abo.fi/sholmbac/GDBInstructionScanner.git
 cp GDBInstructionScanner/ci.py tests/ci.py
+cp GDBInstructionScanner/test.c tests/test.c
