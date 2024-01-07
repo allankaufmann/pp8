@@ -5,7 +5,11 @@ prototyptaskscpp/ci.py
 prototyptaskscpp/gdb/
 prototyptaskscpp/main
 prototyptaskscpp/seq/
+prototyptaskscpp/cmake-build-debug/
+prototyptaskscpp/.idea/
 tests/ci.py
 tests/myprog
 tests/test.c
 tests/test.seq
+sampleapp/.idea/
+sampleapp/cmake-build-debug/
