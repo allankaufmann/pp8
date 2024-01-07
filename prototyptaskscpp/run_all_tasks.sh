@@ -21,7 +21,7 @@ for ((i = 0; i <${#tasks[@]}; i++)); do
 	echo "ci" >> $gdbname
 	echo "exit" >> $gdbname
 
-	gdb --batch --command=$gdbname --args main $taskname
+	gdb --batch --command=$gdbname --args main $taskname > $taskname_gdb.log
 	mv instructionseq.txt $taskname.seq
 
 	#cd build
