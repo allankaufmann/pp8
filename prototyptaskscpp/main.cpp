@@ -52,7 +52,11 @@ static const char *const bitbyte = "bitbyte";
 
 static const char *const nop = "nop";
 
+static const char *const empty = "empty";
 
+void* run_empty() {
+    //
+}
 
 
 int main(int argc, char *argv[]) {
@@ -67,7 +71,11 @@ int main(int argc, char *argv[]) {
     if (argc==2) {
         printf("Es wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\n");
         char* taskname = argv[1];
-        if (strcmp(argv[1], dadd) == 0)
+
+        if (strcmp(taskname, empty) == 0)
+        {
+            run_empty();
+        } else if (strcmp(taskname, dadd) == 0)
         {
             run_dadd(1);
             printf("run_%s wurde ausgefuehrt", dadd);
