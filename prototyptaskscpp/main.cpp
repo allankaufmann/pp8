@@ -55,7 +55,7 @@ static const char *const nop = "nop";
 static const char *const empty = "empty";
 
 void* run_empty() {
-    //
+    return NULL;
 }
 
 
