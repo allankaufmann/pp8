@@ -17,5 +17,12 @@ cpu MHz		: 1016.209
 cpu MHz		: 1900.000
 cpu MHz		: 1117.895
 
-todos:
-sampleapp.gdb fehlt in git
+rapl-ploat
+- als su aufrufen
+./rapl-plot
+
+Papi:
+sudo apt-get install papi-tools
+https://github.com/icl-utk-edu/papi/wiki/PAPI-Overview
+https://github.com/icl-utk-edu/papi/wiki/Downloading-and-Installing-PAPI
+./papi_avail
