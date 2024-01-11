@@ -18,3 +18,4 @@ sampleapp/CMakeFiles/
 sampleapp/ci.py
 sampleapp/sampleapp.gdb.log
 sampleapp/sampleapp.seq
+uarch-configure/
