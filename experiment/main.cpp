@@ -18,7 +18,7 @@ void logTime() {
     std::cout << std::ctime(&result);
 }
 
-int main() {
+void testepebench() {
     logTime();
     uint64_t begin = timeSinceEpochMillisec();
 
@@ -31,5 +31,30 @@ int main() {
 
     std::cout << "Dauer: " << dauer << " MS" << std::endl;
     logTime();
+}
+
+void testrapl() {
+    system("./testRaplRead.sh");
+}
+
+void testThreadWithRapl() {
+    testrapl();
+    std::cout << "Thread wird gestartet\n";
+    std::thread t1(doSomething);
+    std::thread t2(testrapl);
+    t1.join();
+    t2.join();
+    logTime();
+}
+
+void testpowercap() {
+    system("./testpowercap.sh");
+}
+
+int main() {
+    //testepebench();
+    //testrapl();
+    //testThreadWithRapl();
+    testpowercap();
     return 0;
 }
