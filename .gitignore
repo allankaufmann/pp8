@@ -19,3 +19,8 @@ sampleapp/ci.py
 sampleapp/sampleapp.gdb.log
 sampleapp/sampleapp.seq
 uarch-configure/
+experiment/.idea/
+experiment/CMakeFiles/
+experiment/cmake-build-debug/
+experiment/experiment
+experiment/main
