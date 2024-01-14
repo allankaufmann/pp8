@@ -28,6 +28,8 @@ https://github.com/icl-utk-edu/papi/wiki/Downloading-and-Installing-PAPI
 ./papi_avail
 
 powercap
+-- Energie wird angezeigt, aber komisch....
+sudo cat /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj
 
 https://www.kernel.org/doc/html/latest/power/powercap/powercap.html
 
