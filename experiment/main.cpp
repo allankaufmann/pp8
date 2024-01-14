@@ -2,6 +2,7 @@
 #include <thread>
 #include <ctime>
 #include <chrono>
+#include <string.h>
 
 void runSampleApplication() {
     std::cout << "Skript runSampleApplication.sh wird gestartet" << std::endl;
@@ -73,6 +74,33 @@ long long measureIdle(int milliseconds) {
     return counter_diff;
 }
 
+char* getFilename() {
+    time_t mytime = time(NULL);
+    tm local_tm = *localtime(&mytime);
+
+    int year = local_tm.tm_year + 1900;
+    int month = local_tm.tm_mon+1;
+
+    //printf("Jahr: %d\n", year);
+    //printf("Monat: %d\n", month);
+    //printf("Tag: %d\n", local_tm.tm_mday);
+    //printf("Std: %d\n", local_tm.tm_hour);
+    //printf("Min: %d\n", local_tm.tm_min);
+
+    char* filename;
+    sprintf(filename, "%d%s%d%d%d%d.log", year, (month<10) ? "0" : "", month, local_tm.tm_mday, local_tm.tm_hour, local_tm.tm_min);
+
+    return filename;
+}
+
+void logMeasure() {
+    FILE* filePointer;
+    filePointer = fopen(getFilename(), "w");
+    fprintf(filePointer, "someText");
+    fclose(filePointer);
+}
+
+
 void measureSampleApplication() {
     long long idle3000MS = measureIdle(3000);
     std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
@@ -96,6 +124,7 @@ void measureSampleApplication() {
     long long counter_diff = counter_end - counter_beginn;
 
     std::cout << "Leistungsaufnahme in Mikojoul: " << (counter_diff - idle3000MS) << std::endl;
+    logMeasure();
 }
 
 
@@ -104,5 +133,8 @@ int main() {
     //testrapl();
     //testThreadWithRapl();
     measureSampleApplication();
+
+
+
     return 0;
 }
