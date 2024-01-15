@@ -88,15 +88,25 @@ char* getFilename() {
     //printf("Min: %d\n", local_tm.tm_min);
 
     char* filename;
-    sprintf(filename, "%d%s%d%d%d%d.log", year, (month<10) ? "0" : "", month, local_tm.tm_mday, local_tm.tm_hour, local_tm.tm_min);
+    sprintf(filename, "%d%s%d%s%d%s%d%s%d.log",
+            year,
+            (month<10) ? "0" : "",
+            month,
+            (local_tm.tm_mday<10) ? "0" : "",
+            local_tm.tm_mday,
+            (local_tm.tm_hour<10) ? "0" : "",
+            local_tm.tm_hour,
+            (local_tm.tm_min<10) ? "0" : "",
+            local_tm.tm_min);
 
     return filename;
 }
 
-void logMeasure() {
+void logMeasure(char app[], long long  dauer, long long power) {
     FILE* filePointer;
     filePointer = fopen(getFilename(), "w");
-    fprintf(filePointer, "someText");
+    fprintf(filePointer, "app;duration;power\n");
+    fprintf(filePointer, "%s;%lld;%lld\n", app, dauer, power);
     fclose(filePointer);
 }
 
@@ -122,9 +132,10 @@ void measureSampleApplication() {
 
     long long counter_end = readEnergy_UJ();
     long long counter_diff = counter_end - counter_beginn;
+    long long leistungsaufnahme = counter_diff - idle3000MS;
 
-    std::cout << "Leistungsaufnahme in Mikojoul: " << (counter_diff - idle3000MS) << std::endl;
-    logMeasure();
+    std::cout << "Leistungsaufnahme in Mikojoul: " << (leistungsaufnahme) << std::endl;
+    logMeasure("epeBench", dauer, leistungsaufnahme);
 }
 
 
