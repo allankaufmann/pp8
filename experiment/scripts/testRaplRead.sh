@@ -1,7 +1,7 @@
 #!/bin/bash
-cd ..
+cd ../..
 cd uarch-configure
 cd rapl-read
 echo "$PWD"
-source ../config.sh
+source /home/allan/config.sh
 echo $supw | sudo -S ./rapl-read

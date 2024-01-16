@@ -5,6 +5,7 @@
 #include <string.h>
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
+const char* script_testRapl = "./scripts/testRaplRead.sh";
 
 void runSampleApplication(const char* command) {
     std::cout << "Skript " << command << " wird gestartet" << std::endl;
@@ -25,7 +26,7 @@ void logTime() {
 
 
 void testrapl() {
-    system("./testRaplRead.sh");
+    system(script_testRapl);
 }
 
 void testThreadWithRapl() {
@@ -65,7 +66,7 @@ long long readCounterFromFile() {
 }
 
 long long  readEnergy_UJ() {
-    system("./readEnergy_UJ.sh");
+    system("./scripts/readEnergy_UJ.sh");
     return readCounterFromFile();
 }
 
