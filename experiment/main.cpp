@@ -4,9 +4,11 @@
 #include <chrono>
 #include <string.h>
 
-void runSampleApplication() {
-    std::cout << "Skript runSampleApplication.sh wird gestartet" << std::endl;
-    system("./runSampleApplication.sh");
+const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
+
+void runSampleApplication(const char* command) {
+    std::cout << "Skript " << command << " wird gestartet" << std::endl;
+    system(command);
 }
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
@@ -29,7 +31,8 @@ void testrapl() {
 void testThreadWithRapl() {
     testrapl();
     std::cout << "Thread wird gestartet\n";
-    std::thread t1(runSampleApplication);
+
+    std::thread t1(runSampleApplication, script_Sample_Application);
     std::thread t2(testrapl);
     t1.join();
     t2.join();
@@ -81,12 +84,6 @@ char* getFilename() {
     int year = local_tm.tm_year + 1900;
     int month = local_tm.tm_mon+1;
 
-    //printf("Jahr: %d\n", year);
-    //printf("Monat: %d\n", month);
-    //printf("Tag: %d\n", local_tm.tm_mday);
-    //printf("Std: %d\n", local_tm.tm_hour);
-    //printf("Min: %d\n", local_tm.tm_min);
-
     char* filename;
     sprintf(filename, "%d%s%d%s%d%s%d%s%d.log",
             year,
@@ -102,7 +99,7 @@ char* getFilename() {
     return filename;
 }
 
-void logMeasure(char app[], long long  dauer, long long power) {
+void logMeasure(const char app[], long long  dauer, long long power) {
     FILE* filePointer;
     filePointer = fopen(getFilename(), "w");
     fprintf(filePointer, "app;duration;power\n");
@@ -111,7 +108,7 @@ void logMeasure(char app[], long long  dauer, long long power) {
 }
 
 
-void measureSampleApplication() {
+void measureSampleApplication(const char* script) {
     long long idle3000MS = measureIdle(3000);
     std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
 
@@ -121,7 +118,7 @@ void measureSampleApplication() {
     uint64_t begin = timeSinceEpochMillisec();
 
     std::cout << "Thread wird gestartet\n";
-    std::thread t1(runSampleApplication);
+    std::thread t1(runSampleApplication, script);
     t1.join();
 
     uint64_t end = timeSinceEpochMillisec();
@@ -135,17 +132,19 @@ void measureSampleApplication() {
     long long leistungsaufnahme = counter_diff - idle3000MS;
 
     std::cout << "Leistungsaufnahme in Mikojoul: " << (leistungsaufnahme) << std::endl;
-    logMeasure("epeBench", dauer, leistungsaufnahme);
+    logMeasure(script, dauer, leistungsaufnahme);
 }
 
-
+void runSomething() {
+    system("./scripts/runDadd.sh");
+}
 
 int main() {
     //testrapl();
     //testThreadWithRapl();
-    measureSampleApplication();
-
-
+    measureSampleApplication(script_Sample_Application);
+    //measureSampleApplication("./scripts/runDadd.sh");
+    //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
 
     return 0;
 }
