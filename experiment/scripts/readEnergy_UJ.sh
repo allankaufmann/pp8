@@ -1,6 +1,6 @@
 #!/bin/bash
 source /home/allan/config.sh
-
-echo $supw | sudo -S cat /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj > counter.txt
+mkdir -p logs
+echo $supw | sudo -S cat /sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj > logs/counter.txt
 echo ""
 

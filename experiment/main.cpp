@@ -3,9 +3,12 @@
 #include <ctime>
 #include <chrono>
 #include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_testRapl = "./scripts/testRaplRead.sh";
+const char* config_filename = "experiment.ini";
 
 void runSampleApplication(const char* command) {
     std::cout << "Skript " << command << " wird gestartet" << std::endl;
@@ -47,7 +50,7 @@ long long readCounterFromFile() {
     int bufferLength = 255;
     char buffer[bufferLength];
 
-    filePointer = fopen("counter.txt", "r");
+    filePointer = fopen("logs/counter.txt", "r");
 
     //printf("/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj:\n");
 
@@ -55,7 +58,6 @@ long long readCounterFromFile() {
 
     while(fgets(buffer, bufferLength, filePointer)) {
         counter = strtol(buffer, NULL, 10);
-        //printf("%s\n", buffer);
     }
 
     fclose(filePointer);
@@ -86,7 +88,8 @@ char* getFilename() {
     int month = local_tm.tm_mon+1;
 
     char* filename;
-    sprintf(filename, "%d%s%d%s%d%s%d%s%d.log",
+    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
+            "logs/",
             year,
             (month<10) ? "0" : "",
             month,
@@ -101,6 +104,8 @@ char* getFilename() {
 }
 
 void logMeasure(const char app[], long long  dauer, long long power) {
+    mkdir("logs", 0777);
+
     FILE* filePointer;
     filePointer = fopen(getFilename(), "w");
     fprintf(filePointer, "app;duration;power\n");
@@ -140,12 +145,58 @@ void runSomething() {
     system("./scripts/runDadd.sh");
 }
 
+void writeGenScript(char* task) {
+    FILE* filePointerScript;
+    //char* filename = (char*) calloc(40, sizeof(char));
+    char* filename = (char*) malloc(sizeof(char) * (strlen(task)) + 10);
+    sprintf(filename,
+            "%s%s%s",
+            "gen/"
+            "run",
+            task,
+            ".sh");
+
+    filePointerScript = fopen(filename, "w");
+    free(filename);
+
+    fprintf(filePointerScript, "%s", "#!/bin/bash\n");
+    fprintf(filePointerScript, "%s", "cd ..\n");
+    fprintf(filePointerScript, "%s", "cd epEBench/bin/Release\n");
+    fprintf(filePointerScript, "%s%s%s", "./epebench -m ", task, " -t 1 -a 1 -n 1\n");
+    fprintf(filePointerScript, "%s%s%s", "mv epebench_loadlog.txt epebench_", task, ".log\n");
+    fprintf(filePointerScript, "%s", "cd ../../..\n");
+
+
+    fclose(filePointerScript);
+
+}
+
+void readConfigFile() {
+    mkdir("gen", 0777);
+    FILE* filePointer;
+    filePointer = fopen(config_filename, "r");
+    int bufferLength = 255;
+    char buffer[bufferLength];
+
+    char* task;
+
+    while(fgets(buffer, bufferLength, filePointer)) {
+        task = strtok(buffer, "=");
+        writeGenScript(task);
+    }
+
+    fclose(filePointer);
+
+}
+
 int main() {
+    readConfigFile();
     //testrapl();
     //testThreadWithRapl();
-    measureSampleApplication(script_Sample_Application);
+    //measureSampleApplication(script_Sample_Application);
     //measureSampleApplication("./scripts/runDadd.sh");
     //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
+
 
     return 0;
 }
