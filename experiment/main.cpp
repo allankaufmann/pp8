@@ -5,10 +5,13 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <dirent.h>
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_testRapl = "./scripts/testRaplRead.sh";
 const char* config_filename = "experiment.ini";
+
+FILE* logfile;
 
 void runSampleApplication(const char* command) {
     std::cout << "Skript " << command << " wird gestartet" << std::endl;
@@ -87,7 +90,7 @@ char* getFilename() {
     int year = local_tm.tm_year + 1900;
     int month = local_tm.tm_mon+1;
 
-    char* filename;
+    char* filename = (char*) malloc(sizeof(char) * 15);
     sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
             "logs/",
             year,
@@ -103,19 +106,25 @@ char* getFilename() {
     return filename;
 }
 
-void logMeasure(const char app[], long long  dauer, long long power) {
+void openMeasurFile() {
     mkdir("logs", 0777);
+    logfile = fopen(getFilename(), "w");
+    fprintf(logfile, "app;duration;power\n");
 
-    FILE* filePointer;
-    filePointer = fopen(getFilename(), "w");
-    fprintf(filePointer, "app;duration;power\n");
-    fprintf(filePointer, "%s;%lld;%lld\n", app, dauer, power);
-    fclose(filePointer);
+
+}
+
+void closeMeasureFile() {
+    fclose(logfile);
+}
+
+void logMeasure(const char app[], long long  dauer, long long power) {
+    fprintf(logfile, "%s;%lld;%lld\n", app, dauer, power);
 }
 
 
 void measureSampleApplication(const char* script) {
-    long long idle3000MS = measureIdle(3000);
+    long long idle3000MS = measureIdle(1000);
     std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
 
 
@@ -157,7 +166,7 @@ void writeGenScript(char* task) {
             ".sh");
 
     filePointerScript = fopen(filename, "w");
-    free(filename);
+
 
     fprintf(filePointerScript, "%s", "#!/bin/bash\n");
     fprintf(filePointerScript, "%s", "cd ..\n");
@@ -168,7 +177,8 @@ void writeGenScript(char* task) {
 
 
     fclose(filePointerScript);
-
+    chmod(filename, 0777);
+    free(filename);
 }
 
 void readConfigFile() {
@@ -189,8 +199,32 @@ void readConfigFile() {
 
 }
 
+void runAllGenScripts() {
+    DIR *dir;
+    struct dirent *dent;
+    dir = opendir("gen");
+    if(dir!=NULL) {
+        openMeasurFile();
+        while((dent=readdir(dir))!=NULL) {
+            char* file = dent->d_name;
+            if (strcmp(file, ".") == 0 || strcmp(file, "..") == 0) {
+                continue;
+            }
+            char* filename = (char*) malloc(sizeof(char) * (strlen(file)) + 4);
+            sprintf(filename, "%s%s", "gen/", file);
+
+            measureSampleApplication(filename);
+        }
+        closeMeasureFile();
+    }
+
+}
+
 int main() {
-    readConfigFile();
+
+
+    readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
+    runAllGenScripts();
     //testrapl();
     //testThreadWithRapl();
     //measureSampleApplication(script_Sample_Application);
