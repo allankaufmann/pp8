@@ -223,11 +223,11 @@ void runAllGenScripts() {
 int main() {
 
 
-    readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
-    runAllGenScripts();
+    //readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
+    //runAllGenScripts();
     //testrapl();
     //testThreadWithRapl();
-    //measureSampleApplication(script_Sample_Application);
+    measureSampleApplication(script_Sample_Application);
     //measureSampleApplication("./scripts/runDadd.sh");
     //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
 
