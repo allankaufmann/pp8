@@ -1,13 +1,6 @@
 #include <iostream>
-//#include <thread>
-//#include <ctime>
-//#include <chrono>
 #include <string.h> //strtok
 #include <sys/stat.h> //mkdir
-//#include <sys/types.h>
-//#include <dirent.h>
-//#include "measure.cpp"
-//#include <ctype.h>
 
 const char* config_filename = "experiment.ini";
 
