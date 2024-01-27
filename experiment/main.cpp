@@ -6,7 +6,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <dirent.h>
-
+#include "measure.cpp"
+#include <ctype.h>
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_testRapl = "./scripts/testRaplRead.sh";
 const char* config_filename = "experiment.ini";
@@ -196,7 +197,7 @@ void readConfigFile() {
     }
 
     fclose(filePointer);
-
+    printf("%s", "Skripte zum Ausführen der prototypischen Tasks wurden im Ordner 'gen' erstellt!");
 }
 
 void runAllGenScripts() {
@@ -217,17 +218,47 @@ void runAllGenScripts() {
         }
         closeMeasureFile();
     }
-
+    printf("%s", "Skripte wurden ausgeführt, Ergebnisse siehe logs-Ordner!");
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+    char *parameter;
+
+    if (argc==2) {
+        parameter= argv[1];
+    }
+
+    while (strcasecmp(parameter, "C")!=0 &&
+            strcasecmp(parameter, "R")!=0 &&
+            strcasecmp(parameter, "S")!=0 &&
+            strcasecmp(parameter, "X")!=0
+            )  {
+        printf("Bitte einen der folgenden Parameter eingeben: C (=Config), R (=Run), S (=SampleApp), X (=Exit)");
+        char inputParameter[1];
+        scanf("%s", inputParameter);
+        parameter=inputParameter;
+    }
+
+    if (strcasecmp(parameter, "X")==0) {
+        return 0;
+    } else if (strcasecmp(parameter, "C") == 0) {
+
+        readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
+    } else if (strcasecmp(parameter, "R")==0) {
+        runAllGenScripts(); // Messungen der Tasks
+    } else if (strcasecmp(parameter, "S")==0) {
+        measureSampleApplication(script_Sample_Application); // Beispielanwendung
+        printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
+    }
 
 
-    //readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
+
+    //hallowelt();
+    //
     //runAllGenScripts();
     //testrapl();
     //testThreadWithRapl();
-    measureSampleApplication(script_Sample_Application);
+    //measureSampleApplication(script_Sample_Application);
     //measureSampleApplication("./scripts/runDadd.sh");
     //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
 
