@@ -4,4 +4,12 @@ project(experiment)
 set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES scripts)
 
-add_executable(experiment main.cpp)
+add_executable(experiment
+        config.cpp
+        main.cpp
+        measure.cpp
+        search.cpp
+        tools.cpp
+        constants.h
+
+)

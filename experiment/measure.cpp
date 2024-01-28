@@ -6,6 +6,9 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <ctype.h>
+#include "tools.cpp"
+#include "constants.h"
+
 FILE* logfile;
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
@@ -124,23 +127,13 @@ void measureSampleApplication(const char* script) {
 }
 
 void runAllGenScripts() {
-    DIR *dir;
-    struct dirent *dent;
-    dir = opendir("gen");
-    if(dir!=NULL) {
+    std::vector<char*> v_filenames = readFilenamesFromDirectory(foldername_generated_scripts);
         openMeasurFile();
-        while((dent=readdir(dir))!=NULL) {
-            char* file = dent->d_name;
-            if (strcmp(file, ".") == 0 || strcmp(file, "..") == 0) {
-                continue;
-            }
-            char* filename = (char*) malloc(sizeof(char) * (strlen(file)) + 4);
-            sprintf(filename, "%s%s", "gen/", file);
-
+        for (char* filename : v_filenames) {
             measureSampleApplication(filename);
         }
         closeMeasureFile();
-    }
+
     printf("%s", "Skripte wurden ausgeführt, Ergebnisse siehe logs-Ordner!");
 }
 

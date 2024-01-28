@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string.h> //strtok
 #include <sys/stat.h> //mkdir
-
-const char* config_filename = "experiment.ini";
+#include "constants.h"
 
 void writeGenScript(char* task) {
     FILE* filePointerScript;
@@ -32,7 +31,7 @@ void writeGenScript(char* task) {
 }
 
 void readConfigFile() {
-    mkdir("gen", 0777);
+    mkdir(foldername_generated_scripts, 0777);
     FILE* filePointer;
     filePointer = fopen(config_filename, "r");
     int bufferLength = 255;

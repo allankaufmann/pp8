@@ -53,7 +53,6 @@ int main(int argc, char *argv[]) {
     if (strcasecmp(parameter, "X")==0) {
         return 0;
     } else if (strcasecmp(parameter, "C") == 0) {
-
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
         runAllGenScripts(); // Messungen der Tasks
