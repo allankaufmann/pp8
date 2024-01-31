@@ -9,7 +9,7 @@ add_executable(experiment
         main.cpp
         measure.cpp
         search.cpp
-        tools.cpp
         constants.h
-
+        tools.cpp
 )
+

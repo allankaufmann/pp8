@@ -30,9 +30,6 @@ void runSomething() {
 
 
 int main(int argc, char *argv[]) {
-        //test();
-        //return 0;
-
     char *parameter;
 
     if (argc==2) {
@@ -42,9 +39,10 @@ int main(int argc, char *argv[]) {
     while (strcasecmp(parameter, "C")!=0 &&
             strcasecmp(parameter, "R")!=0 &&
             strcasecmp(parameter, "S")!=0 &&
+            strcasecmp(parameter, "T")!=0 &&
             strcasecmp(parameter, "X")!=0
             )  {
-        printf("Bitte einen der folgenden Parameter eingeben: C (=Config), R (=Run), S (=SampleApp), X (=Exit)");
+        printf("Bitte einen der folgenden Parameter eingeben: C (=Config), R (=Run), S (=SampleApp), T (=Test), X (=Exit)");
         char inputParameter[1];
         scanf("%s", inputParameter);
         parameter=inputParameter;
@@ -59,6 +57,8 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "S")==0) {
         measureSampleApplication(script_Sample_Application); // Beispielanwendung
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
+    } else if (strcasecmp(parameter, "T")==0) {
+        test();
     }
 
 

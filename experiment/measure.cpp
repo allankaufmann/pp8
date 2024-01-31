@@ -6,8 +6,9 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <ctype.h>
-#include "tools.cpp"
+#include "vector"
 #include "constants.h"
+#include "tools.cpp"
 
 FILE* logfile;
 
@@ -120,7 +121,7 @@ void measureSampleApplication(const char* script) {
 
     long long counter_end = readEnergy_UJ();
     long long counter_diff = counter_end - counter_beginn;
-    long long leistungsaufnahme = counter_diff - idle3000MS;
+    long long leistungsaufnahme = counter_diff;// - idle3000MS;
 
     std::cout << "Leistungsaufnahme in Mikojoul: " << (leistungsaufnahme) << std::endl;
     logMeasure(script, dauer, leistungsaufnahme);

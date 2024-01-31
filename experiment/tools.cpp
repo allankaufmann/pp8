@@ -15,8 +15,8 @@ std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
             if (strcmp(file, ".") == 0 || strcmp(file, "..") == 0) {
                 continue;
             }
-            char* filename = (char*) malloc(sizeof(char) * (strlen(file)) + 4);
-            sprintf(filename, "%s%s", "gen/", file);
+            char* filename = (char*) malloc(sizeof(char) * (strlen(file) + strlen(directoryname)));
+            sprintf(filename, "%s%s", directoryname, file);
             v.push_back(filename);
         }
         printf("%lu", v.size());
