@@ -1,0 +1,24 @@
+This application performs basic edge detection on RGB images. It is implemented as an image processing pipeline consisting of the following steps:
+- load image from disk,
+- convert to greyscale,
+- check if contrast is sufficient,
+- enhance contrast,
+- apply horizontal sobel filter,
+- apply vertical sobel filter,
+- combine results of sobel filters into single image,
+- write final image to disk.
+
+For further information cf.
+Litzinger & Keller (2022): Code generation for energy-efficient execution of dynamic streaming task graphs on parallel and heterogeneous platforms. Concurrency Computat Pract Exper. 2022;34(2):e6072. https://doi.org/10.1002/cpe.6072
+
+Two major differences in this implementation:
+- greyscale task added,
+- for benchmarking purposes, contrast enhancement is performed in any case (the result of the "check contrast" task is irrelevant).
+
+Download and preparation of example images from the 2014 Middlebury Stereo Vision dataset:
+- run getfiles.sh script to download files.
+- run prepare_images.py to receive images of equal size in RGB binary format (8 bit per channel), requires numpy.
+
+To start the application, run the run.sh script. The imgfilenames file contains the names of images to be processed.
+To view input images, run showimgrgb.py (requires numpy, matplotlib).
+To view output images, run showimggrey.py (requires numpy, matplotlib).
