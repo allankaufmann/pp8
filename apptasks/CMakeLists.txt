@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.27)
+project(apptasks C)
+set(CMAKE_C_STANDARD 11)
+set(SOURCE_FILES images)
+add_executable(apptasks main.c img.h img.c)
+target_link_libraries(apptasks PRIVATE m)
