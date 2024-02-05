@@ -6,5 +6,6 @@
 #define EXPERIMENT_CONSTANTS_H
 const char* config_filename = "experiment.ini";
 const char* foldername_generated_scripts = "gen";
-const char* foldername_seq = "search/taskseq/";
+const char* foldername_seq = "search/taskseq";
+const char* foldername_appseq = "search/appseq";
 #endif //EXPERIMENT_CONSTANTS_H

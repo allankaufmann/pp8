@@ -5,7 +5,7 @@
 #include "config.cpp"
 #include "search.cpp"
 
-const char* script_Sample_Application = "./scripts/runCommand.sh";
+const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_testRapl = "./scripts/testRaplRead.sh";
 
 void testrapl() {
@@ -55,7 +55,9 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "R")==0) {
         runAllGenScripts(); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
+        openMeasurFile();
         measureSampleApplication(script_Sample_Application); // Beispielanwendung
+        closeMeasureFile();
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "T")==0) {
         test();

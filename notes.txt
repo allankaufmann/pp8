@@ -13,3 +13,19 @@ cmake und make:
 - das mit clion erstellte Projekt hat eine CMakeLists.txt, welches als Buildfile für cmake verwendet wird. Dort wurde die cmake-Version 3.22.1 eingetragen
 - das Projekt wird mit cmake build gebaut
 - außerdem ist make auszuführen
+
+edgedetection:
+./getfiles.sh aufrufen
+python3 prepare_images.py aufrufen
+./run.sh aufrufen
+
+gdb mit edgedetection aufrufen:
+gdb --args edgedetection imgfilenames
+
+gcc -g edgedetection.c -o edgedetection edgedetection.o img.o -lm
+
+damit Edgedetection in clion aufgerufen werden kann, in cmakelist einfügen (Abhängigkeit zu mathcalls.h)
+target_link_libraries(apptasks PRIVATE m)
+
+Sequenzerstellung über apptasks:
+- greyscale hat eine loop, shaprencontrast ebenfalls - Vermutung - Schreibproblem in Datei?
