@@ -3,9 +3,16 @@
 #include <vector>
 #include "tools.hpp"
 #include "constants.h"
-
+#include <dirent.h>
+#include <sys/stat.h> //mkdir
+#include <fstream>
+#include <iostream>
 const char* daddseq= "search/taskseq/dadd.seq";
 const char* sampleappseq = "search/appseq/sampleapp.seq";
+
+std::ofstream logfileSearch;
+//FILE* logfileSearch;
+static const char *const logfolder_search = "logs/search/";
 
 class PrototypTask {
     public:
@@ -37,6 +44,26 @@ PrototypTask readSeqFile(const char* file) {
     return t;
 }
 
+void openLogfileSearch() {
+    mkdir(logfolder_search, 0777);
+    logfileSearch.open(getFilename(logfolder_search));
+    logfileSearch << "x;y;z\n";
+    //logfileSearch = fopen(getFilename(logfolder_search), "w");
+    //fprintf(logfileSearch, "x;y;z;\n");
+}
+
+void closeLogFileSearch() {
+    logfileSearch.close();
+}
+
+void logSearch(std::string taskname, std::string ptname, int size) {
+    //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
+    //std::fprintf(logfileSearch, "%s", taskname);
+    logfileSearch << "In AppTask " << taskname << " sind aus ProtTask " << ptname << " " << size << " Einträge vorhanden!\n";
+    //fprintf(logfileSearch, "%s", taskname);
+}
+
+
 void test() {
     std::vector<char*> taskseqnames = readFilenamesFromDirectory(foldername_seq);
 
@@ -59,6 +86,7 @@ void test() {
     //printf("%d", apptaskVektor.size());
 
     //std::vector<PrototypTask>::iterator it = apptaskVektor.begin();
+    openLogfileSearch();
     for (PrototypTask t : apptaskVektor) {
         std::cout << "\nAppTask " << t.name << " wird geprüft!\n";
 
@@ -73,14 +101,15 @@ void test() {
                     }
                 }
             }
-            std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
+            //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
+            logSearch(t.name, pt.name, pt.found.size() );
             pt.found.clear();
         }
 
         //printf("AppTask %s wird geprüft!", t.name);
 
     }
-
+    closeLogFileSearch();
 
 
     //PrototypTask apptask1 = apptaskVektor.

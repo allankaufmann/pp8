@@ -2,7 +2,7 @@
 // Created by allan on 27.01.24.
 //
 #include <stdio.h>
-#include <sys/stat.h>
+#include <sys/stat.h> //mkdir
 #include <sys/types.h>
 #include <dirent.h>
 #include <ctype.h>
@@ -10,7 +10,11 @@
 #include "constants.h"
 #include "tools.cpp"
 
-FILE* logfile;
+static const char *const logfolder_measure = "logs/measure/";
+
+
+FILE* logfileMeasure;
+
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
 uint64_t timeSinceEpochMillisec() {
@@ -65,9 +69,9 @@ char* getFilename() {
     int year = local_tm.tm_year + 1900;
     int month = local_tm.tm_mon+1;
 
-    char* filename = (char*) malloc(sizeof(char) * 15);
+    char* filename = (char*) malloc(sizeof(char) * 30);
     sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
-            "logs/",
+            logfolder_measure,
             year,
             (month<10) ? "0" : "",
             month,
@@ -82,18 +86,22 @@ char* getFilename() {
 }
 
 void openMeasurFile() {
-    mkdir("logs", 0777);
-    logfile = fopen(getFilename(), "w");
-    fprintf(logfile, "app;duration;power\n");
+    mkdir(logfolder_measure, 0777);
+    logfileMeasure = fopen(getFilename(), "w");
+    fprintf(logfileMeasure, "app;duration;power\n");
 }
 
 void closeMeasureFile() {
-    fclose(logfile);
+    fclose(logfileMeasure);
 }
 
 void logMeasure(const char app[], long long  dauer, long long power) {
-    fprintf(logfile, "%s;%lld;%lld\n", app, dauer, power);
+    fprintf(logfileMeasure, "%s;%lld;%lld\n", app, dauer, power);
 }
+
+
+
+
 
 void runCommand(const char* command) {
     std::cout << "Skript " << command << " wird gestartet" << std::endl;

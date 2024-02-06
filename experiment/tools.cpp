@@ -24,6 +24,29 @@ std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
     return v;
 };
 
+char* getFilename(const char *const folder) {
+    time_t mytime = time(NULL);
+    tm local_tm = *localtime(&mytime);
+
+    int year = local_tm.tm_year + 1900;
+    int month = local_tm.tm_mon+1;
+
+    char* filename = (char*) malloc(sizeof(char) * 30);
+    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
+            folder,
+            year,
+            (month<10) ? "0" : "",
+            month,
+            (local_tm.tm_mday<10) ? "0" : "",
+            local_tm.tm_mday,
+            (local_tm.tm_hour<10) ? "0" : "",
+            local_tm.tm_hour,
+            (local_tm.tm_min<10) ? "0" : "",
+            local_tm.tm_min);
+
+    return filename;
+}
+
 /*int main(int argc, char *argv[]) {
     readFilenamesFromDirectory("gen");
 }*/
