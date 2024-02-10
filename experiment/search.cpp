@@ -34,7 +34,6 @@ class PrototypTask {
 };
 
 PrototypTask currentProtTypTask;
-PrototypTask currentAppTask;
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<PrototypTask> apptaskVektor;
@@ -86,7 +85,7 @@ void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTa
 
 
 PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, PrototypTask appTask) {
-    for (int i=0; i < currentAppTask.sequenzen.size(); i++) {
+    for (int i=0; i < appTask.sequenzen.size(); i++) {
         if (appTask.found[i] == true) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
         }
@@ -101,9 +100,9 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 
 
 
-void compareAppTaskWithPrototypTasks(PrototypTask appTask) {
+PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask) {
     for (std::string protTaskSequenceEntry : currentProtTypTask.sequenzen) {
-        currentAppTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, currentAppTask);
+        appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
 
 
         /*for (std::string appTaskSequenceEntry : appTask.sequenzen) {
@@ -116,16 +115,16 @@ void compareAppTaskWithPrototypTasks(PrototypTask appTask) {
     }
 
     int anzahl_hits = 0;
-    for (bool found : currentAppTask.found) {
+    for (bool found : appTask.found) {
         if (found) {
             anzahl_hits++;
         }
     }
 
     //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
-    logSearch(appTask.name, currentProtTypTask.name, anzahl_hits, currentAppTask.sequenzen.size(), currentProtTypTask.sequenzen.size() );
-    currentAppTask.resetFound();
-
+    logSearch(appTask.name, currentProtTypTask.name, anzahl_hits, appTask.sequenzen.size(), currentProtTypTask.sequenzen.size() );
+    appTask.resetFound();
+    return appTask;
 }
 
 void analyseAppTask(PrototypTask appTask) {
@@ -133,7 +132,7 @@ void analyseAppTask(PrototypTask appTask) {
 
     for (PrototypTask protTypTask : prottaskVektor) {
         currentProtTypTask = protTypTask;
-        compareAppTaskWithPrototypTasks(currentAppTask);
+        appTask = compareAppTaskWithPrototypTasks(appTask);
     }
 }
 
@@ -164,7 +163,6 @@ void test() {
     //std::vector<PrototypTask>::iterator it = apptaskVektor.begin();
     openLogfileSearch();
     for (PrototypTask t : apptaskVektor) {
-        currentAppTask=t;
         analyseAppTask(t);
         logfileSearch << "\n";
     }
