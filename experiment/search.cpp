@@ -7,6 +7,8 @@
 #include <sys/stat.h> //mkdir
 #include <fstream>
 #include <iostream>
+#include <map>
+
 const char* daddseq= "search/taskseq/dadd.seq";
 const char* sampleappseq = "search/appseq/sampleapp.seq";
 
@@ -32,6 +34,14 @@ class PrototypTask {
         }
 
 };
+
+class Result {
+    public:
+        std::map<std::string, std::map<std::string, int>> resultMap;
+
+};
+
+Result result;
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<PrototypTask> apptaskVektor;
@@ -63,9 +73,6 @@ PrototypTask readSeqFile(const char* file) {
 void openLogfileSearch() {
     mkdir(logfolder_search, 0777);
     logfileSearch.open(getFilename(logfolder_search));
-    logfileSearch << "x;y;z\n";
-    //logfileSearch = fopen(getFilename(logfolder_search), "w");
-    //fprintf(logfileSearch, "x;y;z;\n");
 }
 
 void closeLogFileSearch() {
@@ -74,14 +81,18 @@ void closeLogFileSearch() {
 
 
 void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTask, int sizeProtTask) {
-    //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
-    //std::fprintf(logfileSearch, "%s", taskname);
     logfileSearch << "In AppTask " << taskname << "(" << sizeAppTask << ") sind aus ProtTask " << ptname << " (" << sizeProtTask << ")  " << size << " Einträge vorhanden!\n";
     logfileSearch.flush();
-    //fprintf(logfileSearch, "%s", taskname);
 }
 
 
+/**
+ * Überprüfung, ob Assemblerbefehl aus Prototyptask im Assemblercode der Anwendungstask vorkommt. Dabei werden bereits verwendete Codestellen übersprungen.
+ *
+ * @param protTaskSequenceEntry der gesuchte Assemblercode aus dem Prototyptask
+ * @param appTask Taskobjekt des Anwendungstasks.
+ * @return Anwendungstask nach Ende der Suche.
+ */
 PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, PrototypTask appTask) {
     for (int i=0; i < appTask.sequenzen.size(); i++) {
         if (appTask.found[i] == true) {
@@ -101,15 +112,6 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask protTypTask ) {
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
         appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
-
-
-        /*for (std::string appTaskSequenceEntry : appTask.sequenzen) {
-            appTaskSequenceEntry.
-            if (protTaskSequenceEntry.compare(appTaskSequenceEntry) == 0) {
-                protTypTask.found.push_back(true);
-                break;
-            }
-        }*/
     }
 
     int anzahl_hits = 0;
@@ -118,9 +120,12 @@ PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask 
             anzahl_hits++;
         }
     }
-
-    //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
     logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size() );
+
+    if (result.resultMap[appTask.name][protTypTask.name]==0 || result.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
+        result.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
+    }
+
     appTask.resetFound();
     return appTask;
 }
@@ -153,14 +158,39 @@ void initAppTaskVektor() {
     printf("%s", "\n");
 }
 
+void logBestTask(PrototypTask t) {
+    std::string bestName;
+    int besthit = 0;
+    std::map<std::string, int>::iterator it;
+    for (it = result.resultMap[t.name].begin(); it != result.resultMap[t.name].end(); it++) {
+        if (it->second>besthit) {
+            besthit=it->second;
+            bestName=it->first;
+        }
+
+    }
+
+    logfileSearch << "Der ähnlichste ProttypTask für " << t.name << " ist " << bestName << "\n\n";
+}
+
 void test() {
     initProttaskVektor();
     initAppTaskVektor();
 
     openLogfileSearch();
+
+    int count = 0; // test
     for (PrototypTask t : apptaskVektor) {
         analyseAppTask(t);
         logfileSearch << "\n";
+
+        logBestTask(t);
+
+        count++;
+        if (count==2) {
+            break; // zu Testzwecken
+        }
+
     }
     closeLogFileSearch();
 }
