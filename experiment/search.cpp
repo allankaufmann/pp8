@@ -33,8 +33,6 @@ class PrototypTask {
 
 };
 
-PrototypTask currentProtTypTask;
-
 std::vector<PrototypTask> prottaskVektor;
 std::vector<PrototypTask> apptaskVektor;
 
@@ -100,8 +98,8 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 
 
 
-PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask) {
-    for (std::string protTaskSequenceEntry : currentProtTypTask.sequenzen) {
+PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask protTypTask ) {
+    for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
         appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
 
 
@@ -122,7 +120,7 @@ PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask) {
     }
 
     //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
-    logSearch(appTask.name, currentProtTypTask.name, anzahl_hits, appTask.sequenzen.size(), currentProtTypTask.sequenzen.size() );
+    logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size() );
     appTask.resetFound();
     return appTask;
 }
@@ -131,8 +129,7 @@ void analyseAppTask(PrototypTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
     for (PrototypTask protTypTask : prottaskVektor) {
-        currentProtTypTask = protTypTask;
-        appTask = compareAppTaskWithPrototypTasks(appTask);
+        appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
     }
 }
 
@@ -160,20 +157,10 @@ void test() {
     initProttaskVektor();
     initAppTaskVektor();
 
-    //std::vector<PrototypTask>::iterator it = apptaskVektor.begin();
     openLogfileSearch();
     for (PrototypTask t : apptaskVektor) {
         analyseAppTask(t);
         logfileSearch << "\n";
     }
     closeLogFileSearch();
-
-
-    //PrototypTask apptask1 = apptaskVektor.
-
-
-
-    //readSeqFile(daddseq);
-    //readSeqFile(sampleappseq);
-
 }
