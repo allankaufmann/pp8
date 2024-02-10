@@ -16,6 +16,8 @@ std::ofstream logfileSearch;
 //FILE* logfileSearch;
 static const char *const logfolder_search = "logs/search/";
 
+
+
 class PrototypTask {
     public:
         std::string name;
@@ -30,6 +32,9 @@ class PrototypTask {
         }
 
 };
+
+PrototypTask currentProtTypTask;
+PrototypTask currentAppTask;
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<PrototypTask> apptaskVektor;
@@ -70,34 +75,35 @@ void closeLogFileSearch() {
     logfileSearch.close();
 }
 
-void logSearch(std::string taskname, std::string ptname, int size) {
+
+void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTask, int sizeProtTask) {
     //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
     //std::fprintf(logfileSearch, "%s", taskname);
-    logfileSearch << "In AppTask " << taskname << " sind aus ProtTask " << ptname << " " << size << " Einträge vorhanden!\n";
+    logfileSearch << "In AppTask " << taskname << "(" << sizeAppTask << ") sind aus ProtTask " << ptname << " (" << sizeProtTask << ")  " << size << " Einträge vorhanden!\n";
     logfileSearch.flush();
     //fprintf(logfileSearch, "%s", taskname);
 }
-PrototypTask protTypTask_;
-PrototypTask appTask_;
 
-void compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, PrototypTask appTask) {
-    for (int i=0; i < appTask_.sequenzen.size(); i++) {
-        if (appTask_.found[i]==true) {
+
+PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, PrototypTask appTask) {
+    for (int i=0; i < currentAppTask.sequenzen.size(); i++) {
+        if (appTask.found[i] == true) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
         }
 
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
-            appTask_.found[i]=true; // Sequenz gefunden, wird auf true gesetzt!
-            return;
+            appTask.found[i]=true; // Sequenz gefunden, wird auf true gesetzt!
+            return appTask;
         }
     }
+    return appTask;
 }
 
 
 
 void compareAppTaskWithPrototypTasks(PrototypTask appTask) {
-    for (std::string protTaskSequenceEntry : protTypTask_.sequenzen) {
-        compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask_);
+    for (std::string protTaskSequenceEntry : currentProtTypTask.sequenzen) {
+        currentAppTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, currentAppTask);
 
 
         /*for (std::string appTaskSequenceEntry : appTask.sequenzen) {
@@ -110,15 +116,15 @@ void compareAppTaskWithPrototypTasks(PrototypTask appTask) {
     }
 
     int anzahl_hits = 0;
-    for (bool found : appTask_.found) {
+    for (bool found : currentAppTask.found) {
         if (found) {
             anzahl_hits++;
         }
     }
 
     //std::cout << "In AppTask " << t.name << " sind aus ProtTask " << pt.name << " " << pt.found.size() << " Einträge vorhanden!\n";
-    logSearch(appTask.name, protTypTask_.name, anzahl_hits );
-    appTask_.resetFound();
+    logSearch(appTask.name, currentProtTypTask.name, anzahl_hits, currentAppTask.sequenzen.size(), currentProtTypTask.sequenzen.size() );
+    currentAppTask.resetFound();
 
 }
 
@@ -126,8 +132,8 @@ void analyseAppTask(PrototypTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
     for (PrototypTask protTypTask : prottaskVektor) {
-        protTypTask_ = protTypTask;
-        compareAppTaskWithPrototypTasks(appTask_);
+        currentProtTypTask = protTypTask;
+        compareAppTaskWithPrototypTasks(currentAppTask);
     }
 }
 
@@ -158,8 +164,9 @@ void test() {
     //std::vector<PrototypTask>::iterator it = apptaskVektor.begin();
     openLogfileSearch();
     for (PrototypTask t : apptaskVektor) {
-        appTask_=t;
+        currentAppTask=t;
         analyseAppTask(t);
+        logfileSearch << "\n";
     }
     closeLogFileSearch();
 
