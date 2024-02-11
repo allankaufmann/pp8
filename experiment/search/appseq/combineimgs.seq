@@ -1,0 +1,8295 @@
+mov    %rax,%rdi
+call   0x555555555110 <puts@plt>
+endbr64 
+bnd jmp *0x3e65(%rip)        # 0x555555558f80 <puts@got.plt>
+endbr64 
+push   %r14
+push   %r13
+push   %r12
+mov    %rdi,%r12
+push   %rbp
+push   %rbx
+sub    $0x10,%rsp
+call   0x7ffff7c28490 <*ABS*+0xa86a0@plt>
+endbr64 
+bnd jmp *0x1f1bfd(%rip)        # 0x7ffff7e1a098 <*ABS*@got.plt>
+endbr64 
+mov    %edi,%eax
+mov    %rdi,%rdx
+vpxor  %xmm0,%xmm0,%xmm0
+and    $0xfff,%eax
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d930 <__strlen_avx2+336>
+vpcmpeqb (%rdi),%ymm0,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d860 <__strlen_avx2+128>
+tzcnt  %eax,%eax
+vzeroupper 
+ret    
+mov    0x198fc9(%rip),%r13        # 0x7ffff7e19e38
+mov    %rax,%rbx
+mov    0x0(%r13),%rbp
+mov    0x0(%rbp),%eax
+and    $0x8000,%eax
+jne    0x7ffff7c80ed8 <__GI__IO_puts+136>
+mov    %fs:0x10,%r14
+mov    0x88(%rbp),%r8
+cmp    %r14,0x8(%r8)
+je     0x7ffff7c80f88 <__GI__IO_puts+312>
+mov    $0x1,%edx
+lock cmpxchg %edx,(%r8)
+jne    0x7ffff7c80fd0 <__GI__IO_puts+384>
+mov    0x88(%rbp),%r8
+mov    0x0(%r13),%rdi
+mov    %r14,0x8(%r8)
+mov    0xc0(%rdi),%eax
+addl   $0x1,0x4(%r8)
+test   %eax,%eax
+je     0x7ffff7c80ee5 <__GI__IO_puts+149>
+cmp    $0xffffffff,%eax
+je     0x7ffff7c80eef <__GI__IO_puts+159>
+mov    0xd8(%rdi),%r14
+lea    0x195b03(%rip),%rdx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+lea    0x196864(%rip),%rax        # 0x7ffff7e17768
+sub    %rdx,%rax
+mov    %r14,%rcx
+sub    %rdx,%rcx
+cmp    %rcx,%rax
+jbe    0x7ffff7c80f90 <__GI__IO_puts+320>
+mov    %rbx,%rdx
+mov    %r12,%rsi
+call   *0x38(%r14)
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+xor    %r12d,%r12d
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+test   %rdx,%rdx
+je     0x7ffff7c8b66e <_IO_new_file_xsputn+110>
+mov    %rdi,%rbp
+mov    %rsi,%r13
+mov    0x28(%rdi),%rdi
+mov    %rdx,%rbx
+mov    0x0(%rbp),%eax
+and    $0xa00,%eax
+cmp    $0xa00,%eax
+je     0x7ffff7c8b680 <_IO_new_file_xsputn+128>
+mov    0x30(%rbp),%r12
+cmp    %rdi,%r12
+jbe    0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+sub    %rdi,%r12
+xor    %r14d,%r14d
+test   %r12,%r12
+je     0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+cmp    %rbx,%r12
+mov    %r13,%rsi
+mov    %rbx,%r15
+cmova  %rbx,%r12
+mov    %r12,%rdx
+add    %r12,%r13
+sub    %r12,%r15
+call   0x7ffff7c283e0 <*ABS*+0xa97d0@plt>
+endbr64 
+bnd jmp *0x1f1c55(%rip)        # 0x7ffff7e1a040 <*ABS*@got.plt>
+endbr64 
+mov    %rdi,%rax
+add    %rdx,%rax
+jmp    0x7ffff7da07c7 <__memmove_avx_unaligned_erms+7>
+cmp    $0x20,%rdx
+jb     0x7ffff7da07f0 <__memmove_avx_unaligned_erms+48>
+cmp    $0x10,%edx
+jae    0x7ffff7da0822 <__memmove_avx_unaligned_erms+98>
+vmovdqu (%rsi),%xmm0
+vmovdqu -0x10(%rsi,%rdx,1),%xmm1
+vmovdqu %xmm0,(%rdi)
+vmovdqu %xmm1,-0x10(%rdi,%rdx,1)
+ret    
+mov    %rax,0x28(%rbp)
+add    %r15,%r14
+jne    0x7ffff7c8b6a3 <_IO_new_file_xsputn+163>
+add    $0x18,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %rax,%rbx
+jne    0x7ffff7c80ecd <__GI__IO_puts+125>
+mov    0x0(%r13),%rdi
+mov    0x28(%rdi),%rax
+cmp    0x30(%rdi),%rax
+jae    0x7ffff7c80fa0 <__GI__IO_puts+336>
+lea    0x1(%rax),%rdx
+mov    %rdx,0x28(%rdi)
+movb   $0xa,(%rax)
+add    $0x1,%rbx
+mov    $0x7fffffff,%eax
+cmp    %rax,%rbx
+cmovbe %rbx,%rax
+testl  $0x8000,0x0(%rbp)
+jne    0x7ffff7c80f76 <__GI__IO_puts+294>
+mov    0x88(%rbp),%rdi
+mov    0x4(%rdi),%esi
+lea    -0x1(%rsi),%edx
+mov    %edx,0x4(%rdi)
+test   %edx,%edx
+jne    0x7ffff7c80f76 <__GI__IO_puts+294>
+movq   $0x0,0x8(%rdi)
+xchg   %edx,(%rdi)
+cmp    $0x1,%edx
+jg     0x7ffff7c80fb8 <__GI__IO_puts+360>
+add    $0x10,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+ret    
+mov    -0x28(%rbp),%rax
+mov    $0x1,%esi
+mov    %rax,%rdi
+call   0x55555555654f <getwidth>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+cmpl   $0x1,-0xc(%rbp)
+jne    0x55555555656b <getwidth+28>
+mov    $0xa,%eax
+jmp    0x55555555657d <getwidth+46>
+pop    %rbp
+ret    
+mov    %eax,-0xc(%rbp)
+mov    -0x28(%rbp),%rax
+mov    $0x2,%esi
+mov    %rax,%rdi
+call   0x55555555654f <getwidth>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+cmpl   $0x1,-0xc(%rbp)
+jne    0x55555555656b <getwidth+28>
+cmpl   $0x2,-0xc(%rbp)
+jne    0x555555556578 <getwidth+41>
+mov    $0xa,%eax
+jmp    0x55555555657d <getwidth+46>
+pop    %rbp
+ret    
+mov    %eax,-0x8(%rbp)
+movl   $0x1,-0x14(%rbp)
+jmp    0x555555555c2b <combineimgs+263>
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+movl   $0x1,-0x18(%rbp)
+jmp    0x555555555c18 <combineimgs+244>
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x28(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x10(%rbp)
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%ecx
+mov    -0x30(%rbp),%rax
+mov    %ecx,%esi
+mov    %rax,%rdi
+call   0x555555556487 <getpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rdx,%rax
+movzbl (%rax),%eax
+pop    %rbp
+ret    
+movzbl %al,%eax
+mov    %eax,-0x4(%rbp)
+mov    -0x10(%rbp),%eax
+imul   %eax,%eax
+mov    %eax,%edx
+mov    -0x4(%rbp),%eax
+imul   %eax,%eax
+add    %edx,%eax
+mov    %eax,-0x4(%rbp)
+cmpl   $0x0,-0x4(%rbp)
+jg     0x555555555bdd <combineimgs+185>
+movl   $0x0,-0x10(%rbp)
+jmp    0x555555555bfc <combineimgs+216>
+mov    -0x10(%rbp),%eax
+movzbl %al,%ecx
+mov    -0x14(%rbp),%edx
+mov    -0x18(%rbp),%esi
+mov    -0x28(%rbp),%rax
+mov    %rax,%rdi
+call   0x55555555650f <setpixel>
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+mov    %rdi,-0x8(%rbp)
+mov    %esi,-0xc(%rbp)
+mov    %edx,-0x10(%rbp)
+mov    %ecx,%eax
+mov    %al,-0x14(%rbp)
+mov    -0x8(%rbp),%rax
+mov    0x8(%rax),%rdx
+mov    -0x8(%rbp),%rax
+mov    (%rax),%eax
+imul   -0x10(%rbp),%eax
+movslq %eax,%rcx
+mov    -0xc(%rbp),%eax
+cltq   
+add    %rcx,%rax
+add    %rax,%rdx
+movzbl -0x14(%rbp),%eax
+mov    %al,(%rdx)
+nop
+pop    %rbp
+ret    
+addl   $0x1,-0x18(%rbp)
+mov    -0xc(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x18(%rbp)
+jl     0x555555555b87 <combineimgs+99>
+addl   $0x1,-0x14(%rbp)
+mov    -0x8(%rbp),%eax
+sub    $0x1,%eax
+cmp    %eax,-0x14(%rbp)
+jl     0x555555555b7b <combineimgs+87>
+nop
+nop
+leave  
+ret    
+jmp    0x55555555616f <main+792>
+mov    $0x0,%eax
+mov    -0x8(%rbp),%rdx
+sub    %fs:0x28,%rdx
+je     0x555555556188 <main+817>
+leave  
+ret    
+mov    %eax,%edi
+call   0x7ffff7c455f0 <__GI_exit>
+endbr64 
+push   %rax
+pop    %rax
+mov    $0x1,%ecx
+mov    $0x1,%edx
+lea    0x1d5231(%rip),%rsi        # 0x7ffff7e1a838 <__exit_funcs>
+sub    $0x8,%rsp
+call   0x7ffff7c45390 <__run_exit_handlers>
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+mov    %rsi,%r12
+push   %rbp
+mov    %edi,%ebp
+push   %rbx
+sub    $0x28,%rsp
+mov    %edx,0x1c(%rsp)
+test   %cl,%cl
+jne    0x7ffff7c455c4 <__run_exit_handlers+564>
+call   0x7ffff7c45d60 <__GI___call_tls_dtors>
+endbr64 
+push   %rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x1d401f(%rip),%rbx        # 0x7ffff7e19d90
+mov    %fs:(%rbx),%rbp
+test   %rbp,%rbp
+je     0x7ffff7c45dbd <__GI___call_tls_dtors+93>
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+ret    
+jmp    0x7ffff7c453b3 <__run_exit_handlers+35>
+lea    0x1d6b2e(%rip),%r14        # 0x7ffff7e1bee8 <__exit_funcs_lock>
+xor    %eax,%eax
+mov    $0x1,%edx
+lock cmpxchg %edx,(%r14)
+jne    0x7ffff7c455ce <__run_exit_handlers+574>
+xor    %ebx,%ebx
+mov    (%r12),%r15
+test   %r15,%r15
+je     0x7ffff7c45510 <__run_exit_handlers+384>
+nopl   0x0(%rax,%rax,1)
+mov    0x8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7c45500 <__run_exit_handlers+368>
+sub    $0x1,%rax
+mov    %rax,%rdx
+mov    %rax,0x8(%r15)
+shl    $0x5,%rdx
+mov    0x10(%r15,%rdx,1),%rcx
+cmp    $0x3,%rcx
+je     0x7ffff7c454b8 <__run_exit_handlers+296>
+cmp    $0x4,%rcx
+je     0x7ffff7c45460 <__run_exit_handlers+208>
+add    %r15,%rdx
+mov    0x18(%rdx),%rax
+mov    0x20(%rdx),%r13
+movq   $0x0,0x10(%rdx)
+mov    %ebx,%edx
+ror    $0x11,%rax
+xor    %fs:0x30,%rax
+xchg   %edx,(%r14)
+cmp    $0x1,%edx
+jg     0x7ffff7c455a0 <__run_exit_handlers+528>
+mov    %ebp,%esi
+mov    %r13,%rdi
+call   *%rax
+endbr64 
+push   %rbp
+mov    %rsp,%rbp
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+push   %rbx
+sub    $0x38,%rsp
+mov    0x349e4(%rip),%r12        # 0x7ffff7ffda40 <_rtld_global+2560>
+sub    $0x1,%r12
+js     0x7ffff7fc9301 <_dl_fini+705>
+movl   $0x0,-0x44(%rbp)
+lea    0x349d4(%rip),%r13        # 0x7ffff7ffda48 <_rtld_global+2568>
+lea    (%r12,%r12,4),%rbx
+lea    0x33fc1(%rip),%rax        # 0x7ffff7ffd040 <_rtld_global>
+shl    $0x5,%rbx
+add    %rax,%rbx
+jmp    0x7ffff7fc90ae <_dl_fini+110>
+mov    %r13,%rdi
+call   *0x339c9(%rip)        # 0x7ffff7ffca80 <___rtld_mutex_lock>
+endbr64 
+mov    0x10(%rdi),%eax
+mov    %eax,%edx
+and    $0x17f,%edx
+nop
+and    $0x7c,%eax
+jne    0x7ffff7c97fb0 <___pthread_mutex_lock+192>
+push   %rbx
+sub    $0x10,%rsp
+test   %edx,%edx
+jne    0x7ffff7c97fb8 <___pthread_mutex_lock+200>
+cmp    $0x100,%edx
+je     0x7ffff7c97f96 <___pthread_mutex_lock+166>
+mov    0x10(%rdi),%edx
+and    $0x7f,%edx
+cmp    $0x1,%edx
+jne    0x7ffff7c98064 <___pthread_mutex_lock+372>
+mov    %fs:0x2d0,%eax
+cmp    %eax,0x8(%rdi)
+jne    0x7ffff7c9800c <___pthread_mutex_lock+284>
+mov    0x10(%rdi),%esi
+and    $0x80,%esi
+jne    0x7ffff7c98046 <___pthread_mutex_lock+342>
+mov    %fs:0x18,%eax
+test   %eax,%eax
+jne    0x7ffff7c98046 <___pthread_mutex_lock+342>
+mov    (%rdi),%edx
+test   %edx,%edx
+jne    0x7ffff7c98046 <___pthread_mutex_lock+342>
+movl   $0x1,(%rdi)
+mov    0x8(%rdi),%eax
+test   %eax,%eax
+jne    0x7ffff7c9816e <___pthread_mutex_lock+638>
+movl   $0x1,0x4(%rdi)
+jmp    0x7ffff7c97f55 <___pthread_mutex_lock+101>
+mov    %fs:0x2d0,%eax
+mov    %eax,0x8(%rdi)
+addl   $0x1,0xc(%rdi)
+nop
+xor    %eax,%eax
+add    $0x10,%rsp
+pop    %rbx
+ret    
+mov    0x8(%rbx),%r15d
+test   %r15d,%r15d
+je     0x7ffff7fc9090 <_dl_fini+80>
+mov    (%rbx),%rax
+movzbl 0x31d(%rax),%eax
+shr    $0x7,%al
+movzbl %al,%eax
+cmp    -0x44(%rbp),%eax
+jne    0x7ffff7fc9090 <_dl_fini+80>
+mov    $0x2,%esi
+mov    %r12,%rdi
+mov    %rsp,-0x58(%rbp)
+call   0x7ffff7fde250 <_dl_audit_activity_nsid>
+endbr64 
+push   %r13
+lea    (%rdi,%rdi,4),%rax
+push   %r12
+shl    $0x5,%rax
+push   %rbp
+lea    0x1edd8(%rip),%rbp        # 0x7ffff7ffd040 <_rtld_global>
+push   %rbx
+sub    $0x8,%rsp
+mov    0x0(%rbp,%rax,1),%rbx
+mov    0x1ec00(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %rbx,%rbx
+je     0x7ffff7fde281 <_dl_audit_activity_nsid+49>
+test   %eax,%eax
+jne    0x7ffff7fde290 <_dl_audit_activity_nsid+64>
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    %r15d,%eax
+mov    %rsp,%rdx
+lea    0xf(,%rax,8),%rax
+shr    $0x4,%rax
+shl    $0x4,%rax
+mov    %rax,%rcx
+and    $0xfffffffffffff000,%rcx
+sub    %rcx,%rdx
+cmp    %rdx,%rsp
+je     0x7ffff7fc9123 <_dl_fini+227>
+and    $0xfff,%eax
+sub    %rax,%rsp
+test   %rax,%rax
+jne    0x7ffff7fc9333 <_dl_fini+755>
+orq    $0x0,-0x8(%rsp,%rax,1)
+jmp    0x7ffff7fc9134 <_dl_fini+244>
+mov    (%rbx),%rax
+mov    %rsp,%r14
+xor    %esi,%esi
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %rax,0x28(%rax)
+jne    0x7ffff7fc9148 <_dl_fini+264>
+cmp    %esi,%r15d
+jbe    0x7ffff7fc937e <_dl_fini+830>
+mov    %esi,%edx
+mov    %rax,(%r14,%rdx,8)
+mov    %esi,0x3f4(%rax)
+add    $0x1,%esi
+addl   $0x1,0x318(%rax)
+mov    0x18(%rax),%rax
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %rax,0x28(%rax)
+jne    0x7ffff7fc9148 <_dl_fini+264>
+cmp    %esi,%r15d
+jbe    0x7ffff7fc937e <_dl_fini+830>
+mov    %esi,%edx
+mov    %rax,(%r14,%rdx,8)
+mov    %esi,0x3f4(%rax)
+add    $0x1,%esi
+addl   $0x1,0x318(%rax)
+mov    0x18(%rax),%rax
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %rax,0x28(%rax)
+jne    0x7ffff7fc9148 <_dl_fini+264>
+cmp    %esi,%r15d
+jbe    0x7ffff7fc937e <_dl_fini+830>
+mov    %esi,%edx
+mov    %rax,(%r14,%rdx,8)
+mov    %esi,0x3f4(%rax)
+add    $0x1,%esi
+addl   $0x1,0x318(%rax)
+mov    0x18(%rax),%rax
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %rax,0x28(%rax)
+jne    0x7ffff7fc9148 <_dl_fini+264>
+cmp    %esi,%r15d
+jbe    0x7ffff7fc937e <_dl_fini+830>
+mov    %esi,%edx
+mov    %rax,(%r14,%rdx,8)
+mov    %esi,0x3f4(%rax)
+add    $0x1,%esi
+addl   $0x1,0x318(%rax)
+mov    0x18(%rax),%rax
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %rax,0x28(%rax)
+jne    0x7ffff7fc9148 <_dl_fini+264>
+cmp    %esi,%r15d
+jbe    0x7ffff7fc937e <_dl_fini+830>
+mov    %esi,%edx
+mov    %rax,(%r14,%rdx,8)
+mov    %esi,0x3f4(%rax)
+add    $0x1,%esi
+addl   $0x1,0x318(%rax)
+mov    0x18(%rax),%rax
+test   %rax,%rax
+jne    0x7ffff7fc9151 <_dl_fini+273>
+cmp    %esi,%r15d
+sete   %al
+test   %r12,%r12
+jne    0x7ffff7fc9192 <_dl_fini+338>
+test   %al,%al
+je     0x7ffff7fc93bc <_dl_fini+892>
+test   %r12,%r12
+sete   %dl
+test   %al,%al
+jne    0x7ffff7fc91ad <_dl_fini+365>
+movzbl %dl,%edx
+mov    $0x1,%ecx
+mov    %r14,%rdi
+mov    %esi,-0x38(%rbp)
+call   0x7ffff7fd6730 <_dl_sort_maps>
+endbr64 
+push   %rbp
+mov    %rdi,%r8
+mov    %rsp,%rbp
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+push   %rbx
+sub    $0x78,%rsp
+mov    0x266b9(%rip),%r13d        # 0x7ffff7ffce08 <_rtld_global_ro+808>
+mov    %cl,-0x51(%rbp)
+test   %r13d,%r13d
+jne    0x7ffff7fd69cd <_dl_sort_maps+669>
+mov    %esi,%r9d
+mov    %ecx,%eax
+mov    %rsp,%rbx
+shl    $0x3,%r9
+sub    $0x1,%esi
+movslq %esi,%rcx
+js     0x7ffff7fd6b02 <_dl_sort_maps+978>
+mov    %rcx,%rdx
+mov    (%r8,%rdx,8),%rsi
+sub    $0x1,%rdx
+andb   $0xfe,0x31d(%rsi)
+test   %edx,%edx
+jns    0x7ffff7fd69e8 <_dl_sort_maps+696>
+mov    (%r8,%rdx,8),%rsi
+sub    $0x1,%rdx
+andb   $0xfe,0x31d(%rsi)
+test   %edx,%edx
+jns    0x7ffff7fd69e8 <_dl_sort_maps+696>
+mov    (%r8,%rdx,8),%rsi
+sub    $0x1,%rdx
+andb   $0xfe,0x31d(%rsi)
+test   %edx,%edx
+jns    0x7ffff7fd69e8 <_dl_sort_maps+696>
+mov    (%r8,%rdx,8),%rsi
+sub    $0x1,%rdx
+andb   $0xfe,0x31d(%rsi)
+test   %edx,%edx
+jns    0x7ffff7fd69e8 <_dl_sort_maps+696>
+mov    (%r8,%rdx,8),%rsi
+sub    $0x1,%rdx
+andb   $0xfe,0x31d(%rsi)
+test   %edx,%edx
+jns    0x7ffff7fd69e8 <_dl_sort_maps+696>
+lea    0xf(%r9),%rdx
+mov    %rsp,%rsi
+shr    $0x4,%rdx
+shl    $0x4,%rdx
+mov    %rdx,%rdi
+and    $0xfffffffffffff000,%rdi
+sub    %rdi,%rsi
+cmp    %rsi,%rsp
+je     0x7ffff7fd6a31 <_dl_sort_maps+769>
+and    $0xfff,%edx
+sub    %rdx,%rsp
+test   %rdx,%rdx
+je     0x7ffff7fd6a45 <_dl_sort_maps+789>
+orq    $0x0,-0x8(%rsp,%rdx,1)
+mov    %rsp,%r11
+test   %al,%al
+lea    -0x41(%rbp),%r13
+mov    $0x0,%eax
+lea    (%r11,%r9,1),%rdx
+movb   $0x0,-0x41(%rbp)
+cmove  %rax,%r13
+mov    %r11,%r14
+mov    %rdx,-0x40(%rbp)
+mov    %rcx,%r12
+lea    -0x40(%rbp),%r15
+mov    %rcx,%r10
+jmp    0x7ffff7fd6a85 <_dl_sort_maps+853>
+mov    (%r8,%r10,8),%rsi
+testb  $0x21,0x31d(%rsi)
+jne    0x7ffff7fd6a9d <_dl_sort_maps+877>
+mov    %r13,%rdx
+mov    %r15,%rdi
+call   0x7ffff7fd6620 <dfs_traversal>
+push   %r13
+mov    %rdi,%r13
+push   %r12
+mov    %rdx,%r12
+push   %rbp
+mov    %rsi,%rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x3d0(%rsi),%rax
+orb    $0x1,0x31d(%rsi)
+test   %rax,%rax
+je     0x7ffff7fd666b <dfs_traversal+75>
+test   %r12,%r12
+jne    0x7ffff7fd66b0 <dfs_traversal+144>
+mov    0x3d8(%rbp),%rax
+test   %rax,%rax
+je     0x7ffff7fd6670 <dfs_traversal+80>
+mov    0x0(%r13),%rax
+lea    -0x8(%rax),%rdx
+mov    %rdx,0x0(%r13)
+mov    %rbp,-0x8(%rax)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+cmp    -0x40(%rbp),%r11
+jne    0x7ffff7fd6a78 <_dl_sort_maps+840>
+sub    $0x1,%r10
+test   %r10d,%r10d
+js     0x7ffff7fd6b5f <_dl_sort_maps+1071>
+mov    (%r8,%r10,8),%rsi
+testb  $0x21,0x31d(%rsi)
+jne    0x7ffff7fd6a9d <_dl_sort_maps+877>
+mov    %r13,%rdx
+mov    %r15,%rdi
+call   0x7ffff7fd6620 <dfs_traversal>
+push   %r13
+mov    %rdi,%r13
+push   %r12
+mov    %rdx,%r12
+push   %rbp
+mov    %rsi,%rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x3d0(%rsi),%rax
+orb    $0x1,0x31d(%rsi)
+test   %rax,%rax
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    (%rax),%rsi
+test   %rsi,%rsi
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    $0x8,%ebx
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+test   %r12,%r12
+jne    0x7ffff7fd66b0 <dfs_traversal+144>
+mov    0x3d8(%rbp),%rax
+test   %rax,%rax
+je     0x7ffff7fd6670 <dfs_traversal+80>
+mov    0x0(%r13),%rax
+lea    -0x8(%rax),%rdx
+mov    %rdx,0x0(%r13)
+mov    %rbp,-0x8(%rax)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+cmp    -0x40(%rbp),%r11
+jne    0x7ffff7fd6a78 <_dl_sort_maps+840>
+sub    $0x1,%r10
+test   %r10d,%r10d
+js     0x7ffff7fd6b5f <_dl_sort_maps+1071>
+mov    (%r8,%r10,8),%rsi
+testb  $0x21,0x31d(%rsi)
+jne    0x7ffff7fd6a9d <_dl_sort_maps+877>
+mov    %r13,%rdx
+mov    %r15,%rdi
+call   0x7ffff7fd6620 <dfs_traversal>
+push   %r13
+mov    %rdi,%r13
+push   %r12
+mov    %rdx,%r12
+push   %rbp
+mov    %rsi,%rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x3d0(%rsi),%rax
+orb    $0x1,0x31d(%rsi)
+test   %rax,%rax
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    (%rax),%rsi
+test   %rsi,%rsi
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    $0x8,%ebx
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+test   %r12,%r12
+jne    0x7ffff7fd66b0 <dfs_traversal+144>
+mov    0x3d8(%rbp),%rax
+test   %rax,%rax
+je     0x7ffff7fd6670 <dfs_traversal+80>
+mov    0x0(%r13),%rax
+lea    -0x8(%rax),%rdx
+mov    %rdx,0x0(%r13)
+mov    %rbp,-0x8(%rax)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+cmp    -0x40(%rbp),%r11
+jne    0x7ffff7fd6a78 <_dl_sort_maps+840>
+sub    $0x1,%r10
+test   %r10d,%r10d
+js     0x7ffff7fd6b5f <_dl_sort_maps+1071>
+mov    (%r8,%r10,8),%rsi
+testb  $0x21,0x31d(%rsi)
+jne    0x7ffff7fd6a9d <_dl_sort_maps+877>
+mov    %r13,%rdx
+mov    %r15,%rdi
+call   0x7ffff7fd6620 <dfs_traversal>
+push   %r13
+mov    %rdi,%r13
+push   %r12
+mov    %rdx,%r12
+push   %rbp
+mov    %rsi,%rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x3d0(%rsi),%rax
+orb    $0x1,0x31d(%rsi)
+test   %rax,%rax
+je     0x7ffff7fd666b <dfs_traversal+75>
+test   %r12,%r12
+jne    0x7ffff7fd66b0 <dfs_traversal+144>
+mov    0x3d8(%rbp),%rax
+test   %rax,%rax
+je     0x7ffff7fd6670 <dfs_traversal+80>
+mov    0x0(%r13),%rax
+lea    -0x8(%rax),%rdx
+mov    %rdx,0x0(%r13)
+mov    %rbp,-0x8(%rax)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+cmp    -0x40(%rbp),%r11
+jne    0x7ffff7fd6a78 <_dl_sort_maps+840>
+sub    $0x1,%r10
+test   %r10d,%r10d
+js     0x7ffff7fd6b5f <_dl_sort_maps+1071>
+mov    (%r8,%r10,8),%rsi
+testb  $0x21,0x31d(%rsi)
+jne    0x7ffff7fd6a9d <_dl_sort_maps+877>
+mov    %r13,%rdx
+mov    %r15,%rdi
+call   0x7ffff7fd6620 <dfs_traversal>
+push   %r13
+mov    %rdi,%r13
+push   %r12
+mov    %rdx,%r12
+push   %rbp
+mov    %rsi,%rbp
+push   %rbx
+sub    $0x8,%rsp
+mov    0x3d0(%rsi),%rax
+orb    $0x1,0x31d(%rsi)
+test   %rax,%rax
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    (%rax),%rsi
+test   %rsi,%rsi
+je     0x7ffff7fd666b <dfs_traversal+75>
+mov    $0x8,%ebx
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+testw  $0x180,0x31c(%rsi)
+je     0x7ffff7fd6690 <dfs_traversal+112>
+mov    (%rax,%rbx,1),%rsi
+add    $0x8,%rbx
+test   %rsi,%rsi
+jne    0x7ffff7fd6653 <dfs_traversal+51>
+test   %r12,%r12
+jne    0x7ffff7fd66b0 <dfs_traversal+144>
+mov    0x3d8(%rbp),%rax
+test   %rax,%rax
+je     0x7ffff7fd6670 <dfs_traversal+80>
+mov    0x0(%r13),%rax
+lea    -0x8(%rax),%rdx
+mov    %rdx,0x0(%r13)
+mov    %rbp,-0x8(%rax)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+cmp    -0x40(%rbp),%r11
+jne    0x7ffff7fd6a78 <_dl_sort_maps+840>
+cmpb   $0x0,-0x41(%rbp)
+je     0x7ffff7fd6b7e <_dl_sort_maps+1102>
+mov    %r9,%rdx
+mov    %r14,%rsi
+mov    %r8,%rdi
+call   0x7ffff7fedfb0 <memmove>
+endbr64 
+mov    %rdi,%rax
+cmp    $0x10,%rdx
+jb     0x7ffff7fedfe0 <memmove+48>
+movups (%rsi),%xmm0
+cmp    $0x20,%rdx
+ja     0x7ffff7fee040 <memmove+144>
+cmp    $0x80,%rdx
+ja     0x7ffff7fee093 <memmove+227>
+movups 0x10(%rsi),%xmm1
+cmp    $0x40,%rdx
+jbe    0x7ffff7fee021 <memmove+113>
+movups -0x10(%rsi,%rdx,1),%xmm2
+movups -0x20(%rsi,%rdx,1),%xmm3
+movups %xmm0,(%rdi)
+movups %xmm1,0x10(%rdi)
+movups %xmm2,-0x10(%rdi,%rdx,1)
+movups %xmm3,-0x20(%rdi,%rdx,1)
+ret    
+jmp    0x7ffff7fd6afa <_dl_sort_maps+970>
+mov    %rbx,%rsp
+jmp    0x7ffff7fd6870 <_dl_sort_maps+320>
+lea    -0x28(%rbp),%rsp
+pop    %rbx
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+pop    %rbp
+ret    
+mov    %r13,%rdi
+call   *0x338af(%rip)        # 0x7ffff7ffca78 <___rtld_mutex_unlock>
+endbr64 
+mov    0x10(%rdi),%eax
+mov    %eax,%edx
+and    $0x17f,%edx
+and    $0x7c,%eax
+jne    0x7ffff7c99ad0 <___pthread_mutex_unlock+96>
+sub    $0x18,%rsp
+test   %edx,%edx
+jne    0x7ffff7c99ae0 <___pthread_mutex_unlock+112>
+cmp    $0x100,%edx
+jne    0x7ffff7c99b17 <___pthread_mutex_unlock+167>
+mov    0x10(%rdi),%ecx
+and    $0x7f,%ecx
+cmp    $0x1,%ecx
+jne    0x7ffff7c99b48 <___pthread_mutex_unlock+216>
+mov    %fs:0x2d0,%edx
+cmp    %edx,0x8(%rdi)
+je     0x7ffff7c99b39 <___pthread_mutex_unlock+201>
+subl   $0x1,0x4(%rdi)
+jne    0x7ffff7c99aac <___pthread_mutex_unlock+60>
+jmp    0x7ffff7c99a8c <___pthread_mutex_unlock+28>
+subl   $0x1,0xc(%rdi)
+movl   $0x0,0x8(%rdi)
+mov    0x10(%rdi),%esi
+and    $0x80,%esi
+je     0x7ffff7c99ab8 <___pthread_mutex_unlock+72>
+mov    %fs:0x18,%edx
+test   %edx,%edx
+jne    0x7ffff7c99aa2 <___pthread_mutex_unlock+50>
+movl   $0x0,(%rdi)
+jmp    0x7ffff7c99aab <___pthread_mutex_unlock+59>
+nop
+add    $0x18,%rsp
+ret    
+mov    -0x38(%rbp),%esi
+test   %esi,%esi
+je     0x7ffff7fc9292 <_dl_fini+594>
+lea    -0x1(%rsi),%eax
+lea    0x8(%r14,%rax,8),%rax
+mov    %rax,-0x50(%rbp)
+mov    (%r14),%r15
+movzbl 0x31c(%r15),%eax
+test   $0x8,%al
+je     0x7ffff7fc927c <_dl_fini+572>
+and    $0xfffffff7,%eax
+mov    %al,0x31c(%r15)
+mov    0x110(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc92a8 <_dl_fini+616>
+testb  $0x2,0x338cc(%rip)        # 0x7ffff7ffcae0 <_rtld_global_ro>
+jne    0x7ffff7fc92c0 <_dl_fini+640>
+mov    0x8(%rax),%rax
+add    (%r15),%rax
+mov    %rax,%rsi
+mov    %rax,-0x40(%rbp)
+mov    0x120(%r15),%rax
+mov    0x8(%rax),%rdx
+shr    $0x3,%rdx
+lea    -0x1(%rdx),%eax
+lea    (%rsi,%rax,8),%rax
+test   %edx,%edx
+je     0x7ffff7fc925f <_dl_fini+543>
+nopw   0x0(%rax,%rax,1)
+mov    %rax,-0x38(%rbp)
+call   *(%rax)
+endbr64 
+cmpb   $0x0,0x3db5(%rip)        # 0x555555559020 <completed.0>
+jne    0x555555555298 <__do_global_dtors_aux+56>
+push   %rbp
+cmpq   $0x0,0x3d82(%rip)        # 0x555555558ff8
+mov    %rsp,%rbp
+je     0x555555555287 <__do_global_dtors_aux+39>
+mov    0x3d86(%rip),%rdi        # 0x555555559008
+call   0x5555555550f0 <__cxa_finalize@plt>
+endbr64 
+bnd jmp *0x3efd(%rip)        # 0x555555558ff8
+endbr64 
+push   %r15
+xor    %eax,%eax
+mov    $0x1,%edx
+push   %r14
+push   %r13
+push   %r12
+mov    %rdi,%r12
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+lea    0x1d6525(%rip),%r13        # 0x7ffff7e1bee8 <__exit_funcs_lock>
+lock cmpxchg %edx,0x0(%r13)
+jne    0x7ffff7c45c13 <__cxa_finalize+627>
+nop
+mov    0x1d4e61(%rip),%r14        # 0x7ffff7e1a838 <__exit_funcs>
+test   %r14,%r14
+je     0x7ffff7c45a8c <__cxa_finalize+236>
+mov    0x8(%r14),%rax
+lea    0x10(%r14),%rbp
+shl    $0x5,%rax
+lea    -0x10(%r14,%rax,1),%rbx
+cmp    %rbp,%rbx
+jb     0x7ffff7c45a80 <__cxa_finalize+224>
+mov    (%r14),%r14
+test   %r14,%r14
+jne    0x7ffff7c459e0 <__cxa_finalize+64>
+mov    0x1d4dad(%rip),%rcx        # 0x7ffff7e1a840 <__quick_exit_funcs>
+test   %rcx,%rcx
+je     0x7ffff7c45ade <__cxa_finalize+318>
+nopl   0x0(%rax,%rax,1)
+mov    0x8(%rcx),%rax
+lea    0x10(%rcx),%rdx
+shl    $0x5,%rax
+lea    -0x10(%rcx,%rax,1),%rax
+cmp    %rax,%rdx
+ja     0x7ffff7c45ad6 <__cxa_finalize+310>
+mov    (%rcx),%rcx
+test   %rcx,%rcx
+jne    0x7ffff7c45aa0 <__cxa_finalize+256>
+test   %r12,%r12
+je     0x7ffff7c45aeb <__cxa_finalize+331>
+mov    %r12,%rdi
+call   0x7ffff7ceadd0 <__unregister_atfork>
+endbr64 
+push   %rbx
+xor    %eax,%eax
+mov    %rdi,%rbx
+mov    $0x1,%edx
+lock cmpxchg %edx,0x136cd9(%rip)        # 0x7ffff7e21ac0 <atfork_lock>
+jne    0x7ffff7ceaee0 <__unregister_atfork+272>
+mov    0x136cec(%rip),%rsi        # 0x7ffff7e21ae0 <fork_handlers>
+test   %rsi,%rsi
+je     0x7ffff7ceaeb0 <__unregister_atfork+224>
+xor    %eax,%eax
+xchg   %eax,0x136c08(%rip)        # 0x7ffff7e21ac0 <atfork_lock>
+cmp    $0x1,%eax
+jg     0x7ffff7ceaed0 <__unregister_atfork+256>
+pop    %rbx
+ret    
+xor    %eax,%eax
+xchg   %eax,0x0(%r13)
+cmp    $0x1,%eax
+jg     0x7ffff7c45c20 <__cxa_finalize+640>
+add    $0x18,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+call   0x5555555551f0 <deregister_tm_clones>
+lea    0x3e19(%rip),%rdi        # 0x555555559010
+lea    0x3e12(%rip),%rax        # 0x555555559010
+cmp    %rdi,%rax
+je     0x555555555218 <deregister_tm_clones+40>
+ret    
+movb   $0x1,0x3d8d(%rip)        # 0x555555559020 <completed.0>
+pop    %rbp
+ret    
+mov    -0x38(%rbp),%rax
+mov    %rax,%rdx
+sub    $0x8,%rax
+cmp    %rdx,-0x40(%rbp)
+jne    0x7ffff7fc9248 <_dl_fini+520>
+mov    0xa8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc9274 <_dl_fini+564>
+mov    0x8(%rax),%rax
+add    (%r15),%rax
+call   *%rax
+endbr64 
+sub    $0x8,%rsp
+add    $0x8,%rsp
+ret    
+mov    %r15,%rdi
+call   0x7ffff7fde570 <_dl_audit_objclose>
+endbr64 
+mov    0x1e8fe(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %eax,%eax
+jne    0x7ffff7fde580 <_dl_audit_objclose+16>
+ret    
+subl   $0x1,0x318(%r15)
+add    $0x8,%r14
+cmp    %r14,-0x50(%rbp)
+jne    0x7ffff7fc91e0 <_dl_fini+416>
+mov    (%r14),%r15
+movzbl 0x31c(%r15),%eax
+test   $0x8,%al
+je     0x7ffff7fc927c <_dl_fini+572>
+subl   $0x1,0x318(%r15)
+add    $0x8,%r14
+cmp    %r14,-0x50(%rbp)
+jne    0x7ffff7fc91e0 <_dl_fini+416>
+mov    (%r14),%r15
+movzbl 0x31c(%r15),%eax
+test   $0x8,%al
+je     0x7ffff7fc927c <_dl_fini+572>
+and    $0xfffffff7,%eax
+mov    %al,0x31c(%r15)
+mov    0x110(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc92a8 <_dl_fini+616>
+testb  $0x2,0x338cc(%rip)        # 0x7ffff7ffcae0 <_rtld_global_ro>
+jne    0x7ffff7fc92c0 <_dl_fini+640>
+mov    0x8(%rax),%rax
+add    (%r15),%rax
+mov    %rax,%rsi
+mov    %rax,-0x40(%rbp)
+mov    0x120(%r15),%rax
+mov    0x8(%rax),%rdx
+shr    $0x3,%rdx
+lea    -0x1(%rdx),%eax
+lea    (%rsi,%rax,8),%rax
+test   %edx,%edx
+je     0x7ffff7fc925f <_dl_fini+543>
+nopw   0x0(%rax,%rax,1)
+mov    %rax,-0x38(%rbp)
+call   *(%rax)
+endbr64 
+cmpb   $0x0,0xd7cd1(%rip)        # 0x7ffff7fa70fc <completed.0>
+jne    0x7ffff7ecf458 <__do_global_dtors_aux+56>
+push   %rbp
+cmpq   $0x0,0xd7bba(%rip)        # 0x7ffff7fa6ff0
+mov    %rsp,%rbp
+je     0x7ffff7ecf447 <__do_global_dtors_aux+39>
+mov    0xd7cae(%rip),%rdi        # 0x7ffff7fa70f0
+call   0x7ffff7ecf1e0 <__cxa_finalize@plt>
+endbr64 
+bnd jmp *0xd7e05(%rip)        # 0x7ffff7fa6ff0
+endbr64 
+push   %r15
+xor    %eax,%eax
+mov    $0x1,%edx
+push   %r14
+push   %r13
+push   %r12
+mov    %rdi,%r12
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+lea    0x1d6525(%rip),%r13        # 0x7ffff7e1bee8 <__exit_funcs_lock>
+lock cmpxchg %edx,0x0(%r13)
+jne    0x7ffff7c45c13 <__cxa_finalize+627>
+nop
+mov    0x1d4e61(%rip),%r14        # 0x7ffff7e1a838 <__exit_funcs>
+test   %r14,%r14
+je     0x7ffff7c45a8c <__cxa_finalize+236>
+mov    0x8(%r14),%rax
+lea    0x10(%r14),%rbp
+shl    $0x5,%rax
+lea    -0x10(%r14,%rax,1),%rbx
+cmp    %rbp,%rbx
+jb     0x7ffff7c45a80 <__cxa_finalize+224>
+mov    (%r14),%r14
+test   %r14,%r14
+jne    0x7ffff7c459e0 <__cxa_finalize+64>
+mov    0x1d4dad(%rip),%rcx        # 0x7ffff7e1a840 <__quick_exit_funcs>
+test   %rcx,%rcx
+je     0x7ffff7c45ade <__cxa_finalize+318>
+nopl   0x0(%rax,%rax,1)
+mov    0x8(%rcx),%rax
+lea    0x10(%rcx),%rdx
+shl    $0x5,%rax
+lea    -0x10(%rcx,%rax,1),%rax
+cmp    %rax,%rdx
+ja     0x7ffff7c45ad6 <__cxa_finalize+310>
+mov    (%rcx),%rcx
+test   %rcx,%rcx
+jne    0x7ffff7c45aa0 <__cxa_finalize+256>
+test   %r12,%r12
+je     0x7ffff7c45aeb <__cxa_finalize+331>
+mov    %r12,%rdi
+call   0x7ffff7ceadd0 <__unregister_atfork>
+endbr64 
+push   %rbx
+xor    %eax,%eax
+mov    %rdi,%rbx
+mov    $0x1,%edx
+lock cmpxchg %edx,0x136cd9(%rip)        # 0x7ffff7e21ac0 <atfork_lock>
+jne    0x7ffff7ceaee0 <__unregister_atfork+272>
+mov    0x136cec(%rip),%rsi        # 0x7ffff7e21ae0 <fork_handlers>
+test   %rsi,%rsi
+je     0x7ffff7ceaeb0 <__unregister_atfork+224>
+xor    %eax,%eax
+xchg   %eax,0x136c08(%rip)        # 0x7ffff7e21ac0 <atfork_lock>
+cmp    $0x1,%eax
+jg     0x7ffff7ceaed0 <__unregister_atfork+256>
+pop    %rbx
+ret    
+xor    %eax,%eax
+xchg   %eax,0x0(%r13)
+cmp    $0x1,%eax
+jg     0x7ffff7c45c20 <__cxa_finalize+640>
+add    $0x18,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+call   0x7ffff7ecf3b0 <deregister_tm_clones>
+lea    0xd7d49(%rip),%rdi        # 0x7ffff7fa7100 <signgam>
+lea    0xd7d42(%rip),%rax        # 0x7ffff7fa7100 <signgam>
+cmp    %rdi,%rax
+je     0x7ffff7ecf3d8 <deregister_tm_clones+40>
+ret    
+movb   $0x1,0xd7ca9(%rip)        # 0x7ffff7fa70fc <completed.0>
+pop    %rbp
+ret    
+mov    -0x38(%rbp),%rax
+mov    %rax,%rdx
+sub    $0x8,%rax
+cmp    %rdx,-0x40(%rbp)
+jne    0x7ffff7fc9248 <_dl_fini+520>
+mov    0xa8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc9274 <_dl_fini+564>
+mov    0x8(%rax),%rax
+add    (%r15),%rax
+call   *%rax
+endbr64 
+sub    $0x8,%rsp
+add    $0x8,%rsp
+ret    
+mov    %r15,%rdi
+call   0x7ffff7fde570 <_dl_audit_objclose>
+endbr64 
+mov    0x1e8fe(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %eax,%eax
+jne    0x7ffff7fde580 <_dl_audit_objclose+16>
+ret    
+subl   $0x1,0x318(%r15)
+add    $0x8,%r14
+cmp    %r14,-0x50(%rbp)
+jne    0x7ffff7fc91e0 <_dl_fini+416>
+mov    (%r14),%r15
+movzbl 0x31c(%r15),%eax
+test   $0x8,%al
+je     0x7ffff7fc927c <_dl_fini+572>
+and    $0xfffffff7,%eax
+mov    %al,0x31c(%r15)
+mov    0x110(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc92a8 <_dl_fini+616>
+mov    0xa8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc9274 <_dl_fini+564>
+mov    %r15,%rdi
+call   0x7ffff7fde570 <_dl_audit_objclose>
+endbr64 
+mov    0x1e8fe(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %eax,%eax
+jne    0x7ffff7fde580 <_dl_audit_objclose+16>
+ret    
+subl   $0x1,0x318(%r15)
+add    $0x8,%r14
+cmp    %r14,-0x50(%rbp)
+jne    0x7ffff7fc91e0 <_dl_fini+416>
+mov    (%r14),%r15
+movzbl 0x31c(%r15),%eax
+test   $0x8,%al
+je     0x7ffff7fc927c <_dl_fini+572>
+and    $0xfffffff7,%eax
+mov    %al,0x31c(%r15)
+mov    0x110(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc92a8 <_dl_fini+616>
+mov    0xa8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7fc9274 <_dl_fini+564>
+mov    %r15,%rdi
+call   0x7ffff7fde570 <_dl_audit_objclose>
+endbr64 
+mov    0x1e8fe(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %eax,%eax
+jne    0x7ffff7fde580 <_dl_audit_objclose+16>
+ret    
+subl   $0x1,0x318(%r15)
+add    $0x8,%r14
+cmp    %r14,-0x50(%rbp)
+jne    0x7ffff7fc91e0 <_dl_fini+416>
+xor    %esi,%esi
+mov    %r12,%rdi
+call   0x7ffff7fde250 <_dl_audit_activity_nsid>
+endbr64 
+push   %r13
+lea    (%rdi,%rdi,4),%rax
+push   %r12
+shl    $0x5,%rax
+push   %rbp
+lea    0x1edd8(%rip),%rbp        # 0x7ffff7ffd040 <_rtld_global>
+push   %rbx
+sub    $0x8,%rsp
+mov    0x0(%rbp,%rax,1),%rbx
+mov    0x1ec00(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %rbx,%rbx
+je     0x7ffff7fde281 <_dl_audit_activity_nsid+49>
+test   %eax,%eax
+jne    0x7ffff7fde290 <_dl_audit_activity_nsid+64>
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    -0x58(%rbp),%rsp
+jmp    0x7ffff7fc9099 <_dl_fini+89>
+sub    $0x1,%r12
+sub    $0xa0,%rbx
+cmp    $0xffffffffffffffff,%r12
+je     0x7ffff7fc92f0 <_dl_fini+688>
+mov    -0x44(%rbp),%edx
+test   %edx,%edx
+jne    0x7ffff7fc9301 <_dl_fini+705>
+mov    0x33b7b(%rip),%eax        # 0x7ffff7ffce78 <_rtld_global_ro+920>
+test   %eax,%eax
+jne    0x7ffff7fc933e <_dl_fini+766>
+testb  $0x80,0x337d8(%rip)        # 0x7ffff7ffcae0 <_rtld_global_ro>
+jne    0x7ffff7fc9360 <_dl_fini+800>
+lea    -0x28(%rbp),%rsp
+pop    %rbx
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+pop    %rbp
+ret    
+mov    $0x1,%edx
+mov    %ebx,%eax
+lock cmpxchg %edx,(%r14)
+je     0x7ffff7c453e0 <__run_exit_handlers+80>
+mov    0x8(%r15),%rax
+test   %rax,%rax
+je     0x7ffff7c45500 <__run_exit_handlers+368>
+mov    (%r15),%rax
+mov    %rax,(%r12)
+test   %rax,%rax
+jne    0x7ffff7c455b7 <__run_exit_handlers+551>
+movb   $0x1,0x1d69b5(%rip)        # 0x7ffff7e1becc <__exit_funcs_done>
+xor    %eax,%eax
+xchg   %eax,(%r14)
+cmp    $0x1,%eax
+jg     0x7ffff7c455db <__run_exit_handlers+587>
+cmpb   $0x0,0x1c(%rsp)
+je     0x7ffff7c4554b <__run_exit_handlers+443>
+lea    0x1d14c5(%rip),%rbx        # 0x7ffff7e169f8 <__elf_set___libc_atexit_element__IO_cleanup__>
+lea    0x1d14c6(%rip),%r12        # 0x7ffff7e16a00 <_IO_helper_jumps>
+cmp    %r12,%rbx
+jae    0x7ffff7c4554b <__run_exit_handlers+443>
+nop
+call   *(%rbx)
+endbr64 
+push   %r15
+xor    %edi,%edi
+push   %r14
+push   %r13
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x48,%rsp
+mov    %fs:0x28,%rax
+mov    %rax,0x38(%rsp)
+xor    %eax,%eax
+lea    0x10(%rsp),%rbp
+call   0x7ffff7c8e8e0 <_IO_flush_all_lockp>
+endbr64 
+push   %r15
+push   %r14
+mov    %edi,%r14d
+push   %r13
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x48,%rsp
+mov    %fs:0x28,%rax
+mov    %rax,0x38(%rsp)
+xor    %eax,%eax
+lea    0x10(%rsp),%r13
+lea    -0x1931(%rip),%rax        # 0x7ffff7c8cfe0 <flush_cleanup>
+movq   $0x0,0x18(%rsp)
+mov    %r13,%rdi
+mov    %rax,0x10(%rsp)
+call   0x7ffff7c911c0 <__GI___libc_cleanup_push_defer>
+endbr64 
+mov    %fs:0x2f8,%rax
+mov    %rax,0x18(%rdi)
+xor    %eax,%eax
+mov    %fs:0x972,%al
+movzbl %al,%eax
+mov    %eax,0x10(%rdi)
+movb   $0x0,%fs:0x972
+mov    %rdi,%fs:0x2f8
+ret    
+mov    %fs:0x10,%rbx
+cmp    %rbx,0x18e121(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+je     0x7ffff7c8e955 <_IO_flush_all_lockp+117>
+xor    %eax,%eax
+mov    $0x1,%edx
+lock cmpxchg %edx,0x18e108(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+jne    0x7ffff7c8eafc <_IO_flush_all_lockp+540>
+mov    %rbx,0x18e103(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+mov    0x18e0f9(%rip),%eax        # 0x7ffff7e1ca54 <list_all_lock+4>
+mov    0x18cd1e(%rip),%r15        # 0x7ffff7e1b680 <_IO_list_all>
+xor    %r12d,%r12d
+lea    0x1(%rax),%edx
+mov    %edx,0x18e0e6(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+test   %r15,%r15
+je     0x7ffff7c8ea99 <_IO_flush_all_lockp+441>
+lea    0x188082(%rip),%rbp        # 0x7ffff7e16a00 <_IO_helper_jumps>
+lea    0x188de3(%rip),%rbx        # 0x7ffff7e17768
+sub    %rbp,%rbx
+jmp    0x7ffff7c8ea1c <_IO_flush_all_lockp+316>
+mov    %r15,0x18e01d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+test   %r14d,%r14d
+je     0x7ffff7c8ea66 <_IO_flush_all_lockp+390>
+mov    0xc0(%r15),%eax
+test   %eax,%eax
+jg     0x7ffff7c8e990 <_IO_flush_all_lockp+176>
+mov    0x20(%r15),%rax
+cmp    %rax,0x28(%r15)
+ja     0x7ffff7c8e9a1 <_IO_flush_all_lockp+193>
+jmp    0x7ffff7c8e9ce <_IO_flush_all_lockp+238>
+test   %r14d,%r14d
+je     0x7ffff7c8ea08 <_IO_flush_all_lockp+296>
+movq   $0x0,0x18e02d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ea90 <_IO_flush_all_lockp+432>
+mov    %r15,0x18e01d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+test   %r14d,%r14d
+je     0x7ffff7c8ea66 <_IO_flush_all_lockp+390>
+mov    0xc0(%r15),%eax
+test   %eax,%eax
+jg     0x7ffff7c8e990 <_IO_flush_all_lockp+176>
+mov    0x20(%r15),%rax
+cmp    %rax,0x28(%r15)
+ja     0x7ffff7c8e9a1 <_IO_flush_all_lockp+193>
+mov    0xd8(%r15),%rax
+mov    %rax,%rsi
+sub    %rbp,%rsi
+cmp    %rsi,%rbx
+jbe    0x7ffff7c8eae8 <_IO_flush_all_lockp+520>
+mov    $0xffffffff,%esi
+mov    %r15,%rdi
+call   *0x18(%rax)
+endbr64 
+push   %r12
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+mov    (%rdi),%eax
+test   $0x8,%al
+jne    0x7ffff7c8cfc0 <_IO_new_file_overflow+512>
+mov    %esi,%ebx
+mov    0x20(%rdi),%rsi
+test   $0x8,%ah
+je     0x7ffff7c8ce30 <_IO_new_file_overflow+112>
+test   %rsi,%rsi
+je     0x7ffff7c8cf58 <_IO_new_file_overflow+408>
+mov    0x28(%rdi),%rdx
+cmp    $0xffffffff,%ebx
+je     0x7ffff7c8ce9c <_IO_new_file_overflow+220>
+pop    %rbx
+mov    %rbp,%rdi
+sub    %rsi,%rdx
+pop    %rbp
+pop    %r12
+jmp    0x7ffff7c8c930 <_IO_new_do_write>
+endbr64 
+xor    %eax,%eax
+test   %rdx,%rdx
+jne    0x7ffff7c8c940 <_IO_new_do_write+16>
+push   %r15
+lea    0x18a0b7(%rip),%r15        # 0x7ffff7e16a00 <_IO_helper_jumps>
+push   %r14
+push   %r13
+lea    0x18ae14(%rip),%r13        # 0x7ffff7e17768
+push   %r12
+sub    %r15,%r13
+mov    %rsi,%r12
+push   %rbp
+mov    %rdx,%rbp
+push   %rbx
+mov    %rdi,%rbx
+sub    $0x8,%rsp
+mov    0xd8(%rdi),%r14
+testl  $0x1000,(%rdi)
+jne    0x7ffff7c8ca40 <_IO_new_do_write+272>
+mov    0x10(%rdi),%rax
+mov    0x20(%rdi),%rsi
+cmp    %rsi,%rax
+je     0x7ffff7c8c9c5 <_IO_new_do_write+149>
+mov    %r14,%rax
+sub    %r15,%rax
+cmp    %r13,%rax
+jae    0x7ffff7c8ca80 <_IO_new_do_write+336>
+mov    %rbp,%rdx
+mov    %r12,%rsi
+mov    %rbx,%rdi
+call   *0x78(%r14)
+endbr64 
+push   %r13
+mov    %rdi,%r13
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x8,%rsp
+test   %rdx,%rdx
+jle    0x7ffff7c8af58 <_IO_new_file_write+152>
+mov    %rsi,%rbp
+mov    %rdx,%r12
+mov    %rdx,%rbx
+jmp    0x7ffff7c8aefd <_IO_new_file_write+61>
+mov    0x70(%r13),%edi
+mov    %rbx,%rdx
+mov    %rbp,%rsi
+testb  $0x2,0x74(%r13)
+je     0x7ffff7c8aee8 <_IO_new_file_write+40>
+call   0x7ffff7d14870 <__GI___libc_write>
+endbr64 
+mov    %fs:0x18,%eax
+test   %eax,%eax
+jne    0x7ffff7d14890 <__GI___libc_write+32>
+mov    $0x1,%eax
+syscall 
+cmp    $0xfffffffffffff000,%rax
+ja     0x7ffff7d148e0 <__GI___libc_write+112>
+ret    
+test   %rax,%rax
+js     0x7ffff7c8af20 <_IO_new_file_write+96>
+sub    %rax,%rbx
+add    %rax,%rbp
+test   %rbx,%rbx
+jle    0x7ffff7c8af50 <_IO_new_file_write+144>
+mov    %r12,%rax
+sub    %rbx,%rax
+jmp    0x7ffff7c8af2b <_IO_new_file_write+107>
+mov    0x90(%r13),%rdx
+test   %rdx,%rdx
+js     0x7ffff7c8af41 <_IO_new_file_write+129>
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    %rax,%r13
+movzwl 0x80(%rbx),%eax
+test   %r13,%r13
+je     0x7ffff7c8c9f5 <_IO_new_do_write+197>
+test   %ax,%ax
+jne    0x7ffff7c8ca60 <_IO_new_do_write+304>
+mov    0x38(%rbx),%rax
+mov    0xc0(%rbx),%edx
+movq   %rax,%xmm0
+mov    %rax,0x28(%rbx)
+punpcklqdq %xmm0,%xmm0
+movups %xmm0,0x8(%rbx)
+movups %xmm0,0x18(%rbx)
+test   %edx,%edx
+jle    0x7ffff7c8ca50 <_IO_new_do_write+288>
+testl  $0x202,(%rbx)
+jne    0x7ffff7c8ca1c <_IO_new_do_write+236>
+jmp    0x7ffff7c8ca18 <_IO_new_do_write+232>
+mov    0x40(%rbx),%rax
+mov    %rax,0x30(%rbx)
+xor    %eax,%eax
+cmp    %r13,%rbp
+setne  %al
+neg    %eax
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    $0xffffffff,%eax
+mov    $0xffffffff,%eax
+cmove  %eax,%r12d
+test   %r14d,%r14d
+je     0x7ffff7c8ea08 <_IO_flush_all_lockp+296>
+movq   $0x0,0x18e02d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ea90 <_IO_flush_all_lockp+432>
+mov    %r15,0x18e01d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+test   %r14d,%r14d
+je     0x7ffff7c8ea66 <_IO_flush_all_lockp+390>
+mov    0xc0(%r15),%eax
+test   %eax,%eax
+jg     0x7ffff7c8e990 <_IO_flush_all_lockp+176>
+mov    0x20(%r15),%rax
+cmp    %rax,0x28(%r15)
+ja     0x7ffff7c8e9a1 <_IO_flush_all_lockp+193>
+jmp    0x7ffff7c8e9ce <_IO_flush_all_lockp+238>
+test   %r14d,%r14d
+je     0x7ffff7c8ea08 <_IO_flush_all_lockp+296>
+movq   $0x0,0x18e02d(%rip)        # 0x7ffff7e1ca40 <run_fp>
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ea90 <_IO_flush_all_lockp+432>
+mov    0x18dfbe(%rip),%eax        # 0x7ffff7e1ca54 <list_all_lock+4>
+sub    $0x1,%eax
+mov    %eax,0x18dfb5(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+test   %eax,%eax
+jne    0x7ffff7c8eab9 <_IO_flush_all_lockp+473>
+movq   $0x0,0x18dfaa(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+xchg   %eax,0x18df9c(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+cmp    $0x1,%eax
+jg     0x7ffff7c8eb0d <_IO_flush_all_lockp+557>
+mov    %r13,%rdi
+call   0x7ffff7c91200 <__GI___libc_cleanup_pop_restore>
+endbr64 
+mov    0x18(%rdi),%rax
+mov    %rax,%fs:0x2f8
+mov    0x10(%rdi),%eax
+mov    %al,%fs:0x972
+cmp    $0x1,%eax
+je     0x7ffff7c91228 <__GI___libc_cleanup_pop_restore+40>
+ret    
+mov    0x38(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c8eb42 <_IO_flush_all_lockp+610>
+add    $0x48,%rsp
+mov    %r12d,%eax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+mov    %rbp,%rdi
+movq   $0x0,0x18(%rsp)
+mov    %eax,%r12d
+lea    -0x1bb4(%rip),%rax        # 0x7ffff7c8cfe0 <flush_cleanup>
+mov    %rax,0x10(%rsp)
+call   0x7ffff7c911c0 <__GI___libc_cleanup_push_defer>
+endbr64 
+mov    %fs:0x2f8,%rax
+mov    %rax,0x18(%rdi)
+xor    %eax,%eax
+mov    %fs:0x972,%al
+movzbl %al,%eax
+mov    %eax,0x10(%rdi)
+movb   $0x0,%fs:0x972
+mov    %rdi,%fs:0x2f8
+ret    
+mov    %fs:0x10,%rbx
+cmp    0x18deaa(%rip),%rbx        # 0x7ffff7e1ca58 <list_all_lock+8>
+je     0x7ffff7c8ebcc <_IO_cleanup+124>
+xor    %eax,%eax
+mov    $0x1,%edx
+lock cmpxchg %edx,0x18de91(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+jne    0x7ffff7c8ed9d <_IO_cleanup+589>
+mov    %rbx,0x18de8c(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+mov    0x18de82(%rip),%eax        # 0x7ffff7e1ca54 <list_all_lock+4>
+mov    0x18caa7(%rip),%r15        # 0x7ffff7e1b680 <_IO_list_all>
+lea    0x1(%rax),%edx
+mov    %edx,0x18de72(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+test   %r15,%r15
+je     0x7ffff7c8ed11 <_IO_cleanup+449>
+lea    0x187e0e(%rip),%r13        # 0x7ffff7e16a00 <_IO_helper_jumps>
+lea    0x188b6f(%rip),%rbx        # 0x7ffff7e17768
+sub    %r13,%rbx
+jmp    0x7ffff7c8ec18 <_IO_cleanup+200>
+mov    (%r15),%r14d
+and    $0x2,%r14d
+jne    0x7ffff7c8ec00 <_IO_cleanup+176>
+movl   $0xffffffff,0xc0(%r15)
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ed08 <_IO_cleanup+440>
+mov    (%r15),%r14d
+and    $0x2,%r14d
+jne    0x7ffff7c8ec00 <_IO_cleanup+176>
+mov    0xc0(%r15),%edx
+test   %edx,%edx
+je     0x7ffff7c8ec00 <_IO_cleanup+176>
+mov    0x88(%r15),%rdx
+test   %rdx,%rdx
+je     0x7ffff7c8ec6e <_IO_cleanup+286>
+mov    %fs:0x10,%rcx
+cmp    0x8(%rdx),%rcx
+je     0x7ffff7c8edd4 <_IO_cleanup+644>
+mov    $0x1,%esi
+xor    %eax,%eax
+lock cmpxchg %esi,(%rdx)
+jne    0x7ffff7c8ed87 <_IO_cleanup+567>
+mov    0x88(%r15),%rax
+mov    %rcx,0x8(%rax)
+movl   $0x1,0x4(%rax)
+cmpb   $0x0,0x18ddc3(%rip)        # 0x7ffff7e1ca38 <dealloc_buffers>
+jne    0x7ffff7c8ec82 <_IO_cleanup+306>
+mov    (%r15),%eax
+test   $0x1,%al
+je     0x7ffff7c8ed60 <_IO_cleanup+528>
+movq   0x18dcc8(%rip),%xmm0        # 0x7ffff7e1ca30 <freeres_list>
+or     $0x1,%eax
+mov    %r15,0x18dcbe(%rip)        # 0x7ffff7e1ca30 <freeres_list>
+mov    %eax,(%r15)
+movhps 0x38(%r15),%xmm0
+movups %xmm0,0xa8(%r15)
+jmp    0x7ffff7c8ec82 <_IO_cleanup+306>
+mov    0xd8(%r15),%rax
+mov    %rax,%rdx
+sub    %r13,%rdx
+cmp    %rdx,%rbx
+jbe    0x7ffff7c8edc0 <_IO_cleanup+624>
+xor    %edx,%edx
+xor    %esi,%esi
+mov    %r15,%rdi
+call   *0x58(%rax)
+endbr64 
+push   %rbx
+mov    %rdi,%rbx
+call   0x7ffff7c8e3b0 <_IO_default_setbuf>
+endbr64 
+push   %r13
+lea    0x1893ab(%rip),%rax        # 0x7ffff7e17768
+push   %r12
+mov    %rdx,%r12
+lea    0x188637(%rip),%rdx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+push   %rbp
+sub    %rdx,%rax
+mov    %rsi,%rbp
+push   %rbx
+mov    %rdi,%rbx
+sub    $0x8,%rsp
+mov    0xd8(%rdi),%r13
+mov    %r13,%rcx
+sub    %rdx,%rcx
+cmp    %rcx,%rax
+jbe    0x7ffff7c8e490 <_IO_default_setbuf+224>
+mov    %rbx,%rdi
+call   *0x60(%r13)
+endbr64 
+push   %rbp
+push   %rbx
+mov    %rdi,%rbx
+sub    $0x18,%rsp
+mov    0x28(%rdi),%rdx
+mov    0x20(%rdi),%rsi
+cmp    %rsi,%rdx
+jbe    0x7ffff7c8a473 <_IO_new_file_sync+67>
+mov    0x8(%rbx),%rsi
+sub    0x10(%rbx),%rsi
+je     0x7ffff7c8a4bc <_IO_new_file_sync+140>
+movq   $0xffffffffffffffff,0x90(%rbx)
+xor    %eax,%eax
+add    $0x18,%rsp
+pop    %rbx
+pop    %rbp
+ret    
+cmp    $0xffffffff,%eax
+je     0x7ffff7c8e4a0 <_IO_default_setbuf+240>
+mov    (%rbx),%edx
+mov    0x38(%rbx),%rdi
+mov    %edx,%eax
+test   %rbp,%rbp
+je     0x7ffff7c8e460 <_IO_default_setbuf+176>
+or     $0x2,%eax
+lea    0x84(%rbx),%r12
+lea    0x83(%rbx),%rbp
+mov    %eax,(%rbx)
+test   %rdi,%rdi
+je     0x7ffff7c8e422 <_IO_default_setbuf+114>
+and    $0x1,%edx
+jne    0x7ffff7c8e422 <_IO_default_setbuf+114>
+movq   %rbp,%xmm0
+movq   %r12,%xmm1
+or     $0x1,%eax
+punpcklqdq %xmm1,%xmm0
+mov    %eax,(%rbx)
+mov    %rbx,%rax
+movups %xmm0,0x38(%rbx)
+pxor   %xmm0,%xmm0
+movups %xmm0,0x8(%rbx)
+movups %xmm0,0x18(%rbx)
+movups %xmm0,0x28(%rbx)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+test   %rax,%rax
+je     0x7ffff7c8a5ca <_IO_new_file_setbuf+42>
+movq   0x38(%rbx),%xmm0
+mov    %rbx,%rax
+punpcklqdq %xmm0,%xmm0
+movups %xmm0,0x8(%rbx)
+movups %xmm0,0x18(%rbx)
+movups %xmm0,0x28(%rbx)
+pop    %rbx
+ret    
+mov    0xc0(%r15),%eax
+test   %eax,%eax
+jle    0x7ffff7c8ecbb <_IO_cleanup+363>
+cmp    $0x2,%r14d
+je     0x7ffff7c8ec00 <_IO_cleanup+176>
+mov    0x88(%r15),%rdi
+test   %rdi,%rdi
+je     0x7ffff7c8ec00 <_IO_cleanup+176>
+mov    0x4(%rdi),%eax
+sub    $0x1,%eax
+mov    %eax,0x4(%rdi)
+jne    0x7ffff7c8ec00 <_IO_cleanup+176>
+movq   $0x0,0x8(%rdi)
+xchg   %eax,(%rdi)
+cmp    $0x1,%eax
+jle    0x7ffff7c8ec00 <_IO_cleanup+176>
+movl   $0xffffffff,0xc0(%r15)
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ed08 <_IO_cleanup+440>
+mov    (%r15),%r14d
+and    $0x2,%r14d
+jne    0x7ffff7c8ec00 <_IO_cleanup+176>
+mov    0xc0(%r15),%edx
+test   %edx,%edx
+je     0x7ffff7c8ec00 <_IO_cleanup+176>
+movl   $0xffffffff,0xc0(%r15)
+mov    0x68(%r15),%r15
+test   %r15,%r15
+je     0x7ffff7c8ed08 <_IO_cleanup+440>
+mov    0x18dd46(%rip),%eax        # 0x7ffff7e1ca54 <list_all_lock+4>
+sub    $0x1,%eax
+mov    %eax,0x18dd3d(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+test   %eax,%eax
+jne    0x7ffff7c8ed31 <_IO_cleanup+481>
+movq   $0x0,0x18dd32(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+xchg   %eax,0x18dd24(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+cmp    $0x1,%eax
+jg     0x7ffff7c8edae <_IO_cleanup+606>
+mov    %rbp,%rdi
+call   0x7ffff7c91200 <__GI___libc_cleanup_pop_restore>
+endbr64 
+mov    0x18(%rdi),%rax
+mov    %rax,%fs:0x2f8
+mov    0x10(%rdi),%eax
+mov    %al,%fs:0x972
+cmp    $0x1,%eax
+je     0x7ffff7c91228 <__GI___libc_cleanup_pop_restore+40>
+ret    
+mov    0x38(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c8eddd <_IO_cleanup+653>
+add    $0x48,%rsp
+mov    %r12d,%eax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+add    $0x8,%rbx
+cmp    %r12,%rbx
+jb     0x7ffff7c45540 <__run_exit_handlers+432>
+mov    %ebp,%edi
+call   0x7ffff7ceac00 <__GI__exit>
+endbr64 
+mov    0x12f205(%rip),%r8        # 0x7ffff7e19e10
+mov    $0xe7,%esi
+mov    $0x3c,%edx
+jmp    0x7ffff7ceac2d <__GI__exit+45>
+mov    %esi,%eax
+syscall 

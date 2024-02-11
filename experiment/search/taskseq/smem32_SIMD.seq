@@ -1,0 +1,45 @@
+mov    %rax,-0x68(%rbp)
+movl   $0x0,-0x6c(%rbp)
+pxor   %xmm1,%xmm1
+cvtsi2sdl -0x74(%rbp),%xmm1
+movsd  0x2b56(%rip),%xmm0        # 0x55555555a1a8
+mulsd  %xmm0,%xmm1
+movsd  0x49ea(%rip),%xmm0        # 0x55555555c048 <instcnt>
+addsd  %xmm1,%xmm0
+movsd  %xmm0,0x49de(%rip)        # 0x55555555c048 <instcnt>
+jmp    0x5555555577fe <_Z15run_smem32_SIMDi+478>
+mov    -0x74(%rbp),%eax
+lea    -0x1(%rax),%edx
+mov    %edx,-0x74(%rbp)
+test   %eax,%eax
+je     0x55555555781c <_Z15run_smem32_SIMDi+508>
+mov    0x482f(%rip),%eax        # 0x55555555c040 <done0>
+test   %eax,%eax
+jne    0x55555555781c <_Z15run_smem32_SIMDi+508>
+mov    $0x1,%eax
+jmp    0x555555557821 <_Z15run_smem32_SIMDi+513>
+test   %al,%al
+jne    0x55555555766f <_Z15run_smem32_SIMDi+79>
+mov    -0x6c(%rbp),%eax
+lea    0x38e4(%rax),%edx
+movslq %edx,%rax
+imul   $0x431bde83,%rax,%rax
+shr    $0x20,%rax
+sar    $0x12,%eax
+mov    %edx,%ecx
+sar    $0x1f,%ecx
+sub    %ecx,%eax
+imul   $0xf4240,%eax,%ecx
+mov    %edx,%eax
+sub    %ecx,%eax
+sub    $0xa,%eax
+mov    %eax,-0x6c(%rbp)
+mov    -0x6c(%rbp),%eax
+cltq   
+lea    0x0(,%rax,4),%rdx
+mov    -0x68(%rbp),%rax
+add    %rdx,%rax
+mov    %rax,-0x18(%rbp)
+mov    -0x18(%rbp),%rax
+movaps (%rax),%xmm0
+movaps (%rax),%xmm0
