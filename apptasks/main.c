@@ -55,6 +55,7 @@ int main(int argc,char *argv[]) {
         } else if (strcmp(taskname, task_sobelh) == 0) {
             sobelh(imgh);
         } else if (strcmp(taskname, task_sobelv) == 0) {
+            copyimage(&imgv,imgh);
             sobelv(imgv);
         } else if (strcmp(taskname, task_combineimgs) == 0) {
             copyimage(&imgv,imgh);

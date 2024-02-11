@@ -80,8 +80,8 @@ void closeLogFileSearch() {
 }
 
 
-void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTask, int sizeProtTask) {
-    logfileSearch << "In AppTask " << taskname << "(" << sizeAppTask << ") sind aus ProtTask " << ptname << " (" << sizeProtTask << ")  " << size << " Einträge vorhanden!\n";
+void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTask, int sizeProtTask, int div) {
+    logfileSearch << "In AppTask " << taskname << "(Gesamt: " << sizeAppTask << ") sind aus ProtTask " << ptname << " (Gesamt: " << sizeProtTask << ")  " << size << " Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask " << div << " mal wiederholt!)\n";
     logfileSearch.flush();
 }
 
@@ -101,6 +101,7 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
             appTask.found[i]=true; // Sequenz gefunden, wird auf true gesetzt!
+            //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
             return appTask;
         }
     }
@@ -110,8 +111,23 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 
 
 PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask protTypTask ) {
-    for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
+
+
+
+    /*for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
         appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
+    }*/
+
+    float sizeAppDivProt = (float) appTask.sequenzen.size() / protTypTask.sequenzen.size();
+    if (sizeAppDivProt > 0.5) {
+        for (int i = 0; i< sizeAppDivProt; i++) {
+            std::cout << "(Durchgang " << i << " von " << sizeAppDivProt << ")\n";
+            for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
+                //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
+                appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
+            }
+        }
+
     }
 
     int anzahl_hits = 0;
@@ -120,7 +136,7 @@ PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask 
             anzahl_hits++;
         }
     }
-    logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size() );
+    logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size(), sizeAppDivProt );
 
     if (result.resultMap[appTask.name][protTypTask.name]==0 || result.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
         result.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
@@ -134,6 +150,7 @@ void analyseAppTask(PrototypTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
     for (PrototypTask protTypTask : prottaskVektor) {
+        std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
         appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
     }
 }
@@ -170,7 +187,7 @@ void logBestTask(PrototypTask t) {
 
     }
 
-    logfileSearch << "Der ähnlichste ProttypTask für " << t.name << " ist " << bestName << "\n\n";
+    logfileSearch << "Der ähnlichste ProttypTask für den AppTask " << t.name << " ist " << bestName << "(" << besthit << " Treffer)\n\n";
 }
 
 void test() {
@@ -188,7 +205,7 @@ void test() {
 
         count++;
         if (count==2) {
-            break; // zu Testzwecken
+            //break; // zu Testzwecken
         }
 
     }
