@@ -28,6 +28,7 @@ experiment/CMakeFiles/
 experiment/cmake-build-debug/
 experiment/experiment
 experiment/main
+experiment/tools
 experiment/gen/
 experiment/logs/counter.txt
 apptasks/gdb/
