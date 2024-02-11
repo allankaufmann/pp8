@@ -109,16 +109,25 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
 }
 
 
-
+/**
+ * Startet die eigentliche Ähnlichkeitssuche zwischen einem Anwendungstask und einem prototypischen Task.
+ *
+ *
+ * @param appTask zu untersuchender Anwendungstask
+ * @param protTypTask zu vergleichender prototypischer Task
+ * @return liefert den Anwendungstask nach Untersuchung zurück
+ */
 PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask protTypTask ) {
 
-
-
-    /*for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
-        appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
-    }*/
-
+    /*
+     * Die Anzahl der Instruktionen des Anwendungstask kann deutlich höher sein, als die Anzahl aus dem Prototyptask. Um die Ähnlichkeit zu überprüfen ist es daher sinnvoller, wenn
+     * der Prototyptask erneut so oft wiederholt wird, dass diese der Anzahl aus dem Anwendungstask annäherend entspricht.
+     */
     float sizeAppDivProt = (float) appTask.sequenzen.size() / protTypTask.sequenzen.size();
+
+    /*
+     * Die Anzahl der Instruktionen des Anwendungstask sollte nicht niedriger sein, als die Anzahl des Prototyptasks. Wenn 50% nicht erreicht sind, dann wird dieser Vergleich nicht durchgeführt.
+     */
     if (sizeAppDivProt > 0.5) {
         for (int i = 0; i< sizeAppDivProt; i++) {
             std::cout << "(Durchgang " << i << " von " << sizeAppDivProt << ")\n";
@@ -146,6 +155,11 @@ PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask 
     return appTask;
 }
 
+/**
+ * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
+ *
+ * @param appTask zu untersuchender Anwendungstask.
+ */
 void analyseAppTask(PrototypTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
@@ -155,6 +169,9 @@ void analyseAppTask(PrototypTask appTask) {
     }
 }
 
+/**
+ * Liest die Sequenzdateien der prototypischen Tasks aus und bereitet einen Vektor für die Ähnlichkeitssuche vor.
+ */
 void initProttaskVektor() {
     std::vector<char*> taskseqnames = readFilenamesFromDirectory(foldername_seq);
     for (char* seqname : taskseqnames) {
@@ -165,6 +182,9 @@ void initProttaskVektor() {
     printf("%s", "\n");
 }
 
+/**
+ * Liest die Sequenzdateien der Anwendungstasks aus und bereitet einen Vektor für die Ähnlichkeitssuche vor.
+ */
 void initAppTaskVektor() {
     std::vector<char*> appseqnames = readFilenamesFromDirectory(foldername_appseq);
     for (char* seqname : appseqnames) {
@@ -175,19 +195,22 @@ void initAppTaskVektor() {
     printf("%s", "\n");
 }
 
-void logBestTask(PrototypTask t) {
+/**
+ * Wird nach Ausführung der Ähnlichkeitssuche eines Anwendungstasks ausgeführt. Zu dem übergebenen Anwendungstask soll der Prototyptask ausgegeben werden, der dem Anwendungstask am ähnlichsten ist.
+ *
+ * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
+ */
+void logBestTask(PrototypTask appTask) {
     std::string bestName;
     int besthit = 0;
     std::map<std::string, int>::iterator it;
-    for (it = result.resultMap[t.name].begin(); it != result.resultMap[t.name].end(); it++) {
+    for (it = result.resultMap[appTask.name].begin(); it != result.resultMap[appTask.name].end(); it++) {
         if (it->second>besthit) {
             besthit=it->second;
             bestName=it->first;
         }
-
     }
-
-    logfileSearch << "Der ähnlichste ProttypTask für den AppTask " << t.name << " ist " << bestName << "(" << besthit << " Treffer)\n\n";
+    logfileSearch << "Der ähnlichste ProttypTask für den AppTask " << appTask.name << " ist " << bestName << "(" << besthit << " Treffer)\n\n";
 }
 
 void test() {
