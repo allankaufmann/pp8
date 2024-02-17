@@ -213,9 +213,26 @@ void logBestTask(PrototypTask appTask) {
     logfileSearch << "Der ähnlichste ProttypTask für den AppTask " << appTask.name << " ist " << bestName << "(" << besthit << " Treffer)\n\n";
 }
 
-void test() {
+bool checkSequenzfiles() {
     initProttaskVektor();
+
+    if (prottaskVektor.empty()) {
+        printf("Der Ordner %s enthält keine Sequenzen (Anwendung prototyptaskscpp ausgeführt?)", foldername_seq);
+        return false;
+    }
+
     initAppTaskVektor();
+    if (apptaskVektor.empty()) {
+        printf("Der Ordner %s enthält keine Sequenzen! (Anwendung apptasks ausgeführt?)", foldername_appseq);
+        return false;
+    }
+    return true;
+}
+
+void compareAppTaskProtTasksOneToOne() {
+    if (checkSequenzfiles()==false) {
+        return;
+    }
 
     openLogfileSearch();
 
@@ -232,5 +249,53 @@ void test() {
         }
 
     }
+    closeLogFileSearch();
+}
+
+PrototypTask compareAppTaskWithPrototypTasksMany(PrototypTask appTask, PrototypTask protTypTask ) {
+    for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
+        //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
+        appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
+    }
+
+    int anzahl_hits = 0;
+    for (bool found : appTask.found) {
+        if (found) {
+            anzahl_hits++;
+        }
+    }
+    logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size(), 1 );
+
+    if (result.resultMap[appTask.name][protTypTask.name]==0 || result.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
+        result.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
+    }
+
+    appTask.resetFound();
+    return appTask;
+}
+
+/**
+ * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
+ *
+ * @param appTask zu untersuchender Anwendungstask.
+ */
+void analyseAppTaskMany(PrototypTask appTask) {
+    std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
+
+    for (PrototypTask protTypTask : prottaskVektor) {
+        std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
+        appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
+    }
+}
+
+void compareAppTaskProtTasksOneToMany() {
+    if (checkSequenzfiles()==false) {
+        return;
+    }
+    openLogfileSearch();
+    PrototypTask task = apptaskVektor[0];
+    analyseAppTaskMany(task);
+
+    logBestTask(task);
     closeLogFileSearch();
 }
