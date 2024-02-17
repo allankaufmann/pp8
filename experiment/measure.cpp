@@ -70,7 +70,7 @@ char* getFilename() {
     int month = local_tm.tm_mon+1;
 
     char* filename = (char*) malloc(sizeof(char) * 30);
-    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
+    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d%s%d.log",
             logfolder_measure,
             year,
             (month<10) ? "0" : "",
@@ -80,7 +80,10 @@ char* getFilename() {
             (local_tm.tm_hour<10) ? "0" : "",
             local_tm.tm_hour,
             (local_tm.tm_min<10) ? "0" : "",
-            local_tm.tm_min);
+            local_tm.tm_min,
+            (local_tm.tm_sec<10) ? "0" : "",
+            local_tm.tm_sec
+            );
 
     return filename;
 }
@@ -88,7 +91,7 @@ char* getFilename() {
 void openMeasurFile() {
     mkdir(logfolder_measure, 0777);
     logfileMeasure = fopen(getFilename(), "w");
-    fprintf(logfileMeasure, "app;duration;power\n");
+    fprintf(logfileMeasure, "app;duration;power;leistung\n");
 }
 
 void closeMeasureFile() {
@@ -96,7 +99,7 @@ void closeMeasureFile() {
 }
 
 void logMeasure(const char app[], long long  dauer, long long power) {
-    fprintf(logfileMeasure, "%s;%lld;%lld\n", app, dauer, power);
+    fprintf(logfileMeasure, "%s;%lld;%lld;%lld\n", app, dauer, power, power/dauer);
 }
 
 

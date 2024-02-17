@@ -6,6 +6,9 @@
 #include "search.cpp"
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
+const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
+const char* script_Sample_m4x4smul_SIMD = "./scripts/runm4x4smul_SIMD.sh";
+
 const char* script_testRapl = "./scripts/testRaplRead.sh";
 
 void testrapl() {
@@ -39,10 +42,19 @@ int main(int argc, char *argv[]) {
     while (strcasecmp(parameter, "C")!=0 &&
             strcasecmp(parameter, "R")!=0 &&
             strcasecmp(parameter, "S")!=0 &&
+            strcasecmp(parameter, "A")!=0 &&
             strcasecmp(parameter, "T")!=0 &&
-            strcasecmp(parameter, "X")!=0
+            strcasecmp(parameter, "X")!=0 &&
+            strcasecmp(parameter, "V")!=0
             )  {
-        printf("Bitte einen der folgenden Parameter eingeben: C (=Config), R (=Run), S (=SampleApp), T (=Test), X (=Exit)");
+        printf("Bitte einen der folgenden Parameter eingeben: \n");
+        printf("\tA (=Abbildung - Abbildung Anw. Task zu prot. Task.)\n");
+        printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
+        printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
+        printf("\tS (=SampleApp - Skript für Beispielanwendung ausführen und messen)\n");
+        printf("\tT (=Test...)\n");
+        printf("\tV (=Versuch...)\n");
+        printf("\tX (=Exit)\n");
         char inputParameter[1];
         scanf("%s", inputParameter);
         parameter=inputParameter;
@@ -59,8 +71,17 @@ int main(int argc, char *argv[]) {
         measureSampleApplication(script_Sample_Application); // Beispielanwendung
         closeMeasureFile();
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
-    } else if (strcasecmp(parameter, "T")==0) {
-        test();
+    } else if (strcasecmp(parameter, "A")==0) {
+        compareAppTaskProtTasksOneToOne();
+    }  else if (strcasecmp(parameter, "T")==0) {
+        compareAppTaskProtTasksOneToMany();
+    } else if (strcasecmp(parameter, "V")==0) {
+        openMeasurFile();
+        //measureSampleApplication(script_Sample_vmov);
+        measureSampleApplication(script_Sample_m4x4smul_SIMD);
+        closeMeasureFile();
+
+        //vmov_SIMD.seq
     }
 
 
