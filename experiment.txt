@@ -1,0 +1,5 @@
+17.02.2024
+greyscale mit allen Schleifenläufen über gdb ausgeführt. Lief über Nacht und hat 185,9 MB produziert bzw. ein GDB-Log über 688 MB. Das Betriebsystem ist dann abgestürzt und die Ausführung müsste wiederholt werden. 
+Es ist fraglich, ob die Sequenzen dann hätten effizient ausgeführt werden können. 
+
+Für den weiteren Verlauf sollte weiterhin das reduzierte Log verwendet werden!
