@@ -12,7 +12,13 @@ sudo apt update
 cmake und make:
 - das mit clion erstellte Projekt hat eine CMakeLists.txt, welches als Buildfile für cmake verwendet wird. Dort wurde die cmake-Version 3.22.1 eingetragen
 - das Projekt wird mit cmake build gebaut
-- außerdem ist make auszuführen
+-sudo apt-get install cmake
+- cp CMakeLists.txt
+- cmake build
+- make auszuführen
+- apptasks mit cmake/Debug bauen
+cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Debug 
+-- ci.py nicht vergessen
 
 edgedetection:
 ./getfiles.sh aufrufen
