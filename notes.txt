@@ -35,3 +35,5 @@ target_link_libraries(apptasks PRIVATE m)
 
 Sequenzerstellung über apptasks:
 - greyscale hat eine loop, shaprencontrast ebenfalls - Vermutung - Schreibproblem in Datei?
+
+sudo passwort aktuell in config.sh im userordner hinterlegt. Die Datei muss dann aber auch eingebunden werden!

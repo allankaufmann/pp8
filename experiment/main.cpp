@@ -74,7 +74,13 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "A")==0) {
         compareAppTaskProtTasksOneToOne();
     }  else if (strcasecmp(parameter, "T")==0) {
-        compareAppTaskProtTasksOneToMany();
+        //compareAppTaskProtTasksOneToMany();
+
+        for (int i = 0; i < 100 ; i++) {
+            printf("\nCounter: %lld\n",readEnergy_UJ());
+        }
+
+
     } else if (strcasecmp(parameter, "V")==0) {
         openMeasurFile();
         //measureSampleApplication(script_Sample_vmov);

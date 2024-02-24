@@ -49,10 +49,35 @@ long long readCounterFromFile() {
     return counter;
 }
 
-long long  readEnergy_UJ() {
+long long  readEnergy_UJ_script_deprecated() {
     system("./scripts/readEnergy_UJ.sh");
     return readCounterFromFile();
 }
+
+
+
+long unsigned  readEnergy_UJ() {
+    FILE *filePointer;
+    filePointer = popen("echo allan | sudo -S cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
+
+    long unsigned energy_ui=0;
+
+    fscanf(filePointer, "%lu", &energy_ui);
+    //printf("%lu\n", energy_ui);
+
+    pclose(filePointer);
+    return energy_ui;
+}
+
+long unsigned  readEnergy_UJ_better_with_loop() {
+    long unsigned energy_ui = readEnergy_UJ();
+    long unsigned new_energy_ui = energy_ui;
+    while (new_energy_ui == energy_ui) {
+        new_energy_ui = readEnergy_UJ();
+    }
+    return new_energy_ui;
+}
+
 
 long long measureIdle(int milliseconds) {
     long long counter_beginn = readEnergy_UJ();
