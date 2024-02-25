@@ -1,0 +1,2 @@
+app;duration;power;leistung
+./scripts/runvmov_SIMD.sh;1012;20476510;20233

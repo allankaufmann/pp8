@@ -11,6 +11,9 @@ const char* script_Sample_m4x4smul_SIMD = "./scripts/runm4x4smul_SIMD.sh";
 
 const char* script_testRapl = "./scripts/testRaplRead.sh";
 
+
+
+
 void testrapl() {
     system(script_testRapl);
 }
@@ -51,8 +54,8 @@ int main(int argc, char *argv[]) {
         printf("\tA (=Abbildung - Abbildung Anw. Task zu prot. Task.)\n");
         printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
-        printf("\tS (=SampleApp - Skript für Beispielanwendung ausführen und messen)\n");
-        printf("\tT (=Test...)\n");
+        printf("\tS (=SampleApp - checkContrast messen)\n");
+        printf("\tT (=Test: 10xLeerlauf messen)\n");
         printf("\tV (=Versuch...)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
@@ -65,19 +68,19 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
-        runAllGenScripts(); // Messungen der Tasks
+        runAllGenScripts(3, foldername_generated_scripts); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
-        openMeasurFile();
-        measureSampleApplication(script_Sample_Application); // Beispielanwendung
-        closeMeasureFile();
+        runAllGenScripts(10, foldername_edgedetction_scripts);
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         compareAppTaskProtTasksOneToOne();
     }  else if (strcasecmp(parameter, "T")==0) {
         //compareAppTaskProtTasksOneToMany();
 
-        for (int i = 0; i < 100 ; i++) {
-            printf("\nCounter: %lld\n",readEnergy_UJ());
+        for (int i = 0; i < 10 ; i++) {
+            printf("\n%d %lu", i, measureIdle(1000));
+            //measureIdle(1000);
+            //printf("\nCounter: %lld\n",readEnergy_UJ());
         }
 
 

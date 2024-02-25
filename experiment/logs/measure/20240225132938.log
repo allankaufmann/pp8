@@ -1,0 +1,11 @@
+app;duration;power;leistung
+./scripts/runSampleApplication.sh;97;182372;1880
+./scripts/runSampleApplication.sh;22;185241;8420
+./scripts/runSampleApplication.sh;21;201965;9617
+./scripts/runSampleApplication.sh;21;185913;8853
+./scripts/runSampleApplication.sh;22;188842;8583
+./scripts/runSampleApplication.sh;22;205444;9338
+./scripts/runSampleApplication.sh;22;191772;8716
+./scripts/runSampleApplication.sh;22;183594;8345
+./scripts/runSampleApplication.sh;22;192688;8758
+./scripts/runSampleApplication.sh;22;196654;8938

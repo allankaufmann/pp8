@@ -1,0 +1,2 @@
+app;duration;power;leistung
+./scripts/runm4x4smul_SIMD.sh;1011;22738162;22490

@@ -37,3 +37,29 @@ Sequenzerstellung über apptasks:
 - greyscale hat eine loop, shaprencontrast ebenfalls - Vermutung - Schreibproblem in Datei?
 
 sudo passwort aktuell in config.sh im userordner hinterlegt. Die Datei muss dann aber auch eingebunden werden!
+
+perf:
+mit perf können ebenfalls die Leistungsaufnahme auswertet werden. Analog zu powertop gibt es jedoch erhebliche Schwankungen.
+
+perf stat -e power/energy-cores/ ./runbitbyte.sh 
+
+ Performance counter stats for 'system wide':
+12,30 Joules power/energy-cores/  
+13,79 Joules power/energy-cores/                                                   
+15,71 Joules power/energy-cores/                                                   
+16,13 Joules power/energy-cores/  
+18,90 Joules power/energy-cores/
+
+
+
+Wenn die Messungen im Recoverymodus ausgeführt werden, dann sind die Messungen einigermaßen konstant. Die Schwankungen kommen also von der Systemlast, u. A. der Ubuntu-Oberfläche.
+Die Tasks der Anwendungen sind häufig unter 1sek, weshalb erhebliche Unterschiede im Vergleich zu den prot Tasks festzustellen sind. 
+Die Anwendung wurde nun so geändert, dass mehrere Bilder berechnet werden, damit Ausführungszeiten von >1000MS erreicht werden.
+Es gibt beim Vergleich der Messungen anw-task zu prottyptask durchaus Abweichungen (etwa im 30% Bereich). Es wird daher geprüft, ob ein Mix (also unterschiedliche Modelle) dem gewünschten Ergebnis bzw. der Präzision näher kommt.
+
+
+
+
+
+
+

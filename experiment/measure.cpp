@@ -79,12 +79,11 @@ long unsigned  readEnergy_UJ_better_with_loop() {
 }
 
 
-long long measureIdle(int milliseconds) {
-    long long counter_beginn = readEnergy_UJ();
+long unsigned  measureIdle(int milliseconds) {
+    long unsigned  counter_beginn = readEnergy_UJ();
     std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-    long long counter_end = readEnergy_UJ();
-    long long counter_diff = counter_end - counter_beginn;
-    return counter_diff;
+    long unsigned counter_end = readEnergy_UJ();
+    return counter_end - counter_beginn;
 }
 
 char* getFilename() {
@@ -123,10 +122,13 @@ void closeMeasureFile() {
     fclose(logfileMeasure);
 }
 
-void logMeasure(const char app[], long long  dauer, long long power) {
-    fprintf(logfileMeasure, "%s;%lld;%lld;%lld\n", app, dauer, power, power/dauer);
+void logMeasure(const char app[], long long  dauer, long long energy_mj) {
+    fprintf(logfileMeasure, "%s;%lld;%lld;%lld\n", app, dauer, energy_mj, energy_mj/dauer);
 }
 
+void logMeasureNewLine() {
+    fprintf(logfileMeasure, "\n");
+}
 
 
 
@@ -137,37 +139,46 @@ void runCommand(const char* command) {
 }
 
 void measureSampleApplication(const char* script) {
-    long long idle3000MS = measureIdle(1000);
-    std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
+    //long long idle3000MS = measureIdle(1000);
+    //std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
 
+    //logTime();
+    uint64_t timestamp_begin = timeSinceEpochMillisec();
+    long long counter_begin = readEnergy_UJ();
 
-    long long counter_beginn = readEnergy_UJ();
-    logTime();
-    uint64_t begin = timeSinceEpochMillisec();
-
-    std::cout << "Thread wird gestartet\n";
     std::thread t1(runCommand, script);
     t1.join();
-
-    uint64_t end = timeSinceEpochMillisec();
-    uint64_t dauer = end - begin;
-
-    std::cout << "Dauer: " << dauer << " MS" << std::endl;
-    logTime();
-
     long long counter_end = readEnergy_UJ();
-    long long counter_diff = counter_end - counter_beginn;
-    long long leistungsaufnahme = counter_diff;// - idle3000MS;
 
-    std::cout << "Leistungsaufnahme in Mikojoul: " << (leistungsaufnahme) << std::endl;
-    logMeasure(script, dauer, leistungsaufnahme);
+    uint64_t timestamp_end = timeSinceEpochMillisec();
+    uint64_t duration = timestamp_end - timestamp_begin;
+
+    //long long energie_grundrauschen = measureIdle(dauer);
+
+
+
+    std::cout << "Dauer: " << duration << " MS" << std::endl;
+    //logTime();
+
+
+    long long counter_diff = counter_end - counter_begin;
+    long long energy_mj = counter_diff; // - energie_grundrauschen;// - idle3000MS;
+
+    std::cout << "Leistungsaufnahme in Mikojoul: " << (energy_mj) << std::endl;
+
+
+
+    logMeasure(script, duration, energy_mj);
 }
 
-void runAllGenScripts() {
-    std::vector<char*> v_filenames = readFilenamesFromDirectory(foldername_generated_scripts);
+void runAllGenScripts(int count, const char* directory) {
+    std::vector<char*> v_filenames = readFilenamesFromDirectory(directory);
         openMeasurFile();
         for (char* filename : v_filenames) {
-            measureSampleApplication(filename);
+            for (int i = 0; i<count; i++) {
+                measureSampleApplication(filename);
+            }
+            logMeasureNewLine();
         }
         closeMeasureFile();
 

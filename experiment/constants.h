@@ -8,4 +8,5 @@ const char* config_filename = "experiment.ini";
 const char* foldername_generated_scripts = "gen";
 const char* foldername_seq = "search/taskseq";
 const char* foldername_appseq = "search/appseq";
+const char* foldername_edgedetction_scripts = "scripts/edgedetection";
 #endif //EXPERIMENT_CONSTANTS_H

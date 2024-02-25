@@ -45,22 +45,56 @@ int main(int argc,char *argv[]) {
         if (strcmp(taskname, task_loadimage) == 0) {
             loadimage(imgrgb,filename);
         } else if (strcmp(taskname, task_greyscale) == 0) {
+            loadimage(imgrgb,filename);
             greyscale(imgrgb,imgh);
         } else if (strcmp(taskname, task_checkcontrast) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
             checkcontrast(imgh);
         } else if (strcmp(taskname, task_sharpencontrast) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
             sharpencontrast(imgh);
         } else if (strcmp(taskname, task_copyimage) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
+            sharpencontrast(imgh);
             copyimage(&imgv,imgh);
         } else if (strcmp(taskname, task_sobelh) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
+            sharpencontrast(imgh);
+            copyimage(&imgv,imgh);
             sobelh(imgh);
         } else if (strcmp(taskname, task_sobelv) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
+            sharpencontrast(imgh);
             copyimage(&imgv,imgh);
+            sobelh(imgh);
             sobelv(imgv);
         } else if (strcmp(taskname, task_combineimgs) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
+            sharpencontrast(imgh);
             copyimage(&imgv,imgh);
+            sobelh(imgh);
+            sobelv(imgv);
             combineimgs(imgh,imgv);
         } else if (strcmp(taskname, task_writeimage) == 0) {
+            loadimage(imgrgb,filename);
+            greyscale(imgrgb,imgh);
+            checkcontrast(imgh);
+            sharpencontrast(imgh);
+            copyimage(&imgv,imgh);
+            sobelh(imgh);
+            sobelv(imgv);
+            combineimgs(imgh,imgv);
             writeimage(imgh,filename); // Ordner outimages muss vorhanden sein
         } else /* default: */
         {

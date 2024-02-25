@@ -12,6 +12,15 @@
 int tmpimgh[XWIDTH][YWIDTH];
 int tmpimgv[XWIDTH][YWIDTH];
 
+static const char *const task_greyscale = "greyscale";
+static const char *const task_checkcontrast = "checkcontrast";
+static const char *const task_sharpencontrast = "sharpencontrast";
+static const char *const task_copyimage = "copyimage";
+static const char *const task_sobelh = "sobelh";
+static const char *const task_sobelv = "sobelv";
+static const char *const task_combineimgs = "combineimgs";
+static const char *const task_writeimage = "writeimage";
+
 
 int maxim(int a, int b)
 {
@@ -237,21 +246,49 @@ int main(int argc,char *argv[])
     imgrgb = createimagergb(XWIDTH, YWIDTH);
     imgh = createimage(XWIDTH, YWIDTH);
 
+    char* taskname = (argc>2) ? argv[2] : NULL;
+
     while(fgets(filename, sizeof(filename), fp) != NULL)
     {
         filename[strcspn(filename, "\n")] = 0;
         loadimage(imgrgb,filename);
-        greyscale(imgrgb,imgh);
-        checkcontrast(imgh);
-        sharpencontrast(imgh);
-        copyimage(&imgv,imgh);
-        sobelh(imgh);
-        sobelv(imgv);
-        combineimgs(imgh,imgv);
-        writeimage(imgh,filename);
+
+        if (taskname==NULL || strcmp(taskname, task_greyscale) == 0) {
+            greyscale(imgrgb,imgh);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_checkcontrast) == 0) {
+            checkcontrast(imgh);
+        }
+        if (taskname==NULL || strcmp(taskname, task_sharpencontrast) == 0) {
+            sharpencontrast(imgh);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_copyimage) == 0) {
+            copyimage(&imgv,imgh);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_sobelh) == 0) {
+            sobelh(imgh);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_sobelv) == 0) {
+            copyimage(&imgv,imgh);
+            sobelh(imgh);
+            sobelv(imgv);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_combineimgs) == 0) {
+            copyimage(&imgv,imgh);
+            combineimgs(imgh,imgv);
+        }
+
+        if (taskname==NULL || strcmp(taskname, task_writeimage) == 0) {
+            writeimage(imgh,filename);
+        }
     }
-    destroyimage(imgrgb);
-    destroyimage(imgh);
-    destroyimage(imgv);
+    //destroyimage(imgrgb);
+    //destroyimage(imgh);
+    //destroyimage(imgv);
     return 0;
 }

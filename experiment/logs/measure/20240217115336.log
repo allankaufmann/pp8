@@ -1,0 +1,2 @@
+app;duration;power;leistung
+./scripts/runSampleApplication.sh;10;1370785;137078
