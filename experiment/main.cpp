@@ -54,9 +54,9 @@ int main(int argc, char *argv[]) {
         printf("\tA (=Abbildung - Abbildung Anw. Task zu prot. Task.)\n");
         printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
-        printf("\tS (=SampleApp - checkContrast messen)\n");
+        printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: 10xLeerlauf messen)\n");
-        printf("\tV (=Versuch...)\n");
+        printf("\tV (=Versuch...CompareOneMany.)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
         scanf("%s", inputParameter);
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "A")==0) {
         compareAppTaskProtTasksOneToOne();
     }  else if (strcasecmp(parameter, "T")==0) {
-        //compareAppTaskProtTasksOneToMany();
+
 
         for (int i = 0; i < 10 ; i++) {
             printf("\n%d %lu", i, measureIdle(1000));
@@ -85,10 +85,11 @@ int main(int argc, char *argv[]) {
 
 
     } else if (strcasecmp(parameter, "V")==0) {
-        openMeasurFile();
+        compareAppTaskProtTasksOneToMany();
+        //openMeasurFile();
         //measureSampleApplication(script_Sample_vmov);
-        measureSampleApplication(script_Sample_m4x4smul_SIMD);
-        closeMeasureFile();
+        //measureSampleApplication(script_Sample_m4x4smul_SIMD);
+        //closeMeasureFile();
 
         //vmov_SIMD.seq
     }

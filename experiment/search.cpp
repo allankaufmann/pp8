@@ -20,19 +20,26 @@ static const char *const logfolder_search = "logs/search/";
 
 
 
-class PrototypTask {
+class Task {
     public:
         std::string name;
         std::vector<std::string> sequenzen;
-        std::vector<bool> found;
+};
 
-        void resetFound() {
-            found.clear();
-            for (std::string s : sequenzen) {
-                found.push_back(false);
-            }
+class PrototypTask : public Task{
+
+};
+
+class AnwTask : public Task {
+public:
+    std::vector<bool> found;
+
+    void resetFound() {
+        found.clear();
+        for (std::string s : sequenzen) {
+            found.push_back(false);
         }
-
+    }
 };
 
 class Result {
@@ -44,11 +51,11 @@ class Result {
 Result result;
 
 std::vector<PrototypTask> prottaskVektor;
-std::vector<PrototypTask> apptaskVektor;
+std::vector<AnwTask> apptaskVektor;
 
-PrototypTask readSeqFile(const char* file) {
-    PrototypTask t;
-    t.name=file;
+std::vector<std::string> readSeqFile(const char* file, Task t) {
+    std::vector<std::string> sequenzen;
+
 
 
     FILE* filePointer;
@@ -62,11 +69,25 @@ PrototypTask readSeqFile(const char* file) {
     while(fgets(buffer, bufferLength, filePointer)) {
         task = strtok(buffer, " ");
         //printf("%s\n", task);
-        t.sequenzen.push_back(task);
-        t.found.push_back(false);
+        sequenzen.push_back(task);
     }
 
     fclose(filePointer);
+    return sequenzen;
+}
+
+PrototypTask readProttypTaskSeqfile(const char* file) {
+    PrototypTask t;
+    t.name=file;
+    t.sequenzen=readSeqFile(file, t);
+    return t;
+}
+
+AnwTask readAnwTaskSeqfile(const char* file) {
+    AnwTask t;
+    t.name=file;
+    t.sequenzen=readSeqFile(file, t);
+    t.resetFound();
     return t;
 }
 
@@ -93,7 +114,7 @@ void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTa
  * @param appTask Taskobjekt des Anwendungstasks.
  * @return Anwendungstask nach Ende der Suche.
  */
-PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, PrototypTask appTask) {
+AnwTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, AnwTask appTask) {
     for (int i=0; i < appTask.sequenzen.size(); i++) {
         if (appTask.found[i] == true) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
@@ -117,7 +138,7 @@ PrototypTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequ
  * @param protTypTask zu vergleichender prototypischer Task
  * @return liefert den Anwendungstask nach Untersuchung zurück
  */
-PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask protTypTask ) {
+AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTask ) {
 
     /*
      * Die Anzahl der Instruktionen des Anwendungstask kann deutlich höher sein, als die Anzahl aus dem Prototyptask. Um die Ähnlichkeit zu überprüfen ist es daher sinnvoller, wenn
@@ -160,7 +181,7 @@ PrototypTask compareAppTaskWithPrototypTasks(PrototypTask appTask, PrototypTask 
  *
  * @param appTask zu untersuchender Anwendungstask.
  */
-void analyseAppTask(PrototypTask appTask) {
+void analyseAppTask(AnwTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
     for (PrototypTask protTypTask : prottaskVektor) {
@@ -175,7 +196,7 @@ void analyseAppTask(PrototypTask appTask) {
 void initProttaskVektor() {
     std::vector<char*> taskseqnames = readFilenamesFromDirectory(foldername_seq);
     for (char* seqname : taskseqnames) {
-        PrototypTask t = readSeqFile(seqname);
+        PrototypTask t = readProttypTaskSeqfile(seqname);
         prottaskVektor.push_back(t);
         printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
     }
@@ -188,7 +209,7 @@ void initProttaskVektor() {
 void initAppTaskVektor() {
     std::vector<char*> appseqnames = readFilenamesFromDirectory(foldername_appseq);
     for (char* seqname : appseqnames) {
-        PrototypTask t = readSeqFile(seqname);
+        AnwTask t = readAnwTaskSeqfile(seqname);
         apptaskVektor.push_back(t);
         printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
     }
@@ -200,7 +221,7 @@ void initAppTaskVektor() {
  *
  * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
  */
-void logBestTask(PrototypTask appTask) {
+void logBestTask(AnwTask appTask) {
     std::string bestName;
     int besthit = 0;
     std::map<std::string, int>::iterator it;
@@ -214,14 +235,12 @@ void logBestTask(PrototypTask appTask) {
 }
 
 bool checkSequenzfiles() {
-    initProttaskVektor();
 
     if (prottaskVektor.empty()) {
         printf("Der Ordner %s enthält keine Sequenzen (Anwendung prototyptaskscpp ausgeführt?)", foldername_seq);
         return false;
     }
 
-    initAppTaskVektor();
     if (apptaskVektor.empty()) {
         printf("Der Ordner %s enthält keine Sequenzen! (Anwendung apptasks ausgeführt?)", foldername_appseq);
         return false;
@@ -230,6 +249,9 @@ bool checkSequenzfiles() {
 }
 
 void compareAppTaskProtTasksOneToOne() {
+    initProttaskVektor();
+    initAppTaskVektor();
+
     if (checkSequenzfiles()==false) {
         return;
     }
@@ -237,22 +259,22 @@ void compareAppTaskProtTasksOneToOne() {
     openLogfileSearch();
 
     int count = 0; // test
-    for (PrototypTask t : apptaskVektor) {
+    for (AnwTask t : apptaskVektor) {
         analyseAppTask(t);
         logfileSearch << "\n";
 
         logBestTask(t);
 
         count++;
-        if (count==2) {
-            //break; // zu Testzwecken
+        if (count==1) {
+            break; // zu Testzwecken
         }
 
     }
     closeLogFileSearch();
 }
 
-PrototypTask compareAppTaskWithPrototypTasksMany(PrototypTask appTask, PrototypTask protTypTask ) {
+AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask ) {
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
         //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
         appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
@@ -279,7 +301,7 @@ PrototypTask compareAppTaskWithPrototypTasksMany(PrototypTask appTask, PrototypT
  *
  * @param appTask zu untersuchender Anwendungstask.
  */
-void analyseAppTaskMany(PrototypTask appTask) {
+void analyseAppTaskMany(AnwTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
     for (PrototypTask protTypTask : prottaskVektor) {
@@ -293,7 +315,7 @@ void compareAppTaskProtTasksOneToMany() {
         return;
     }
     openLogfileSearch();
-    PrototypTask task = apptaskVektor[0];
+    AnwTask task = apptaskVektor[0];//erstmal nur einen!
     analyseAppTaskMany(task);
 
     logBestTask(task);
