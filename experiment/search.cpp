@@ -22,12 +22,12 @@ static const char *const logfolder_search = "logs/search/";
 
 class Result {
 public:
-    std::map<std::string, std::map<std::string, int>> resultMap; // <AnwTask, <Prottask, Treffer>>
-    std::map<std::string, std::vector<bool>> pptFoundMap; // pro jeden PPT die Treffer speichern
+    std::map<std::string, std::map<std::string, int>> protTaskAnzTrefferMap; // <AnwTask, <Prottask, Treffer>>
+    std::map<std::string, std::vector<bool>> pptFoundMapWithBool; // für jeden PPT die Treffer speichern
     std::list<std::string> list; // Namen der abgebildeten PPTs.
 
-    void resetFound() {
-        pptFoundMap.clear();
+    void resetPptFoundMap() {
+        pptFoundMapWithBool.clear();
     }
 
 };
@@ -55,7 +55,7 @@ public:
     Result resultOneToOne;
 
     std::vector<bool> getTaskHitList(PrototypTask ptt) {
-        return resultOneToOne.pptFoundMap[ptt.name];
+        return resultOneToOne.pptFoundMapWithBool[ptt.name];
     }
 
     void initTaskHitList(PrototypTask ptt){
@@ -64,7 +64,7 @@ public:
             hit.push_back(false);
         }
 
-        resultOneToOne.pptFoundMap[ptt.name]=hit;
+        resultOneToOne.pptFoundMapWithBool[ptt.name]=hit;
     }
 
     void mergeFound(std::vector<bool> hit) {
@@ -120,7 +120,7 @@ public:
 
     void calcBestTask() {
         std::map<std::string, int>::iterator it;
-        for (it = resultOneToOne.resultMap[name].begin(); it != resultOneToOne.resultMap[name].end(); it++) {
+        for (it = resultOneToOne.protTaskAnzTrefferMap[name].begin(); it != resultOneToOne.protTaskAnzTrefferMap[name].end(); it++) {
             if (it->second>besthit) {
                 besthit=it->second;
                 bestName=it->first;
@@ -235,7 +235,7 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
 
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
             //appTask.getTaskHitList(protTypTask)[i]=true;
-            appTask.resultOneToOne.pptFoundMap[protTypTask.name][i]=true;
+            appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name][i]=true;
             //hitList[i]=true; // Sequenz gefunden, wird auf true gesetzt!
             //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
             return appTask;
@@ -282,8 +282,8 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
     }
     logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size(), sizeAppDivProt );
 
-    if (appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]==0 || appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
-        appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
+    if (appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] == 0 || appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] < anzahl_hits) {
+        appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=anzahl_hits;
     }
 
     appTask.resetFound();
@@ -413,15 +413,15 @@ AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTy
     }
     logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size(), 1 );
 
-    if (appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]==0 || appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
-        appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
+    if (appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] == 0 || appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] < anzahl_hits) {
+        appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=anzahl_hits;
     }
     return appTask;
 }
 
 AnwTask calcBestTaskMany(AnwTask appTask) {
     std::map<std::string, int>::iterator it;
-    for (it = appTask.resultOneToOne.resultMap[appTask.name].begin(); it != appTask.resultOneToOne.resultMap[appTask.name].end(); it++) {
+    for (it = appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name].begin(); it != appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name].end(); it++) {
         std::string pttName = it->first;
         int anzahlTreffer = it->second;
 
@@ -475,11 +475,10 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
         appTask = calcBestTaskMany(appTask);
         appTask.resultOneToOne.list.push_back(appTask.bestName);
 
-        appTask.mergeFound(appTask.resultOneToOne.pptFoundMap[appTask.bestName]);
+        appTask.mergeFound(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]);
 
-        appTask.found=appTask.resultOneToOne.pptFoundMap[appTask.bestName];// Hits in App übertragen
-        appTask.resultOneToOne.resetFound(); // wieder zurücksetzen!
-        appTask.resultOneToOne.resultMap.clear();
+        appTask.resultOneToOne.resetPptFoundMap(); // wieder zurücksetzen!
+        appTask.resultOneToOne.protTaskAnzTrefferMap.clear();
         appTask.bestName="";
         appTask.besthit=0;
     }
