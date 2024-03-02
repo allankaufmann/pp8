@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <list>
 
 const char* daddseq= "search/taskseq/dadd.seq";
 const char* sampleappseq = "search/appseq/sampleapp.seq";
@@ -18,9 +19,17 @@ std::ofstream logfileSearch;
 //FILE* logfileSearch;
 static const char *const logfolder_search = "logs/search/";
 
+
 class Result {
 public:
     std::map<std::string, std::map<std::string, int>> resultMap; // <AnwTask, <Prottask, Treffer>>
+    std::map<std::string, std::vector<bool>> pptFoundMap; // pro jeden PPT die Treffer speichern
+    std::list<std::string> list; // Namen der abgebildeten PPTs.
+
+    void resetFound() {
+        pptFoundMap.clear();
+    }
+
 };
 
 class Task {
@@ -30,13 +39,44 @@ class Task {
 };
 
 class PrototypTask : public Task {
+    std::vector<bool> hit; // Übereinstimmung bei Vergleich
 
+    void resetHit(Task anwTask) {
+        hit.clear();
+        for (std::string s : anwTask.sequenzen) {
+            hit.push_back(false);
+        }
+    }
 };
 
 class AnwTask : public Task {
 public:
     std::vector<bool> found;
     Result resultOneToOne;
+
+    std::vector<bool> getTaskHitList(PrototypTask ptt) {
+        return resultOneToOne.pptFoundMap[ptt.name];
+    }
+
+    void initTaskHitList(PrototypTask ptt){
+        std::vector<bool> hit;
+        for (int i = 0; i < sequenzen.size(); i++) {
+            hit.push_back(false);
+        }
+
+        resultOneToOne.pptFoundMap[ptt.name]=hit;
+    }
+
+    void mergeFound(std::vector<bool> hit) {
+        for (int i = 0; i < sequenzen.size(); i++) {
+            if (found[i]) {
+                continue;
+            }
+            if (hit[i]) {
+                found[i]=true;
+            }
+        }
+    }
 
 
     void resetFound() {
@@ -56,8 +96,27 @@ public:
         return count;
     }
 
+    /**
+     * Zählt alle nicht gefundenen bis Count erreicht wurde.
+     *
+     * @param count
+     * @return
+     */
+    int maxIndex(int max) {
+        int count = 0;
+        for (int i = 0; i < found.size(); i++) {
+            if (!found[i]) {
+                count++;
+            }
+            if (count>=max){
+                return i;
+            }
+        }
+        return found.size()-1;
+    }
+
     std::string bestName;
-    int besthit = 0;
+    float besthit = 0;
 
     void calcBestTask() {
         std::map<std::string, int>::iterator it;
@@ -69,10 +128,13 @@ public:
         }
     }
 
+
+
 };
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
+
 
 std::vector<std::string> readSeqFile(const char* file, Task t) {
     std::vector<std::string> sequenzen;
@@ -133,14 +195,48 @@ void logSearch(std::string taskname, std::string ptname, int size, int sizeAppTa
  * @param appTask Taskobjekt des Anwendungstasks.
  * @return Anwendungstask nach Ende der Suche.
  */
-AnwTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, AnwTask appTask) {
+AnwTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceEntry, AnwTask appTask, int maxIndex) {
     for (int i=0; i < appTask.sequenzen.size(); i++) {
         if (appTask.found[i] == true) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
         }
 
+        if (maxIndex!=0 && i > maxIndex) {
+            return appTask;
+        }
+
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
             appTask.found[i]=true; // Sequenz gefunden, wird auf true gesetzt!
+            //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
+            return appTask;
+        }
+    }
+    return appTask;
+}
+
+/**
+ * Überprüfung, ob Assemblerbefehl aus Prototyptask im Assemblercode der Anwendungstask vorkommt. Dabei werden bereits verwendete Codestellen übersprungen.
+ *
+ * @param protTaskSequenceEntry der gesuchte Assemblercode aus dem Prototyptask
+ * @param appTask Taskobjekt des Anwendungstasks.
+ * @return Anwendungstask nach Ende der Suche.
+ */
+AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSequenceEntry, AnwTask appTask, PrototypTask protTypTask, int maxIndex) {
+    std::vector<bool> hitList = appTask.getTaskHitList(protTypTask);
+
+    for (int i=0; i < appTask.sequenzen.size(); i++) {
+        if (appTask.found[i] || hitList[i] == true) {
+            continue; // Sequenz bereits gefunden, nächster Treffer!
+        }
+
+        if (maxIndex!=0 && i > maxIndex) {
+            return appTask;
+        }
+
+        if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
+            //appTask.getTaskHitList(protTypTask)[i]=true;
+            appTask.resultOneToOne.pptFoundMap[protTypTask.name][i]=true;
+            //hitList[i]=true; // Sequenz gefunden, wird auf true gesetzt!
             //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
             return appTask;
         }
@@ -173,7 +269,7 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
             std::cout << "(Durchgang " << i << " von " << sizeAppDivProt << ")\n";
             for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
                 //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
-                appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
+                appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask, 0);
             }
         }
 
@@ -292,24 +388,50 @@ void compareAppTaskProtTasksOneToOne() {
 }
 
 AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask ) {
+
+    int maxIndex = appTask.maxIndex(protTypTask.sequenzen.size());
+
+    // Iteration durch Befehle des prottypTasks.
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
         //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
-        appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask);
+        appTask = compareProtTaskSequenEntryWithAppTaskEntryMany(protTaskSequenceEntry, appTask, protTypTask, maxIndex);
     }
 
     int anzahl_hits = 0;
-    for (bool found : appTask.found) {
+    for (bool found : appTask.getTaskHitList(protTypTask)) {
         if (found) {
             anzahl_hits++;
         }
     }
     logSearch(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(), protTypTask.sequenzen.size(), 1 );
 
-    /*if (resultOneToOne.resultMap[appTask.name][protTypTask.name]==0 || resultOneToOne.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
-        resultOneToOne.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
-    }*/
+    if (appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]==0 || appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name] < anzahl_hits) {
+        appTask.resultOneToOne.resultMap[appTask.name][protTypTask.name]=anzahl_hits;
+    }
+    return appTask;
+}
 
-    //appTask.resetFound();
+AnwTask calcBestTaskMany(AnwTask appTask) {
+    std::map<std::string, int>::iterator it;
+    for (it = appTask.resultOneToOne.resultMap[appTask.name].begin(); it != appTask.resultOneToOne.resultMap[appTask.name].end(); it++) {
+        std::string pttName = it->first;
+        int anzahlTreffer = it->second;
+
+        PrototypTask task;
+        for (PrototypTask t : prottaskVektor) {
+            if (t.name == pttName) {
+                task = t;
+                break;
+            }
+        }
+
+        float percent = (float) anzahlTreffer * 100 / task.sequenzen.size();
+        if (percent>appTask.besthit) {
+            appTask.besthit=percent;
+            appTask.bestName=pttName;
+        }
+    }
+
     return appTask;
 }
 
@@ -324,9 +446,35 @@ void analyseAppTaskMany(AnwTask appTask) {
 
 
     for (PrototypTask protTypTask : prottaskVektor) {
+        appTask.initTaskHitList(protTypTask);
         std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
         appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
     }
+
+    appTask = calcBestTaskMany(appTask);
+    appTask.resultOneToOne.list.push_back(appTask.bestName);
+
+    appTask.mergeFound(appTask.resultOneToOne.pptFoundMap[appTask.bestName]);
+
+    appTask.found=appTask.resultOneToOne.pptFoundMap[appTask.bestName];// Hits in App übertragen
+    appTask.resultOneToOne.resetFound(); // wieder zurücksetzen!
+    appTask.resultOneToOne.resultMap.clear();
+    appTask.bestName="";
+    appTask.besthit=0;
+
+    for (PrototypTask protTypTask : prottaskVektor) {
+        appTask.initTaskHitList(protTypTask);
+        std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
+        appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
+    }
+
+    appTask = calcBestTaskMany(appTask);
+    appTask.resultOneToOne.list.push_back(appTask.bestName);
+
+    for (std::string s : appTask.resultOneToOne.list) {
+        std::cout << "Die besten Tasks sind:" << s;
+    }
+
 }
 
 void compareAppTaskProtTasksOneToMany() {
@@ -335,9 +483,7 @@ void compareAppTaskProtTasksOneToMany() {
         return;
     }
     openLogfileSearch();
-    AnwTask task = apptaskVektor[0];//erstmal nur einen!
+    AnwTask task = apptaskVektor[3];//erstmal nur einen!
     analyseAppTaskMany(task);
-
-    task = logBestTask(task);
     closeLogFileSearch();
 }
