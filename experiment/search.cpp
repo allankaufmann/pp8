@@ -117,6 +117,7 @@ public:
 
     std::string bestName;
     float besthit = 0;
+    int bestLastTrueIndex = 0;
 
     void calcBestTask() {
         std::map<std::string, int>::iterator it;
@@ -127,7 +128,6 @@ public:
             }
         }
     }
-
 
 
 };
@@ -149,6 +149,7 @@ std::vector<std::string> readSeqFile(const char* file, Task t) {
 
     while(fgets(buffer, bufferLength, filePointer)) {
         task = strtok(buffer, " ");
+        task = strtok(task, "\n");
         //printf("%s\n", task);
         sequenzen.push_back(task);
     }
@@ -225,8 +226,11 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
     std::vector<bool> hitList = appTask.getTaskHitList(protTypTask);
 
     for (int i=0; i < appTask.sequenzen.size(); i++) {
-        if (appTask.found[i] || hitList[i] == true) {
+        if (appTask.found[i]) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
+        }
+        if (hitList[i]) {
+            continue; // Sequenz bereits aus vorheriger Suche gefunden, nächster!
         }
 
         if (maxIndex!=0 && i > maxIndex) {
@@ -234,10 +238,7 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
         }
 
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
-            //appTask.getTaskHitList(protTypTask)[i]=true;
             appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name][i]=true;
-            //hitList[i]=true; // Sequenz gefunden, wird auf true gesetzt!
-            //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
             return appTask;
         }
     }
@@ -399,6 +400,7 @@ void compareAppTaskProtTasksOneToOne() {
 AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask ) {
 
     int maxIndex = appTask.maxIndex(protTypTask.sequenzen.size());
+    maxIndex=0;
 
     // Iteration durch Befehle des prottypTasks.
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
@@ -434,9 +436,31 @@ AnwTask calcBestTaskMany(AnwTask appTask) {
         }
 
         float percent = (float) anzahlTreffer * 100 / task.sequenzen.size();
-        if (percent>appTask.besthit) {
+
+        int indexLastTrue = 0;
+
+        std::vector<bool> boolVektor = appTask.resultOneToOne.pptFoundMapWithBool[task.name];
+
+        for (int i = boolVektor.size()-1; i>-1; i--) {
+            if (boolVektor[i]) {
+                indexLastTrue=i;
+                break;
+            }
+        }
+
+
+        if (percent==appTask.besthit) {
+            std::cout << "Gleichheit mit " << task.name << "\n";
+            if (indexLastTrue<appTask.bestLastTrueIndex) {
+              std::cout << "Letzter True wert kleiner! Der Task " << task.name << " wird verwendet!";
+                appTask.besthit=percent;
+                appTask.bestName=pttName;
+                appTask.bestLastTrueIndex=indexLastTrue;
+            }
+        } else if (percent>appTask.besthit) {
             appTask.besthit=percent;
             appTask.bestName=pttName;
+            appTask.bestLastTrueIndex=indexLastTrue;
         }
     }
 
@@ -483,9 +507,9 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
         appTask.besthit=0;
     }
 
-
+    std::cout << "Die besten Tasks sind:\n";
     for (std::string s : appTask.resultOneToOne.list) {
-        std::cout << "Die besten Tasks sind:" << s;
+        std::cout << s << "\n";
     }
     return appTask;
 }
