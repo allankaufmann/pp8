@@ -268,7 +268,6 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
         for (int i = 0; i< sizeAppDivProt; i++) {
             std::cout << "(Durchgang " << i << " von " << sizeAppDivProt << ")\n";
             for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
-                //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
                 appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask, 0);
             }
         }
@@ -343,6 +342,16 @@ AnwTask logBestTask(AnwTask appTask) {
     return appTask;
 }
 
+void logBestTasks(AnwTask appTask) {
+    //appTask.calcBestTask();
+    logfileSearch << "Die ähnlichste ProttypTask für den AppTask " << appTask.name << " sind: " << "\n";
+
+    for (std::string s : appTask.resultOneToOne.list) {
+        logfileSearch << s << "\n";
+    }
+
+}
+
 bool checkSequenzfiles() {
 
     if (prottaskVektor.empty()) {
@@ -393,7 +402,6 @@ AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTy
 
     // Iteration durch Befehle des prottypTasks.
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
-        //std::cout << "Suche Sequenzeintrag " << protTaskSequenceEntry << " (Durchgang " << i << " von " << sizeAppDivProt << ")\n";
         appTask = compareProtTaskSequenEntryWithAppTaskEntryMany(protTaskSequenceEntry, appTask, protTypTask, maxIndex);
     }
 
@@ -435,46 +443,52 @@ AnwTask calcBestTaskMany(AnwTask appTask) {
     return appTask;
 }
 
+float calcSequenzSize() {
+    int summe = 1;
+
+    for (PrototypTask protTypTask : prottaskVektor) {
+        summe+=protTypTask.sequenzen.size();
+    }
+
+    return (float) summe / prottaskVektor.size();
+}
+
 /**
  * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
  *
  * @param appTask zu untersuchender Anwendungstask.
  */
-void analyseAppTaskMany(AnwTask appTask) {
+AnwTask analyseAppTaskMany(AnwTask appTask) {
     std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
+    int sizeAppDivProt = appTask.sequenzen.size() / calcSequenzSize();
 
+    for (int i = 0; i< sizeAppDivProt; i++) {
+        std::cout << "(Durchgang " << (i+1) << " von " << sizeAppDivProt << ")\n";
 
-    for (PrototypTask protTypTask : prottaskVektor) {
-        appTask.initTaskHitList(protTypTask);
-        std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
-        appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
+        for (PrototypTask protTypTask : prottaskVektor) {
+            appTask.initTaskHitList(protTypTask);
+            std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
+            appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
+        }
+
+        appTask = calcBestTaskMany(appTask);
+        appTask.resultOneToOne.list.push_back(appTask.bestName);
+
+        appTask.mergeFound(appTask.resultOneToOne.pptFoundMap[appTask.bestName]);
+
+        appTask.found=appTask.resultOneToOne.pptFoundMap[appTask.bestName];// Hits in App übertragen
+        appTask.resultOneToOne.resetFound(); // wieder zurücksetzen!
+        appTask.resultOneToOne.resultMap.clear();
+        appTask.bestName="";
+        appTask.besthit=0;
     }
 
-    appTask = calcBestTaskMany(appTask);
-    appTask.resultOneToOne.list.push_back(appTask.bestName);
-
-    appTask.mergeFound(appTask.resultOneToOne.pptFoundMap[appTask.bestName]);
-
-    appTask.found=appTask.resultOneToOne.pptFoundMap[appTask.bestName];// Hits in App übertragen
-    appTask.resultOneToOne.resetFound(); // wieder zurücksetzen!
-    appTask.resultOneToOne.resultMap.clear();
-    appTask.bestName="";
-    appTask.besthit=0;
-
-    for (PrototypTask protTypTask : prottaskVektor) {
-        appTask.initTaskHitList(protTypTask);
-        std::cout << "Vergleich mit protTypTask " << protTypTask.name << "\n";
-        appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask);
-    }
-
-    appTask = calcBestTaskMany(appTask);
-    appTask.resultOneToOne.list.push_back(appTask.bestName);
 
     for (std::string s : appTask.resultOneToOne.list) {
         std::cout << "Die besten Tasks sind:" << s;
     }
-
+    return appTask;
 }
 
 void compareAppTaskProtTasksOneToMany() {
@@ -484,6 +498,7 @@ void compareAppTaskProtTasksOneToMany() {
     }
     openLogfileSearch();
     AnwTask task = apptaskVektor[3];//erstmal nur einen!
-    analyseAppTaskMany(task);
+    task = analyseAppTaskMany(task);
+    logBestTasks(task);
     closeLogFileSearch();
 }
