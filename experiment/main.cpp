@@ -42,17 +42,23 @@ int main(int argc, char *argv[]) {
         parameter= argv[1];
     }
 
-    while (strcasecmp(parameter, "C")!=0 &&
+    while ( strcasecmp(parameter, "C")!=0 &&
+            strcasecmp(parameter, "A")!=0 &&
+            strcasecmp(parameter, "B")!=0 &&
+            strcasecmp(parameter, "D")!=0 &&
+            strcasecmp(parameter, "E")!=0 &&
             strcasecmp(parameter, "R")!=0 &&
             strcasecmp(parameter, "S")!=0 &&
-            strcasecmp(parameter, "A")!=0 &&
             strcasecmp(parameter, "T")!=0 &&
             strcasecmp(parameter, "X")!=0 &&
             strcasecmp(parameter, "V")!=0
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
-        printf("\tA (=Abbildung - Abbildung Anw. Task zu prot. Task.)\n");
         printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
+        printf("\tA (=Abbildung - 1 AnwTask auf 1 Prototyptask - Test)\n");
+        printf("\tB (=Abbildung - 1 AnwTask auf 1 Prototyptask - alle)\n");
+        printf("\tD (=Abbildung - 1 AnwTask auf N Prototyptasks - Test)\n");
+        printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: 10xLeerlauf messen)\n");
@@ -73,7 +79,13 @@ int main(int argc, char *argv[]) {
         runAllGenScripts(10, foldername_edgedetction_scripts);
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
-        compareAppTaskProtTasksOneToOne();
+        compareAppTaskProtTasksOneToOne(true);
+    } else if (strcasecmp(parameter, "B")==0) {
+        compareAppTaskProtTasksOneToOne(false);
+    }   else if (strcasecmp(parameter, "D")==0) {
+        compareAppTaskProtTasksOneToMany(true);
+    } else if (strcasecmp(parameter, "E")==0) {
+        compareAppTaskProtTasksOneToMany(false);
     }  else if (strcasecmp(parameter, "T")==0) {
 
 
@@ -83,24 +95,17 @@ int main(int argc, char *argv[]) {
             //printf("\nCounter: %lld\n",readEnergy_UJ());
         }
 
-
     } else if (strcasecmp(parameter, "V")==0) {
-        compareAppTaskProtTasksOneToMany();
+        compareAppTaskProtTasksOneToMany(true);
         //openMeasurFile();
         //measureSampleApplication(script_Sample_vmov);
         //measureSampleApplication(script_Sample_m4x4smul_SIMD);
         //closeMeasureFile();
-
-        //vmov_SIMD.seq
+        //testrapl();
+        //testThreadWithRapl();
+        //measureSampleApplication(script_Sample_Application);
+        //measureSampleApplication("./scripts/runDadd.sh");
+        //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
     }
-
-
-    //testrapl();
-    //testThreadWithRapl();
-    //measureSampleApplication(script_Sample_Application);
-    //measureSampleApplication("./scripts/runDadd.sh");
-    //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
-
-
     return 0;
 }

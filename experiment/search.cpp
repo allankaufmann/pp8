@@ -396,7 +396,7 @@ void initTaskVektors() {
     initAppTaskVektor();
 }
 
-void compareAppTaskProtTasksOneToOne() {
+void compareAppTaskProtTasksOneToOne(bool test) {
     initTaskVektors();
 
     if (checkSequenzfiles()==false) {
@@ -413,11 +413,12 @@ void compareAppTaskProtTasksOneToOne() {
         t.calcBestTask();
         logBestTask(t);
 
-        count++;
-        if (count==1) {
-            break; // zu Testzwecken
+        if (test) { // wenn gesetzt, dann wird nur ein anwTask abgebildet
+            count++;
+            if (count==1) {
+                break;
+            }
         }
-
     }
     closeLogFileSearch();
 }
@@ -539,14 +540,23 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
     return appTask;
 }
 
-void compareAppTaskProtTasksOneToMany() {
+void compareAppTaskProtTasksOneToMany(bool test) {
     initTaskVektors();
     if (checkSequenzfiles()==false) {
         return;
     }
     openLogfileSearch();
-    AnwTask task = apptaskVektor[3];//erstmal nur einen!
-    task = analyseAppTaskMany(task);
-    logBestTasks(task);
+
+    if (test) {
+        AnwTask task = apptaskVektor[3];//erstmal nur einen!
+        task = analyseAppTaskMany(task);
+        logBestTasks(task);
+    } else {
+        logMessageOnSearchFileAndCout("Noch nicht implementiert!", true);
+    }
+
+
+
+
     closeLogFileSearch();
 }
