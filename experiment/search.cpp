@@ -400,7 +400,6 @@ void compareAppTaskProtTasksOneToOne() {
 AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask ) {
 
     int maxIndex = appTask.maxIndex(protTypTask.sequenzen.size());
-    maxIndex=0;
 
     // Iteration durch Befehle des prottypTasks.
     for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
