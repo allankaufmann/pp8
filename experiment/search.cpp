@@ -349,7 +349,7 @@ void initAppTaskVektor() {
  * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
  */
 AnwTask logBestTask(AnwTask appTask) {
-    logMessageOnSearchFileAndCout("Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" + std::to_string(appTask.besthit) + " Treffer)\n\n", true);
+    logMessageOnSearchFileAndCout("Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" + std::to_string(appTask.besthit) + " % Treffer)\n\n", true);
     return appTask;
 }
 
@@ -548,7 +548,8 @@ void compareAppTaskProtTasksOneToMany(bool test) {
     openLogfileSearch();
 
     if (test) {
-        AnwTask task = apptaskVektor[3];//erstmal nur einen!
+        //AnwTask task = apptaskVektor[3];//testWithNopBitByteShiftIMulLogic
+        AnwTask task = apptaskVektor[0];//sobelv
         task = analyseAppTaskMany(task);
         logBestTasks(task);
     } else {

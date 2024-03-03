@@ -42,3 +42,14 @@ scraphandre:
 sudo apt install docker.io
 docker run -v /sys/class/powercap:/sys/class/powercap -v /proc:/proc -ti hubblo/scaphandre stdout -t 15
 
+Ableitung 1:1 und 1:N:
+- bei den Messungen wurde bei Task sobelv eine Leistungsaufnahme von etwa 15000 MJ/MS festgestellt
+- bei der Abbildung 1:1 wurde sobelv auf den Task vmov_SIMD.seq abgebildet, dieser wurde mit 10891 MJ/MS gemessen
+- bei der Abbildugn 1:N wurde sobelv auf die Tasks m4x4smul_SIMD.seq (37%) und vmov_SIMD.seq (62% abgebildet). 
+- diese wurden mit einer Leistungsaufnahme von 11940 MJ/MS gemessen. Die Abweichung wurde von 27,39% auf 20,4% reduziert
+
+
+
+
+
+

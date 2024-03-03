@@ -7,6 +7,7 @@
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
+const char* script_sobolv = "./scripts/runsobelv.sh";
 const char* script_Sample_m4x4smul_SIMD = "./scripts/runm4x4smul_SIMD.sh";
 
 const char* script_testRapl = "./scripts/testRaplRead.sh";
@@ -62,7 +63,7 @@ int main(int argc, char *argv[]) {
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: 10xLeerlauf messen)\n");
-        printf("\tV (=Versuch...CompareOneMany.)\n");
+        printf("\tV (=Versuch...epebench-sobelv messen)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
         scanf("%s", inputParameter);
@@ -96,11 +97,11 @@ int main(int argc, char *argv[]) {
         }
 
     } else if (strcasecmp(parameter, "V")==0) {
-        compareAppTaskProtTasksOneToMany(true);
-        //openMeasurFile();
-        //measureSampleApplication(script_Sample_vmov);
+        //compareAppTaskProtTasksOneToMany(true);
+        openMeasurFile();
+        measureSampleApplication(script_sobolv);
         //measureSampleApplication(script_Sample_m4x4smul_SIMD);
-        //closeMeasureFile();
+        closeMeasureFile();
         //testrapl();
         //testThreadWithRapl();
         //measureSampleApplication(script_Sample_Application);
