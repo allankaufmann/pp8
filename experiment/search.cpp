@@ -9,7 +9,7 @@
 #include <iostream>
 #include <map>
 #include <list>
-
+#include <thread>
 const char* daddseq= "search/taskseq/dadd.seq";
 const char* sampleappseq = "search/appseq/sampleapp.seq";
 
@@ -174,6 +174,10 @@ public:
 std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
 
+/**
+ * Für die Abbildung 1:N werden die Tasks parallel geprüft. Aus diesem Grund werden die Zwischenergebnisse hier zusammengeführt.
+ */
+Result resultOneToMany;
 
 std::vector<std::string> readSeqFile(const char* file, Task t) {
     std::vector<std::string> sequenzen;
@@ -262,8 +266,6 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceE
  * @return Anwendungstask nach Ende der Suche.
  */
 AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSequenceEntry, AnwTask appTask, PrototypTask protTypTask, int maxIndex) {
-    std::vector<bool> hitList = appTask.getTaskHitList(protTypTask);
-
     std::list<int> indexes = appTask.indexOfMap[protTaskSequenceEntry];
 
     if (indexes.empty()) {
@@ -286,27 +288,6 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
         return appTask;
     }
 
-
-
-
-    // Dauert lange, ggfls. suchen wo der Befehl als erstes vorkommt
-    /*for (int i=0; i < appTask.sequenzen.size(); i++) {
-        if (appTask.found[i]) {
-            continue; // Sequenz bereits gefunden, nächster Treffer!
-        }
-        if (hitList[i]) {
-            continue; // Sequenz bereits aus vorheriger Suche gefunden, nächster!
-        }
-
-        if (maxIndex!=0 && i > maxIndex) {
-            return appTask;
-        }
-
-        if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
-            appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name][i]=true;
-            return appTask;
-        }
-    }*/
     return appTask;
 }
 
@@ -483,10 +464,6 @@ void compareAppTaskProtTasksOneToOne(bool test) {
 }
 
 AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask, int maxIndex ) {
-
-    //int maxIndex = appTask.maxIndex(protTypTask.sequenzen.size());// Wenn die Anw Task befehle enthält, dann werden diese immer durchiteriert...
-    int x = 0;
-
     appTask.initIndexOfMap(maxIndex, protTypTask.name);
 
     for (int i = 0; i < protTypTask.sequenzen.size(); i++) {
@@ -568,6 +545,18 @@ float calcSequenzSize() {
     return (float) summe / prottaskVektor.size();
 }
 
+
+
+AnwTask prepareAnwTaskAndProtTypTaskForCompare(AnwTask appTask, PrototypTask protTypTask ) {
+    int maxIndex = appTask.lastIndexOfTrue() + protTypTask.sequenzen.size();
+    appTask.initTaskHitList(protTypTask);
+    logMessageOnSearchFileAndCout("Vergleich " + appTask.name + " mit protTypTask " + protTypTask.name + "\n", false);
+    appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask, maxIndex);
+    resultOneToMany.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name];
+    resultOneToMany.pptFoundMapWithBool[protTypTask.name]=appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name];
+    return appTask;
+}
+
 /**
  * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
  *
@@ -576,26 +565,29 @@ float calcSequenzSize() {
 AnwTask analyseAppTaskMany(AnwTask appTask) {
     logMessageOnSearchFileAndCout("\nAppTask " + appTask.name + " wird geprüft!\n", true);
 
-
     int sizeAppDivProt = appTask.sequenzen.size() / calcSequenzSize();
 
     for (int i = 0; i< sizeAppDivProt; i++) {
+        resultOneToMany=appTask.resultOneToOne;
         logMessageOnSearchFileAndCout("(Durchgang " + std::to_string(i+1) + " von " + std::to_string(sizeAppDivProt) + ")\n", true);
 
-        for (PrototypTask protTypTask : prottaskVektor) {
-            int maxIndex = appTask.lastIndexOfTrue() + protTypTask.sequenzen.size();
-            appTask.initTaskHitList(protTypTask);
-            logMessageOnSearchFileAndCout("Vergleich " + appTask.name + " mit protTypTask " + protTypTask.name + "\n", false);
-            appTask = compareAppTaskWithPrototypTasksMany(appTask, protTypTask, maxIndex);
+        std::list<std::thread> threadlist;
+        std::thread myThreads[prottaskVektor.size()];
+        for (int j = 0; j < prottaskVektor.size(); j++) {
+            myThreads[j] = std::thread(prepareAnwTaskAndProtTypTaskForCompare, appTask, prottaskVektor[j]);
         }
 
+        for (int j = 0; j < prottaskVektor.size(); j++) {
+            myThreads[j].join();
+        }
+
+        appTask.resultOneToOne=resultOneToMany;
         appTask = calcBestTaskMany(appTask);
         logBestTask(appTask);
         appTask.resultOneToOne.list.push_back(appTask.bestName);
         appTask.resultOneToOne.abgebildeteTaskMap[appTask.bestName]+=1;
 
         appTask.mergeFound(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]);
-
         appTask.resultOneToOne.resetPptFoundMap(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]); // wieder zurücksetzen!
         appTask.resultOneToOne.protTaskAnzTrefferMap.clear();
         appTask.bestName="";
@@ -622,9 +614,6 @@ void compareAppTaskProtTasksOneToMany(bool test) {
     } else {
         logMessageOnSearchFileAndCout("Noch nicht implementiert!", true);
     }
-
-
-
 
     closeLogFileSearch();
 }
