@@ -67,8 +67,18 @@ public:
     Result resultOneToOne;
     std::map<std::string, std::list<int>> indexOfMap;
 
-    void initIndexOfMap() {
+    void initIndexOfMap(int maxIndex, std::string prottaskname) {
+        indexOfMap.clear();
         for (int i = 0; i < sequenzen.size(); i++) {
+            if (i>maxIndex) {
+                return;
+            }
+            if (found[i]){
+                continue;
+            }
+            if (resultOneToOne.pptFoundMapWithBool[prottaskname][i]) {
+                continue;
+            }
             indexOfMap[sequenzen[i]].push_back(i);
         }
     }
@@ -256,13 +266,11 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
 
     std::list<int> indexes = appTask.indexOfMap[protTaskSequenceEntry];
 
-
     if (indexes.empty()) {
         return appTask;
     }
 
     for (int index : indexes) {
-
         if (appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name][index]) {
             continue; // Sequenz bereits gefunden, nächster Treffer!
         }
@@ -274,6 +282,7 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntryMany(std::string protTaskSeque
         }
 
         appTask.resultOneToOne.pptFoundMapWithBool[protTypTask.name][index]=true;
+
         return appTask;
     }
 
@@ -386,7 +395,7 @@ void initAppTaskVektor() {
     std::vector<char*> appseqnames = readFilenamesFromDirectory(foldername_appseq);
     for (char* seqname : appseqnames) {
         AnwTask t = readAnwTaskSeqfile(seqname);
-        t.initIndexOfMap();
+        //t.initIndexOfMap();
         apptaskVektor.push_back(t);
         printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
     }
@@ -476,11 +485,16 @@ void compareAppTaskProtTasksOneToOne(bool test) {
 AnwTask compareAppTaskWithPrototypTasksMany(AnwTask appTask, PrototypTask protTypTask, int maxIndex ) {
 
     //int maxIndex = appTask.maxIndex(protTypTask.sequenzen.size());// Wenn die Anw Task befehle enthält, dann werden diese immer durchiteriert...
+    int x = 0;
 
-    // Iteration durch Befehle des prottypTasks.
-    for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
-        appTask = compareProtTaskSequenEntryWithAppTaskEntryMany(protTaskSequenceEntry, appTask, protTypTask, maxIndex);
+    appTask.initIndexOfMap(maxIndex, protTypTask.name);
+
+    for (int i = 0; i < protTypTask.sequenzen.size(); i++) {
+        appTask = compareProtTaskSequenEntryWithAppTaskEntryMany(protTypTask.sequenzen[i], appTask, protTypTask, maxIndex);
+        appTask.initIndexOfMap(maxIndex, protTypTask.name);
     }
+
+
 
     int anzahl_hits = 0;
     for (bool found : appTask.getTaskHitList(protTypTask)) {
@@ -599,9 +613,10 @@ void compareAppTaskProtTasksOneToMany(bool test) {
     openLogfileSearch();
 
     if (test) {
-        //AnwTask task = apptaskVektor[3];//testWithNopBitByteShiftIMulLogic
+        AnwTask task = apptaskVektor[3];//testWithNopBitByteShiftIMulLogic
         //AnwTask task = apptaskVektor[0];//sobelv
-        AnwTask task = apptaskVektor[10];//sobelv_50_50
+        //AnwTask task = apptaskVektor[10];//sobelv_50_50
+
         task = analyseAppTaskMany(task);
         logBestTasks(task);
     } else {
