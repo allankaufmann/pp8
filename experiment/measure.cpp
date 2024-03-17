@@ -112,13 +112,13 @@ char* getFilename() {
     return filename;
 }
 
-void openMeasurFile() {
+void openMeasurLogFile() {
     mkdir(logfolder_measure, 0777);
     logfileMeasure = fopen(getFilename(), "w");
     fprintf(logfileMeasure, "app;duration;power;leistung\n");
 }
 
-void closeMeasureFile() {
+void closeMeasureLogFile() {
     fclose(logfileMeasure);
 }
 
@@ -138,49 +138,31 @@ void runCommand(const char* command) {
     system(command);
 }
 
-void measureSampleApplication(const char* script) {
-    //long long idle3000MS = measureIdle(1000);
-    //std::cout << "Leistungsaufnahme für 3000MS:" << idle3000MS << std::endl;
-
-    //logTime();
+void runAndMeasureScript(const char* script) {
     uint64_t timestamp_begin = timeSinceEpochMillisec();
     long long counter_begin = readEnergy_UJ();
-
     std::thread t1(runCommand, script);
     t1.join();
     long long counter_end = readEnergy_UJ();
-
     uint64_t timestamp_end = timeSinceEpochMillisec();
     uint64_t duration = timestamp_end - timestamp_begin;
-
-    //long long energie_grundrauschen = measureIdle(dauer);
-
-
-
     std::cout << "Dauer: " << duration << " MS" << std::endl;
-    //logTime();
-
-
     long long counter_diff = counter_end - counter_begin;
-    long long energy_mj = counter_diff; // - energie_grundrauschen;// - idle3000MS;
-
+    long long energy_mj = counter_diff;
     std::cout << "Leistungsaufnahme in Mikojoul: " << (energy_mj) << std::endl;
-
-
-
     logMeasure(script, duration, energy_mj);
 }
 
-void runAllGenScripts(int count, const char* directory) {
+void runAndMeasureScriptsFromDirectory(int count, const char* directory) {
     std::vector<char*> v_filenames = readFilenamesFromDirectory(directory);
-        openMeasurFile();
+    openMeasurLogFile();
         for (char* filename : v_filenames) {
             for (int i = 0; i<count; i++) {
-                measureSampleApplication(filename);
+                runAndMeasureScript(filename);
             }
             logMeasureNewLine();
         }
-        closeMeasureFile();
+    closeMeasureLogFile();
 
     printf("%s", "Skripte wurden ausgeführt, Ergebnisse siehe logs-Ordner!");
 }

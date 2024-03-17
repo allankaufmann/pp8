@@ -10,6 +10,7 @@
 #include <map>
 #include <list>
 #include <thread>
+#include "math.h"
 const char* daddseq= "search/taskseq/dadd.seq";
 const char* sampleappseq = "search/appseq/sampleapp.seq";
 
@@ -70,7 +71,7 @@ public:
     void initIndexOfMap(int maxIndex, std::string prottaskname) {
         indexOfMap.clear();
         for (int i = 0; i < sequenzen.size(); i++) {
-            if (i>maxIndex) {
+            if (maxIndex!=0 && i>maxIndex) {
                 return;
             }
             if (found[i]){
@@ -173,6 +174,7 @@ public:
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
+std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf Map
 
 /**
  * Für die Abbildung 1:N werden die Tasks parallel geprüft. Aus diesem Grund werden die Zwischenergebnisse hier zusammengeführt.
@@ -372,12 +374,13 @@ void initProttaskVektor() {
 /**
  * Liest die Sequenzdateien der Anwendungstasks aus und bereitet einen Vektor für die Ähnlichkeitssuche vor.
  */
-void initAppTaskVektor() {
+void initAppTaskCollections() {
     std::vector<char*> appseqnames = readFilenamesFromDirectory(foldername_appseq);
     for (char* seqname : appseqnames) {
         AnwTask t = readAnwTaskSeqfile(seqname);
         //t.initIndexOfMap();
         apptaskVektor.push_back(t);
+        apptaskMap[t.name]=t;
         printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
     }
     printf("%s", "\n");
@@ -394,12 +397,7 @@ AnwTask logBestTask(AnwTask appTask) {
 }
 
 void logBestTasks(AnwTask appTask) {
-    //appTask.calcBestTask();
     logMessageOnSearchFileAndCout("\nDer Anwendungstask " + appTask.name + " wurde auf folgende prototypischen Tasks abgebildet:\n", true);
-
-    /*for (std::string s : appTask.resultOneToOne.list) {
-        logMessageOnSearchFileAndCout(s+"\n", true);
-    }*/
 
     int countAlleTasks = 0;
 
@@ -415,6 +413,9 @@ void logBestTasks(AnwTask appTask) {
         float percent = anzahl * 100 / countAlleTasks;
         logMessageOnSearchFileAndCout(key + " (" + std::to_string(anzahl) + " mal zugeordnet, in %: " + std::to_string(percent) + ")\n", true);
     }
+
+    float percent = appTask.countFound() * 100 / appTask.sequenzen.size();
+    logMessageOnSearchFileAndCout(std::to_string(appTask.countFound()) + " von " + std::to_string(appTask.sequenzen.size()) + " gefunden! (" + std::to_string(percent) + "%)", true);
 }
 
 bool checkSequenzfiles() {
@@ -433,7 +434,7 @@ bool checkSequenzfiles() {
 
 void initTaskVektors() {
     initProttaskVektor();
-    initAppTaskVektor();
+    initAppTaskCollections();
 }
 
 void compareAppTaskProtTasksOneToOne(bool test) {
@@ -565,14 +566,26 @@ AnwTask prepareAnwTaskAndProtTypTaskForCompare(AnwTask appTask, PrototypTask pro
 AnwTask analyseAppTaskMany(AnwTask appTask) {
     logMessageOnSearchFileAndCout("\nAppTask " + appTask.name + " wird geprüft!\n", true);
 
-    int sizeAppDivProt = appTask.sequenzen.size() / calcSequenzSize();
+    int sizeAppDivProt = ceil(float(appTask.sequenzen.size() / calcSequenzSize()))+1; // Produkt wird immer aufgerundet!
 
     for (int i = 0; i< sizeAppDivProt; i++) {
         resultOneToMany=appTask.resultOneToOne;
         logMessageOnSearchFileAndCout("(Durchgang " + std::to_string(i+1) + " von " + std::to_string(sizeAppDivProt) + ")\n", true);
 
+
+        /*#pragma omp parallel
+        {
+            #pragma omp for private (j) shared (appTask, prottaskVektor)
+            for (int j = 0; j < prottaskVektor.size(); j++) {
+                prepareAnwTaskAndProtTypTaskForCompare(appTask, prottaskVektor[j]);
+            }
+        };*/
+
         std::list<std::thread> threadlist;
+        //unsigned int nthreads = std::thread::hardware_concurrency();
         std::thread myThreads[prottaskVektor.size()];
+
+
         for (int j = 0; j < prottaskVektor.size(); j++) {
             myThreads[j] = std::thread(prepareAnwTaskAndProtTypTaskForCompare, appTask, prottaskVektor[j]);
         }
@@ -605,7 +618,7 @@ void compareAppTaskProtTasksOneToMany(bool test) {
     openLogfileSearch();
 
     if (test) {
-        AnwTask task = apptaskVektor[3];//testWithNopBitByteShiftIMulLogic
+        AnwTask task = apptaskVektor[3];//sobelv_20_20
         //AnwTask task = apptaskVektor[0];//sobelv
         //AnwTask task = apptaskVektor[10];//sobelv_50_50
 
@@ -613,6 +626,23 @@ void compareAppTaskProtTasksOneToMany(bool test) {
         logBestTasks(task);
     } else {
         logMessageOnSearchFileAndCout("Noch nicht implementiert!", true);
+    }
+
+    closeLogFileSearch();
+}
+
+void compareAppTaskProtTasksOneToManyTest(std::string appTaskName) {
+
+    if (checkSequenzfiles()==false) {
+        return;
+    }
+    openLogfileSearch();
+    AnwTask task = apptaskMap[appTaskName];
+    if (!task.name.empty()) {
+        task = analyseAppTaskMany(task);
+        logBestTasks(task);
+    } else {
+        logMessageOnSearchFileAndCout("Anwendungs task [" + appTaskName + "] nicht gefunden!", true);
     }
 
     closeLogFileSearch();

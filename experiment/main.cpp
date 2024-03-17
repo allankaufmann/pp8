@@ -8,6 +8,7 @@
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
 const char* script_sobolv = "./scripts/runsobelv.sh";
+const char* script_measure = "./scripts/measureGreyscale1N.sh";
 const char* script_Sample_m4x4smul_SIMD = "./scripts/runm4x4smul_SIMD.sh";
 
 const char* script_testRapl = "./scripts/testRaplRead.sh";
@@ -75,16 +76,27 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
-        runAllGenScripts(3, foldername_generated_scripts); // Messungen der Tasks
+        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
-        runAllGenScripts(10, foldername_edgedetction_scripts);
+        runAndMeasureScriptsFromDirectory(10, foldername_edgedetction_scripts);
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         compareAppTaskProtTasksOneToOne(true);
     } else if (strcasecmp(parameter, "B")==0) {
         compareAppTaskProtTasksOneToOne(false);
     }   else if (strcasecmp(parameter, "D")==0) {
-        compareAppTaskProtTasksOneToMany(true);
+        initTaskVektors();
+        printf("Im Ordner search/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+
+        for (int i = 0; i < apptaskVektor.size(); i++) {
+            printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());
+        }
+
+        int index = -1;
+        while (scanf("%d", &index) == 1) {
+;           compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].name);
+        }
+
     } else if (strcasecmp(parameter, "E")==0) {
         compareAppTaskProtTasksOneToMany(false);
     }  else if (strcasecmp(parameter, "T")==0) {
@@ -98,15 +110,15 @@ int main(int argc, char *argv[]) {
 
     } else if (strcasecmp(parameter, "V")==0) {
         //compareAppTaskProtTasksOneToMany(true);
-        openMeasurFile();
-        measureSampleApplication(script_sobolv);
-        //measureSampleApplication(script_Sample_m4x4smul_SIMD);
-        closeMeasureFile();
+        openMeasurLogFile();
+        runAndMeasureScript(script_measure);
+        //runAndMeasureScript(script_Sample_m4x4smul_SIMD);
+        closeMeasureLogFile();
         //testrapl();
         //testThreadWithRapl();
-        //measureSampleApplication(script_Sample_Application);
-        //measureSampleApplication("./scripts/runDadd.sh");
-        //measureSampleApplication("./scripts/runm4x4smul_SIMD.sh");
+        //runAndMeasureScript(script_Sample_Application);
+        //runAndMeasureScript("./scripts/runDadd.sh");
+        //runAndMeasureScript("./scripts/runm4x4smul_SIMD.sh");
     }
     return 0;
 }

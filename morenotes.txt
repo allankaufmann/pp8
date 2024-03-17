@@ -45,9 +45,77 @@ docker run -v /sys/class/powercap:/sys/class/powercap -v /proc:/proc -ti hubblo/
 Ableitung 1:1 und 1:N:
 - bei den Messungen wurde bei Task sobelv eine Leistungsaufnahme von etwa 15000 MJ/MS festgestellt
 - bei der Abbildung 1:1 wurde sobelv auf den Task vmov_SIMD.seq abgebildet, dieser wurde mit 10891 MJ/MS gemessen
-- bei der Abbildugn 1:N wurde sobelv auf die Tasks m4x4smul_SIMD.seq (37%) und vmov_SIMD.seq (62% abgebildet). 
+- bei der Abbildugn 1:N wurde sobelv auf die Tasks m4x4smul_SIMD.seq (37%) und vmov_SIMD.seq (62% abgebildet). (10x10)
 - diese wurden mit einer Leistungsaufnahme von 11940 MJ/MS gemessen. Die Abweichung wurde von 27,39% auf 20,4% reduziert
 
+Beispiel greyscale:
+search/taskseq/dadd.seq (1 mal zugeordnet, in %: 12.000000)
+search/taskseq/vmov_SIMD.seq (7 mal zugeordnet, in %: 87.000000)
+
+scripts/edgedetection/runEdgedetection_greyscale.sh;1462;24919736;17044
+scripts/edgedetection/runEdgedetection_greyscale.sh;1451;24730222;17043
+scripts/edgedetection/runEdgedetection_greyscale.sh;1457;24873472;17071
+scripts/edgedetection/runEdgedetection_greyscale.sh;1456;24867795;17079
+scripts/edgedetection/runEdgedetection_greyscale.sh;1474;24940000;16919
+scripts/edgedetection/runEdgedetection_greyscale.sh;1452;24721067;17025
+scripts/edgedetection/runEdgedetection_greyscale.sh;1455;24840451;17072
+scripts/edgedetection/runEdgedetection_greyscale.sh;1456;24602537;16897
+scripts/edgedetection/runEdgedetection_greyscale.sh;1460;24425902;16730
+scripts/edgedetection/runEdgedetection_greyscale.sh;1476;25253353;17109
+
+app;duration;power;leistung
+./scripts/measureGreyscale1N.sh;2039;20860909;10230
+
+gen/runvmov_SIMD.sh;1031;11153047;10817
+gen/runvmov_SIMD.sh;1022;11146090;10906
+gen/runvmov_SIMD.sh;1022;11131563;10891
+
+Abweichung : 40%
+- wenig Unterschied 1:N im Vergleich zu 1:1
+- bei Messung der Anwendung wird die komplette Anwendung augeführt (inkl. Main, Datenenladen usw)
+-- bei der Ableitung der ppt wird nur der eigentliche Task geloggt
+-- Idee: Messung der Anwendung ohne Task und dann abziehen!
+
+Abbildung ohne MaxIndex: 
+
+Der Anwendungstask search/appseq/greyscale.seq wurde auf folgende prototypischen Tasks abgebildet:
+search/taskseq/dadd.seq (3 mal zugeordnet, in %: 30.000000)
+search/taskseq/dmem.seq (2 mal zugeordnet, in %: 20.000000)
+search/taskseq/vmov_SIMD.seq (5 mal zugeordnet, in %: 50.000000)
+10832 von 18296 gefunden! (59.000000%)
+Messung: app;duration;power;leistung
+./scripts/measureGreyscale1N.sh;2085;18349135;8800
+
+scripts/edgedetection/runEdgedetection_loadImage.sh;81;745969;9209
+scripts/edgedetection/runEdgedetection_loadImage.sh;77;542601;7046
+scripts/edgedetection/runEdgedetection_loadImage.sh;79;520872;6593
+scripts/edgedetection/runEdgedetection_loadImage.sh;77;527892;6855
+scripts/edgedetection/runEdgedetection_loadImage.sh;80;511046;6388
+scripts/edgedetection/runEdgedetection_loadImage.sh;79;512389;6485
+scripts/edgedetection/runEdgedetection_loadImage.sh;77;606810;7880
+scripts/edgedetection/runEdgedetection_loadImage.sh;77;533996;6935
+scripts/edgedetection/runEdgedetection_loadImage.sh;78;532347;6824
+scripts/edgedetection/runEdgedetection_loadImage.sh;79;600584;7602
+
+scripts/edgedetection/runEdgedetection_greyscale.sh;1423;21928716;15410
+scripts/edgedetection/runEdgedetection_greyscale.sh;1350;21105659;15633
+scripts/edgedetection/runEdgedetection_greyscale.sh;1348;20694222;15351
+scripts/edgedetection/runEdgedetection_greyscale.sh;1410;21695562;15386
+scripts/edgedetection/runEdgedetection_greyscale.sh;1346;21115486;15687
+scripts/edgedetection/runEdgedetection_greyscale.sh;1348;21098274;15651
+scripts/edgedetection/runEdgedetection_greyscale.sh;1348;21193367;15722
+scripts/edgedetection/runEdgedetection_greyscale.sh;1349;21132087;15665
+scripts/edgedetection/runEdgedetection_greyscale.sh;1347;20623116;15310
+scripts/edgedetection/runEdgedetection_greyscale.sh;1348;21089241;15644
+
+Messung ergab 8800, dazu Mittelwert für loadImage z. B. 7616
+8800+7616=16416
+Vergleichbar mit Messung greyscale!
+
+vorheriger Algorithmus: 10230+7616=17846 - ca 14% drüber!
+
+Ergo: Zur Leistungsaufnahme der CPU muss noch die Leistungsaufnahme der Anwendung ohne Task berücksichtigt werden!
+oder.... die Sequenz des Anwendungstask muss komplett genommen werden, also ohne Breakpoints!
 
 
 
