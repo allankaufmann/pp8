@@ -44,7 +44,9 @@ int main(int argc, char *argv[]) {
         parameter= argv[1];
     }
 
-    while ( strcasecmp(parameter, "C")!=0 &&
+    while (
+            //strcasecmp(parameter, "1")!=0 &&
+            strcasecmp(parameter, "C")!=0 &&
             strcasecmp(parameter, "A")!=0 &&
             strcasecmp(parameter, "B")!=0 &&
             strcasecmp(parameter, "D")!=0 &&
@@ -53,6 +55,7 @@ int main(int argc, char *argv[]) {
             strcasecmp(parameter, "S")!=0 &&
             strcasecmp(parameter, "T")!=0 &&
             strcasecmp(parameter, "X")!=0 &&
+            strcasecmp(parameter, "W")!=0 &&
             strcasecmp(parameter, "V")!=0
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
@@ -63,8 +66,9 @@ int main(int argc, char *argv[]) {
         printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
-        printf("\tT (=Test: 10xLeerlauf messen)\n");
+        printf("\tT (=Test: Freq)\n");
         printf("\tV (=Versuch...epebench-sobelv messen)\n");
+        printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
         scanf("%s", inputParameter);
@@ -73,7 +77,9 @@ int main(int argc, char *argv[]) {
 
     if (strcasecmp(parameter, "X")==0) {
         return 0;
-    } else if (strcasecmp(parameter, "C") == 0) {
+    } /*else if (strcasecmp(parameter, "1") == 0) {
+        printf("hallo");
+    }*/ else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
         runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts); // Messungen der Tasks
@@ -92,21 +98,23 @@ int main(int argc, char *argv[]) {
             printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());
         }
 
-        int index = -1;
-        while (scanf("%d", &index) == 1) {
-;           compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].name);
+        int index = 0;
+        if (scanf("%d", &index) == 1) {
+            compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].name);
         }
-
     } else if (strcasecmp(parameter, "E")==0) {
         compareAppTaskProtTasksOneToMany(false);
+    } else if (strcasecmp(parameter, "W")==0) {
+        setCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
 
 
-        for (int i = 0; i < 10 ; i++) {
+        setCpuFrequency();
+        /*for (int i = 0; i < 10 ; i++) {
             printf("\n%d %lu", i, measureIdle(1000));
             //measureIdle(1000);
             //printf("\nCounter: %lld\n",readEnergy_UJ());
-        }
+        }*/
 
     } else if (strcasecmp(parameter, "V")==0) {
         //compareAppTaskProtTasksOneToMany(true);

@@ -136,6 +136,10 @@ public:
         return count;
     }
 
+    bool allFound() {
+        return sequenzen.size() == countFound();
+    }
+
     /**
      * Zählt alle nicht gefundenen bis Count erreicht wurde.
      *
@@ -572,6 +576,9 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
         resultOneToMany=appTask.resultOneToOne;
         logMessageOnSearchFileAndCout("(Durchgang " + std::to_string(i+1) + " von " + std::to_string(sizeAppDivProt) + ")\n", true);
 
+        if (appTask.allFound()){
+            return appTask; // wenn im letzten Durchgang alle gefunden wurden, dann wird dieser Durchgang abgebrochen!
+        }
 
         /*#pragma omp parallel
         {
