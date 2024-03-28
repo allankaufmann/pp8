@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #include <string.h>
 #include "img.h"
-
+#include <omp.h>
 #define XWIDTH 2300
 #define YWIDTH 1848
 #define INPUTPATH "./images/"
@@ -234,59 +235,85 @@ void writeimage(MyIMG* img, char* filename)
     fclose(fp);
 }
 
+void runEdgedetection(char* taskname, char* filename, MyIMG* imgrgb, MyIMG* imgh) {
+    MyIMG *imgv;
+    loadimage(imgrgb,filename);
+
+    if (taskname==NULL) {
+        greyscale(imgrgb,imgh);
+        checkcontrast(imgh);
+        sharpencontrast(imgh);
+        copyimage(&imgv,imgh);
+        sobelh(imgh);
+        sobelv(imgv);
+        combineimgs(imgh,imgv);
+        writeimage(imgh,filename);
+    } else if (strcmp(taskname, task_greyscale) == 0) {
+        greyscale(imgrgb,imgh);
+    } else if (strcmp(taskname, task_checkcontrast) == 0) {
+        checkcontrast(imgh);
+    } else if (taskname==NULL || strcmp(taskname, task_sharpencontrast) == 0) {
+        sharpencontrast(imgh);
+    } else if (strcmp(taskname, task_copyimage) == 0) {
+        copyimage(&imgv,imgh);
+    } else if (taskname==NULL || strcmp(taskname, task_sobelh) == 0) {
+        sobelh(imgh);
+    } else if (taskname==NULL || strcmp(taskname, task_sobelv) == 0) {
+        sobelv(imgv);
+    } else if (strcmp(taskname, task_combineimgs) == 0) {
+        copyimage(&imgv,imgh);
+        combineimgs(imgh,imgv);
+    } else if (taskname==NULL || strcmp(taskname, task_writeimage) == 0) {
+        writeimage(imgh,filename);
+    }
+}
+
 int main(int argc,char *argv[])
 {
     char *listfilename;
     char filename[64];
     FILE *fp;
-    MyIMG *imgrgb, *imgh, *imgv;
+    MyIMG *imgrgb, *imgh;
 
     listfilename = argv[1];
     fp = fopen(listfilename, "r");
     imgrgb = createimagergb(XWIDTH, YWIDTH);
     imgh = createimage(XWIDTH, YWIDTH);
+    int parallelism = (argc>2) ? atoi(argv[2]) : 1;
+    char* taskname = (argc>3) ? argv[3] : NULL;
 
-    char* taskname = (argc>2) ? argv[2] : NULL;
 
-    while(fgets(filename, sizeof(filename), fp) != NULL)
-    {
+    printf("Parallelitätsgrad: %d\n", parallelism);
+    printf("Task: %s\n", taskname);
+    char filenames[23][64];
+
+    int counter = 0;
+    while(fgets(filename, sizeof(filename), fp) != NULL) {
         filename[strcspn(filename, "\n")] = 0;
-        loadimage(imgrgb,filename);
-
-        if (taskname==NULL || strcmp(taskname, task_greyscale) == 0) {
-            greyscale(imgrgb,imgh);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_checkcontrast) == 0) {
-            checkcontrast(imgh);
-        }
-        if (taskname==NULL || strcmp(taskname, task_sharpencontrast) == 0) {
-            sharpencontrast(imgh);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_copyimage) == 0) {
-            copyimage(&imgv,imgh);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_sobelh) == 0) {
-            sobelh(imgh);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_sobelv) == 0) {
-            copyimage(&imgv,imgh);
-            sobelh(imgh);
-            sobelv(imgv);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_combineimgs) == 0) {
-            copyimage(&imgv,imgh);
-            combineimgs(imgh,imgv);
-        }
-
-        if (taskname==NULL || strcmp(taskname, task_writeimage) == 0) {
-            writeimage(imgh,filename);
-        }
+        strcpy(filenames[counter], filename );
+        counter++;
     }
+
+    if (parallelism<=1) {
+        for (int i = 0; i<counter; i++)
+        {
+            runEdgedetection(taskname, filenames[i], imgrgb, imgh);
+        }
+        return 0;
+    }
+
+    printf("dyn: %d\n", omp_get_dynamic());
+    printf("num_treads: %d\n", omp_get_num_threads());
+    omp_set_num_threads(parallelism); // Parallelitätsgrad über OMP gesetzt.
+
+    #pragma omp parallel
+    {
+        #pragma omp for
+        for (int j = 0; j < counter; j++) {
+            runEdgedetection(taskname, filenames[j], imgrgb, imgh);
+        }
+    };
+
     //destroyimage(imgrgb);
     //destroyimage(imgh);
     //destroyimage(imgv);
