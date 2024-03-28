@@ -30,8 +30,11 @@ gdb --args edgedetection imgfilenames
 
 gcc -g edgedetection.c -o edgedetection edgedetection.o img.o -lm
 
-damit Edgedetection in clion aufgerufen werden kann, in cmakelist einfügen (Abhängigkeit zu mathcalls.h)
+damit Edgedetection (apptasks) in clion aufgerufen werden kann, in cmakelist einfügen (Abhängigkeit zu mathcalls.h)
 target_link_libraries(apptasks PRIVATE m)
+
+Damit edgedetection (nicht apptasks) in clion aufgerufen werden kann, ist als Runconfiguration eine native Anwendung zu erstellen
+(https://www.jetbrains.com/help/clion/makefiles-support.html#rd-configs)
 
 Sequenzerstellung über apptasks:
 - greyscale hat eine loop, shaprencontrast ebenfalls - Vermutung - Schreibproblem in Datei?

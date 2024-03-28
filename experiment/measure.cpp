@@ -10,6 +10,7 @@
 #include "constants.h"
 #include "tools.cpp"
 
+
 static const char *const logfolder_measure = "logs/measure/";
 
 
@@ -153,12 +154,19 @@ void runAndMeasureScript(const char* script) {
     logMeasure(script, duration, energy_mj);
 }
 
-void runAndMeasureScriptsFromDirectory(int count, const char* directory) {
+void runAndMeasureScriptsFromDirectory(int count, const char* directory, const char* cores) {
     std::vector<char*> v_filenames = readFilenamesFromDirectory(directory);
     openMeasurLogFile();
         for (char* filename : v_filenames) {
+
+            char fileWithParam[strlen(filename)+2];
+            strcpy(fileWithParam, filename);
+            strcat(fileWithParam, " ");// Test mit 2 Cores
+
+            strcat(fileWithParam, cores);
             for (int i = 0; i<count; i++) {
-                runAndMeasureScript(filename);
+
+                runAndMeasureScript(fileWithParam);
             }
             logMeasureNewLine();
         }

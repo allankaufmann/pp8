@@ -7,6 +7,7 @@
 const char* config_filename = "experiment.ini";
 const char* config_filename2 = "experiment.config";
 const char* foldername_generated_scripts = "gen";
+std::string foldername_generated_scripts_cpp = "gen";
 const char* foldername_seq = "search/taskseq";
 const char* foldername_appseq = "search/appseq";
 const char* foldername_edgedetction_scripts = "scripts/edgedetection";

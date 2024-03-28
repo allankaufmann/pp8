@@ -82,9 +82,9 @@ int main(int argc, char *argv[]) {
     }*/ else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
-        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts); // Messungen der Tasks
+        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts, "2"); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
-        runAndMeasureScriptsFromDirectory(10, foldername_edgedetction_scripts);
+        runAndMeasureScriptsFromDirectory(10, foldername_edgedetction_scripts, "2");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         compareAppTaskProtTasksOneToOne(true);
