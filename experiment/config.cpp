@@ -93,6 +93,8 @@ void generateAppTaskScripts(std::string task) {
 
 void readConfigFile() {
     mkdir(foldername_generated_scripts, 0777);
+    mkdir(foldername_generated_scripts_tasktypes.c_str(), 0777);
+    mkdir(foldername_generated_scripts_apptasks.c_str(), 0777);
 
     std::ifstream file(config_filename2);
     std::string currentSection;
@@ -125,28 +127,28 @@ void readConfigFile() {
         }
     }
 
+    std::cout << "Folgende Tasktypen sind konfiguriert:\n";
     for (std::string s : tasktypeVektor) {
-        std::cout << s << "\n";
+        std::cout << "\t" << s << "\n";
         generateTaskTypeScripts(s);
     }
 
+    std::cout << "\nFolgende Anwendungstasks sind konfiguriert:\n";
     for (std::string s: apptypeVektor) {
-        std::cout << s << "\n";
+        std::cout << "\t" << s << "\n";
         generateAppTaskScripts(s);
     }
 
-    printf("%s", "Skripte zum Ausführen der Tasks wurden im Ordner 'gen' erstellt!");
+    std::cout  << "\nSkripte zum Ausführen der Tasks wurden im Ordner 'gen' erstellt!\n";
 
-    for (std::string s : apptypeVektor) {
-        std::cout << s << "\n";
-    }
-
+    std::cout << "\nFolgende CPU Frequenzlevel sind hinterlegt:\n";
     for (std::string s : cpuFrequencyVektor) {
-        std::cout << s << "\n";
+        std::cout << "\t" << s << "\n";
     }
 
+    std::cout << "\nFolgende Parallelitätslevel sind hinterlegt:\n";
     for (std::string s : parallelismVektor) {
-        std::cout << s << "\n";
+        std::cout << "\t" << s << "\n";
     }
 }
 
