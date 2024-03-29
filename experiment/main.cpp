@@ -1,10 +1,14 @@
 #include <iostream>
 #include <thread>
-#include <string.h>
+#include <string.h> //strtok
 #include "measure.cpp"
 #include "config.cpp"
-#include "taskmapper/taskmapper.cpp"
-
+#include "math.h" //ceil
+#include "taskmapper/taskmapperresult.cpp"
+#include "taskmapper/taskclasses.cpp"
+#include "taskmapper/taskmapperLog.cpp"
+#include "taskmapper/taskmapperOneToOne.cpp"
+#include "taskmapper/taskmapperOneToMany.cpp"
 
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
