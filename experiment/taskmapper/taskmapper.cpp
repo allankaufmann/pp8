@@ -11,6 +11,8 @@
 #include <list>
 #include <thread>
 #include "math.h"
+#include "taskmapperresult.cpp"
+#include "taskclasses.cpp"
 //const char* daddseq= "taskmapper/taskseq/dadd.seq";
 //const char* sampleappseq = "taskmapper/appseq/sampleapp.seq";
 
@@ -18,164 +20,6 @@
 
 std::ofstream logfileTaskmapper;
 static const char *const logfolder_taskmapper = "logs/taskmapper/";
-
-void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmapper){
-    std::cout << text;
-    if (withLogFileTaskmapper) {
-        logfileTaskmapper << text;
-    }
-}
-
-
-class Result {
-public:
-    std::map<std::string, std::map<std::string, int>> protTaskAnzTrefferMap; // <AnwTask, <Prottask, Treffer>>
-    std::map<std::string, std::vector<bool>> pptFoundMapWithBool; // für jeden PPT die Treffer speichern
-    std::list<std::string> list; // Namen der abgebildeten PPTs.
-    std::map<std::string, int> abgebildeteTaskMap;
-
-    void resetPptFoundMap(std::vector<bool> hit) {
-        pptFoundMapWithBool.clear();
-        /*std::map<std::string, std::vector<bool>>::iterator it;
-        for (it = pptFoundMapWithBool.begin(); it != pptFoundMapWithBool.end(); it++) {
-            std::string s = it->first;
-            pptFoundMapWithBool[s]=hit;
-        }*/
-    }
-
-};
-
-class Task {
-    public:
-        std::string name;
-        std::vector<std::string> sequenzen;
-};
-
-class PrototypTask : public Task {
-    std::vector<bool> hit; // Übereinstimmung bei Vergleich
-
-    void resetHit(Task anwTask) {
-        hit.clear();
-        for (std::string s : anwTask.sequenzen) {
-            hit.push_back(false);
-        }
-    }
-};
-
-class AnwTask : public Task {
-public:
-    std::vector<bool> found;
-    Result resultOneToOne;
-    std::map<std::string, std::list<int>> indexOfMap;
-
-    void initIndexOfMap(int maxIndex, std::string prottaskname) {
-        indexOfMap.clear();
-        for (int i = 0; i < sequenzen.size(); i++) {
-            if (maxIndex!=0 && i>maxIndex) {
-                return;
-            }
-            if (found[i]){
-                continue;
-            }
-            if (resultOneToOne.pptFoundMapWithBool[prottaskname][i]) {
-                continue;
-            }
-            indexOfMap[sequenzen[i]].push_back(i);
-        }
-    }
-
-    int lastIndexOfTrue() {
-        for (int i = found.size()-1; i>0; i--) {
-            if (found[i]) {
-                return i;
-            }
-        }
-        return 0;
-    }
-
-
-    std::vector<bool> getTaskHitList(PrototypTask ptt) {
-        return resultOneToOne.pptFoundMapWithBool[ptt.name];
-    }
-
-    void initTaskHitList(PrototypTask ptt){
-        std::vector<bool> hit;
-        for (int i = 0; i < sequenzen.size(); i++) {
-            hit.push_back(false);
-        }
-
-        resultOneToOne.pptFoundMapWithBool[ptt.name]=hit;
-    }
-
-    void mergeFound(std::vector<bool> hit) {
-        for (int i = 0; i < sequenzen.size(); i++) {
-            if (found[i]) {
-                continue;
-            }
-            if (hit[i]) {
-                found[i]=true;
-            }
-        }
-    }
-
-
-    void resetFound() {
-        found.clear();
-        for (std::string s : sequenzen) {
-            found.push_back(false);
-        }
-    }
-
-    int countFound() {
-        int count = 0;
-        for (bool b : found) {
-            if (b) {
-                count++;
-            }
-        }
-        return count;
-    }
-
-    bool allFound() {
-        return sequenzen.size() == countFound();
-    }
-
-    /**
-     * Zählt alle nicht gefundenen bis Count erreicht wurde.
-     *
-     * @param count
-     * @return
-     */
-    int maxIndex(int max) {
-        int count = 0;
-        for (int i = 0; i < found.size(); i++) {
-            if (!found[i]) {
-                count++;
-            }
-            if (count>=max){
-                return i;
-            }
-        }
-        return found.size()-1;
-    }
-
-    std::string bestName;
-    float besthit = 0;
-    int bestFirstFalseIndex = 0;
-
-    void calcBestTask() {
-        std::map<std::string, int>::iterator it;
-        for (it = resultOneToOne.protTaskAnzTrefferMap[name].begin(); it != resultOneToOne.protTaskAnzTrefferMap[name].end(); it++) {
-            if (it->second>besthit) {
-                besthit=it->second;
-                bestName=it->first;
-            }
-        }
-    }
-
-
-};
-
 std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
 std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf Map
@@ -184,6 +28,13 @@ std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf M
  * Für die Abbildung 1:N werden die Tasks parallel geprüft. Aus diesem Grund werden die Zwischenergebnisse hier zusammengeführt.
  */
 Result resultOneToMany;
+
+void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmapper){
+    std::cout << text;
+    if (withLogFileTaskmapper) {
+        logfileTaskmapper << text;
+    }
+}
 
 std::vector<std::string> readSeqFile(const char* file, Task t) {
     std::vector<std::string> sequenzen;

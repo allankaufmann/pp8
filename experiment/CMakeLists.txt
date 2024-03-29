@@ -4,12 +4,14 @@ project(experiment)
 set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES scripts)
 
-add_executable(experiment
+add_executable(
         config.cpp
         main.cpp
         measure.cpp
         taskmapper/taskmapper.cpp
         constants.h
         tools.cpp
+        taskmapper/taskmapperresult.cpp
+        taskmapper/taskclasses.cpp
 )
 

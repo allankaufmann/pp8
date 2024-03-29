@@ -5,6 +5,8 @@
 #include "config.cpp"
 #include "taskmapper/taskmapper.cpp"
 
+
+
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
 const char* script_sobolv = "./scripts/runsobelv.sh";
@@ -117,6 +119,7 @@ int main(int argc, char *argv[]) {
         }*/
 
     } else if (strcasecmp(parameter, "V")==0) {
+
         //compareAppTaskProtTasksOneToMany(true);
         openMeasurLogFile();
         runAndMeasureScript(script_measure);
