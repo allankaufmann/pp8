@@ -3,7 +3,7 @@
 #include <string.h>
 #include "measure.cpp"
 #include "config.cpp"
-#include "search.cpp"
+#include "taskmapper/taskmapper.cpp"
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
         compareAppTaskProtTasksOneToOne(false);
     }   else if (strcasecmp(parameter, "D")==0) {
         initTaskVektors();
-        printf("Im Ordner search/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+        printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
 
         for (int i = 0; i < apptaskVektor.size(); i++) {
             printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());

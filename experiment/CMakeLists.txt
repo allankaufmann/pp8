@@ -8,7 +8,7 @@ add_executable(experiment
         config.cpp
         main.cpp
         measure.cpp
-        search.cpp
+        taskmapper/taskmapper.cpp
         constants.h
         tools.cpp
 )
