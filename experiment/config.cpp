@@ -48,10 +48,9 @@ void writeGenScript(const char* task) {
     free(filename);
 }
 
-void generateBenchmarkScripts(std::string task) {
+void generateTaskTypeScripts(std::string task) {
     // $CORES ist der Parameter für Anzahl Kerne!
-
-    std::string filename = foldername_generated_scripts_cpp + "/" + "run" + task + ".sh";
+    std::string filename = foldername_generated_scripts_tasktypes + "/" + "run" + task + ".sh";
     std::ofstream scriptfile (filename);
     if (scriptfile.is_open()) {
         scriptfile << "#!/bin/bash\n";
@@ -69,8 +68,27 @@ void generateBenchmarkScripts(std::string task) {
     }
     scriptfile.close();
     chmod(filename.c_str(), 0777);
+}
 
-
+void generateAppTaskScripts(std::string task) {
+    // $CORES ist der Parameter für Anzahl Kerne!
+    std::string filename = foldername_generated_scripts_apptasks + "/" + "runEdgedetection_" + task + ".sh";
+    std::ofstream scriptfile (filename);
+    if (scriptfile.is_open()) {
+        scriptfile << "#!/bin/bash\n";
+        scriptfile << "CORES=$1\n";
+        scriptfile << "if [ -z \"$CORES\" ]\n";
+        scriptfile << "then\n";
+        scriptfile << "CORES=1\n";
+        scriptfile << "fi\n";
+        scriptfile << "echo Anzahl ist $CORES\n";
+        scriptfile << "cd ..\n";
+        scriptfile << "cd edgedetection\n";
+        scriptfile << "echo \"$PWD\"\n";
+        scriptfile << "./edgedetection imgfilenames $CORES " + task + "\n";
+    }
+    scriptfile.close();
+    chmod(filename.c_str(), 0777);
 }
 
 void readConfigFile() {
@@ -109,11 +127,15 @@ void readConfigFile() {
 
     for (std::string s : tasktypeVektor) {
         std::cout << s << "\n";
-        generateBenchmarkScripts(s);
-        //writeGenScript(s.c_str());
+        generateTaskTypeScripts(s);
     }
 
-    printf("%s", "Skripte zum Ausführen der prototypischen Tasks wurden im Ordner 'gen' erstellt!");
+    for (std::string s: apptypeVektor) {
+        std::cout << s << "\n";
+        generateAppTaskScripts(s);
+    }
+
+    printf("%s", "Skripte zum Ausführen der Tasks wurden im Ordner 'gen' erstellt!");
 
     for (std::string s : apptypeVektor) {
         std::cout << s << "\n";

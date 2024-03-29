@@ -1,0 +1,8 @@
+[OneToOne]
+sobelv=vmov_SIMD
+
+[greyscale]
+dadd=0.12
+vmov_SIMD=0.87
+
+

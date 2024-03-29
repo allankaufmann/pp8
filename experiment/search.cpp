@@ -580,16 +580,7 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
             return appTask; // wenn im letzten Durchgang alle gefunden wurden, dann wird dieser Durchgang abgebrochen!
         }
 
-        /*#pragma omp parallel
-        {
-            #pragma omp for private (j) shared (appTask, prottaskVektor)
-            for (int j = 0; j < prottaskVektor.size(); j++) {
-                prepareAnwTaskAndProtTypTaskForCompare(appTask, prottaskVektor[j]);
-            }
-        };*/
-
         std::list<std::thread> threadlist;
-        //unsigned int nthreads = std::thread::hardware_concurrency();
         std::thread myThreads[prottaskVektor.size()];
 
 
