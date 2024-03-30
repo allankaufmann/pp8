@@ -6,6 +6,14 @@ std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf M
 std::ofstream logfileTaskmapper;
 static const char *const logfolder_taskmapper = "logs/taskmapper/";
 
+std::string result_section_log="Log";
+std::string result_section_one2one="OneToOne";
+std::string result_section_many2one="ManyToOne";
+std::string result_section_model="model";
+std::string result_section_end_model="end_model";
+
+char* currentLogfileName;
+
 std::vector<std::string> readSeqFile(const char* file, Task t) {
     std::vector<std::string> sequenzen;
 
@@ -95,7 +103,8 @@ bool checkSequenzfiles() {
 
 void openLogfileTaskmapper() {
     mkdir(logfolder_taskmapper, 0777);
-    logfileTaskmapper.open(getFilename(logfolder_taskmapper));
+    currentLogfileName = getFilename(logfolder_taskmapper);
+    logfileTaskmapper.open(currentLogfileName);
 }
 
 void closeLogFileTaskmapper() {
@@ -114,17 +123,7 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
     }
 }
 
-/**
- * Wird nach Ausführung der Ähnlichkeitssuche eines Anwendungstasks ausgeführt. Zu dem übergebenen Anwendungstask soll der Prototyptask ausgegeben werden, der dem Anwendungstask am ähnlichsten ist.
- *
- * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
- */
-AnwTask logBestTask(AnwTask appTask, bool percent) {
-    logMessageOnTaskmapperFileAndCout(
-            "Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" +
-            std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
-    return appTask;
-}
+
 
 void logBestTasks(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout(
@@ -150,4 +149,88 @@ void logBestTasks(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout(
             std::to_string(appTask.countFound()) + " von " + std::to_string(appTask.sequenzen.size()) + " gefunden! (" +
             std::to_string(percent) + "%)", true);
+}
+
+void saveOneToOneLine(std::string newOneToOneLine) {
+    std::ifstream infile(filename_taskmap_result);
+
+    size_t delimiterPos = newOneToOneLine.find('=');
+    std::string newKey = newOneToOneLine.substr(0, delimiterPos);
+    std::string newValue = newOneToOneLine.substr(delimiterPos + 1);
+    bool newKeyfound = false;
+
+    std::list<std::string> logs;
+    std::list<std::string> oneToOne;
+    std::list<std::string> manyToOne;
+
+    std::string line;
+    std::string currentSection;
+    while (std::getline(infile, line)) {
+        if (line.empty()) {
+            continue;
+        }
+        if (line[0] == '[' && line[line.length() - 1] == ']') {
+            currentSection = line.substr(1, line.length() - 2);
+            continue;
+        }
+
+        size_t delimiterPos = line.find('=');
+
+        if (currentSection==result_section_log) {
+            logs.push_back(line);
+        } else if (currentSection==result_section_one2one) {
+            std::string key = line.substr(0, delimiterPos);
+            std::string value = line.substr(delimiterPos + 1);
+
+            if (newKey==key) {
+                newKeyfound=true;
+                oneToOne.push_back(newOneToOneLine);
+            } else {
+                oneToOne.push_back(line);
+            }
+        } else if (currentSection==result_section_many2one) {
+            manyToOne.push_back(line);
+        }
+    }
+
+    infile.close();
+
+    std::ofstream oufile(filename_taskmap_result);
+
+    oufile << "[" << result_section_log << "]\n";
+
+    oufile << currentLogfileName << "\n";
+    for (std::string l : logs) {
+        oufile << l << "\n";
+    }
+
+    oufile << "\n";
+    oufile << "[" << result_section_one2one << "]\n";
+    for (std::string l : oneToOne) {
+        oufile << l << "\n";
+    }
+    if (!newKeyfound) {
+        oufile << newOneToOneLine<<"\n";
+    }
+
+    oufile << "\n";
+    oufile << "[" << result_section_many2one << "]\n";
+    for (std::string l : manyToOne) {
+        oufile << l << "\n";
+    }
+
+    oufile.close();
+}
+
+/**
+ * Wird nach Ausführung der Ähnlichkeitssuche eines Anwendungstasks ausgeführt. Zu dem übergebenen Anwendungstask soll der Prototyptask ausgegeben werden, der dem Anwendungstask am ähnlichsten ist.
+ *
+ * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
+ */
+AnwTask logBestTask(AnwTask appTask, bool percent) {
+    logMessageOnTaskmapperFileAndCout(
+            "Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" +
+            std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
+    saveOneToOneLine(appTask.name + "=" + appTask.bestName);
+    return appTask;
 }

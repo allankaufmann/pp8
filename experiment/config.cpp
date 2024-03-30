@@ -3,7 +3,7 @@
 #include <sys/stat.h> //mkdir
 #include <fstream>
 #include "constants.h"
-
+#include <list>
 std::string section_tasktypes="TaskTypes";
 
 std::string section_apptasks="ApplicationTasks";
@@ -172,8 +172,5 @@ void setCpuFrequency() {
         system(frequence.c_str());
         system("cpupower frequency-info");
     }
-
-
-
 }
 

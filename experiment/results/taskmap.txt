@@ -1,8 +1,12 @@
+[Log]
+logs/taskmapper/202403301812.log
+
 [OneToOne]
-sobelv=vmov_SIMD
+sobelv=test
+taskmapper/appseq/checkcontrast.seq=taskmapper/taskseq/m4x4smul_SIMD.seq
 
-[greyscale]
-dadd=0.12
-vmov_SIMD=0.87
-
-
+[ManyToOne]
+model=greyscale
+ dadd=0.12
+ vmov_SIMD=0.87
+end_model
