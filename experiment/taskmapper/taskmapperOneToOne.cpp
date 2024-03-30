@@ -1,5 +1,7 @@
 
 
+Result resultOneToOne;
+
 /**
  * Überprüfung, ob Assemblerbefehl aus Prototyptask im Assemblercode der Anwendungstask vorkommt. Dabei werden bereits verwendete Codestellen übersprungen.
  *
@@ -54,7 +56,7 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
      */
     if (sizeAppDivProt > 0.5) {
         for (int i = 0; i< sizeAppDivProt; i++) {
-            std::cout << "\n(Durchgang " << i << " von " << sizeAppDivProt << ")\n";
+            std::cout << "\n(Durchgang " << i << " von " << sizeAppDivProt << "; " << appTask.name<< " mit " << protTypTask.name << ") \n";
             for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
                 appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask, 0);
             }
@@ -79,6 +81,13 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
     return appTask;
 }
 
+AnwTask prepareAnwTaskAndProtTypTaskForCompareOneToOne(AnwTask appTask, PrototypTask protTypTask ) {
+    logMessageOnTaskmapperFileAndCout("Vergleich " + appTask.name + " mit protTypTask " + protTypTask.name + "\n",
+                                      false);
+    appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
+    resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name];
+    return appTask;
+}
 
 /**
  * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
@@ -89,16 +98,24 @@ AnwTask analyseAppTask(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout("\nAppTask " + appTask.name + " wird geprüft!\n", true);
     //std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
 
+    std::thread myThreads[prottaskVektor.size()];
+    int counter = 0;
     for (PrototypTask protTypTask : prottaskVektor) {
-        logMessageOnTaskmapperFileAndCout("Vergleich " + appTask.name + " mit protTypTask " + protTypTask.name + "\n",
-                                          false);
-        appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
+        myThreads[counter] = std::thread(prepareAnwTaskAndProtTypTaskForCompareOneToOne, appTask, protTypTask);
+        counter++;
     }
+
+    for (int j = 0; j < prottaskVektor.size(); j++) {
+        myThreads[j].join();
+    }
+
+    appTask.resultOneToOne=resultOneToOne;
+
     return appTask;
 }
 
 
-void compareAppTaskProtTasksOneToOne(bool test) {
+void compareAppTaskProtTasksOneToOne() {
     initTaskVektors();
 
     if (checkSequenzfiles()==false) {
@@ -107,20 +124,26 @@ void compareAppTaskProtTasksOneToOne(bool test) {
 
     openLogfileTaskmapper();
 
-    int count = 0; // test
     for (AnwTask t : apptaskVektor) {
 
         t = analyseAppTask(t);
         logfileTaskmapper << "\n";
         t.calcBestTask();
-        logBestTask(t);
-
-        if (test) { // wenn gesetzt, dann wird nur ein anwTask abgebildet
-            count++;
-            if (count==1) {
-                break;
-            }
-        }
+        logBestTask(t, false);
     }
+    closeLogFileTaskmapper();
+}
+
+void compareAppTaskProtTasksOneToOneTest(std::string appTaskName) {
+    if (checkSequenzfiles()==false) {
+        return;
+    }
+
+    openLogfileTaskmapper();
+    AnwTask task = apptaskMap[appTaskName];
+    task = analyseAppTask(task);
+    logfileTaskmapper << "\n";
+    task.calcBestTask();
+    logBestTask(task, false);
     closeLogFileTaskmapper();
 }

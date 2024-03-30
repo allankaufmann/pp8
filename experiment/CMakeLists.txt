@@ -8,10 +8,12 @@ add_executable(
         config.cpp
         main.cpp
         measure.cpp
-        taskmapper/taskmapper.cpp
         constants.h
         tools.cpp
         taskmapper/taskmapperresult.cpp
         taskmapper/taskclasses.cpp
+        taskmapper/taskmapperOneToOne.cpp
+        taskmapper/taskmapperLog.cpp
+        taskmapper/taskmapperOneToMany.cpp
 )
 

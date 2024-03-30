@@ -93,9 +93,19 @@ int main(int argc, char *argv[]) {
         runAndMeasureScriptsFromDirectory(10, foldername_edgedetction_scripts, "2");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
-        compareAppTaskProtTasksOneToOne(true);
+        initTaskVektors();
+        printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+
+        for (int i = 0; i < apptaskVektor.size(); i++) {
+            printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());
+        }
+
+        int index = 0;
+        if (scanf("%d", &index) == 1) {
+            compareAppTaskProtTasksOneToOneTest(apptaskVektor[index].name);
+        }
     } else if (strcasecmp(parameter, "B")==0) {
-        compareAppTaskProtTasksOneToOne(false);
+        compareAppTaskProtTasksOneToOne();
     }   else if (strcasecmp(parameter, "D")==0) {
         initTaskVektors();
         printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());

@@ -119,10 +119,10 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
  *
  * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
  */
-AnwTask logBestTask(AnwTask appTask) {
+AnwTask logBestTask(AnwTask appTask, bool percent) {
     logMessageOnTaskmapperFileAndCout(
             "Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" +
-            std::to_string(appTask.besthit) + " % Treffer)\n\n", true);
+            std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
     return appTask;
 }
 
