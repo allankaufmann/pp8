@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: Freq)\n");
-        printf("\tV (=Versuch...epebench-sobelv messen)\n");
+        printf("\tV (=Versuch...result-taskmap)\n");
         printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
@@ -134,16 +134,11 @@ int main(int argc, char *argv[]) {
 
     } else if (strcasecmp(parameter, "V")==0) {
 
-        //compareAppTaskProtTasksOneToMany(true);
-        openMeasurLogFile();
-        runAndMeasureScript(script_measure);
-        //runAndMeasureScript(script_Sample_m4x4smul_SIMD);
-        closeMeasureLogFile();
-        //testrapl();
-        //testThreadWithRapl();
-        //runAndMeasureScript(script_Sample_Application);
-        //runAndMeasureScript("./scripts/runDadd.sh");
-        //runAndMeasureScript("./scripts/runm4x4smul_SIMD.sh");
+        //openMeasurLogFile();
+        //runAndMeasureScript(script_measure);
+        //closeMeasureLogFile();
+        openLogfileTaskmapper();
+        saveOneToOneLine("sobelv=test");
     }
     return 0;
 }

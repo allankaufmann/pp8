@@ -36,10 +36,28 @@ std::vector<std::string> readSeqFile(const char* file, Task t) {
     return sequenzen;
 }
 
+void extractTaskNameFromFileName(const char* filename, char* taskname) {
+    const char *start = strrchr(filename, '/');
+    const char *end = strchr(filename, '.');
+
+    if (start != NULL && end != NULL && end > start) {
+        size_t length = end - start - 1; //
+
+
+        strncpy(taskname, start + 1, length);
+        taskname[length] = '\0'; // Null-terminate the string
+    } else {
+        taskname[0] = '\0'; // If no '/' and '.', return an empty string
+    }
+}
 
 PrototypTask readProttypTaskSeqfile(const char* file) {
     PrototypTask t;
     t.name=file;
+
+    char c_taskname[strlen(file)];
+    extractTaskNameFromFileName(file, c_taskname);
+    t.taskname=c_taskname;
     t.sequenzen=readSeqFile(file, t);
     return t;
 }
@@ -47,6 +65,10 @@ PrototypTask readProttypTaskSeqfile(const char* file) {
 AnwTask readAnwTaskSeqfile(const char* file) {
     AnwTask t;
     t.name=file;
+
+    char c_taskname[strlen(file)];
+    extractTaskNameFromFileName(file, c_taskname);
+    t.taskname=c_taskname;
     t.sequenzen=readSeqFile(file, t);
     t.resetFound();
     return t;

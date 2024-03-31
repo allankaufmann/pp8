@@ -2,6 +2,7 @@
 class Task {
 public:
     std::string name;
+    std::string taskname;
     std::vector<std::string> sequenzen;
 };
 
