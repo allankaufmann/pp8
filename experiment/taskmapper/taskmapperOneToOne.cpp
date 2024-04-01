@@ -56,7 +56,7 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
      */
     if (sizeAppDivProt > 0.5) {
         for (int i = 0; i< sizeAppDivProt; i++) {
-            std::cout << "\n(Durchgang " << i << " von " << sizeAppDivProt << "; " << appTask.name<< " mit " << protTypTask.name << ") \n";
+            std::cout << "\n(Durchgang " << i << " von " << sizeAppDivProt << "; " << appTask.taskname<< " mit " << protTypTask.taskname << ") \n";
             for (std::string protTaskSequenceEntry : protTypTask.sequenzen) {
                 appTask = compareProtTaskSequenEntryWithAppTaskEntry(protTaskSequenceEntry, appTask, 0);
             }
@@ -70,11 +70,11 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
             anzahl_hits++;
         }
     }
-    logTaskMapperOne2One(appTask.name, protTypTask.name, anzahl_hits, appTask.sequenzen.size(),
+    logTaskMapperOne2One(appTask.taskname, protTypTask.taskname, anzahl_hits, appTask.sequenzen.size(),
                          protTypTask.sequenzen.size(), sizeAppDivProt);
 
-    if (appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] == 0 || appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name] < anzahl_hits) {
-        appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=anzahl_hits;
+    if (appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname] == 0 || appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname] < anzahl_hits) {
+        appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname]=anzahl_hits;
     }
 
     appTask.resetFound();
@@ -82,10 +82,10 @@ AnwTask compareAppTaskWithPrototypTasks(AnwTask appTask, PrototypTask protTypTas
 }
 
 AnwTask prepareAnwTaskAndProtTypTaskForCompareOneToOne(AnwTask appTask, PrototypTask protTypTask ) {
-    logMessageOnTaskmapperFileAndCout("Vergleich " + appTask.name + " mit protTypTask " + protTypTask.name + "\n",
+    logMessageOnTaskmapperFileAndCout("Vergleich " + appTask.taskname + " mit protTypTask " + protTypTask.taskname + "\n",
                                       false);
     appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
-    resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.name][protTypTask.name];
+    resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname];
     return appTask;
 }
 
@@ -95,8 +95,8 @@ AnwTask prepareAnwTaskAndProtTypTaskForCompareOneToOne(AnwTask appTask, Prototyp
  * @param appTask zu untersuchender Anwendungstask.
  */
 AnwTask analyseAppTask(AnwTask appTask) {
-    logMessageOnTaskmapperFileAndCout("\nAppTask " + appTask.name + " wird geprüft!\n", true);
-    //std::cout << "\nAppTask " << appTask.name << " wird geprüft!\n";
+    logMessageOnTaskmapperFileAndCout("\nAppTask " + appTask.taskname + " wird geprüft!\n", true);
+    //std::cout << "\nAppTask " << appTask.taskfilename << " wird geprüft!\n";
 
     std::thread myThreads[prottaskVektor.size()];
     int counter = 0;

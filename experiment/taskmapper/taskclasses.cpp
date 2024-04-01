@@ -1,7 +1,7 @@
 
 class Task {
 public:
-    std::string name;
+    std::string taskfilename;
     std::string taskname;
     std::vector<std::string> sequenzen;
 };
@@ -50,7 +50,7 @@ public:
 
 
     std::vector<bool> getTaskHitList(PrototypTask ptt) {
-        return resultOneToOne.pptFoundMapWithBool[ptt.name];
+        return resultOneToOne.pptFoundMapWithBool[ptt.taskname];
     }
 
     void initTaskHitList(PrototypTask ptt){
@@ -59,7 +59,7 @@ public:
             hit.push_back(false);
         }
 
-        resultOneToOne.pptFoundMapWithBool[ptt.name]=hit;
+        resultOneToOne.pptFoundMapWithBool[ptt.taskname]=hit;
     }
 
     void mergeFound(std::vector<bool> hit) {
@@ -120,7 +120,7 @@ public:
 
     void calcBestTask() {
         std::map<std::string, int>::iterator it;
-        for (it = resultOneToOne.protTaskAnzTrefferMap[name].begin(); it != resultOneToOne.protTaskAnzTrefferMap[name].end(); it++) {
+        for (it = resultOneToOne.protTaskAnzTrefferMap[taskname].begin(); it != resultOneToOne.protTaskAnzTrefferMap[taskname].end(); it++) {
             if (it->second>besthit) {
                 besthit=it->second;
                 bestName=it->first;

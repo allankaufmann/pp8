@@ -1,9 +1,11 @@
 [Log]
+logs/taskmapper/202404011130.log
 logs/taskmapper/202403301812.log
 
 [OneToOne]
 sobelv=test
 taskmapper/appseq/checkcontrast.seq=taskmapper/taskseq/m4x4smul_SIMD.seq
+testWithNop=nop
 
 [ManyToOne]
 model=greyscale

@@ -97,12 +97,12 @@ int main(int argc, char *argv[]) {
         printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
 
         for (int i = 0; i < apptaskVektor.size(); i++) {
-            printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());
+            printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
         }
 
         int index = 0;
         if (scanf("%d", &index) == 1) {
-            compareAppTaskProtTasksOneToOneTest(apptaskVektor[index].name);
+            compareAppTaskProtTasksOneToOneTest(apptaskVektor[index].taskname);
         }
     } else if (strcasecmp(parameter, "B")==0) {
         compareAppTaskProtTasksOneToOne();
@@ -111,12 +111,12 @@ int main(int argc, char *argv[]) {
         printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
 
         for (int i = 0; i < apptaskVektor.size(); i++) {
-            printf("[%d]: %s\n", i, apptaskVektor[i].name.c_str());
+            printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
         }
 
         int index = 0;
         if (scanf("%d", &index) == 1) {
-            compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].name);
+            compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].taskname);
         }
     } else if (strcasecmp(parameter, "E")==0) {
         compareAppTaskProtTasksOneToMany(false);

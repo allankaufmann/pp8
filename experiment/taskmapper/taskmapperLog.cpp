@@ -53,22 +53,22 @@ void extractTaskNameFromFileName(const char* filename, char* taskname) {
 
 PrototypTask readProttypTaskSeqfile(const char* file) {
     PrototypTask t;
-    t.name=file;
-
+    t.taskfilename=file;
     char c_taskname[strlen(file)];
     extractTaskNameFromFileName(file, c_taskname);
     t.taskname=c_taskname;
+
     t.sequenzen=readSeqFile(file, t);
     return t;
 }
 
 AnwTask readAnwTaskSeqfile(const char* file) {
     AnwTask t;
-    t.name=file;
-
+    t.taskfilename=file;
     char c_taskname[strlen(file)];
     extractTaskNameFromFileName(file, c_taskname);
     t.taskname=c_taskname;
+
     t.sequenzen=readSeqFile(file, t);
     t.resetFound();
     return t;
@@ -83,7 +83,7 @@ void initProttaskVektor() {
     for (char* seqname : taskseqnames) {
         PrototypTask t = readProttypTaskSeqfile(seqname);
         prottaskVektor.push_back(t);
-        printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
+        printf("Der Task %s enthält %d Einträge\n", t.taskname.c_str(), t.sequenzen.size());
     }
     printf("%s", "\n");
 }
@@ -97,8 +97,8 @@ void initAppTaskCollections() {
         AnwTask t = readAnwTaskSeqfile(seqname);
         //t.initIndexOfMap();
         apptaskVektor.push_back(t);
-        apptaskMap[t.name]=t;
-        printf("Der Task %s enthält %d Einträge\n", seqname, t.sequenzen.size());
+        apptaskMap[t.taskname]=t;
+        printf("Der Task %s enthält %d Einträge\n", t.taskname.c_str(), t.sequenzen.size());
     }
     printf("%s", "\n");
 }
@@ -149,7 +149,7 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
 
 void logBestTasks(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout(
-            "\nDer Anwendungstask " + appTask.name + " wurde auf folgende prototypischen Tasks abgebildet:\n", true);
+            "\nDer Anwendungstask " + appTask.taskname + " wurde auf folgende prototypischen Tasks abgebildet:\n", true);
 
     int countAlleTasks = 0;
 
@@ -251,8 +251,8 @@ void saveOneToOneLine(std::string newOneToOneLine) {
  */
 AnwTask logBestTask(AnwTask appTask, bool percent) {
     logMessageOnTaskmapperFileAndCout(
-            "Der ähnlichste ProttypTask für den AppTask " + appTask.name + " ist " + appTask.bestName + "(" +
+            "Der ähnlichste ProttypTask für den AppTask " + appTask.taskname + " ist " + appTask.bestName + "(" +
             std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
-    saveOneToOneLine(appTask.name + "=" + appTask.bestName);
+    saveOneToOneLine(appTask.taskname + "=" + appTask.bestName);
     return appTask;
 }
