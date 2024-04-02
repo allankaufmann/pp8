@@ -1,4 +1,5 @@
 
+#include <set>
 
 std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
@@ -155,7 +156,6 @@ void logBestTasks(AnwTask appTask) {
 
     std::map<std::string, int>::iterator it;
     for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
-        //std::string key = it->first;
         countAlleTasks+=it->second;
     }
 
@@ -173,21 +173,30 @@ void logBestTasks(AnwTask appTask) {
             std::to_string(percent) + "%)", true);
 }
 
-void saveOneToOneLine(std::string newOneToOneLine) {
+void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) {
     std::ifstream infile(filename_taskmap_result);
 
-    size_t delimiterPos = newOneToOneLine.find('=');
-    std::string newKey = newOneToOneLine.substr(0, delimiterPos);
-    std::string newValue = newOneToOneLine.substr(delimiterPos + 1);
-    bool newKeyfound = false;
-
-    std::list<std::string> logs;
+    std::set<std::string> logs;
     std::list<std::string> oneToOne;
+    bool updateOneToOneKey = false;
     std::list<std::string> manyToOne;
+    bool updateOneToManyModellEntry = false;
+    bool updateOneToManyModell= false;
 
     std::string line;
     std::string currentSection;
+    std::string currentModel;
+    std::string currentModelEntry;
+
+    size_t delimiterPosInNewLine = newLineToUpdate.find('=');
+    std::string keyInNewline = (delimiterPosInNewLine!=0) ? newLineToUpdate.substr(0, delimiterPosInNewLine): NULL;
+    std::string valueInNewLine = (delimiterPosInNewLine!=0) ? newLineToUpdate.substr(delimiterPosInNewLine + 1):NULL;
+
     while (std::getline(infile, line)) {
+        size_t delimiterPos = line.find('=');
+        std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+        std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+
         if (line.empty()) {
             continue;
         }
@@ -196,22 +205,56 @@ void saveOneToOneLine(std::string newOneToOneLine) {
             continue;
         }
 
-        size_t delimiterPos = line.find('=');
-
         if (currentSection==result_section_log) {
-            logs.push_back(line);
+            logs.insert(line);
         } else if (currentSection==result_section_one2one) {
-            std::string key = line.substr(0, delimiterPos);
-            std::string value = line.substr(delimiterPos + 1);
-
-            if (newKey==key) {
-                newKeyfound=true;
-                oneToOne.push_back(newOneToOneLine);
+            if (sectionToUpdate == result_section_one2one){
+                if (keyInNewline == keyOfCurrentLine) {
+                    updateOneToOneKey=true;
+                    oneToOne.push_back(newLineToUpdate);
+                } else {
+                    oneToOne.push_back(line);
+                }
             } else {
                 oneToOne.push_back(line);
             }
         } else if (currentSection==result_section_many2one) {
-            manyToOne.push_back(line);
+            if (keyOfCurrentLine == result_section_model){
+                currentModel=valueOfCurrentLine;
+                manyToOne.push_back(line);
+                if (currentModel==sectionToUpdate) {
+                    updateOneToManyModell=true;
+                }
+                continue;
+            }
+
+            // anderes Model als das gesuchte, kann hinzugefügt werden
+            if (currentModel!=sectionToUpdate) {
+                manyToOne.push_back(line);
+                continue;
+            }
+
+            // ab hier nur das Modell, das aktualisiert werden soll. Es wird der Modelleintrag betrachtet
+            currentModelEntry = keyOfCurrentLine;
+
+            // Es gibt bereits einen Modelleintrag. Die aktuelle Zeile soll ersetzt werden
+            if (currentModelEntry==keyInNewline) {
+                updateOneToManyModellEntry=true;
+                manyToOne.push_back(newLineToUpdate);
+                continue;
+            } else if (keyOfCurrentLine != result_section_end_model){
+                manyToOne.push_back(line);
+            }
+
+            // Es gibt keinen Modelleintrag
+            if (keyOfCurrentLine == result_section_end_model) {
+                if (!updateOneToManyModellEntry) {
+                    manyToOne.push_back(newLineToUpdate);
+                }
+                manyToOne.push_back(line);
+                continue;
+            }
+
         }
     }
 
@@ -231,8 +274,8 @@ void saveOneToOneLine(std::string newOneToOneLine) {
     for (std::string l : oneToOne) {
         oufile << l << "\n";
     }
-    if (!newKeyfound) {
-        oufile << newOneToOneLine<<"\n";
+    if (sectionToUpdate==result_section_one2one && !updateOneToOneKey) {
+        oufile << newLineToUpdate << "\n";
     }
 
     oufile << "\n";
@@ -240,6 +283,13 @@ void saveOneToOneLine(std::string newOneToOneLine) {
     for (std::string l : manyToOne) {
         oufile << l << "\n";
     }
+
+    if(sectionToUpdate!=result_section_one2one && !updateOneToManyModell) {
+        oufile << result_section_model << "=" << sectionToUpdate << "\n";
+        oufile << newLineToUpdate << "\n";
+        oufile << "end_model\n";
+    }
+
 
     oufile.close();
 }
@@ -253,6 +303,6 @@ AnwTask logBestTask(AnwTask appTask, bool percent) {
     logMessageOnTaskmapperFileAndCout(
             "Der ähnlichste ProttypTask für den AppTask " + appTask.taskname + " ist " + appTask.bestName + "(" +
             std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
-    saveOneToOneLine(appTask.taskname + "=" + appTask.bestName);
+    saveOneToOneLine(result_section_one2one, appTask.taskname + "=" + appTask.bestName);
     return appTask;
 }
