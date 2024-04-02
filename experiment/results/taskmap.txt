@@ -1,9 +1,10 @@
 [Log]
-logs/taskmapper/202404022103.log
+logs/taskmapper/202404022108.log
 logs/taskmapper/202404021746.log
 logs/taskmapper/202404021815.log
 logs/taskmapper/202404021956.log
 logs/taskmapper/202404022103.log
+logs/taskmapper/202404022108.log
 
 [OneToOne]
 sobelv=vmov_SIMD
@@ -27,4 +28,55 @@ model=testWithNopBitByteShiftIMulLogic
  imul=20.000000
  logic=20.000000
  nop=20.000000
+end_model
+model=sobelv
+ vmov_SIMD=100.000000
+end_model
+model=checkcontrast
+ dmem64_SIMD=50.000000
+ m4x4smul=50.000000
+end_model
+model=copyimage
+ imem=33.000000
+ m4x4smul=33.000000
+ vmov_SIMD=33.000000
+end_model
+model=testWithNopAndBitByteAndShift
+ bitbyte=33.000000
+ nop=33.000000
+ shift=33.000000
+end_model
+model=testWithNopAndBitByte
+ bitbyte=50.000000
+ nop=50.000000
+end_model
+model=combineimgs
+ iadd=20.000000
+ vmov_SIMD=80.000000
+end_model
+model=sharpencontrast
+ imul=50.000000
+ vmov_SIMD=50.000000
+end_model
+model=loadimage
+ bitbyte=5.000000
+ iadd=5.000000
+ m4x4smul=5.000000
+ vmov_SIMD=83.000000
+end_model
+model=sobelh
+ vmov_SIMD=100.000000
+end_model
+model=writeimage
+ imem=25.000000
+ logic=25.000000
+ m4x4smul=25.000000
+ shift=25.000000
+end_model
+model=greyscale
+ dadd=20.000000
+ vmov_SIMD=80.000000
+end_model
+model=testWithNop
+ nop=100.000000
 end_model
