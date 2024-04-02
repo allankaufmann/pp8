@@ -1,14 +1,15 @@
 
+#include <string.h>
 
 AnwTask calcBestTaskMany(AnwTask appTask) {
-    std::map<std::string, int>::iterator it;
-    for (it = appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname].begin(); it != appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskfilename].end(); it++) {
-        std::string pttName = it->first;
-        int anzahlTreffer = it->second;
+
+    for (const auto& kv : appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname]) {
+        std::string pttName = kv.first;
+        int anzahlTreffer = kv.second;
 
         PrototypTask task;
         for (PrototypTask t : prottaskVektor) {
-            if (t.taskname == pttName) {
+            if (t.taskname.compare(pttName)==0) {
                 task = t;
                 break;
             }
@@ -180,24 +181,17 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
 }
 
 
-void compareAppTaskProtTasksOneToMany(bool test) {
+void compareAppTaskProtTasksOneToMany() {
     initTaskVektors();
     if (checkSequenzfiles()==false) {
         return;
     }
     openLogfileTaskmapper();
 
-    if (test) {
-        AnwTask task = apptaskVektor[3];//sobelv_20_20
-        //AnwTask task = apptaskVektor[0];//sobelv
-        //AnwTask task = apptaskVektor[10];//sobelv_50_50
-
-        task = analyseAppTaskMany(task);
-        logBestTasks(task);
-    } else {
-        logMessageOnTaskmapperFileAndCout("Noch nicht implementiert!", true);
+    for (AnwTask t : apptaskVektor) {
+        t = analyseAppTaskMany(t);
+        logBestTasks(t);
     }
-
     closeLogFileTaskmapper();
 }
 

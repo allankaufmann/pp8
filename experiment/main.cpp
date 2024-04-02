@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
             compareAppTaskProtTasksOneToManyTest(apptaskVektor[index].taskname);
         }
     } else if (strcasecmp(parameter, "E")==0) {
-        compareAppTaskProtTasksOneToMany(false);
+        compareAppTaskProtTasksOneToMany();
     } else if (strcasecmp(parameter, "W")==0) {
         setCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
@@ -138,8 +138,6 @@ int main(int argc, char *argv[]) {
         //runAndMeasureScript(script_measure);
         //closeMeasureLogFile();
         openLogfileTaskmapper();
-        saveLineToTaskmapFile("OneToOne", "sobelv=test2");
-        saveLineToTaskmapFile("OneToOne", "testWithX=Y");
         saveLineToTaskmapFile("greyscale", " dadd=0.13");
         saveLineToTaskmapFile("greyscale", " x=0.99");
         saveLineToTaskmapFile("neuesModell", " x=0.99");

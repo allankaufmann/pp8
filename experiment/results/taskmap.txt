@@ -1,5 +1,9 @@
 [Log]
+logs/taskmapper/202404022103.log
 logs/taskmapper/202404021746.log
+logs/taskmapper/202404021815.log
+logs/taskmapper/202404021956.log
+logs/taskmapper/202404022103.log
 
 [OneToOne]
 sobelv=vmov_SIMD
@@ -17,3 +21,10 @@ greyscale=vmov_SIMD
 testWithNop=nop
 
 [OneToMany]
+model=testWithNopBitByteShiftIMulLogic
+ bitbyte=20.000000
+ shift=20.000000
+ imul=20.000000
+ logic=20.000000
+ nop=20.000000
+end_model
