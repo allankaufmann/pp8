@@ -138,12 +138,12 @@ int main(int argc, char *argv[]) {
         //runAndMeasureScript(script_measure);
         //closeMeasureLogFile();
         openLogfileTaskmapper();
-        saveOneToOneLine("OneToOne", "sobelv=test2");
-        saveOneToOneLine("OneToOne", "testWithX=Y");
-        saveOneToOneLine("greyscale", " dadd=0.13");
-        saveOneToOneLine("greyscale", " x=0.99");
-        saveOneToOneLine("neuesModell", " x=0.99");
-        saveOneToOneLine("neuesModell", " y=0.01");
+        saveLineToTaskmapFile("OneToOne", "sobelv=test2");
+        saveLineToTaskmapFile("OneToOne", "testWithX=Y");
+        saveLineToTaskmapFile("greyscale", " dadd=0.13");
+        saveLineToTaskmapFile("greyscale", " x=0.99");
+        saveLineToTaskmapFile("neuesModell", " x=0.99");
+        saveLineToTaskmapFile("neuesModell", " y=0.01");
 
     }
     return 0;

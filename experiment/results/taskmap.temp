@@ -17,3 +17,7 @@ greyscale=vmov_SIMD
 testWithNop=nop
 
 [OneToMany]
+model=greyscale
+ dadd=0.12
+ vmov_SIMD=0.87
+end_model

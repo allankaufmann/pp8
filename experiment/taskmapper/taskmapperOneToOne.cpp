@@ -129,7 +129,7 @@ void compareAppTaskProtTasksOneToOne() {
         t = analyseAppTask(t);
         logfileTaskmapper << "\n";
         t.calcBestTask();
-        logBestTask(t, false);
+        logBestTask(t, false, true);
     }
     closeLogFileTaskmapper();
 }
@@ -144,6 +144,6 @@ void compareAppTaskProtTasksOneToOneTest(std::string appTaskName) {
     task = analyseAppTask(task);
     logfileTaskmapper << "\n";
     task.calcBestTask();
-    logBestTask(task, false);
+    logBestTask(task, false, true);
     closeLogFileTaskmapper();
 }

@@ -9,7 +9,7 @@ static const char *const logfolder_taskmapper = "logs/taskmapper/";
 
 std::string result_section_log="Log";
 std::string result_section_one2one="OneToOne";
-std::string result_section_many2one="ManyToOne";
+std::string result_section_one2many="OneToMany";
 std::string result_section_model="model";
 std::string result_section_end_model="end_model";
 
@@ -148,38 +148,15 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
 
 
 
-void logBestTasks(AnwTask appTask) {
-    logMessageOnTaskmapperFileAndCout(
-            "\nDer Anwendungstask " + appTask.taskname + " wurde auf folgende prototypischen Tasks abgebildet:\n", true);
 
-    int countAlleTasks = 0;
 
-    std::map<std::string, int>::iterator it;
-    for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
-        countAlleTasks+=it->second;
-    }
-
-    for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
-        std::string key = it->first;
-        int anzahl = it->second;
-        float percent = anzahl * 100 / countAlleTasks;
-        logMessageOnTaskmapperFileAndCout(
-                key + " (" + std::to_string(anzahl) + " mal zugeordnet, in %: " + std::to_string(percent) + ")\n", true);
-    }
-
-    float percent = appTask.countFound() * 100 / appTask.sequenzen.size();
-    logMessageOnTaskmapperFileAndCout(
-            std::to_string(appTask.countFound()) + " von " + std::to_string(appTask.sequenzen.size()) + " gefunden! (" +
-            std::to_string(percent) + "%)", true);
-}
-
-void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) {
+void saveLineToTaskmapFile(std::string sectionToUpdate, std::string newLineToUpdate) {
     std::ifstream infile(filename_taskmap_result);
 
     std::set<std::string> logs;
     std::list<std::string> oneToOne;
     bool updateOneToOneKey = false;
-    std::list<std::string> manyToOne;
+    std::list<std::string> oneToMany;
     bool updateOneToManyModellEntry = false;
     bool updateOneToManyModell= false;
 
@@ -218,10 +195,10 @@ void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) 
             } else {
                 oneToOne.push_back(line);
             }
-        } else if (currentSection==result_section_many2one) {
+        } else if (currentSection == result_section_one2many) {
             if (keyOfCurrentLine == result_section_model){
                 currentModel=valueOfCurrentLine;
-                manyToOne.push_back(line);
+                oneToMany.push_back(line);
                 if (currentModel==sectionToUpdate) {
                     updateOneToManyModell=true;
                 }
@@ -230,7 +207,7 @@ void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) 
 
             // anderes Model als das gesuchte, kann hinzugefügt werden
             if (currentModel!=sectionToUpdate) {
-                manyToOne.push_back(line);
+                oneToMany.push_back(line);
                 continue;
             }
 
@@ -240,18 +217,18 @@ void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) 
             // Es gibt bereits einen Modelleintrag. Die aktuelle Zeile soll ersetzt werden
             if (currentModelEntry==keyInNewline) {
                 updateOneToManyModellEntry=true;
-                manyToOne.push_back(newLineToUpdate);
+                oneToMany.push_back(newLineToUpdate);
                 continue;
             } else if (keyOfCurrentLine != result_section_end_model){
-                manyToOne.push_back(line);
+                oneToMany.push_back(line);
             }
 
             // Es gibt keinen Modelleintrag
             if (keyOfCurrentLine == result_section_end_model) {
                 if (!updateOneToManyModellEntry) {
-                    manyToOne.push_back(newLineToUpdate);
+                    oneToMany.push_back(newLineToUpdate);
                 }
-                manyToOne.push_back(line);
+                oneToMany.push_back(line);
                 continue;
             }
 
@@ -279,8 +256,8 @@ void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) 
     }
 
     oufile << "\n";
-    oufile << "[" << result_section_many2one << "]\n";
-    for (std::string l : manyToOne) {
+    oufile << "[" << result_section_one2many << "]\n";
+    for (std::string l : oneToMany) {
         oufile << l << "\n";
     }
 
@@ -294,15 +271,46 @@ void saveOneToOneLine(std::string sectionToUpdate, std::string newLineToUpdate) 
     oufile.close();
 }
 
+void logBestTasks(AnwTask appTask) {
+    logMessageOnTaskmapperFileAndCout(
+            "\nDer Anwendungstask " + appTask.taskname + " wurde auf folgende prototypischen Tasks abgebildet:\n", true);
+
+    int countAlleTasks = 0;
+
+    std::map<std::string, int>::iterator it;
+    for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
+        countAlleTasks+=it->second;
+    }
+
+    for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
+        std::string key = it->first;
+        int anzahl = it->second;
+        float percent = anzahl * 100 / countAlleTasks;
+        logMessageOnTaskmapperFileAndCout(
+                key + " (" + std::to_string(anzahl) + " mal zugeordnet, in %: " + std::to_string(percent) + ")\n", true);
+        std::string line = " " + key+"=" + std::to_string(percent);
+        saveLineToTaskmapFile(appTask.taskname, line);
+    }
+
+    float percent = appTask.countFound() * 100 / appTask.sequenzen.size();
+    logMessageOnTaskmapperFileAndCout(
+            std::to_string(appTask.countFound()) + " von " + std::to_string(appTask.sequenzen.size()) + " gefunden! (" +
+            std::to_string(percent) + "%)", true);
+
+}
+
 /**
  * Wird nach Ausführung der Ähnlichkeitssuche eines Anwendungstasks ausgeführt. Zu dem übergebenen Anwendungstask soll der Prototyptask ausgegeben werden, der dem Anwendungstask am ähnlichsten ist.
  *
  * @param appTask für diesen Anwendungstask wird das Ergebnis geprüft.
  */
-AnwTask logBestTask(AnwTask appTask, bool percent) {
+AnwTask logBestTask(AnwTask appTask, bool percent, bool savetofile) {
     logMessageOnTaskmapperFileAndCout(
             "Der ähnlichste ProttypTask für den AppTask " + appTask.taskname + " ist " + appTask.bestName + "(" +
             std::to_string(appTask.besthit) + " " + (percent ? "%" : "") + " Treffer)\n\n", true);
-    saveOneToOneLine(result_section_one2one, appTask.taskname + "=" + appTask.bestName);
+
+    if (savetofile) {
+        saveLineToTaskmapFile(result_section_one2one, appTask.taskname + "=" + appTask.bestName);
+    }
     return appTask;
 }

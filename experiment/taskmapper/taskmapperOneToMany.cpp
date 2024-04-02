@@ -165,7 +165,7 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
 
         appTask.resultOneToOne=resultOneToMany;
         appTask = calcBestTaskMany(appTask);
-        logBestTask(appTask, true);
+        logBestTask(appTask, true, false);
         appTask.resultOneToOne.list.push_back(appTask.bestName);
         appTask.resultOneToOne.abgebildeteTaskMap[appTask.bestName]+=1;
 
