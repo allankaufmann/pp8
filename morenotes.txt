@@ -42,9 +42,16 @@ scraphandre:
 sudo apt install docker.io
 docker run -v /sys/class/powercap:/sys/class/powercap -v /proc:/proc -ti hubblo/scaphandre stdout -t 15
 
-
-
-
+Threads per core:
+	https://askubuntu.com/questions/724228/how-to-find-the-number-of-cpu-cores-including-virtual
+	cat /proc/cpuinfo | grep processor | wc -l
+	cat /proc/cpuinfo | grep 'core id'
+	lscpu
+	
+	ausschalten: echo off > /sys/devices/system/cpu/smt/control
+	cat /sys/devices/system/cpu/smt/control
+	
+	
 
 
 

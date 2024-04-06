@@ -1,0 +1,36 @@
+Gesprächsnotizen 05.04.2024
+
+prüfen:
+- kann die MHz eigentlich wirklich auf 400Hz einstellen?
+- Info sollte aus Hardware kommen
+- mit den physischen Kernen arbeiten - also 4
+--Auslesen mit CPU power
+- Betriebssystem Parameter
+-- /etc/default/grub
+--- no smt - (recherche!)
+--- Multithreading deaktivieren
+--- oder über Bios deaktivieren
+- andernfalls würde die Leistungsaufnahme nicht so skalieren wie erwartet, daher auf physisch vorhandene einschränken
+
+Benchmark:
+- mehr als 1 Sekunden -> 5 sekunden
+-- Präzision höher wenn länger
+-- Überlauf kann passieren d. h. Zähler ist plötzlich kleiner
+
+
+MEssung Apptasks:
+- ggfls. Zähler in Datei schreiben und auslesen
+- Ausführung der Task über mehrere Bilder hinwen, Bilder nach Möglichkeit vorher laden, damit andere Tasks nicht mit ausgeführt werden
+-- je kürzer Ausführung, desto unpräziser
+
+-- Timestamps für die Energieverbrauchswerte
+--- Einträge für die einzelnen Threads
+---- anhand der Timestamps prüfen welcher als erster fertig war -> Zeitraum und Energieverbrauch
+---- pro Kern ein Bild und dann Methode wiederholen
+---- oder: größere Menge ein Eingaben
+---- openMP prüfen ob die Thread statisch aufgeteilt werden
+----- ThreadID auslogen
+----- prüfen wann der erste Thread fertig ist -> Start und Endzeitpunkt
+
+
+
