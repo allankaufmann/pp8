@@ -1,0 +1,49 @@
+
+AppTask testWithNopBitByteShiftIMulLogic wird geprüft!
+(Durchgang 1 von 6)
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask shift (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask imul (Gesamt: 2071)  2015 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask nop (Gesamt: 1999)  1999 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask branch (Gesamt: 1997)  1994 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask m4x4smul (Gesamt: 1999)  1975 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask icompare (Gesamt: 2095)  2005 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask bitbyte (Gesamt: 2037)  1999 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask imov (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask logic (Gesamt: 2036)  1997 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  2023 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dmul (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask iadd (Gesamt: 2039)  1994 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  2021 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dadd (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask imem (Gesamt: 2080)  2001 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dmem (Gesamt: 2091)  2008 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  2060 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  2054 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask testWithNopBitByteShiftIMulLogic(Gesamt: 10139) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  2030 Einträge vorhanden!
+

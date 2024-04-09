@@ -1,0 +1,2 @@
+app;duration;power;leistung
+./scripts/measureGreyscale1N.sh;80;144714;1808

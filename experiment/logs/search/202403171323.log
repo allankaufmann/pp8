@@ -1,0 +1,328 @@
+
+AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq wird geprüft!
+(Durchgang 1 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1994 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1975 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2030 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2001 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1994 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2060 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2015 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1997 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  2005 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2008 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2023 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2021 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2054 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist search/taskseq/nop.seq(100.000000 % Treffer)
+
+(Durchgang 2 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  2037 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2023 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2010 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1948 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2021 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1948 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1949 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2000 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  2017 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1948 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1960 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  2023 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  2003 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2025 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2063 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2027 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2050 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist search/taskseq/bitbyte.seq(100.000000 % Treffer)
+
+(Durchgang 3 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  2000 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1975 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1976 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2036 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  2002 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1976 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1979 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1993 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1996 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2031 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1991 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2023 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2000 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2010 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2080 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2031 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2066 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist search/taskseq/shift.seq(100.000000 % Treffer)
+
+(Durchgang 4 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2035 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1998 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2071 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2031 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1931 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1931 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1944 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1930 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1930 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  2002 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1996 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  2021 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2000 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2035 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2009 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2078 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2065 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist search/taskseq/imul.seq(100.000000 % Treffer)
+
+(Durchgang 5 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1960 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1951 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1948 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2016 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2013 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1976 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1949 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  2016 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  2036 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1995 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1948 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2001 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2001 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  2024 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2013 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2013 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1976 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2013 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2013 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist search/taskseq/logic.seq(100.000000 % Treffer)
+
+(Durchgang 6 von 6)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  0 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  0 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/bitbyte.seq
+Gleichheit mit search/taskseq/branch.seq
+Gleichheit mit search/taskseq/dadd.seq
+Gleichheit mit search/taskseq/dmem.seq
+Gleichheit mit search/taskseq/dmem64_SIMD.seq
+Gleichheit mit search/taskseq/dmul.seq
+Gleichheit mit search/taskseq/dmul64_SIMD.seq
+Gleichheit mit search/taskseq/dsub64_SIMD.seq
+Gleichheit mit search/taskseq/iadd.seq
+Gleichheit mit search/taskseq/icompare.seq
+Gleichheit mit search/taskseq/imem.seq
+Gleichheit mit search/taskseq/imov.seq
+Gleichheit mit search/taskseq/imul.seq
+Gleichheit mit search/taskseq/logic.seq
+Gleichheit mit search/taskseq/m4x4smul.seq
+Gleichheit mit search/taskseq/m4x4smul_SIMD.seq
+Gleichheit mit search/taskseq/nop.seq
+Gleichheit mit search/taskseq/shift.seq
+Gleichheit mit search/taskseq/smul32_SIMD.seq
+Gleichheit mit search/taskseq/ssub32_SIMD.seq
+Gleichheit mit search/taskseq/v1x4smul_SIMD.seq
+Gleichheit mit search/taskseq/vconvert_SIMD.seq
+Gleichheit mit search/taskseq/vmov_SIMD.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq ist (0.000000 % Treffer)
+
+
+Der Anwendungstask search/appseq/testWithNopBitByteShiftIMulLogic.seq wurde auf folgende prototypischen Tasks abgebildet:
+ (1 mal zugeordnet, in %: 16.000000)
+search/taskseq/bitbyte.seq (1 mal zugeordnet, in %: 16.000000)
+search/taskseq/imul.seq (1 mal zugeordnet, in %: 16.000000)
+search/taskseq/logic.seq (1 mal zugeordnet, in %: 16.000000)
+search/taskseq/nop.seq (1 mal zugeordnet, in %: 16.000000)
+search/taskseq/shift.seq (1 mal zugeordnet, in %: 16.000000)
+10139 von 10139 gefunden! (100.000000%)

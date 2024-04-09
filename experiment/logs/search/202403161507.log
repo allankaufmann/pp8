@@ -1,0 +1,11 @@
+
+AppTask search/appseq/greyscale.seq wird geprüft!
+(Durchgang 1 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1075 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1053 Einträge vorhanden!
+

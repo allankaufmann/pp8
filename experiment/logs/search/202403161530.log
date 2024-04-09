@@ -1,0 +1,503 @@
+
+AppTask search/appseq/greyscale.seq wird geprüft!
+(Durchgang 1 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2005 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1894 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1916 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1895 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1956 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1952 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1916 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1935 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2036 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1895 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1935 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1894 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1978 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1959 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1894 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1913 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1940 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1975 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1978 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1894 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2006 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/dmul.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/dadd.seq(96.071777 % Treffer)
+
+(Durchgang 2 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1199 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1195 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1178 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1264 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1288 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1239 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1198 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1261 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1241 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1199 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1259 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1178 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1223 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1218 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1257 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1264 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1318 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1234 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1288 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/dmem.seq(61.597321 % Treffer)
+
+(Durchgang 3 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1131 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1155 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1128 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1186 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1131 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1109 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1125 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1126 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1156 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/dmem.seq(55.236729 % Treffer)
+
+(Durchgang 4 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1131 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1109 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1131 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1091 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1118 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1118 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1126 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1169 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1145 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/dmul.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/dadd.seq(54.849659 % Treffer)
+
+(Durchgang 5 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  940 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  962 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  983 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  980 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  933 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  939 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  964 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  959 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  989 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  990 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  940 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  974 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1017 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/dmul.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/dadd.seq(48.739090 % Treffer)
+
+(Durchgang 6 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  828 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  774 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  800 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  828 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  830 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  803 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  831 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  780 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  841 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  821 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  815 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  882 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  805 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  824 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  858 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/dmul.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/vmov_SIMD.seq(40.890125 % Treffer)
+
+(Durchgang 7 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  841 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  774 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  825 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  780 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  805 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  824 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  831 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  803 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  821 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  830 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  825 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  800 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  882 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  858 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  815 Einträge vorhanden!
+
+Gleichheit mit search/taskseq/dmul.seq
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/vmov_SIMD.seq(40.890125 % Treffer)
+
+(Durchgang 8 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  841 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  803 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  821 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  831 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  824 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  780 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  805 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  800 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  774 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  822 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  822 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  830 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  858 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  760 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  781 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  882 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  815 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/vmov_SIMD.seq(40.890125 % Treffer)
+
+(Durchgang 9 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  791 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  750 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  744 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  770 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  800 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  852 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  801 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  751 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  773 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  794 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  775 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  751 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  811 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  730 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  789 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  789 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  828 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  785 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/vmov_SIMD.seq(39.499306 % Treffer)
+
+(Durchgang 10 von 10)
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  673 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  695 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  708 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  666 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  713 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  672 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  708 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  723 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  697 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  716 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  774 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  733 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  692 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  673 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  722 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  652 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  750 Einträge vorhanden!
+
+In AppTask search/appseq/greyscale.seq(Gesamt: 18296) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  707 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/greyscale.seq ist search/taskseq/vmov_SIMD.seq(35.883171 % Treffer)
+
+
+Der Anwendungstask search/appseq/greyscale.seq wurde auf folgende prototypischen Tasks abgebildet:
+search/taskseq/dadd.seq (3 mal zugeordnet, in %: 30.000000)
+search/taskseq/dmem.seq (2 mal zugeordnet, in %: 20.000000)
+search/taskseq/vmov_SIMD.seq (5 mal zugeordnet, in %: 50.000000)
+10832 von 18296 gefunden! (59.000000%)

@@ -1,0 +1,85 @@
+app;duration;power;leistung
+gen/rundadd.sh 2;15010;47822632;3186
+gen/rundadd.sh 2;7988;27868948;3488
+gen/rundadd.sh 2;1063;6031662;5674
+
+gen/runimul.sh 2;1064;6122787;5754
+gen/runimul.sh 2;1052;5488633;5217
+gen/runimul.sh 2;1050;6436813;6130
+
+gen/runv1x4smul_SIMD.sh 2;1048;8274943;7895
+gen/runv1x4smul_SIMD.sh 2;1044;7769390;7441
+gen/runv1x4smul_SIMD.sh 2;1048;7559184;7212
+
+gen/runshift.sh 2;1047;6119308;5844
+gen/runshift.sh 2;1042;4568287;4384
+gen/runshift.sh 2;1043;4973681;4768
+
+gen/rundmem64_SIMD.sh 2;1045;5449693;5215
+gen/rundmem64_SIMD.sh 2;1043;5215379;5000
+gen/rundmem64_SIMD.sh 2;1043;5347643;5127
+
+gen/runm4x4smul_SIMD.sh 2;1055;6482833;6144
+gen/runm4x4smul_SIMD.sh 2;1059;6639815;6269
+gen/runm4x4smul_SIMD.sh 2;1054;7796062;7396
+
+gen/rundsub64_SIMD.sh 2;1052;8062907;7664
+gen/rundsub64_SIMD.sh 2;1059;7577862;7155
+gen/rundsub64_SIMD.sh 2;1045;5632798;5390
+
+gen/runvconvert_SIMD.sh 2;1045;4852953;4643
+gen/runvconvert_SIMD.sh 2;1045;4997118;4781
+gen/runvconvert_SIMD.sh 2;1044;4929736;4721
+
+gen/rundmul64_SIMD.sh 2;1047;5687119;5431
+gen/rundmul64_SIMD.sh 2;1054;8867714;8413
+gen/rundmul64_SIMD.sh 2;1067;9431250;8839
+
+gen/runicompare.sh 2;1059;10161168;9595
+gen/runicompare.sh 2;1047;6822371;6516
+gen/runicompare.sh 2;1046;6366500;6086
+
+gen/rundmem.sh 2;1062;6786603;6390
+gen/rundmem.sh 2;1057;9358008;8853
+gen/rundmem.sh 2;1069;10710117;10018
+
+gen/runimem.sh 2;1061;10210423;9623
+gen/runimem.sh 2;1062;10330296;9727
+gen/runimem.sh 2;1058;7993022;7554
+
+gen/runm4x4smul.sh 2;260;2091121;8042
+gen/runm4x4smul.sh 2;193;870420;4509
+gen/runm4x4smul.sh 2;197;834654;4236
+
+gen/runnop.sh 2;1050;5519517;5256
+gen/runnop.sh 2;1041;5979416;5743
+gen/runnop.sh 2;1048;7123090;6796
+
+gen/runbranch.sh 2;1043;7994609;7665
+gen/runbranch.sh 2;1043;7106610;6813
+gen/runbranch.sh 2;1052;6036789;5738
+
+gen/rundmul.sh 2;1047;5797105;5536
+gen/rundmul.sh 2;1047;7278058;6951
+gen/rundmul.sh 2;1057;10630283;10057
+
+gen/runiadd.sh 2;1059;8230631;7772
+gen/runiadd.sh 2;1056;10583164;10021
+gen/runiadd.sh 2;1054;6458419;6127
+
+gen/runlogic.sh 2;1047;5692856;5437
+gen/runlogic.sh 2;1064;5939743;5582
+gen/runlogic.sh 2;1063;6406051;6026
+
+gen/runbitbyte.sh 2;1046;7061017;6750
+gen/runbitbyte.sh 2;1046;5773606;5519
+gen/runbitbyte.sh 2;1047;6925458;6614
+
+gen/runvmov_SIMD.sh 2;1048;6298812;6010
+gen/runvmov_SIMD.sh 2;1051;6326461;6019
+gen/runvmov_SIMD.sh 2;1048;6364913;6073
+
+gen/runimov.sh 2;1063;6601546;6210
+gen/runimov.sh 2;1055;7348920;6965
+gen/runimov.sh 2;1096;13142728;11991
+

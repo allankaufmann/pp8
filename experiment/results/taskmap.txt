@@ -1,10 +1,14 @@
 [Log]
-logs/taskmapper/202404022108.log
+logs/taskmapper/202404091651.log
 logs/taskmapper/202404021746.log
 logs/taskmapper/202404021815.log
 logs/taskmapper/202404021956.log
 logs/taskmapper/202404022103.log
 logs/taskmapper/202404022108.log
+logs/taskmapper/202404091539.log
+logs/taskmapper/202404091559.log
+logs/taskmapper/202404091619.log
+logs/taskmapper/202404091651.log
 
 [OneToOne]
 sobelv=vmov_SIMD
@@ -22,61 +26,73 @@ greyscale=vmov_SIMD
 testWithNop=nop
 
 [OneToMany]
-model=testWithNopBitByteShiftIMulLogic
- bitbyte=20.000000
- shift=20.000000
- imul=20.000000
- logic=20.000000
- nop=20.000000
-end_model
 model=sobelv
- vmov_SIMD=100.000000
+ branch=0.100000
+ dmem=0.100000
+ m4x4smul=0.500000
+ vmov_SIMD=0.300000
 end_model
 model=checkcontrast
- dmem64_SIMD=50.000000
- m4x4smul=50.000000
+ dmem64_SIMD=0.500000
+ shift=0.500000
 end_model
 model=copyimage
- imem=33.000000
- m4x4smul=33.000000
- vmov_SIMD=33.000000
+ imem=0.330000
+ m4x4smul=0.330000
+ shift=0.330000
+end_model
+model=testWithNopBitByteShiftIMulLogic
+ bitbyte=0.200000
+ imul=0.200000
+ logic=0.200000
+ nop=0.200000
+ shift=0.200000
 end_model
 model=testWithNopAndBitByteAndShift
- bitbyte=33.000000
- nop=33.000000
- shift=33.000000
+ bitbyte=0.330000
+ nop=0.330000
+ shift=0.330000
 end_model
 model=testWithNopAndBitByte
- bitbyte=50.000000
- nop=50.000000
+ bitbyte=0.500000
+ nop=0.500000
 end_model
 model=combineimgs
- iadd=20.000000
- vmov_SIMD=80.000000
+ branch=0.400000
+ m4x4smul=0.400000
+ vmov_SIMD=0.200000
 end_model
 model=sharpencontrast
- imul=50.000000
- vmov_SIMD=50.000000
+ bitbyte=0.100000
+ imul=0.100000
+ m4x4smul=0.200000
+ vmov_SIMD=0.600000
 end_model
 model=loadimage
- bitbyte=5.000000
- iadd=5.000000
- m4x4smul=5.000000
- vmov_SIMD=83.000000
+ bitbyte=0.110000
+ imem=0.050000
+ logic=0.050000
+ m4x4smul=0.720000
+ shift=0.050000
 end_model
 model=sobelh
- vmov_SIMD=100.000000
+ branch=0.100000
+ dmem=0.100000
+ m4x4smul=0.500000
+ vmov_SIMD=0.300000
 end_model
 model=writeimage
- imem=25.000000
- logic=25.000000
- m4x4smul=25.000000
- shift=25.000000
+ imem=0.250000
+ imov=0.250000
+ logic=0.250000
+ shift=0.250000
 end_model
 model=greyscale
- dadd=20.000000
- vmov_SIMD=80.000000
+ dadd=0.200000
+ dmem=0.100000
+ m4x4smul=0.600000
+ vmov_SIMD=0.100000
 end_model
 model=testWithNop
- nop=100.000000
+ nop=1.000000
 end_model

@@ -1,0 +1,100 @@
+app;duration;power;leistung
+gen/apptasks/runEdgedetection_writeimage.sh 2;3229;68430428;21192
+gen/apptasks/runEdgedetection_writeimage.sh 2;5177;114378491;22093
+gen/apptasks/runEdgedetection_writeimage.sh 2;5184;115671274;22313
+gen/apptasks/runEdgedetection_writeimage.sh 2;5142;117339605;22819
+gen/apptasks/runEdgedetection_writeimage.sh 2;3852;87965290;22836
+gen/apptasks/runEdgedetection_writeimage.sh 2;5178;117947085;22778
+gen/apptasks/runEdgedetection_writeimage.sh 2;5149;119153809;23141
+gen/apptasks/runEdgedetection_writeimage.sh 2;3875;91124157;23515
+gen/apptasks/runEdgedetection_writeimage.sh 2;5179;121724603;23503
+gen/apptasks/runEdgedetection_writeimage.sh 2;5216;123233816;23626
+
+gen/apptasks/runEdgedetection_sobelh.sh 2;5185;117857547;22730
+gen/apptasks/runEdgedetection_sobelh.sh 2;5187;117299748;22614
+gen/apptasks/runEdgedetection_sobelh.sh 2;5178;115512948;22308
+gen/apptasks/runEdgedetection_sobelh.sh 2;5408;121273859;22424
+gen/apptasks/runEdgedetection_sobelh.sh 2;5417;114827953;21197
+gen/apptasks/runEdgedetection_sobelh.sh 2;5460;121997003;22343
+gen/apptasks/runEdgedetection_sobelh.sh 2;5487;121785760;22195
+gen/apptasks/runEdgedetection_sobelh.sh 2;5401;120090146;22234
+gen/apptasks/runEdgedetection_sobelh.sh 2;5571;122750419;22033
+gen/apptasks/runEdgedetection_sobelh.sh 2;5471;114224256;20878
+
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5421;108052091;19932
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5270;113543715;21545
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5304;117696293;22190
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5117;107198212;20949
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5131;111391866;21709
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5366;114561963;21349
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5135;107417266;20918
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5116;107726592;21056
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5295;111293599;21018
+gen/apptasks/runEdgedetection_sharpencontrast.sh 2;5124;107428497;20965
+
+gen/apptasks/runEdgedetection_greyscale.sh 2;5133;109541468;21340
+gen/apptasks/runEdgedetection_greyscale.sh 2;5119;107189362;20939
+gen/apptasks/runEdgedetection_greyscale.sh 2;5367;112055255;20878
+gen/apptasks/runEdgedetection_greyscale.sh 2;5014;103986245;20739
+gen/apptasks/runEdgedetection_greyscale.sh 2;5338;103516519;19392
+gen/apptasks/runEdgedetection_greyscale.sh 2;4967;104563087;21051
+gen/apptasks/runEdgedetection_greyscale.sh 2;5276;111497700;21132
+gen/apptasks/runEdgedetection_greyscale.sh 2;5291;111556660;21084
+gen/apptasks/runEdgedetection_greyscale.sh 2;5022;103920510;20693
+gen/apptasks/runEdgedetection_greyscale.sh 2;5132;109773889;21390
+
+gen/apptasks/runEdgedetection_copyimage.sh 2;5985;119081910;19896
+gen/apptasks/runEdgedetection_copyimage.sh 2;5036;111450765;22130
+gen/apptasks/runEdgedetection_copyimage.sh 2;5072;108107268;21314
+gen/apptasks/runEdgedetection_copyimage.sh 2;5090;108284391;21273
+gen/apptasks/runEdgedetection_copyimage.sh 2;5824;122780448;21081
+gen/apptasks/runEdgedetection_copyimage.sh 2;5081;109172389;21486
+gen/apptasks/runEdgedetection_copyimage.sh 2;5096;108640836;21318
+gen/apptasks/runEdgedetection_copyimage.sh 2;5135;106902742;20818
+gen/apptasks/runEdgedetection_copyimage.sh 2;5151;106507112;20676
+gen/apptasks/runEdgedetection_copyimage.sh 2;5090;107191498;21059
+
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5165;104636573;20258
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5118;104318398;20382
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5437;109569483;20152
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5436;109949059;20226
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5111;106300265;20798
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5379;110578758;20557
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5145;105044470;20416
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5014;101604233;20264
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5181;109006008;21039
+gen/apptasks/runEdgedetection_combineimgs.sh 2;5435;109693445;20182
+
+gen/apptasks/runEdgedetection_sobelv.sh 2;5576;118756593;21297
+gen/apptasks/runEdgedetection_sobelv.sh 2;5727;122612296;21409
+gen/apptasks/runEdgedetection_sobelv.sh 2;5576;118687563;21285
+gen/apptasks/runEdgedetection_sobelv.sh 2;5723;122755118;21449
+gen/apptasks/runEdgedetection_sobelv.sh 2;5484;115456247;21053
+gen/apptasks/runEdgedetection_sobelv.sh 2;5659;119330383;21086
+gen/apptasks/runEdgedetection_sobelv.sh 2;5412;114061720;21075
+gen/apptasks/runEdgedetection_sobelv.sh 2;6001;118520205;19750
+gen/apptasks/runEdgedetection_sobelv.sh 2;5684;123478749;21723
+gen/apptasks/runEdgedetection_sobelv.sh 2;5824;124709092;21412
+
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;268615;12209
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;258727;11760
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;265258;12057
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;231750;10534
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;231933;10542
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;221924;10087
+gen/apptasks/runEdgedetection_loadimage.sh 2;22;208434;9474
+gen/apptasks/runEdgedetection_loadimage.sh 2;25;169982;6799
+gen/apptasks/runEdgedetection_loadimage.sh 2;26;179198;6892
+gen/apptasks/runEdgedetection_loadimage.sh 2;26;168884;6495
+
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;96172;1570635628;16331
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;2971;51266470;17255
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;827;14887841;18002
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;612;10358127;16925
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;394;7063336;17927
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;206;3531668;17144
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;148;2537042;17142
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;172;2888543;16793
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;167;2809441;16823
+gen/apptasks/runEdgedetection_checkcontrast.sh 2;164;2822868;17212
+

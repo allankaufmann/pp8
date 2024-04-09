@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: Freq)\n");
-        printf("\tV (=Versuch...result-taskmap)\n");
+        printf("\tV (=Versuch...copy 1:N)\n");
         printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
@@ -88,9 +88,9 @@ int main(int argc, char *argv[]) {
     }*/ else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
-        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts, "2"); // Messungen der Tasks
+        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
-        runAndMeasureScriptsFromDirectory(10, foldername_edgedetction_scripts, "2");
+        runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         initTaskVektors();
@@ -134,14 +134,15 @@ int main(int argc, char *argv[]) {
 
     } else if (strcasecmp(parameter, "V")==0) {
 
-        //openMeasurLogFile();
-        //runAndMeasureScript(script_measure);
-        //closeMeasureLogFile();
-        openLogfileTaskmapper();
+        openMeasurLogFile();
+        runAndMeasureScript(script_measure);
+        closeMeasureLogFile();
+
+        /*openLogfileTaskmapper();
         saveLineToTaskmapFile("greyscale", " dadd=0.13");
         saveLineToTaskmapFile("greyscale", " x=0.99");
         saveLineToTaskmapFile("neuesModell", " x=0.99");
-        saveLineToTaskmapFile("neuesModell", " y=0.01");
+        saveLineToTaskmapFile("neuesModell", " y=0.01");*/
 
     }
     return 0;

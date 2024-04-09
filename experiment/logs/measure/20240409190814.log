@@ -1,0 +1,19 @@
+app;duration;power;leistung
+gen/apptasks/runEdgedetection_writeimage.sh 1;2278;26799248;11764
+
+gen/apptasks/runEdgedetection_sobelh.sh 1;4885;67155346;13747
+
+gen/apptasks/runEdgedetection_sharpencontrast.sh 1;4914;68790840;13998
+
+gen/apptasks/runEdgedetection_greyscale.sh 1;4869;68437203;14055
+
+gen/apptasks/runEdgedetection_copyimage.sh 1;4432;61930506;13973
+
+gen/apptasks/runEdgedetection_combineimgs.sh 1;4831;68561043;14191
+
+gen/apptasks/runEdgedetection_sobelv.sh 1;4839;63857503;13196
+
+gen/apptasks/runEdgedetection_loadimage.sh 1;22;223021;10137
+
+gen/apptasks/runEdgedetection_checkcontrast.sh 1;1951;30775128;15774
+

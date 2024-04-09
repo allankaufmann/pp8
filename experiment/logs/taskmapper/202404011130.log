@@ -1,0 +1,28 @@
+
+AppTask testWithNop wird geprüft!
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask imul (Gesamt: 2071)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dmul (Gesamt: 2062)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask m4x4smul (Gesamt: 1999)  1974 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask imem (Gesamt: 2080)  1976 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  1977 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dmem (Gesamt: 2091)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask logic (Gesamt: 2036)  1976 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask nop (Gesamt: 1999)  1999 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dadd (Gesamt: 2062)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  1973 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask iadd (Gesamt: 2039)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask icompare (Gesamt: 2095)  1976 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask bitbyte (Gesamt: 2037)  1975 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  1972 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1976 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask shift (Gesamt: 1996)  1983 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask imov (Gesamt: 1996)  1983 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+In AppTask testWithNop(Gesamt: 1999) sind aus ProtTask branch (Gesamt: 1997)  1998 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+
+Der ähnlichste ProttypTask für den AppTask testWithNop ist nop(1999.000000  Treffer)
+

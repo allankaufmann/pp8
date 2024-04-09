@@ -132,6 +132,30 @@ AnwTask prepareAnwTaskAndProtTypTaskForCompare(AnwTask appTask, PrototypTask pro
     return appTask;
 }
 
+AnwTask analyse(AnwTask appTask) {
+    std::list<std::thread> threadlist;
+    std::thread myThreads[prottaskVektor.size()];
+    for (int j = 0; j < prottaskVektor.size(); j++) {
+        myThreads[j] = std::thread(prepareAnwTaskAndProtTypTaskForCompare, appTask, prottaskVektor[j]);
+    }
+
+    for (int j = 0; j < prottaskVektor.size(); j++) {
+        myThreads[j].join();
+    }
+
+    appTask.resultOneToOne=resultOneToMany;
+    appTask = calcBestTaskMany(appTask);
+    logBestTask(appTask, true, false);
+    appTask.resultOneToOne.list.push_back(appTask.bestName);
+    appTask.resultOneToOne.abgebildeteTaskMap[appTask.bestName]+=1;
+
+    appTask.mergeFound(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]);
+    appTask.resultOneToOne.resetPptFoundMap(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]); // wieder zurücksetzen!
+    appTask.resultOneToOne.protTaskAnzTrefferMap.clear();
+    appTask.bestName="";
+    appTask.besthit=0;
+    return appTask;
+}
 
 /**
  * Für den übergebenen Anwendungstask wird eine Ähnlichkeitssuche ausgeführt. Dabei werden nacheinander mit den vorhandenen Prototyptasks vergleichen.
@@ -152,30 +176,25 @@ AnwTask analyseAppTaskMany(AnwTask appTask) {
             return appTask; // wenn im letzten Durchgang alle gefunden wurden, dann wird dieser Durchgang abgebrochen!
         }
 
-        std::list<std::thread> threadlist;
-        std::thread myThreads[prottaskVektor.size()];
-
-
-        for (int j = 0; j < prottaskVektor.size(); j++) {
-            myThreads[j] = std::thread(prepareAnwTaskAndProtTypTaskForCompare, appTask, prottaskVektor[j]);
-        }
-
-        for (int j = 0; j < prottaskVektor.size(); j++) {
-            myThreads[j].join();
-        }
-
-        appTask.resultOneToOne=resultOneToMany;
-        appTask = calcBestTaskMany(appTask);
-        logBestTask(appTask, true, false);
-        appTask.resultOneToOne.list.push_back(appTask.bestName);
-        appTask.resultOneToOne.abgebildeteTaskMap[appTask.bestName]+=1;
-
-        appTask.mergeFound(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]);
-        appTask.resultOneToOne.resetPptFoundMap(appTask.resultOneToOne.pptFoundMapWithBool[appTask.bestName]); // wieder zurücksetzen!
-        appTask.resultOneToOne.protTaskAnzTrefferMap.clear();
-        appTask.bestName="";
-        appTask.besthit=0;
+        appTask= analyse(appTask);
     }
+    float percentFound = appTask.percentFound();
+    if (percentFound < 85) {
+        float newpercentFound = 0;
+        do {
+            percentFound = appTask.percentFound();
+            logMessageOnTaskmapperFileAndCout("Der Anwendungstask wurde zu " + std::to_string(percentFound) + "% abgedeckt. Es werden weitere Runden durchgeführt, um eine höhere Abdeckung zu erreichen!\n", true);
+            appTask= analyse(appTask);
+            newpercentFound = appTask.percentFound();
+
+            float diff = newpercentFound - percentFound;
+
+            if (diff<2) {
+                break;
+            }
+        } while ((newpercentFound > percentFound && newpercentFound < 85) || newpercentFound==percentFound);
+    }
+
 
     return appTask;
 }

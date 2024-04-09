@@ -1,0 +1,7 @@
+
+AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq wird geprüft!
+(Durchgang 1 von 5)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2023 Einträge vorhanden!
+

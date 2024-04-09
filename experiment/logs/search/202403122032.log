@@ -1,0 +1,17 @@
+
+AppTask search/appseq/testWithNop.seq wird geprüft!
+(Durchgang 1 von 1)
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1994 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1975 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1976 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNop.seq(Gesamt: 1999) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1976 Einträge vorhanden!
+

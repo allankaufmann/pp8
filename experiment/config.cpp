@@ -62,7 +62,7 @@ void generateTaskTypeScripts(std::string task) {
         scriptfile << "echo Anzahl ist $CORES\n";
         scriptfile << "cd ..\n";
         scriptfile << "cd epEBench/bin/Release\n";
-        scriptfile << "./epebench -m " + task + " -t 1 -n $CORES\n";
+        scriptfile << "./epebench -m " + task + " -t 5 -n $CORES\n";
         scriptfile << "mv epebench_loadlog.txt epebench_" + task + ".log\n";
         scriptfile << "cd ../../..";
     }

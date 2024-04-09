@@ -1,0 +1,28 @@
+
+AppTask taskmapper/appseq/checkcontrast.seq wird geprüft!
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/imem.seq (Gesamt: 2080)  1851 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dmul.seq (Gesamt: 2062)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1862 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/branch.seq (Gesamt: 1997)  1848 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/imov.seq (Gesamt: 1996)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/bitbyte.seq (Gesamt: 2037)  1851 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dmem.seq (Gesamt: 2091)  1856 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/icompare.seq (Gesamt: 2095)  1849 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/shift.seq (Gesamt: 1996)  1848 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/m4x4smul.seq (Gesamt: 1999)  1851 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dadd.seq (Gesamt: 2062)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/nop.seq (Gesamt: 1999)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1866 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/iadd.seq (Gesamt: 2039)  1859 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/logic.seq (Gesamt: 2036)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/imul.seq (Gesamt: 2071)  1861 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1868 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1857 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+In AppTask taskmapper/appseq/checkcontrast.seq(Gesamt: 1922) sind aus ProtTask taskmapper/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1847 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 0 mal wiederholt!)
+
+Der ähnlichste ProttypTask für den AppTask taskmapper/appseq/checkcontrast.seq ist taskmapper/taskseq/m4x4smul_SIMD.seq(1868.000000  Treffer)
+

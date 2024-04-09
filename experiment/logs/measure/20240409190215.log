@@ -1,0 +1,93 @@
+app;duration;power;leistung
+gen/tasktypes/rundadd.sh 1;5048;58568576;11602
+gen/tasktypes/rundadd.sh 1;5035;59253388;11768
+gen/tasktypes/rundadd.sh 1;5035;59855499;11887
+
+gen/tasktypes/runimul.sh 1;5035;57638830;11447
+gen/tasktypes/runimul.sh 1;5029;58067051;11546
+gen/tasktypes/runimul.sh 1;5032;58142673;11554
+
+gen/tasktypes/runv1x4smul_SIMD.sh 1;5032;64730913;12863
+gen/tasktypes/runv1x4smul_SIMD.sh 1;5031;64720110;12864
+gen/tasktypes/runv1x4smul_SIMD.sh 1;5032;64734880;12864
+
+gen/tasktypes/runshift.sh 1;5027;54162093;10774
+gen/tasktypes/runshift.sh 1;5030;54063949;10748
+gen/tasktypes/runshift.sh 1;5029;54082259;10754
+
+gen/tasktypes/rundmem64_SIMD.sh 1;5032;60729459;12068
+gen/tasktypes/rundmem64_SIMD.sh 1;5031;61090603;12142
+gen/tasktypes/rundmem64_SIMD.sh 1;5030;61032742;12133
+
+gen/tasktypes/runm4x4smul_SIMD.sh 1;5037;67781931;13456
+gen/tasktypes/runm4x4smul_SIMD.sh 1;5032;68083811;13530
+gen/tasktypes/runm4x4smul_SIMD.sh 1;5032;68038156;13521
+
+gen/tasktypes/rundsub64_SIMD.sh 1;5029;65014787;12927
+gen/tasktypes/rundsub64_SIMD.sh 1;5032;64488849;12815
+gen/tasktypes/rundsub64_SIMD.sh 1;5035;64882829;12886
+
+gen/tasktypes/runvconvert_SIMD.sh 1;5032;52613025;10455
+gen/tasktypes/runvconvert_SIMD.sh 1;5032;52458057;10424
+gen/tasktypes/runvconvert_SIMD.sh 1;5028;52515979;10444
+
+gen/tasktypes/rundmul64_SIMD.sh 1;5031;63345602;12591
+gen/tasktypes/rundmul64_SIMD.sh 1;5029;63382528;12603
+gen/tasktypes/rundmul64_SIMD.sh 1;5031;63399801;12601
+
+gen/tasktypes/runicompare.sh 1;5028;70978700;14116
+gen/tasktypes/runicompare.sh 1;5032;70901491;14090
+gen/tasktypes/runicompare.sh 1;5033;71006471;14108
+
+gen/tasktypes/rundmem.sh 1;5047;22074285;4373
+gen/tasktypes/rundmem.sh 1;5042;22133915;4389
+gen/tasktypes/rundmem.sh 1;5045;22156560;4391
+
+gen/tasktypes/runimem.sh 1;5032;57062232;11339
+gen/tasktypes/runimem.sh 1;5032;57889318;11504
+gen/tasktypes/runimem.sh 1;5034;58477389;11616
+
+gen/tasktypes/runm4x4smul.sh 1;5040;78652204;15605
+gen/tasktypes/runm4x4smul.sh 1;5039;79394633;15756
+gen/tasktypes/runm4x4smul.sh 1;5037;79499125;15783
+
+gen/tasktypes/runssub32_SIMD.sh 1;5032;68179024;13549
+gen/tasktypes/runssub32_SIMD.sh 1;5033;68155954;13541
+gen/tasktypes/runssub32_SIMD.sh 1;5031;68146432;13545
+
+gen/tasktypes/runnop.sh 1;5029;57055518;11345
+gen/tasktypes/runnop.sh 1;5030;57132484;11358
+gen/tasktypes/runnop.sh 1;5030;56993506;11330
+
+gen/tasktypes/runbranch.sh 1;5030;56914344;11314
+gen/tasktypes/runbranch.sh 1;5029;56933387;11321
+gen/tasktypes/runbranch.sh 1;5029;57004065;11335
+
+gen/tasktypes/runsmul32_SIMD.sh 1;5031;66640271;13245
+gen/tasktypes/runsmul32_SIMD.sh 1;5024;59949126;11932
+gen/tasktypes/runsmul32_SIMD.sh 1;5034;59903900;11899
+
+gen/tasktypes/rundmul.sh 1;5036;56849098;11288
+gen/tasktypes/rundmul.sh 1;5034;56756386;11274
+gen/tasktypes/rundmul.sh 1;5034;56668984;11257
+
+gen/tasktypes/runiadd.sh 1;5035;60103179;11937
+gen/tasktypes/runiadd.sh 1;5034;59975615;11914
+gen/tasktypes/runiadd.sh 1;5033;60052824;11931
+
+gen/tasktypes/runlogic.sh 1;5042;49364009;9790
+gen/tasktypes/runlogic.sh 1;5038;49353328;9796
+gen/tasktypes/runlogic.sh 1;5040;49376521;9796
+
+gen/tasktypes/runbitbyte.sh 1;5035;66348707;13177
+gen/tasktypes/runbitbyte.sh 1;5033;66241346;13161
+gen/tasktypes/runbitbyte.sh 1;5031;66342848;13186
+
+gen/tasktypes/runvmov_SIMD.sh 1;5034;55534770;11031
+gen/tasktypes/runvmov_SIMD.sh 1;5031;55499553;11031
+gen/tasktypes/runvmov_SIMD.sh 1;5034;55376750;11000
+
+gen/tasktypes/runimov.sh 1;5030;52552844;10447
+gen/tasktypes/runimov.sh 1;5030;52256214;10388
+gen/tasktypes/runimov.sh 1;5028;52318042;10405
+

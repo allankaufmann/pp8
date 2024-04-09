@@ -285,14 +285,14 @@ void logBestTasks(AnwTask appTask) {
     for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
         std::string key = it->first;
         int anzahl = it->second;
-        float percent = anzahl * 100 / countAlleTasks;
+        float percent = ((float) (anzahl * 100 / countAlleTasks))*0.01;
         logMessageOnTaskmapperFileAndCout(
                 key + " (" + std::to_string(anzahl) + " mal zugeordnet, in %: " + std::to_string(percent) + ")\n", true);
         std::string line = " " + key+"=" + std::to_string(percent);
         saveLineToTaskmapFile(appTask.taskname, line);
     }
 
-    float percent = appTask.countFound() * 100 / appTask.sequenzen.size();
+    float percent = (float) appTask.countFound() * 100 / appTask.sequenzen.size();
     logMessageOnTaskmapperFileAndCout(
             std::to_string(appTask.countFound()) + " von " + std::to_string(appTask.sequenzen.size()) + " gefunden! (" +
             std::to_string(percent) + "%)", true);

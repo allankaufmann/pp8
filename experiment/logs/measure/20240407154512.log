@@ -1,0 +1,93 @@
+app;duration;power;leistung
+gen/tasktypes 2;71;103881;1463
+gen/tasktypes 2;14;126403;9028
+gen/tasktypes 2;14;100159;7154
+
+gen/rundadd.sh 2;1048;18211257;17377
+gen/rundadd.sh 2;1034;18207351;17608
+gen/rundadd.sh 2;1040;18230850;17529
+
+gen/runimul.sh 2;1048;17595170;16789
+gen/runimul.sh 2;1037;17739823;17106
+gen/runimul.sh 2;1038;17804459;17152
+
+gen/runv1x4smul_SIMD.sh 2;1029;20272286;19700
+gen/runv1x4smul_SIMD.sh 2;1030;20406686;19812
+gen/runv1x4smul_SIMD.sh 2;1024;20491647;20011
+
+gen/runshift.sh 2;1028;16675372;16221
+gen/runshift.sh 2;1027;16865801;16422
+gen/runshift.sh 2;1023;16846331;16467
+
+gen/rundmem64_SIMD.sh 2;1028;19528575;18996
+gen/rundmem64_SIMD.sh 2;1026;19461803;18968
+gen/rundmem64_SIMD.sh 2;1028;19631847;19097
+
+gen/runm4x4smul_SIMD.sh 2;1034;22160588;21431
+gen/runm4x4smul_SIMD.sh 2;1033;22104680;21398
+gen/runm4x4smul_SIMD.sh 2;1028;22256168;21649
+
+gen/rundsub64_SIMD.sh 2;1025;20964546;20453
+gen/rundsub64_SIMD.sh 2;1029;21022590;20430
+gen/rundsub64_SIMD.sh 2;1030;20998054;20386
+
+gen/runvconvert_SIMD.sh 2;1026;16598773;16178
+gen/runvconvert_SIMD.sh 2;1024;16620929;16231
+gen/runvconvert_SIMD.sh 2;1028;16593402;16141
+
+gen/rundmul64_SIMD.sh 2;1028;21100348;20525
+gen/rundmul64_SIMD.sh 2;1025;20776192;20269
+gen/rundmul64_SIMD.sh 2;1031;20712288;20089
+
+gen/runicompare.sh 2;1025;23516420;22942
+gen/runicompare.sh 2;1028;23719422;23073
+gen/runicompare.sh 2;1034;23804077;23021
+
+gen/rundmem.sh 2;1044;8152262;7808
+gen/rundmem.sh 2;1039;12472808;12004
+gen/rundmem.sh 2;1046;8231790;7869
+
+gen/runimem.sh 2;1038;19833079;19107
+gen/runimem.sh 2;1025;20255868;19761
+gen/runimem.sh 2;1028;20183542;19633
+
+gen/runm4x4smul.sh 2;24;221068;9211
+gen/runm4x4smul.sh 2;19;206543;10870
+gen/runm4x4smul.sh 2;21;222961;10617
+
+gen/runnop.sh 2;1022;16039937;15694
+gen/runnop.sh 2;1022;15992574;15648
+gen/runnop.sh 2;1027;15883870;15466
+
+gen/runbranch.sh 2;1032;18867567;18282
+gen/runbranch.sh 2;1024;18773878;18333
+gen/runbranch.sh 2;1028;18755384;18244
+
+gen/apptasks 2;16;88989;5561
+gen/apptasks 2;16;92224;5764
+gen/apptasks 2;16;87951;5496
+
+gen/rundmul.sh 2;1039;17956130;17282
+gen/rundmul.sh 2;1031;18145034;17599
+gen/rundmul.sh 2;1035;18176345;17561
+
+gen/runiadd.sh 2;1031;18666517;18105
+gen/runiadd.sh 2;1034;18681410;18067
+gen/runiadd.sh 2;1028;18585035;18078
+
+gen/runlogic.sh 2;1046;16585712;15856
+gen/runlogic.sh 2;1051;16203572;15417
+gen/runlogic.sh 2;1033;16662189;16129
+
+gen/runbitbyte.sh 2;1025;20983650;20471
+gen/runbitbyte.sh 2;1024;21062386;20568
+gen/runbitbyte.sh 2;1028;21067268;20493
+
+gen/runvmov_SIMD.sh 2;1030;17884781;17363
+gen/runvmov_SIMD.sh 2;1027;17755021;17288
+gen/runvmov_SIMD.sh 2;1024;17854996;17436
+
+gen/runimov.sh 2;1037;18398208;17741
+gen/runimov.sh 2;1029;18280898;17765
+gen/runimov.sh 2;1026;18526503;18057
+

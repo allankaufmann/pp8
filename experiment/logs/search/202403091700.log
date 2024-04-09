@@ -1,0 +1,43 @@
+
+AppTask search/appseq/sobelv_50_50.seq wird geprüft!
+(Durchgang 1 von 279)
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1161 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1178 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1117 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1137 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1166 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1186 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1222 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1133 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1175 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+

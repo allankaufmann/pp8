@@ -91,6 +91,10 @@ public:
         return count;
     }
 
+    float percentFound() {
+        return (float) countFound() * 100 / sequenzen.size();
+    }
+
     bool allFound() {
         return sequenzen.size() == countFound();
     }

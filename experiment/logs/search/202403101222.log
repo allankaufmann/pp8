@@ -1,0 +1,7 @@
+
+AppTask search/appseq/sobelv_50_50.seq wird geprüft!
+(Durchgang 1 von 279)
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_50_50.seq(Gesamt: 558193) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1161 Einträge vorhanden!
+

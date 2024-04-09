@@ -1,0 +1,10 @@
+apptask;Parallelism;CPUFrequency;estimation;measure;diff
+
+greyscale;1;400;X;Y;X-Y
+checkcontrast;1;400;X;Y;X-Y
+
+greyscale;2;400;X;Y;X-Y
+checkcontrast;2;400;X;Y;X-Y
+
+greyscale;1;800;X;Y;X-Y
+checkcontrast;1;800;X;Y;X-Y

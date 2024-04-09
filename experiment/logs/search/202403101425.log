@@ -1,0 +1,2052 @@
+
+AppTask search/appseq/sobelv_20_20.seq wird geprüft!
+(Durchgang 1 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  18 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1178 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1137 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1133 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1117 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1186 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1186 Einträge vorhanden!
+
+n!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1161 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1098 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1175 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1244 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1166 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1222 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(57.672695 % Treffer)
+
+(Durchgang 2 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1015 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1069 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1074 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1094 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1132 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.453873 % Treffer)
+
+(Durchgang 3 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1078 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1056 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1020 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1001 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1079 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1001 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1001 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1001 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1068 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 4 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1006 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1068 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1093 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1006 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1006 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1073 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1006 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 5 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1055 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1078 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1078 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1073 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 6 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1078 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1078 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1055 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1068 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 7 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1068 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1093 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1073 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.453873 % Treffer)
+
+(Durchgang 8 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1055 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1089 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1064 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1077 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1069 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 9 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1087 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1070 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 10 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1070 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1087 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 11 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1055 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1091 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1079 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 12 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 13 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1035 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1055 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 14 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 15 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1044 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1061 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 16 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1057 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1037 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1091 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 17 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1046 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 18 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  992 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1009 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  993 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1058 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1038 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1066 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1091 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 19 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1043 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.453873 % Treffer)
+
+(Durchgang 20 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1014 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1043 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 21 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1010 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1038 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1058 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 22 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1015 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1043 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 23 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1013 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  996 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  997 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1043 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 24 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1038 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1011 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1058 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1091 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1147 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.175709 % Treffer)
+
+(Durchgang 25 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1043 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1005 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1088 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1096 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1076 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1133 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 26 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1090 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1011 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1058 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1038 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  995 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1022 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1083 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1148 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1071 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.222069 % Treffer)
+
+(Durchgang 27 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1000 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1046 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1070 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1087 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1153 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1008 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1075 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1132 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.453873 % Treffer)
+
+(Durchgang 28 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1015 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  999 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1046 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1087 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1003 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1095 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1069 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1152 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1007 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1075 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1131 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.407509 % Treffer)
+
+(Durchgang 29 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  22 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1010 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1057 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  994 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  998 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1082 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1079 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1064 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1089 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1020 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1148 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1002 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1069 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1128 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(53.222069 % Treffer)
+
+(Durchgang 30 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  21 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1020 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1037 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1020 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1067 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1093 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1085 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1118 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1029 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1046 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1107 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1049 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1029 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1029 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1029 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1108 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1175 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1160 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.473804 % Treffer)
+
+(Durchgang 31 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  24 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1033 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1080 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1037 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1114 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1064 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1106 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1089 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1104 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1104 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1059 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1171 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1026 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1103 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1161 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.288364 % Treffer)
+
+(Durchgang 32 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  24 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1038 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1042 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1032 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1065 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1086 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1094 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1049 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1070 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1111 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1029 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1032 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1109 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1032 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1119 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1110 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1178 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1032 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1050 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1103 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1161 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.612888 % Treffer)
+
+(Durchgang 33 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1033 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1037 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1114 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1079 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1057 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1104 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1089 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1170 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1159 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.242004 % Treffer)
+
+(Durchgang 34 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1107 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1108 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1092 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1048 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1068 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1110 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1117 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1159 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.520168 % Treffer)
+
+(Durchgang 35 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1057 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1041 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1062 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1033 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1016 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1104 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1045 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1114 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1021 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1037 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1079 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1089 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1025 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1170 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1159 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.242004 % Treffer)
+
+(Durchgang 36 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1047 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1036 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1040 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1084 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1039 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1027 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1019 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1063 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1107 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1117 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1108 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1092 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1068 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1176 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1110 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1048 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1030 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1159 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1102 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(54.520168 % Treffer)
+
+(Durchgang 37 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1313 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1335 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1445 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1333 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1313 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1336 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1361 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1406 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1450 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1450 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1383 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1389 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1381 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1438 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1388 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1397 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1388 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1463 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1388 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1388 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1557 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1542 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1623 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(72.183586 % Treffer)
+
+(Durchgang 38 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  30 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1348 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1349 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  1409 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1345 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1329 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1389 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1368 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1373 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1349 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  1409 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  1411 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  1349 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  1418 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  1393 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1328 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  1470 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  1386 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  1440 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/vmov_SIMD.seq(68.150208 % Treffer)
+
+(Durchgang 39 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  856 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  853 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  897 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  876 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  917 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  837 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  881 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  919 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  926 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  917 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  901 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  978 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  894 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  948 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/smem32_SIMD.seq(51.111111 % Treffer)
+
+(Durchgang 40 von 40)
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  856 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  853 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  919 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  881 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  897 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  876 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  837 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  917 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  926 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  917 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  901 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  978 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  857 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  836 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  948 Einträge vorhanden!
+
+In AppTask search/appseq/sobelv_20_20.seq(Gesamt: 80326) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  894 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask search/appseq/sobelv_20_20.seq ist search/taskseq/smem32_SIMD.seq(51.111111 % Treffer)
+
+
+Der Anwendungstask search/appseq/sobelv_20_20.seq wurde auf folgende prototypischen Tasks abgebildet:
+search/taskseq/smem32_SIMD.seq (2 mal zugeordnet, in %: 5.000000)
+search/taskseq/vmov_SIMD.seq (38 mal zugeordnet, in %: 95.000000)

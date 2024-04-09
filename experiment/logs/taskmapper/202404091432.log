@@ -1,0 +1,500 @@
+
+AppTask greyscale wird geprüft!
+(Durchgang 1 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  1003 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  1051 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  1012 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  1067 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  1075 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  1008 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  1003 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  1008 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1060 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1060 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  1046 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  1081 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  1081 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  1033 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  1090 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  1053 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  1081 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1137 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  1012 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  1012 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  1012 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1125 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1849 Einträge vorhanden!
+
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(57.799313 % Treffer)
+
+(Durchgang 2 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  912 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  912 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  961 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  933 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  933 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  961 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  999 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  989 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  977 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  956 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1004 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  983 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  989 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1046 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  940 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  989 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1035 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1758 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(54.954674 % Treffer)
+
+(Durchgang 3 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  972 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  929 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  929 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1001 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  951 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  908 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  956 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  982 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  940 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  998 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  908 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1001 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  961 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  988 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  989 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1046 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  921 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1034 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  988 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1757 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(54.923412 % Treffer)
+
+(Durchgang 4 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  929 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  930 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  981 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  974 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  996 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  908 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  952 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  959 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  987 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  908 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  987 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1042 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  958 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  938 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  919 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1034 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  990 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1760 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(55.017193 % Treffer)
+
+(Durchgang 5 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  979 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  930 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  909 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  909 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  986 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  973 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  957 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  909 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  929 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  952 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1000 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  995 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  936 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  918 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  918 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  957 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  985 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  918 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1043 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  918 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  989 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1035 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1758 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(54.954674 % Treffer)
+
+(Durchgang 6 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  1594 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  1615 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  1615 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  1594 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  1725 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  1725 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  1729 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  1696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1816 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  1683 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  1659 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  1731 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  1673 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  1664 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  1726 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  1682 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  1673 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  1673 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  1725 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  1673 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  1892 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  1826 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  2549 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist vmov_SIMD(84.191010 % Treffer)
+
+(Durchgang 7 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  934 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  914 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  965 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  980 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  915 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  939 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  980 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  958 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  975 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  1016 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  955 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  937 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  915 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  964 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  894 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  949 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  992 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1580 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist m4x4smul(49.390434 % Treffer)
+
+(Durchgang 8 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  716 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  737 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  782 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  717 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  765 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  782 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  736 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  760 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  751 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  798 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  741 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  738 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  717 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  756 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  696 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  742 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  772 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1158 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist dadd(37.924347 % Treffer)
+
+(Durchgang 9 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  687 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  711 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  768 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  686 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  721 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  752 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  708 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  752 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  735 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  706 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  707 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  726 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  730 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  687 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  666 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  712 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  742 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  1128 Einträge vorhanden!
+
+Gleichheit mit dmul
+Der ähnlichste ProttypTask für den AppTask greyscale ist dadd(36.469448 % Treffer)
+
+(Durchgang 10 von 10)
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask logic (Gesamt: 2036)  628 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imov (Gesamt: 1996)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask nop (Gesamt: 1999)  608 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask iadd (Gesamt: 2039)  629 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask bitbyte (Gesamt: 2037)  633 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imem (Gesamt: 2080)  630 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask branch (Gesamt: 1997)  609 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask icompare (Gesamt: 2095)  609 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  652 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask shift (Gesamt: 1996)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmul (Gesamt: 2062)  674 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dadd (Gesamt: 2062)  674 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask imul (Gesamt: 2071)  643 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  648 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  588 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  690 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask dmem (Gesamt: 2091)  657 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  664 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  634 Einträge vorhanden!
+
+In AppTask greyscale(Gesamt: 18296) sind aus ProtTask m4x4smul (Gesamt: 3199)  973 Einträge vorhanden!
+

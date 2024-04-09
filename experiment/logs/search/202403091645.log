@@ -1,0 +1,51 @@
+
+AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq wird geprüft!
+(Durchgang 1 von 5)
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/nop.seq (Gesamt: 1999)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vconvert_SIMD.seq (Gesamt: 2090)  2023 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imov.seq (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imem.seq (Gesamt: 2080)  2001 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/icompare.seq (Gesamt: 2095)  2005 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/branch.seq (Gesamt: 1997)  1994 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/bitbyte.seq (Gesamt: 2037)  1999 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/v1x4smul_SIMD.seq (Gesamt: 2287)  2030 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem.seq (Gesamt: 2091)  2008 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dsub64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dadd.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul_SIMD.seq (Gesamt: 2328)  2054 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul64_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmul.seq (Gesamt: 2062)  1981 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/m4x4smul.seq (Gesamt: 1999)  1975 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/iadd.seq (Gesamt: 2039)  1994 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/logic.seq (Gesamt: 2036)  1997 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/imul.seq (Gesamt: 2071)  2015 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/dmem64_SIMD.seq (Gesamt: 2081)  2021 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/ssub32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/vmov_SIMD.seq (Gesamt: 2157)  2060 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smul32_SIMD.seq (Gesamt: 2114)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/shift.seq (Gesamt: 1996)  1973 Einträge vorhanden!
+
+In AppTask search/appseq/testWithNopBitByteShiftIMulLogic.seq(Gesamt: 10139) sind aus ProtTask search/taskseq/smem32_SIMD.seq (Gesamt: 45)  23 Einträge vorhanden!
+
