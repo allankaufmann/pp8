@@ -1,6 +1,6 @@
 #!/bin/bash
-tasks=('empty' 'dadd' 'm4x4smul_SIMD' 'v1x4smul_SIMD' 'dmul64_SIMD' 'smul32_SIMD' 'ssub32_SIMD' 'dsub64_SIMD' 'dmem64_SIMD' 'smem32_SIMD' 'vmov_SIMD' 'vconvert_SIMD' 'm4x4smul' 'dmul' 'imul' 'iadd' 'icompare' 'logic' 'branch' 'imem' 'dmem' 'imov' 'shift' 'bitbyte' 'nop')
-stops=(58 1085    137            202              234          266           300           334            360            387           420        453              885       1054    1116   1147   1214       1282   1349     1377   1406    1476   1549    1620      1657)
+tasks=('dadd' 'm4x4smul_SIMD' 'v1x4smul_SIMD' 'dmul64_SIMD' 'smul32_SIMD' 'ssub32_SIMD' 'dsub64_SIMD' 'dmem64_SIMD'  'vmov_SIMD' 'vconvert_SIMD' 'm4x4smul' 'dmul' 'imul' 'iadd' 'icompare' 'logic' 'branch' 'imem' 'dmem' 'imov' 'shift' 'bitbyte' 'nop')
+stops=( 1085    137            202              234          266           300           334            360              420        453              885       1054    1116   1147   1214       1282   1349     1377   1406    1476   1549    1620      1657)
 
 
 gcc -g main.cpp -o main

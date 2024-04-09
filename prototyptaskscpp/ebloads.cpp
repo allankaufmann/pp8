@@ -873,7 +873,7 @@ void* run_m4x4smul(int counts) {
     instcnt += counts*CNT_DIV;
     while ((counts--) && !done0) {
 
-        idx = (idx + 16) % MEM_SIZE-20;      // provoke cache misses
+        idx = (idx + 16) % MEM_SIZE/*-20*/;      // provoke cache misses -> PP8, does not work!
 
         for (unsigned int i = idx; i < 16+idx; i += 4)
             for (unsigned int j = idx; j < 4+idx; ++j)

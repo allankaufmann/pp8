@@ -60,7 +60,6 @@ void* run_empty() {
 
 
 int main(int argc, char *argv[]) {
-
     int i;
     printf("Anzahl Argumente: %d\n",argc);
     for(i=0;i<argc;i++)
