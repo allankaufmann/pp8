@@ -12,8 +12,6 @@ std::string section_cpufrequency="CPUFrequency";
 
 std::string section_parallelism="Parallelism";
 
-std::string currentCPUFreq;
-
 std::vector<std::string> tasktypeVektor;
 
 std::vector<std::string> apptypeVektor;
@@ -48,9 +46,9 @@ void writeGenScript(const char* task) {
     free(filename);
 }
 
-void generateTaskTypeScripts(std::string task) {
+void generateTaskTypeScripts(std::string folder, std::string task) {
     // $CORES ist der Parameter für Anzahl Kerne!
-    std::string filename = foldername_generated_scripts_tasktypes + "/" + "run" + task + ".sh";
+    std::string filename = folder + "/" + task + ".sh";
     std::ofstream scriptfile (filename);
     if (scriptfile.is_open()) {
         scriptfile << "#!/bin/bash\n";
@@ -63,6 +61,7 @@ void generateTaskTypeScripts(std::string task) {
         scriptfile << "cd ..\n";
         scriptfile << "cd epEBench/bin/Release\n";
         scriptfile << "./epebench -m " + task + " -t 5 -n $CORES\n";
+        scriptfile << "chmod a+w epebench_loadlog.txt\n";
         scriptfile << "mv epebench_loadlog.txt epebench_" + task + ".log\n";
         scriptfile << "cd ../../..";
     }
@@ -72,7 +71,7 @@ void generateTaskTypeScripts(std::string task) {
 
 void generateAppTaskScripts(std::string task) {
     // $CORES ist der Parameter für Anzahl Kerne!
-    std::string filename = foldername_generated_scripts_apptasks + "/" + "runEdgedetection_" + task + ".sh";
+    std::string filename = foldername_generated_scripts_apptasks + "/" + task + ".sh";
     std::ofstream scriptfile (filename);
     if (scriptfile.is_open()) {
         scriptfile << "#!/bin/bash\n";
@@ -91,7 +90,7 @@ void generateAppTaskScripts(std::string task) {
     chmod(filename.c_str(), 0777);
 }
 
-void readConfigFile() {
+void readConfigFile(bool showEntries, bool generateScripts) {
     mkdir(foldername_generated_scripts, 0777);
     mkdir(foldername_generated_scripts_tasktypes.c_str(), 0777);
     mkdir(foldername_generated_scripts_apptasks.c_str(), 0777);
@@ -127,50 +126,58 @@ void readConfigFile() {
         }
     }
 
-    std::cout << "Folgende Tasktypen sind konfiguriert:\n";
+    if (showEntries) {
+        std::cout << "Folgende Tasktypen sind konfiguriert:\n";
+    }
+
     for (std::string s : tasktypeVektor) {
-        std::cout << "\t" << s << "\n";
-        generateTaskTypeScripts(s);
+        if (showEntries) {
+            std::cout << "\t" << s << "\n";
+        }
+        if (generateScripts) {
+            generateTaskTypeScripts(foldername_generated_scripts_tasktypes, s);
+        }
     }
 
-    std::cout << "\nFolgende Anwendungstasks sind konfiguriert:\n";
+    // Für one2Many-Abbildung werden weitere Skripte für die Tasktypen benötigt!
+    if (generateScripts) {
+        for (std::string s: apptypeVektor) {
+            generateTaskTypeScripts(foldername_generated_scripts_tasktypes_onetomany, s);
+        }
+    }
+
+
+
+
+    if (showEntries) {
+        std::cout << "\nFolgende Anwendungstasks sind konfiguriert:\n";
+    }
+
     for (std::string s: apptypeVektor) {
-        std::cout << "\t" << s << "\n";
-        generateAppTaskScripts(s);
+        if (showEntries) {
+            std::cout << "\t" << s << "\n";
+        }
+
+        if (generateScripts) {
+            generateAppTaskScripts(s);
+        }
     }
 
-    std::cout  << "\nSkripte zum Ausführen der Tasks wurden im Ordner 'gen' erstellt!\n";
-
-    std::cout << "\nFolgende CPU Frequenzlevel sind hinterlegt:\n";
-    for (std::string s : cpuFrequencyVektor) {
-        std::cout << "\t" << s << "\n";
+    if (generateScripts) {
+        std::cout  << "\nSkripte zum Ausführen der Tasks wurden im Ordner 'gen' erstellt!\n";
     }
 
-    std::cout << "\nFolgende Parallelitätslevel sind hinterlegt:\n";
-    for (std::string s : parallelismVektor) {
-        std::cout << "\t" << s << "\n";
-    }
-}
+    if (showEntries) {
+        std::cout << "\nFolgende CPU Frequenzlevel sind hinterlegt:\n";
+        for (std::string s : cpuFrequencyVektor) {
+            std::cout << "\t" << s << "\n";
+        }
 
-void setCpuFrequency() {
-    if (cpuFrequencyVektor.size()==0) {
-        readConfigFile();
-    }
+        std::cout << "\nFolgende Parallelitätslevel sind hinterlegt:\n";
+        for (std::string s : parallelismVektor) {
+            std::cout << "\t" << s << "\n";
+        }
 
-
-
-    printf("In der Konfigurationsdatei experiment.config sind %d CPU-Level hinterlegt, bitte durch Eingabe auswählen!\n", cpuFrequencyVektor.size());
-
-    for (int i = 0; i < cpuFrequencyVektor.size(); i++) {
-        printf("[%d]: %s\n", i, cpuFrequencyVektor[i].c_str());
-    }
-
-    int index = 0;
-    if (scanf("%d", &index) == 1) {
-        currentCPUFreq = cpuFrequencyVektor[index];
-        std::string frequence = "echo allan | sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
-        system(frequence.c_str());
-        system("cpupower frequency-info");
     }
 }
 

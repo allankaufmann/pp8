@@ -1,0 +1,5 @@
+app;duration;power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;7812;36259612;4641
+./gen/tasktypes/m4x4smul_SIMD.sh 1;8548;37994470;4444
+./gen/tasktypes/m4x4smul_SIMD.sh 1;6899;35821991;5192
+

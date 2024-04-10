@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5042;23860107;4732
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5046;24468260;4849
+

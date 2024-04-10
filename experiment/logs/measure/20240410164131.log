@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5042;20477120;4061
+gen/tasktypes/onetomany/copyimage.sh 1;8733;32940407;3771
+

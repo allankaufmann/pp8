@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5053;24817808;4911
+gen/tasktypes/onetomany/sobelh.sh 1;5043;31384136;6223
+

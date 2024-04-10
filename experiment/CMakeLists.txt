@@ -7,7 +7,7 @@ set(SOURCE_FILES scripts)
 add_executable(
         config.cpp
         main.cpp
-        measure.cpp
+        estimation/measure.cpp
         constants.h
         tools.cpp
         taskmapper/taskmapperresult.cpp
@@ -15,5 +15,7 @@ add_executable(
         taskmapper/taskmapperOneToOne.cpp
         taskmapper/taskmapperLog.cpp
         taskmapper/taskmapperOneToMany.cpp
+        estimation/estimator.cpp
+        estimation/estimator.cpp
 )
 

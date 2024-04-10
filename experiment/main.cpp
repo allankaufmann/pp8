@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <string.h> //strtok
-#include "measure.cpp"
+#include "estimation/measure.cpp"
 #include "config.cpp"
 #include "math.h" //ceil
 #include "taskmapper/taskmapperresult.cpp"
@@ -9,6 +9,7 @@
 #include "taskmapper/taskmapperLog.cpp"
 #include "taskmapper/taskmapperOneToOne.cpp"
 #include "taskmapper/taskmapperOneToMany.cpp"
+#include "estimation/estimator.cpp"
 
 
 const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
@@ -60,6 +61,7 @@ int main(int argc, char *argv[]) {
             strcasecmp(parameter, "R")!=0 &&
             strcasecmp(parameter, "S")!=0 &&
             strcasecmp(parameter, "T")!=0 &&
+            strcasecmp(parameter, "U")!=0 &&
             strcasecmp(parameter, "X")!=0 &&
             strcasecmp(parameter, "W")!=0 &&
             strcasecmp(parameter, "V")!=0
@@ -73,7 +75,8 @@ int main(int argc, char *argv[]) {
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tT (=Test: Freq)\n");
-        printf("\tV (=Versuch...copy 1:N)\n");
+        printf("\tU (=Estimation)\n");
+        printf("\tV (=Versuch...greyscale 1:N)\n");
         printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
@@ -86,7 +89,7 @@ int main(int argc, char *argv[]) {
     } /*else if (strcasecmp(parameter, "1") == 0) {
         printf("hallo");
     }*/ else if (strcasecmp(parameter, "C") == 0) {
-        readConfigFile(); // Konfigurationsdatei auslesen und Skripte erstellen
+        readConfigFile(true, true); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
         runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
@@ -121,11 +124,11 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "E")==0) {
         compareAppTaskProtTasksOneToMany();
     } else if (strcasecmp(parameter, "W")==0) {
-        setCpuFrequency();
+        selectCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
 
 
-        setCpuFrequency();
+        selectCpuFrequency();
         /*for (int i = 0; i < 10 ; i++) {
             printf("\n%d %lu", i, measureIdle(1000));
             //measureIdle(1000);
@@ -144,6 +147,9 @@ int main(int argc, char *argv[]) {
         saveLineToTaskmapFile("neuesModell", " x=0.99");
         saveLineToTaskmapFile("neuesModell", " y=0.01");*/
 
+    } else if (strcasecmp(parameter, "U")==0) {
+        readConfigFile(false, false);
+        testEstimation();
     }
     return 0;
 }

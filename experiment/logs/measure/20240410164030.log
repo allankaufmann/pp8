@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5058;25989862;5138
+gen/tasktypes/onetomany/checkcontrast.sh 1;5068;22928896;4524
+

@@ -1,0 +1,3 @@
+app;duration;power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5127;28592334;5576
+

@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include "img.h"
 
-static const int maxXWidth = 10; // Für die Sequenzerstellung sollten 10x10 Durchgänge ausreichend sein
-static const int maxYWidth = 10; // Für die Sequenzerstellung sollten 10x10 Durchgänge ausreichend sein
+static const int maxXWidth = 20; // Für die Sequenzerstellung sollten 20x20 Durchgänge ausreichend sein
+static const int maxYWidth = 20; // Für die Sequenzerstellung sollten 20x20 Durchgänge ausreichend sein
 
 MyIMG *createimage(int xwidth, int ywidth)
 {

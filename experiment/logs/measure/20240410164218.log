@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/m4x4smul.sh 1;5047;27644522;5477
+gen/tasktypes/onetomany/writeimage.sh 1;5044;22329105;4426
+

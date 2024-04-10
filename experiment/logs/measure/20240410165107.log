@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/imul.sh 1;5125;21489508;4193
+gen/tasktypes/onetomany/combineimgs.sh 1;5130;27179130;5298
+

@@ -1,7 +1,8 @@
 #!/bin/bash
-tasks=(loadimage greyscale checkcontrast sharpencontrast copyimage sobelh sobelv combineimgs writeimage) 
+tasks=(loadimage greyscale checkcontrast sharpencontrast copyimage sobelh sobelv combineimgs writeimage)
 stops=(206       167       57            86              85        146    116    189         226)
-
+#tasks=(greyscale )
+#stops=(167)
 
 mkdir -p gdb
 mkdir -p seq

@@ -1,0 +1,4 @@
+app;duration;power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5123;22588504;4409
+gen/tasktypes/onetomany/greyscale.sh 1;8948;33168799;3706
+

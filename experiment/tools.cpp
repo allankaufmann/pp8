@@ -1,4 +1,5 @@
 
+#include <set>
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
@@ -53,3 +54,32 @@ char* getFilename(const char *const folder) {
 
 
 
+void extractAppTaskNameFromFileName(const char* filename, char* taskname) {
+    const char *start = strrchr(filename, '/');
+    const char *end = strchr(filename, '.');
+
+    if (start != NULL && end != NULL && end > start) {
+        size_t length = end - start - 1; //
+
+
+        strncpy(taskname, start + 1, length);
+        taskname[length] = '\0'; // Null-terminate the string
+    } else {
+        taskname[0] = '\0'; // If no '/' and '.', return an empty string
+    }
+}
+
+void extractTaskNameFromFileName(const char* filename, char* taskname) {
+    const char *start = strrchr(filename, '/');
+    const char *end = strrchr(filename, '.');
+
+    if (start != NULL && end != NULL && end > start) {
+        size_t length = end - start - 1; //
+
+
+        strncpy(taskname, start + 1, length);
+        taskname[length] = '\0'; // Null-terminate the string
+    } else {
+        taskname[0] = '\0'; // If no '/' and '.', return an empty string
+    }
+}
