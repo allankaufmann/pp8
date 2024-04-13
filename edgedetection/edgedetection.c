@@ -6,6 +6,7 @@
 #include <omp.h>
 #include <stdint.h>//uint64_t
 #include <sys/time.h>
+#include <stdbool.h>
 #define XWIDTH 2300
 #define YWIDTH 1848
 #define INPUTPATH "./images/"
@@ -277,7 +278,7 @@ void prepareParallelism(int parallelism) {
     //omp_set_num_threads(parallelism); // Parallelitätsgrad über OMP gesetzt.
     printf("dyn: %d\n", omp_get_dynamic());
     printf("num_treads: %d\n", omp_get_num_threads());
-    //smtoff();
+    smtoff();
 }
 
 unsigned long long  millisecondsSinceEpoch() {
@@ -292,26 +293,35 @@ unsigned long long  millisecondsSinceEpoch() {
     return millisecondsSinceEpoch;
 }
 
+bool checkDuration(unsigned long long timestamp_begin) {
+    unsigned long long timestamp_end = millisecondsSinceEpoch();
+    unsigned long long duration = timestamp_end - timestamp_begin;
+    return duration > 5000;
+}
+
 void callFunctionWithImgrgbAndImg(char* taskname, FunctionPtrWithImgrgbAndImg functionPtrWithImgrgbAndImg, int parallelism, MyIMG* imgrgb,MyIMG* img) {
 
-    unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
+    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
     functionPtrWithImgrgbAndImg(imgrgb, img);
     unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
     unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
 
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;
+    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
 
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
+    bool stop = false;
 
-    #pragma omp parallel num_threads(parallelism)
+    #pragma omp parallel num_threads(parallelism) shared(timestamp_begin, stop)
         {
             #pragma omp for
                 for (int j = 0; j < parallelism; j++) {
-                    for (int i = 0; i < durchgaenge; i++) {
-                        printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), i, omp_get_thread_num());
+                    int counter = 1;
+                    while(!stop) {
+                        printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), counter++, omp_get_thread_num());
                         functionPtrWithImgrgbAndImg(imgrgb, img);
+                        stop=checkDuration(timestamp_begin);
                     }
                 }
     };
@@ -334,25 +344,29 @@ void callFunctionWithImgrgbAndImg(char* taskname, FunctionPtrWithImgrgbAndImg fu
 }
 
 void callFunctionWithImg(char* taskname, FunctionPtrWithImg functionPtrWithImg, int parallelism, MyIMG* img) {
-    unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
+    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
     functionPtrWithImg(img);
     unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
     unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
 
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;
+    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
 
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
-    #pragma omp parallel num_threads(parallelism)
+    bool stop = false;
+    #pragma omp parallel num_threads(parallelism) shared(timestamp_begin, stop)
     {
         #pragma omp for
-            for (int j = 0; j < parallelism; j++) {
-                for (int i = 0; i < durchgaenge; i++) {
-                    printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), i, omp_get_thread_num());
-                    functionPtrWithImg(img);
-                }
+        for (int j = 0; j < parallelism; j++) {
+            int counter = 1;
+            while(!stop) {
+                printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), counter++, omp_get_thread_num());
+                functionPtrWithImg(img);
+                stop=checkDuration(timestamp_begin);
             }
+        }
+
         };
     long long counter_end = readEnergy_UJ();
     unsigned long long timestamp_end = millisecondsSinceEpoch();
@@ -373,25 +387,29 @@ void callFunctionWithImg(char* taskname, FunctionPtrWithImg functionPtrWithImg, 
 }
 
 void callFunctionWithImgAndChar(char* taskname, FunctionPtrWithImgAndChar functionPtrWithImgAndChar, int parallelism, MyIMG* img, char* filename) {
-    unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
+    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
     functionPtrWithImgAndChar(img, filename);
     unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
     unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
 
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;
+    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
 
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
-    #pragma omp parallel num_threads(parallelism)
+    bool stop = false;
+    #pragma omp parallel num_threads(parallelism) shared(timestamp_begin, stop)
     {
         #pragma omp for
-            for (int j = 0; j < parallelism; j++) {
-                for (int i = 0; i < durchgaenge; i++) {
-                    printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), i, omp_get_thread_num());
-                    functionPtrWithImgAndChar(img, filename);
-                }
+        for (int j = 0; j < parallelism; j++) {
+            int counter = 1;
+            while(!stop) {
+                printf("OMP-Lauf=%d, CPU %d / Durchgang#%d, Thread %d\n", j, sched_getcpu(), counter++, omp_get_thread_num());
+                functionPtrWithImgAndChar(img, filename);
+                stop=checkDuration(timestamp_begin);
             }
+        }
+
     };
     long long counter_end = readEnergy_UJ();
     unsigned long long timestamp_end = millisecondsSinceEpoch();
@@ -414,7 +432,6 @@ void callFunctionWithImgAndChar(char* taskname, FunctionPtrWithImgAndChar functi
 void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* imgrgb, MyIMG* imgh) {
     MyIMG *imgv;
 
-
     FunctionPtrWithImgrgbAndImg gs = greyscale;
     FunctionPtrWithImg  cc = checkcontrast;
     FunctionPtrWithImg  sc = sharpencontrast;
@@ -426,7 +443,7 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     FunctionPtrWithImgAndChar li = loadimage;
     if (taskname==NULL) {
         //loadimage(imgrgb,filename);
-        callFunctionWithImgAndChar(task_loadimage, wi, parallelism,  imgrgb,filename);
+        callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
         //greyscale(imgrgb,imgh);
         callFunctionWithImgrgbAndImg(task_greyscale, gs, parallelism, imgrgb,imgh);
 
@@ -458,7 +475,7 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, cc, parallelism, imgh);
         //checkcontrast(imgh);
-    } else if (taskname==NULL || strcmp(taskname, task_sharpencontrast) == 0) {
+    } else if (strcmp(taskname, task_sharpencontrast) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sc, parallelism, imgh);
         //sharpencontrast(imgh);
@@ -466,11 +483,11 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
         loadimage(imgrgb,filename);
         callFunctionWithImgrgbAndImg(taskname, ci, parallelism, &imgv,imgh);
         //copyimage(&imgv,imgh);
-    } else if (taskname==NULL || strcmp(taskname, task_sobelh) == 0) {
+    } else if (strcmp(taskname, task_sobelh) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sh, parallelism, imgh);
         //sobelh(imgh);
-    } else if (taskname==NULL || strcmp(taskname, task_sobelv) == 0) {
+    } else if (strcmp(taskname, task_sobelv) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sv, parallelism, imgh);
         //sobelv(imgv);
@@ -479,14 +496,15 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
         copyimage(&imgv,imgh);
         callFunctionWithImgrgbAndImg(taskname, combine, parallelism, imgh,imgv);
         //combineimgs(imgh,imgv);
-    } else if (taskname==NULL || strcmp(taskname, task_writeimage) == 0) {
+    } else if (strcmp(taskname, task_writeimage) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(taskname, wi, parallelism, imgh,filename);
         //writeimage(imgh,filename);
-    } else if (taskname==NULL || strcmp(taskname, task_loadimage) == 0) {
+    } else if (strcmp(taskname, task_loadimage) == 0) {
         //loadimage(imgrgb,filename);
-        callFunctionWithImgAndChar(task_loadimage, wi, parallelism,  imgrgb,filename);
+        callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
     }
+    smton();
 }
 
 int main(int argc,char *argv[])
