@@ -1,9 +1,12 @@
+#include <sys/stat.h> //mkdir, chmod
+
 std::ofstream resultFile;
 std::string currentCPUFreq;
 std::string currentParallelism;
 
 void openResultFile() {
     resultFile.open(filename_estimation_result);
+    chmod(filename_estimation_result.c_str(), 0777);
 }
 
 void closeResultFile() {
@@ -26,7 +29,7 @@ void selectCpuFrequency() {
     int index = 0;
     if (scanf("%d", &index) == 1) {
         currentCPUFreq = cpuFrequencyVektor[index];
-        std::string frequence = "echo allan | sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
+        std::string frequence = "cpupower frequency-set -u " + currentCPUFreq + "mhz";
         system(frequence.c_str());
         system("cpupower frequency-info");
     }
@@ -34,7 +37,7 @@ void selectCpuFrequency() {
 
 void setupCpuFrequenzlevel(std::string frequenz) {
     currentCPUFreq = frequenz;
-    std::string frequence = "echo allan | sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
+    std::string frequence = "sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
     system(frequence.c_str());
     system("cpupower frequency-info");
     printf("CPU Frequenz wurde auf %s MHz eingestellt!\n", frequenz.c_str());
@@ -70,7 +73,11 @@ std::string readOneToOneMapping(std::string apptaskname) {
 }
 
 void logHeadline() {
-    resultFile << "CPUFrequency;apptask;Parallelism;oneToOneTask;estimationOneToOne;estimationOneToMany;apptaskduration;measure;diffOneToOne;diffOneToMany\n";
+    resultFile << "CPUFrequency;Parallelism;apptask;apptaskduration;apptaskpower:\testimationOneToOne;diffOneToOne;\testimationOneToMany;diffOneToMany\n";
+}
+
+void logEmptyline() {
+    resultFile << "\n";
 }
 
 void estimateApptask(std::string apptaskname) {
@@ -78,18 +85,16 @@ void estimateApptask(std::string apptaskname) {
 
     MeasureResult result = estimateAppTask(apptaskname, oneToOneTask, currentCPUFreq, currentParallelism);
 
-
     MeasureResult appTaskresult = measureAppTask(apptaskname, currentCPUFreq, currentParallelism);
 
     resultFile << currentCPUFreq << ";";
-    resultFile << apptaskname << ";";
     resultFile << currentParallelism << ";";
-    resultFile << oneToOneTask << ";";
-    resultFile << result.power() << ";";
-    resultFile << result.powerOneToMany() << ";";
-    resultFile << appTaskresult.duration << ";";
-    resultFile << appTaskresult.power() << ";";
-    resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << "%;";
+    resultFile << apptaskname << ";";
+    resultFile << appTaskresult.duration << " MS; ";
+    resultFile << appTaskresult.power() << " MJ/MS:\t";
+    resultFile << result.power() << " MJ/MS; ";
+    resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << "%;\t";
+    resultFile << result.powerOneToMany() << " MJ/MS;";
     resultFile << (result.powerOneToMany()-appTaskresult.power())*100/appTaskresult.power() << "%;";
     resultFile << "\n";
 }
@@ -97,15 +102,59 @@ void estimateApptask(std::string apptaskname) {
 void testEstimation() {
     openResultFile();
     logHeadline();
-    setupCpuFrequenzlevel(cpuFrequencyVektor[5]);
-    setCurrentParallelism(parallelismVektor[0]);
-
     openMeasurLogFile();
 
+    setupCpuFrequenzlevel(cpuFrequencyVektor[5]);
+
+    setCurrentParallelism(parallelismVektor[0]);
     for (std::string apptaskname: apptypeVektor) {
         estimateApptask(apptaskname);
         estimateApptask(apptaskname);
         estimateApptask(apptaskname);
+        logEmptyline();
+    }
+
+    logEmptyline();
+    setCurrentParallelism(parallelismVektor[1]);
+    for (std::string apptaskname: apptypeVektor) {
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        logEmptyline();
+    }
+
+    logEmptyline();
+    setCurrentParallelism(parallelismVektor[2]);
+    for (std::string apptaskname: apptypeVektor) {
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        logEmptyline();
+    }
+
+    setupCpuFrequenzlevel(cpuFrequencyVektor[4]);
+
+    setCurrentParallelism(parallelismVektor[0]);
+    logEmptyline();
+    for (std::string apptaskname: apptypeVektor) {
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        logEmptyline();
+    }
+    setCurrentParallelism(parallelismVektor[1]);
+    for (std::string apptaskname: apptypeVektor) {
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        logEmptyline();
+    }
+    setCurrentParallelism(parallelismVektor[2]);
+    for (std::string apptaskname: apptypeVektor) {
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        estimateApptask(apptaskname);
+        logEmptyline();
     }
 
 

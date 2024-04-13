@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h> //strtok
-#include <sys/stat.h> //mkdir
+#include <sys/stat.h> //mkdir, chmod
 #include <fstream>
 #include "constants.h"
 #include <list>
@@ -60,7 +60,7 @@ void generateTaskTypeScripts(std::string folder, std::string task) {
         scriptfile << "echo Anzahl ist $CORES\n";
         scriptfile << "cd ..\n";
         scriptfile << "cd epEBench/bin/Release\n";
-        scriptfile << "./epebench -m " + task + " -t 5 -n $CORES\n";
+        scriptfile << "./epebench -m " + task + " -t 5 -n $CORES -u 100 \n";
         scriptfile << "chmod a+w epebench_loadlog.txt\n";
         scriptfile << "mv epebench_loadlog.txt epebench_" + task + ".log\n";
         scriptfile << "cd ../../..";

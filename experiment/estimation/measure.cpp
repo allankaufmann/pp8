@@ -11,7 +11,7 @@
 #include "../tools.cpp"
 #include <vector>
 #include <fstream>
-
+#include <unistd.h>
 static const char *const logfolder_measure = "logs/measure/";
 
 class MeasureResult {
@@ -82,7 +82,7 @@ long long  readEnergy_UJ_script_deprecated() {
 
 long unsigned  readEnergy_UJ() {
     FILE *filePointer;
-    filePointer = popen("echo allan | sudo -S cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
+    filePointer = popen("cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
 
     long unsigned energy_ui=0;
 
@@ -95,7 +95,7 @@ long unsigned  readEnergy_UJ() {
 
 long unsigned  readEnergy_UJ_better_with_loop() {
     long unsigned energy_ui = readEnergy_UJ();
-    long unsigned new_energy_ui = energy_ui;
+    long unsigned new_energy_ui = readEnergy_UJ();
     while (new_energy_ui == energy_ui) {
         new_energy_ui = readEnergy_UJ();
     }
@@ -164,7 +164,7 @@ void runCommand(const char* command) {
 
 MeasureResult runAndMeasureScript(const char* script) {
     uint64_t timestamp_begin = timeSinceEpochMillisec();
-    long long counter_begin = readEnergy_UJ();
+    long long counter_begin = readEnergy_UJ_better_with_loop();
     std::thread t1(runCommand, script);
     t1.join();
     long long counter_end = readEnergy_UJ();
@@ -285,6 +285,7 @@ MeasureResult measureAppTask(std::string apptaskname, std::string cpufreq, std::
         //std::cout << line << "\n";
     }
 
+    logMeasure(apptaskname.c_str(), result.duration, result.energy_mj);
     logMeasureNewLine();
     return result;
 }

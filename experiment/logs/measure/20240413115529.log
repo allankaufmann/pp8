@@ -1,0 +1,811 @@
+app;duration;power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5058;22566043;4461
+gen/tasktypes/onetomany/checkcontrast.sh 1;5034;19716686;3916
+
+checkcontrast;5011;25681270;5124
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5033;22921877;4554
+gen/tasktypes/onetomany/checkcontrast.sh 1;5029;19665904;3910
+
+checkcontrast;5011;26225458;5233
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5036;22880862;4543
+gen/tasktypes/onetomany/checkcontrast.sh 1;5028;19530407;3884
+
+checkcontrast;5011;25588375;5106
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5030;20748238;4124
+gen/tasktypes/onetomany/loadimage.sh 1;5035;17882950;3551
+
+loadimage;5011;29351243;5857
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5029;20782723;4132
+gen/tasktypes/onetomany/loadimage.sh 1;5031;17841019;3546
+
+loadimage;5011;29226793;5832
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5029;20858528;4147
+gen/tasktypes/onetomany/loadimage.sh 1;5031;17880753;3554
+
+loadimage;5012;29274644;5840
+
+./gen/tasktypes/m4x4smul.sh 1;5043;25669063;5090
+gen/tasktypes/onetomany/greyscale.sh 1;5040;24465086;4854
+
+greyscale;5039;23036379;4571
+
+./gen/tasktypes/m4x4smul.sh 1;5041;25578182;5074
+gen/tasktypes/onetomany/greyscale.sh 1;5034;24622068;4891
+
+greyscale;5063;24083007;4756
+
+./gen/tasktypes/m4x4smul.sh 1;5033;25520626;5070
+gen/tasktypes/onetomany/greyscale.sh 1;5037;24438902;4851
+
+greyscale;5071;24095154;4751
+
+./gen/tasktypes/vmov_SIMD.sh 1;5027;19370129;3853
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5033;22717655;4513
+
+sharpencontrast;5078;23775818;4682
+
+./gen/tasktypes/vmov_SIMD.sh 1;5032;19268200;3829
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5032;22738894;4518
+
+sharpencontrast;5079;23774170;4680
+
+./gen/tasktypes/vmov_SIMD.sh 1;5028;19322704;3843
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5032;22738467;4518
+
+sharpencontrast;5080;23786011;4682
+
+./gen/tasktypes/m4x4smul.sh 1;5041;25634029;5085
+gen/tasktypes/onetomany/copyimage.sh 1;5040;24187194;4799
+
+copyimage;5021;23351442;4650
+
+./gen/tasktypes/m4x4smul.sh 1;5038;25502987;5062
+gen/tasktypes/onetomany/copyimage.sh 1;5040;23874573;4737
+
+copyimage;5016;23439515;4672
+
+./gen/tasktypes/m4x4smul.sh 1;5038;25567500;5074
+gen/tasktypes/onetomany/copyimage.sh 1;5041;24201476;4800
+
+copyimage;5022;23512879;4681
+
+./gen/tasktypes/m4x4smul.sh 1;5036;25463741;5056
+gen/tasktypes/onetomany/sobelh.sh 1;5032;24761655;4920
+
+sobelh;5056;23237611;4596
+
+./gen/tasktypes/m4x4smul.sh 1;5042;25611750;5079
+gen/tasktypes/onetomany/sobelh.sh 1;5042;24768369;4912
+
+sobelh;5188;23851746;4597
+
+./gen/tasktypes/m4x4smul.sh 1;5037;25598507;5082
+gen/tasktypes/onetomany/sobelh.sh 1;5036;24769712;4918
+
+sobelh;5034;23652467;4698
+
+./gen/tasktypes/m4x4smul.sh 1;5047;25534907;5059
+gen/tasktypes/onetomany/sobelv.sh 1;5042;24678404;4894
+
+sobelv;5081;22573734;4442
+
+./gen/tasktypes/m4x4smul.sh 1;5039;25637203;5087
+gen/tasktypes/onetomany/sobelv.sh 1;5034;24773190;4921
+
+sobelv;5123;22736636;4438
+
+./gen/tasktypes/m4x4smul.sh 1;5039;25564388;5073
+gen/tasktypes/onetomany/sobelv.sh 1;5039;24728208;4907
+
+sobelv;5180;23085085;4456
+
+./gen/tasktypes/imul.sh 1;5031;19638133;3903
+gen/tasktypes/onetomany/combineimgs.sh 1;5035;24565855;4879
+
+combineimgs;5053;23831910;4716
+
+./gen/tasktypes/imul.sh 1;5030;19530102;3882
+gen/tasktypes/onetomany/combineimgs.sh 1;5036;24572264;4879
+
+combineimgs;5055;23489136;4646
+
+./gen/tasktypes/imul.sh 1;5027;19642711;3907
+gen/tasktypes/onetomany/combineimgs.sh 1;5032;24508849;4870
+
+combineimgs;5058;23230593;4592
+
+./gen/tasktypes/dmem.sh 1;5038;21631719;4293
+gen/tasktypes/onetomany/writeimage.sh 1;5029;17894974;3558
+
+writeimage;5012;31973307;6379
+
+./gen/tasktypes/dmem.sh 1;5033;21690557;4309
+gen/tasktypes/onetomany/writeimage.sh 1;5030;17898331;3558
+
+writeimage;5015;32038675;6388
+
+./gen/tasktypes/dmem.sh 1;5036;21828740;4334
+gen/tasktypes/onetomany/writeimage.sh 1;5030;17904068;3559
+
+writeimage;5012;30872907;6159
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5037;34886751;6926
+gen/tasktypes/onetomany/checkcontrast.sh 2;5027;29042284;5777
+
+checkcontrast;5011;26956413;5379
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5034;34800692;6913
+gen/tasktypes/onetomany/checkcontrast.sh 2;5030;29168321;5798
+
+checkcontrast;5012;27193656;5425
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5036;34887545;6927
+gen/tasktypes/onetomany/checkcontrast.sh 2;5033;29044604;5770
+
+checkcontrast;5012;27162040;5419
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5029;30855511;6135
+gen/tasktypes/onetomany/loadimage.sh 2;5035;26137995;5191
+
+loadimage;5013;44079660;8793
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5028;31331707;6231
+gen/tasktypes/onetomany/loadimage.sh 2;5035;26125849;5188
+
+loadimage;5013;44010142;8779
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5030;31064984;6175
+gen/tasktypes/onetomany/loadimage.sh 2;5034;26199213;5204
+
+loadimage;5011;43684154;8717
+
+./gen/tasktypes/m4x4smul.sh 2;5048;42823132;8483
+gen/tasktypes/onetomany/greyscale.sh 2;5043;40207050;7972
+
+greyscale;5089;37160061;7302
+
+./gen/tasktypes/m4x4smul.sh 2;5047;41445755;8211
+gen/tasktypes/onetomany/greyscale.sh 2;5043;38861717;7706
+
+greyscale;5016;36463590;7269
+
+./gen/tasktypes/m4x4smul.sh 2;5048;41337419;8188
+gen/tasktypes/onetomany/greyscale.sh 2;5052;39015952;7722
+
+greyscale;5096;37697841;7397
+
+./gen/tasktypes/vmov_SIMD.sh 2;5027;28647631;5698
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5039;35407990;7026
+
+sharpencontrast;5049;37154079;7358
+
+./gen/tasktypes/vmov_SIMD.sh 2;5025;28665576;5704
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5037;35532318;7054
+
+sharpencontrast;5055;37330288;7384
+
+./gen/tasktypes/vmov_SIMD.sh 2;5031;28628772;5690
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5037;35346467;7017
+
+sharpencontrast;5041;37079922;7355
+
+./gen/tasktypes/m4x4smul.sh 2;5041;41450273;8222
+gen/tasktypes/onetomany/copyimage.sh 2;5039;38806053;7701
+
+copyimage;5015;36548307;7287
+
+./gen/tasktypes/m4x4smul.sh 2;5040;41336564;8201
+gen/tasktypes/onetomany/copyimage.sh 2;5046;38738732;7677
+
+copyimage;5021;36288969;7227
+
+./gen/tasktypes/m4x4smul.sh 2;5038;41499772;8237
+gen/tasktypes/onetomany/copyimage.sh 2;5043;38733544;7680
+
+copyimage;5020;36471952;7265
+
+./gen/tasktypes/m4x4smul.sh 2;5042;41091509;8149
+gen/tasktypes/onetomany/sobelh.sh 2;5044;40241596;7978
+
+sobelh;5029;32227945;6408
+
+./gen/tasktypes/m4x4smul.sh 2;5045;41498368;8225
+gen/tasktypes/onetomany/sobelh.sh 2;5043;39356466;7804
+
+sobelh;5049;32494606;6435
+
+./gen/tasktypes/m4x4smul.sh 2;5041;41534378;8239
+gen/tasktypes/onetomany/sobelh.sh 2;5040;40621356;8059
+
+sobelh;5231;34147434;6527
+
+./gen/tasktypes/m4x4smul.sh 2;5045;41678238;8261
+gen/tasktypes/onetomany/sobelv.sh 2;5037;39438803;7829
+
+sobelv;5225;32849098;6286
+
+./gen/tasktypes/m4x4smul.sh 2;5045;41709304;8267
+gen/tasktypes/onetomany/sobelv.sh 2;5044;39390464;7809
+
+sobelv;5227;33132605;6338
+
+./gen/tasktypes/m4x4smul.sh 2;5047;41763259;8274
+gen/tasktypes/onetomany/sobelv.sh 2;5049;40635455;8048
+
+sobelv;5240;32919899;6282
+
+./gen/tasktypes/imul.sh 2;5032;29928452;5947
+gen/tasktypes/onetomany/combineimgs.sh 2;5032;39606832;7870
+
+combineimgs;5018;37394863;7452
+
+./gen/tasktypes/imul.sh 2;5036;29835861;5924
+gen/tasktypes/onetomany/combineimgs.sh 2;5034;39525838;7851
+
+combineimgs;5014;37397426;7458
+
+./gen/tasktypes/imul.sh 2;5036;29889755;5935
+gen/tasktypes/onetomany/combineimgs.sh 2;5034;39592366;7864
+
+combineimgs;5070;37962672;7487
+
+./gen/tasktypes/dmem.sh 2;5047;35487153;7031
+gen/tasktypes/onetomany/writeimage.sh 2;5045;26905510;5333
+
+writeimage;5013;41227251;8224
+
+./gen/tasktypes/dmem.sh 2;5045;33058936;6552
+gen/tasktypes/onetomany/writeimage.sh 2;5035;27002128;5362
+
+writeimage;5014;41133379;8203
+
+./gen/tasktypes/dmem.sh 2;5048;35275301;6987
+gen/tasktypes/onetomany/writeimage.sh 2;5035;27044791;5371
+
+writeimage;5014;41182573;8213
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5040;47923217;9508
+gen/tasktypes/onetomany/checkcontrast.sh 3;5031;39706136;7892
+
+checkcontrast;5012;27911733;5568
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5040;48074584;9538
+gen/tasktypes/onetomany/checkcontrast.sh 3;5031;39817037;7914
+
+checkcontrast;5012;28045643;5595
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5038;48076964;9542
+gen/tasktypes/onetomany/checkcontrast.sh 3;5032;39822774;7913
+
+checkcontrast;5012;28167164;5619
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5029;43111462;8572
+gen/tasktypes/onetomany/loadimage.sh 3;5036;35283296;7006
+
+loadimage;5015;41088823;8193
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5030;43227977;8594
+gen/tasktypes/onetomany/loadimage.sh 3;5043;35248140;6989
+
+loadimage;5015;41219132;8219
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5029;43219128;8593
+gen/tasktypes/onetomany/loadimage.sh 3;5039;35217806;6989
+
+loadimage;5014;41290726;8235
+
+./gen/tasktypes/m4x4smul.sh 3;5047;58765535;11643
+gen/tasktypes/onetomany/greyscale.sh 3;5051;55207134;10929
+
+greyscale;5015;50368646;10043
+
+./gen/tasktypes/m4x4smul.sh 3;5054;59240388;11721
+gen/tasktypes/onetomany/greyscale.sh 3;5043;55366924;10978
+
+greyscale;5106;51102408;10008
+
+./gen/tasktypes/m4x4smul.sh 3;5043;59239411;11746
+gen/tasktypes/onetomany/greyscale.sh 3;5052;55771463;11039
+
+greyscale;5012;50821708;10140
+
+./gen/tasktypes/vmov_SIMD.sh 3;5045;38826866;7696
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5045;47095766;9335
+
+sharpencontrast;5030;50787529;10096
+
+./gen/tasktypes/vmov_SIMD.sh 3;5032;38666893;7684
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5038;48592527;9645
+
+sharpencontrast;5030;50686149;10076
+
+./gen/tasktypes/vmov_SIMD.sh 3;5033;38481469;7645
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5040;48614804;9645
+
+sharpencontrast;5032;50628289;10061
+
+./gen/tasktypes/m4x4smul.sh 3;5049;58133762;11513
+gen/tasktypes/onetomany/copyimage.sh 3;5039;53789901;10674
+
+copyimage;5021;50454033;10048
+
+./gen/tasktypes/m4x4smul.sh 3;5044;58141209;11526
+gen/tasktypes/onetomany/copyimage.sh 3;5039;54474714;10810
+
+copyimage;5013;50318047;10037
+
+./gen/tasktypes/m4x4smul.sh 3;5045;58775851;11650
+gen/tasktypes/onetomany/copyimage.sh 3;5039;54171675;10750
+
+copyimage;5021;50277947;10013
+
+./gen/tasktypes/m4x4smul.sh 3;5045;58163792;11528
+gen/tasktypes/onetomany/sobelh.sh 3;5043;55597514;11024
+
+sobelh;5139;46322758;9013
+
+./gen/tasktypes/m4x4smul.sh 3;5052;57697118;11420
+gen/tasktypes/onetomany/sobelh.sh 3;5051;54383955;10766
+
+sobelh;5151;45898687;8910
+
+./gen/tasktypes/m4x4smul.sh 3;5048;57902867;11470
+gen/tasktypes/onetomany/sobelh.sh 3;5044;55754374;11053
+
+sobelh;5138;45751714;8904
+
+./gen/tasktypes/m4x4smul.sh 3;5049;59076997;11700
+gen/tasktypes/onetomany/sobelv.sh 3;5051;55891032;11065
+
+sobelv;5137;44830147;8726
+
+./gen/tasktypes/m4x4smul.sh 3;5043;58026218;11506
+gen/tasktypes/onetomany/sobelv.sh 3;5059;56110696;11091
+
+sobelv;5154;45165229;8763
+
+./gen/tasktypes/m4x4smul.sh 3;5042;58288486;11560
+gen/tasktypes/onetomany/sobelv.sh 3;5035;56258401;11173
+
+sobelv;5136;45462713;8851
+
+./gen/tasktypes/imul.sh 3;5035;41106157;8164
+gen/tasktypes/onetomany/combineimgs.sh 3;5045;55044048;10910
+
+combineimgs;5030;51773671;10292
+
+./gen/tasktypes/imul.sh 3;5043;41044268;8138
+gen/tasktypes/onetomany/combineimgs.sh 3;5046;54573225;10815
+
+combineimgs;5034;50864494;10104
+
+./gen/tasktypes/imul.sh 3;5040;40973833;8129
+gen/tasktypes/onetomany/combineimgs.sh 3;5053;55356792;10955
+
+combineimgs;5036;50752556;10077
+
+./gen/tasktypes/dmem.sh 3;5051;48656553;9633
+gen/tasktypes/onetomany/writeimage.sh 3;5036;35144563;6978
+
+writeimage;5016;44063730;8784
+
+./gen/tasktypes/dmem.sh 3;5051;49282772;9757
+gen/tasktypes/onetomany/writeimage.sh 3;5036;35224337;6994
+
+writeimage;5013;43940928;8765
+
+./gen/tasktypes/dmem.sh 3;5049;50336480;9969
+gen/tasktypes/onetomany/writeimage.sh 3;5035;35274018;7005
+
+writeimage;5015;44461739;8865
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5032;20286813;4031
+gen/tasktypes/onetomany/checkcontrast.sh 1;5029;17852310;3549
+
+checkcontrast;5012;23280702;4644
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5035;20136423;3999
+gen/tasktypes/onetomany/checkcontrast.sh 1;5030;17805558;3539
+
+checkcontrast;5012;23271852;4643
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5035;20195261;4010
+gen/tasktypes/onetomany/checkcontrast.sh 1;5029;17834671;3546
+
+checkcontrast;5011;23432069;4676
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5031;19025891;3781
+gen/tasktypes/onetomany/loadimage.sh 1;5031;16240193;3228
+
+loadimage;5012;26403131;5267
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5031;18967237;3770
+gen/tasktypes/onetomany/loadimage.sh 1;5031;16217366;3223
+
+loadimage;5012;26453363;5278
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5028;19002759;3779
+gen/tasktypes/onetomany/loadimage.sh 1;5032;16218586;3223
+
+loadimage;5012;26342035;5255
+
+./gen/tasktypes/m4x4smul.sh 1;5042;22662967;4494
+gen/tasktypes/onetomany/greyscale.sh 1;5035;21715521;4312
+
+greyscale;5107;21532721;4216
+
+./gen/tasktypes/m4x4smul.sh 1;5040;22582644;4480
+gen/tasktypes/onetomany/greyscale.sh 1;5036;21686773;4306
+
+greyscale;5104;21251105;4163
+
+./gen/tasktypes/m4x4smul.sh 1;5042;22581546;4478
+gen/tasktypes/onetomany/greyscale.sh 1;5046;21639593;4288
+
+greyscale;5107;21458991;4201
+
+./gen/tasktypes/vmov_SIMD.sh 1;5027;16907489;3363
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5035;20023081;3976
+
+sharpencontrast;5079;20953987;4125
+
+./gen/tasktypes/vmov_SIMD.sh 1;5029;16871844;3354
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5035;19982126;3968
+
+sharpencontrast;5084;20902412;4111
+
+./gen/tasktypes/vmov_SIMD.sh 1;5029;16862017;3352
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5035;20031260;3978
+
+sharpencontrast;5086;20834481;4096
+
+./gen/tasktypes/m4x4smul.sh 1;5034;22570072;4483
+gen/tasktypes/onetomany/copyimage.sh 1;5038;21476202;4262
+
+copyimage;5017;20476266;4081
+
+./gen/tasktypes/m4x4smul.sh 1;5037;22528018;4472
+gen/tasktypes/onetomany/copyimage.sh 1;5035;21453925;4260
+
+copyimage;5016;20565438;4099
+
+./gen/tasktypes/m4x4smul.sh 1;5035;22528629;4474
+gen/tasktypes/onetomany/copyimage.sh 1;5035;21389166;4248
+
+copyimage;5023;20578438;4096
+
+./gen/tasktypes/m4x4smul.sh 1;5034;22455692;4460
+gen/tasktypes/onetomany/sobelh.sh 1;5040;21854253;4336
+
+sobelh;5117;20739693;4053
+
+./gen/tasktypes/m4x4smul.sh 1;5030;22679141;4508
+gen/tasktypes/onetomany/sobelh.sh 1;5042;21834234;4330
+
+sobelh;5044;20426583;4049
+
+./gen/tasktypes/m4x4smul.sh 1;5042;22577457;4477
+gen/tasktypes/onetomany/sobelh.sh 1;5047;21821355;4323
+
+sobelh;5199;21100471;4058
+
+./gen/tasktypes/m4x4smul.sh 1;5033;22624881;4495
+gen/tasktypes/onetomany/sobelv.sh 1;5039;21957402;4357
+
+sobelv;5046;19722118;3908
+
+./gen/tasktypes/m4x4smul.sh 1;5038;22594181;4484
+gen/tasktypes/onetomany/sobelv.sh 1;5042;21824468;4328
+
+sobelv;5035;19933237;3958
+
+./gen/tasktypes/m4x4smul.sh 1;5032;22573795;4486
+gen/tasktypes/onetomany/sobelv.sh 1;5042;21793951;4322
+
+sobelv;5026;19644054;3908
+
+./gen/tasktypes/imul.sh 1;5032;17883378;3553
+gen/tasktypes/onetomany/combineimgs.sh 1;5033;21721563;4315
+
+combineimgs;5039;20392342;4046
+
+./gen/tasktypes/imul.sh 1;5032;17814102;3540
+gen/tasktypes/onetomany/combineimgs.sh 1;5037;21712591;4310
+
+combineimgs;5045;20295419;4022
+
+./gen/tasktypes/imul.sh 1;5033;17960952;3568
+gen/tasktypes/onetomany/combineimgs.sh 1;5040;21706427;4306
+
+combineimgs;5048;21305427;4220
+
+./gen/tasktypes/dmem.sh 1;5041;21443182;4253
+gen/tasktypes/onetomany/writeimage.sh 1;5035;16221089;3221
+
+writeimage;5013;29786239;5941
+
+./gen/tasktypes/dmem.sh 1;5040;21546027;4275
+gen/tasktypes/onetomany/writeimage.sh 1;5035;16171529;3211
+
+writeimage;5016;29583359;5897
+
+./gen/tasktypes/dmem.sh 1;5043;21591802;4281
+gen/tasktypes/onetomany/writeimage.sh 1;5032;16287312;3236
+
+writeimage;5017;28825976;5745
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5043;30144271;5977
+gen/tasktypes/onetomany/checkcontrast.sh 2;5030;25555416;5080
+
+checkcontrast;5012;23962219;4780
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5041;30224288;5995
+gen/tasktypes/onetomany/checkcontrast.sh 2;5030;25642695;5097
+
+checkcontrast;5012;23763062;4741
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5037;29982468;5952
+gen/tasktypes/onetomany/checkcontrast.sh 2;5029;25769709;5124
+
+checkcontrast;5012;23943176;4777
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5029;27635793;5495
+gen/tasktypes/onetomany/loadimage.sh 2;5037;22906618;4547
+
+loadimage;5012;39051231;7791
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5032;27584891;5481
+gen/tasktypes/onetomany/loadimage.sh 2;5038;22990115;4563
+
+loadimage;5012;38677330;7716
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5033;27685781;5500
+gen/tasktypes/onetomany/loadimage.sh 2;5035;22931399;4554
+
+loadimage;5014;38947593;7767
+
+./gen/tasktypes/m4x4smul.sh 2;5047;36948697;7320
+gen/tasktypes/onetomany/greyscale.sh 2;5047;34841646;6903
+
+greyscale;5084;32150613;6323
+
+./gen/tasktypes/m4x4smul.sh 2;5034;35641510;7080
+gen/tasktypes/onetomany/greyscale.sh 2;5040;34189060;6783
+
+greyscale;5016;31819071;6343
+
+./gen/tasktypes/m4x4smul.sh 2;5042;35670319;7074
+gen/tasktypes/onetomany/greyscale.sh 2;5040;33773961;6701
+
+greyscale;5047;31949747;6330
+
+./gen/tasktypes/vmov_SIMD.sh 2;5030;24621825;4894
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5040;30658552;6083
+
+sharpencontrast;5045;32081583;6359
+
+./gen/tasktypes/vmov_SIMD.sh 2;5033;24572446;4882
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5032;30615705;6084
+
+sharpencontrast;5056;32386392;6405
+
+./gen/tasktypes/vmov_SIMD.sh 2;5034;24516478;4870
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5037;30676069;6090
+
+sharpencontrast;5047;32394509;6418
+
+./gen/tasktypes/m4x4smul.sh 2;5048;35906585;7113
+gen/tasktypes/onetomany/copyimage.sh 2;5035;33445349;6642
+
+copyimage;5012;31634563;6311
+
+./gen/tasktypes/m4x4smul.sh 2;5045;35750274;7086
+gen/tasktypes/onetomany/copyimage.sh 2;5032;33534155;6664
+
+copyimage;5023;31763896;6323
+
+./gen/tasktypes/m4x4smul.sh 2;5046;35740204;7082
+gen/tasktypes/onetomany/copyimage.sh 2;5033;33463964;6648
+
+copyimage;5015;31782511;6337
+
+./gen/tasktypes/m4x4smul.sh 2;5048;35743255;7080
+gen/tasktypes/onetomany/sobelh.sh 2;5040;34242405;6794
+
+sobelh;5244;29074022;5544
+
+./gen/tasktypes/m4x4smul.sh 2;5047;35768280;7087
+gen/tasktypes/onetomany/sobelh.sh 2;5042;34248569;6792
+
+sobelh;5207;28821581;5535
+
+./gen/tasktypes/m4x4smul.sh 2;5048;35732208;7078
+gen/tasktypes/onetomany/sobelh.sh 2;5047;34299228;6795
+
+sobelh;5200;28913684;5560
+
+./gen/tasktypes/m4x4smul.sh 2;5038;35924712;7130
+gen/tasktypes/onetomany/sobelv.sh 2;5043;34022496;6746
+
+sobelv;5259;28388417;5398
+
+./gen/tasktypes/m4x4smul.sh 2;5047;35754669;7084
+gen/tasktypes/onetomany/sobelv.sh 2;5039;34023046;6751
+
+sobelv;5207;28295765;5434
+
+./gen/tasktypes/m4x4smul.sh 2;5036;35820770;7112
+gen/tasktypes/onetomany/sobelv.sh 2;5044;34245396;6789
+
+sobelv;5211;28003041;5373
+
+./gen/tasktypes/imul.sh 2;5030;26239007;5216
+gen/tasktypes/onetomany/combineimgs.sh 2;5042;33999974;6743
+
+combineimgs;5076;32374857;6378
+
+./gen/tasktypes/imul.sh 2;5038;26361627;5232
+gen/tasktypes/onetomany/combineimgs.sh 2;5041;34098363;6764
+
+combineimgs;5067;32296487;6373
+
+./gen/tasktypes/imul.sh 2;5039;26201227;5199
+gen/tasktypes/onetomany/combineimgs.sh 2;5037;33981053;6746
+
+combineimgs;5068;32322793;6377
+
+./gen/tasktypes/dmem.sh 2;5045;31758830;6295
+gen/tasktypes/onetomany/writeimage.sh 2;5038;23213015;4607
+
+writeimage;5016;36313505;7239
+
+./gen/tasktypes/dmem.sh 2;5043;31542766;6254
+gen/tasktypes/onetomany/writeimage.sh 2;5036;23084657;4583
+
+writeimage;5015;36518095;7281
+
+./gen/tasktypes/dmem.sh 2;5049;32128091;6363
+gen/tasktypes/onetomany/writeimage.sh 2;5031;23118960;4595
+
+writeimage;5016;36472502;7271
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5041;41236894;8180
+gen/tasktypes/onetomany/checkcontrast.sh 3;5035;33901586;6733
+
+checkcontrast;5013;24142821;4816
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5045;37567286;7446
+gen/tasktypes/onetomany/checkcontrast.sh 3;5034;33961766;6746
+
+checkcontrast;5013;24136718;4814
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5040;41295487;8193
+gen/tasktypes/onetomany/checkcontrast.sh 3;5049;33930150;6720
+
+checkcontrast;5013;24226745;4832
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5030;36376127;7231
+gen/tasktypes/onetomany/loadimage.sh 3;5047;30216597;5987
+
+loadimage;5015;41178789;8211
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5033;36419463;7236
+gen/tasktypes/onetomany/loadimage.sh 3;5047;30360335;6015
+
+loadimage;5015;41212174;8217
+
+./gen/tasktypes/dmem64_SIMD.sh 3;5041;36594267;7259
+gen/tasktypes/onetomany/loadimage.sh 3;5043;30518781;6051
+
+loadimage;5014;41086748;8194
+
+./gen/tasktypes/m4x4smul.sh 3;5052;49800593;9857
+gen/tasktypes/onetomany/greyscale.sh 3;5055;47088320;9315
+
+greyscale;5027;42855908;8525
+
+./gen/tasktypes/m4x4smul.sh 3;5048;48795347;9666
+gen/tasktypes/onetomany/greyscale.sh 3;5057;47505982;9394
+
+greyscale;5030;43309459;8610
+
+./gen/tasktypes/m4x4smul.sh 3;5044;50151300;9942
+gen/tasktypes/onetomany/greyscale.sh 3;5052;45976017;9100
+
+greyscale;5028;43410900;8633
+
+./gen/tasktypes/vmov_SIMD.sh 3;5034;32921485;6539
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5042;41713150;8273
+
+sharpencontrast;5124;43644725;8517
+
+./gen/tasktypes/vmov_SIMD.sh 3;5033;33063636;6569
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5044;41704056;8268
+
+sharpencontrast;5018;43247631;8618
+
+./gen/tasktypes/vmov_SIMD.sh 3;5048;32989662;6535
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5040;41595414;8253
+
+sharpencontrast;5016;43038403;8580
+
+./gen/tasktypes/m4x4smul.sh 3;5043;50563469;10026
+gen/tasktypes/onetomany/copyimage.sh 3;5038;47053896;9339
+
+copyimage;5020;42812512;8528
+
+./gen/tasktypes/m4x4smul.sh 3;5048;49568232;9819
+gen/tasktypes/onetomany/copyimage.sh 3;5036;45959782;9126
+
+copyimage;5024;42983227;8555
+
+./gen/tasktypes/m4x4smul.sh 3;5038;49552973;9835
+gen/tasktypes/onetomany/copyimage.sh 3;5052;46172978;9139
+
+copyimage;5024;42989697;8556
+
+./gen/tasktypes/m4x4smul.sh 3;5040;49576289;9836
+gen/tasktypes/onetomany/sobelh.sh 3;5050;48607785;9625
+
+sobelh;5217;41111161;7880
+
+./gen/tasktypes/m4x4smul.sh 3;5053;50952994;10083
+gen/tasktypes/onetomany/sobelh.sh 3;5044;48767087;9668
+
+sobelh;5230;40982317;7836
+
+./gen/tasktypes/m4x4smul.sh 3;5064;50938591;10058
+gen/tasktypes/onetomany/sobelh.sh 3;5051;48255980;9553
+
+sobelh;5236;41121904;7853
+
+./gen/tasktypes/m4x4smul.sh 3;5046;49881525;9885
+gen/tasktypes/onetomany/sobelv.sh 3;5053;48518796;9601
+
+sobelv;5259;39723409;7553
+
+./gen/tasktypes/m4x4smul.sh 3;5052;50268304;9950
+gen/tasktypes/onetomany/sobelv.sh 3;5044;47697327;9456
+
+sobelv;5262;38898949;7392
+
+./gen/tasktypes/m4x4smul.sh 3;5046;50195306;9947
+gen/tasktypes/onetomany/sobelv.sh 3;5044;47687073;9454
+
+sobelv;5243;38853050;7410
+
+./gen/tasktypes/imul.sh 3;5043;34844820;6909
+gen/tasktypes/onetomany/combineimgs.sh 3;5041;46132267;9151
+
+combineimgs;5076;43870432;8642
+
+./gen/tasktypes/imul.sh 3;5037;34920382;6932
+gen/tasktypes/onetomany/combineimgs.sh 3;5041;46385257;9201
+
+combineimgs;5078;44018992;8668
+
+./gen/tasktypes/imul.sh 3;5037;35012910;6951
+gen/tasktypes/onetomany/combineimgs.sh 3;5046;47556457;9424
+
+combineimgs;5078;43865488;8638
+
+./gen/tasktypes/dmem.sh 3;5045;43890451;8699
+gen/tasktypes/onetomany/writeimage.sh 3;5042;30569075;6062
+
+writeimage;5014;38741234;7726
+
+./gen/tasktypes/dmem.sh 3;5045;42511854;8426
+gen/tasktypes/onetomany/writeimage.sh 3;5045;30626936;6070
+
+writeimage;5015;39489157;7874
+
+./gen/tasktypes/dmem.sh 3;5051;42663404;8446
+gen/tasktypes/onetomany/writeimage.sh 3;5044;30516096;6049
+
+writeimage;5016;39694784;7913
+

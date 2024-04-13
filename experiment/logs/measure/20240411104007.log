@@ -1,0 +1,145 @@
+app;duration;power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5070;23237856;4583
+gen/tasktypes/onetomany/checkcontrast.sh 1;5047;20319223;4026
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5054;23209413;4592
+gen/tasktypes/onetomany/checkcontrast.sh 1;5043;20329721;4031
+
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5048;20965278;4153
+gen/tasktypes/onetomany/loadimage.sh 1;5046;18930371;3751
+
+
+./gen/tasktypes/dmem64_SIMD.sh 1;5042;21423651;4249
+gen/tasktypes/onetomany/loadimage.sh 1;5045;18751478;3716
+
+
+./gen/tasktypes/m4x4smul.sh 1;5045;25982355;5150
+gen/tasktypes/onetomany/greyscale.sh 1;5059;24786191;4899
+
+
+./gen/tasktypes/m4x4smul.sh 1;5056;25757380;5094
+gen/tasktypes/onetomany/greyscale.sh 1;5054;24855405;4917
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5044;19676890;3901
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5048;22981570;4552
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5050;19595959;3880
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5045;22930239;4545
+
+
+./gen/tasktypes/m4x4smul.sh 1;5056;25645686;5072
+gen/tasktypes/onetomany/copyimage.sh 1;5053;24522154;4852
+
+
+./gen/tasktypes/m4x4smul.sh 1;5049;25819209;5113
+gen/tasktypes/onetomany/copyimage.sh 1;5046;24586729;4872
+
+
+./gen/tasktypes/m4x4smul.sh 1;5052;25678462;5082
+gen/tasktypes/onetomany/sobelh.sh 1;5053;24919004;4931
+
+
+./gen/tasktypes/m4x4smul.sh 1;5056;25720271;5087
+gen/tasktypes/onetomany/sobelh.sh 1;5055;24966061;4938
+
+
+./gen/tasktypes/m4x4smul.sh 1;5056;25763423;5095
+gen/tasktypes/onetomany/sobelv.sh 1;5054;24949216;4936
+
+
+./gen/tasktypes/m4x4smul.sh 1;5052;25791132;5105
+gen/tasktypes/onetomany/sobelv.sh 1;5049;24887082;4929
+
+
+./gen/tasktypes/imul.sh 1;5047;19835886;3930
+gen/tasktypes/onetomany/combineimgs.sh 1;5050;24822568;4915
+
+
+./gen/tasktypes/imul.sh 1;5047;19855784;3934
+gen/tasktypes/onetomany/combineimgs.sh 1;5050;24698423;4890
+
+
+./gen/tasktypes/dmem.sh 1;5049;21702520;4298
+gen/tasktypes/onetomany/writeimage.sh 1;5043;18716993;3711
+
+
+./gen/tasktypes/dmem.sh 1;5052;20693184;4096
+gen/tasktypes/onetomany/writeimage.sh 1;5041;18651197;3699
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5052;35462556;7019
+gen/tasktypes/onetomany/checkcontrast.sh 2;5037;29419236;5840
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5048;35666595;7065
+gen/tasktypes/onetomany/checkcontrast.sh 2;5044;29451340;5838
+
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5045;31825236;6308
+gen/tasktypes/onetomany/loadimage.sh 2;5050;26373773;5222
+
+
+./gen/tasktypes/dmem64_SIMD.sh 2;5043;31906229;6326
+gen/tasktypes/onetomany/loadimage.sh 2;5043;26279718;5211
+
+
+./gen/tasktypes/m4x4smul.sh 2;5051;41606155;8237
+gen/tasktypes/onetomany/greyscale.sh 2;5053;38912071;7700
+
+
+./gen/tasktypes/m4x4smul.sh 2;5066;41651566;8221
+gen/tasktypes/onetomany/greyscale.sh 2;5059;38921715;7693
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5047;28686328;5683
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5053;35582001;7041
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5043;28669726;5685
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5055;35638703;7050
+
+
+./gen/tasktypes/m4x4smul.sh 2;5060;41496537;8200
+gen/tasktypes/onetomany/copyimage.sh 2;5070;38840904;7660
+
+
+./gen/tasktypes/m4x4smul.sh 2;5062;41755509;8248
+gen/tasktypes/onetomany/copyimage.sh 2;5052;38940147;7707
+
+
+./gen/tasktypes/m4x4smul.sh 2;5059;41770950;8256
+gen/tasktypes/onetomany/sobelh.sh 2;5057;39556051;7822
+
+
+./gen/tasktypes/m4x4smul.sh 2;5057;41825515;8270
+gen/tasktypes/onetomany/sobelh.sh 2;5057;40679950;8044
+
+
+./gen/tasktypes/m4x4smul.sh 2;5055;41774002;8263
+gen/tasktypes/onetomany/sobelv.sh 2;5053;40765704;8067
+
+
+./gen/tasktypes/m4x4smul.sh 2;5053;41741775;8260
+gen/tasktypes/onetomany/sobelv.sh 2;5063;39699117;7841
+
+
+./gen/tasktypes/imul.sh 2;5047;30333602;6010
+gen/tasktypes/onetomany/combineimgs.sh 2;5057;39616476;7833
+
+
+./gen/tasktypes/imul.sh 2;5055;30330855;6000
+gen/tasktypes/onetomany/combineimgs.sh 2;5060;39527853;7811
+
+
+./gen/tasktypes/dmem.sh 2;5061;36571745;7226
+gen/tasktypes/onetomany/writeimage.sh 2;5050;27306143;5407
+
+
+./gen/tasktypes/dmem.sh 2;5058;36577115;7231
+gen/tasktypes/onetomany/writeimage.sh 2;5045;27258720;5403
+
+

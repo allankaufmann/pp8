@@ -1,5 +1,5 @@
 [Log]
-logs/taskmapper/202404091651.log
+logs/taskmapper/202404110959.log
 logs/taskmapper/202404021746.log
 logs/taskmapper/202404021815.log
 logs/taskmapper/202404021956.log
@@ -9,20 +9,24 @@ logs/taskmapper/202404091539.log
 logs/taskmapper/202404091559.log
 logs/taskmapper/202404091619.log
 logs/taskmapper/202404091651.log
+logs/taskmapper/202404101919.log
+logs/taskmapper/202404110957.log
+logs/taskmapper/202404110958.log
+logs/taskmapper/202404110959.log
 
 [OneToOne]
-sobelv=vmov_SIMD
+sobelv=m4x4smul
 checkcontrast=m4x4smul_SIMD
-copyimage=vmov_SIMD
+copyimage=m4x4smul
 testWithNopBitByteShiftIMulLogic=nop
 testWithNopAndBitByteAndShift=nop
 testWithNopAndBitByte=nop
 combineimgs=imul
 sharpencontrast=vmov_SIMD
-loadimage=vmov_SIMD
-sobelh=vmov_SIMD
-writeimage=m4x4smul
-greyscale=vmov_SIMD
+loadimage=dmem64_SIMD
+sobelh=m4x4smul
+writeimage=dmem
+greyscale=m4x4smul
 testWithNop=nop
 
 [OneToMany]
@@ -69,11 +73,10 @@ model=sharpencontrast
  vmov_SIMD=0.600000
 end_model
 model=loadimage
- bitbyte=0.110000
- imem=0.050000
- logic=0.050000
- m4x4smul=0.720000
- shift=0.050000
+ imem=0.250000
+ imov=0.250000
+ logic=0.250000
+ shift=0.250000
 end_model
 model=sobelh
  branch=0.100000

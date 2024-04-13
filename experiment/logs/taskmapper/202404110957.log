@@ -1,0 +1,28 @@
+
+AppTask loadimage wird geprüft!
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask bitbyte (Gesamt: 2037)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dmem64_SIMD (Gesamt: 2081)  4841 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask logic (Gesamt: 2036)  4840 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask m4x4smul (Gesamt: 3199)  4319 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 1 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask nop (Gesamt: 1999)  4829 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask branch (Gesamt: 1997)  4829 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dmem (Gesamt: 2091)  4840 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask imov (Gesamt: 1996)  4829 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dsub64_SIMD (Gesamt: 2114)  4830 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask vconvert_SIMD (Gesamt: 2090)  4835 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask ssub32_SIMD (Gesamt: 2114)  4830 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask iadd (Gesamt: 2039)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask imem (Gesamt: 2080)  4836 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dmul64_SIMD (Gesamt: 2114)  4830 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dadd (Gesamt: 2062)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask shift (Gesamt: 1996)  4840 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask icompare (Gesamt: 2095)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask vmov_SIMD (Gesamt: 2157)  4837 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask dmul (Gesamt: 2062)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask imul (Gesamt: 2071)  4831 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask m4x4smul_SIMD (Gesamt: 2328)  4841 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask smul32_SIMD (Gesamt: 2114)  4830 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+In AppTask loadimage(Gesamt: 4951) sind aus ProtTask v1x4smul_SIMD (Gesamt: 2287)  4837 Einträge vorhanden! (Der Prottask wurde aufgrund der Größe des AppTask 2 mal wiederholt!)
+
+Der ähnlichste ProttypTask für den AppTask loadimage ist dmem64_SIMD(4841.000000  Treffer)
+
