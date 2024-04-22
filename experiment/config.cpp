@@ -4,6 +4,7 @@
 #include <fstream>
 #include "constants.h"
 #include <list>
+#include "vector"
 std::string section_tasktypes="TaskTypes";
 
 std::string section_apptasks="ApplicationTasks";

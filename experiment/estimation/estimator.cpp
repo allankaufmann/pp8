@@ -1,8 +1,8 @@
 #include <sys/stat.h> //mkdir, chmod
 
+
+
 std::ofstream resultFile;
-std::string currentCPUFreq;
-std::string currentParallelism;
 
 void openResultFile() {
     resultFile.open(filename_estimation_result);
@@ -15,37 +15,6 @@ void closeResultFile() {
 
 
 
-void selectCpuFrequency() {
-    if (cpuFrequencyVektor.size()==0) {
-        readConfigFile(false, false);
-    }
-
-    printf("In der Konfigurationsdatei experiment.config sind %d CPU-Level hinterlegt, bitte durch Eingabe auswählen!\n", cpuFrequencyVektor.size());
-
-    for (int i = 0; i < cpuFrequencyVektor.size(); i++) {
-        printf("[%d]: %s\n", i, cpuFrequencyVektor[i].c_str());
-    }
-
-    int index = 0;
-    if (scanf("%d", &index) == 1) {
-        currentCPUFreq = cpuFrequencyVektor[index];
-        std::string frequence = "cpupower frequency-set -u " + currentCPUFreq + "mhz";
-        system(frequence.c_str());
-        system("cpupower frequency-info");
-    }
-}
-
-void setupCpuFrequenzlevel(std::string frequenz) {
-    currentCPUFreq = frequenz;
-    std::string frequence = "sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
-    system(frequence.c_str());
-    system("cpupower frequency-info");
-    printf("CPU Frequenz wurde auf %s MHz eingestellt!\n", frequenz.c_str());
-}
-
-void setCurrentParallelism(std::string parallel) {
-    currentParallelism = parallel;
-}
 
 std::string readOneToOneMapping(std::string apptaskname) {
     std::ifstream infile(filename_taskmap_result);

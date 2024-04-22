@@ -13,6 +13,10 @@
 #include <fstream>
 #include <unistd.h>
 static const char *const logfolder_measure = "logs/measure/";
+FILE* logfileMeasure;
+
+std::string currentCPUFreq;
+std::string currentParallelism;
 
 class MeasureResult {
 public:
@@ -37,7 +41,7 @@ public:
 
 };
 
-FILE* logfileMeasure;
+
 
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
@@ -139,7 +143,7 @@ char* getFilename() {
 void openMeasurLogFile() {
     mkdir(logfolder_measure, 0777);
     logfileMeasure = fopen(getFilename(), "w");
-    fprintf(logfileMeasure, "app;duration;power;leistung\n");
+    fprintf(logfileMeasure, "app;cpufreq;Parallelitätsgrad;Dauer; power;leistung\n");
 }
 
 void closeMeasureLogFile() {
@@ -148,6 +152,10 @@ void closeMeasureLogFile() {
 
 void logMeasure(const char app[], long long  dauer, long long energy_mj) {
     fprintf(logfileMeasure, "%s;%lld;%lld;%lld\n", app, dauer, energy_mj, energy_mj/dauer);
+}
+
+void logMeasure(MeasureResult res) {
+    fprintf(logfileMeasure, "%s;%s;%s,%lld;%lld;%f\n", res.taskname.c_str(), res.cpuFreq.c_str(), res.parallelism.c_str(),  res.duration, res.energy_mj, res.power());
 }
 
 void logMeasureNewLine() {
@@ -203,6 +211,8 @@ void runAndMeasureScriptsFromDirectory(int count, const char* directory, const c
 
     printf("%s", "Skripte wurden ausgeführt, Ergebnisse siehe logs-Ordner!");
 }
+
+
 
 char* searchTasktypeFile(std::string tasktypename, std::string folder) {
     std::vector<char*> v_filenames = readFilenamesFromDirectory(folder.c_str());
@@ -288,6 +298,85 @@ MeasureResult measureAppTask(std::string apptaskname, std::string cpufreq, std::
     logMeasure(apptaskname.c_str(), result.duration, result.energy_mj);
     logMeasureNewLine();
     return result;
+}
+
+
+void selectCpuFrequency() {
+    if (cpuFrequencyVektor.size()==0) {
+        readConfigFile(false, false);
+    }
+
+    printf("In der Konfigurationsdatei experiment.config sind %d CPU-Level hinterlegt, bitte durch Eingabe auswählen!\n", cpuFrequencyVektor.size());
+
+    for (int i = 0; i < cpuFrequencyVektor.size(); i++) {
+        printf("[%d]: %s\n", i, cpuFrequencyVektor[i].c_str());
+    }
+
+    int index = 0;
+    if (scanf("%d", &index) == 1) {
+        currentCPUFreq = cpuFrequencyVektor[index];
+        std::string frequence = "cpupower frequency-set -u " + currentCPUFreq + "mhz";
+        system(frequence.c_str());
+        system("cpupower frequency-info");
+    }
+}
+
+void setupCpuFrequenzlevel(std::string frequenz) {
+    currentCPUFreq = frequenz;
+    std::string frequence = "sudo -S cpupower frequency-set -u " + currentCPUFreq + "mhz";
+    system(frequence.c_str());
+    system("cpupower frequency-info");
+    printf("CPU Frequenz wurde auf %s MHz eingestellt!\n", frequenz.c_str());
+}
+
+void setCurrentParallelism(std::string parallel) {
+    currentParallelism = parallel;
+}
+
+void smtoff() {
+    system("echo off > /sys/devices/system/cpu/smt/control");
+}
+
+void measureAllPrototypTasks(int count) {
+    smtoff();
+    readConfigFile(false, false);
+    openMeasurLogFile();
+
+    std::string cpuFrequency = cpuFrequencyVektor[5];
+
+    //for (std::string cpuFrequency : cpuFrequencyVektor) {
+        for (std::string parallelism : parallelismVektor) {
+            for(std::string tasktype: tasktypeVektor) {
+                for (int i = 0; i < count; i++) {
+                    char* filename = searchTasktypeFile(tasktype, foldername_generated_scripts_tasktypes);
+                    std::string fileWithParam = getFilenameWithParam(filename, parallelism);
+                    MeasureResult result = runAndMeasureScript(fileWithParam.c_str());
+                    result.taskname=tasktype;
+                    result.cpuFreq=cpuFrequency;
+                    result.parallelism=parallelism;
+                    logMeasure(result);
+                }
+                logMeasureNewLine();
+            }
+        }
+    //}
+
+    cpuFrequency = cpuFrequencyVektor[4];
+    for (std::string parallelism : parallelismVektor) {
+        for(std::string tasktype: tasktypeVektor) {
+            for (int i = 0; i < count; i++) {
+                char* filename = searchTasktypeFile(tasktype, foldername_generated_scripts_tasktypes);
+                std::string fileWithParam = getFilenameWithParam(filename, parallelism);
+                MeasureResult result = runAndMeasureScript(fileWithParam.c_str());
+                result.taskname=tasktype;
+                result.cpuFreq=cpuFrequency;
+                result.parallelism=parallelism;
+                logMeasure(result);
+            }
+            logMeasureNewLine();
+        }
+    }
+    closeMeasureLogFile();
 }
 
 

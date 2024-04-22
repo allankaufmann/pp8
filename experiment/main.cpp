@@ -1,14 +1,17 @@
 #include <iostream>
 #include <thread>
 #include <string.h> //strtok
-#include "estimation/measure.cpp"
+
 #include "config.cpp"
+#include "estimation/measure.cpp"
 #include "math.h" //ceil
 #include "taskmapper/taskmapperresult.cpp"
 #include "taskmapper/taskclasses.cpp"
 #include "taskmapper/taskmapperLog.cpp"
 #include "taskmapper/taskmapperOneToOne.cpp"
 #include "taskmapper/taskmapperOneToMany.cpp"
+#include "taskmapper/taskmapperDiffsearch.cpp"
+#include "taskmapper/taskmapperPairsearch.cpp"
 #include "estimation/estimator.cpp"
 
 
@@ -74,7 +77,7 @@ int main(int argc, char *argv[]) {
         printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
-        printf("\tT (=Test: Freq)\n");
+        printf("\tT (=Test: Alternatives Mapping)\n");
         printf("\tU (=Estimation)\n");
         printf("\tV (=Versuch...greyscale 1:N)\n");
         printf("\tW (CPU Frequence)\n");
@@ -91,7 +94,8 @@ int main(int argc, char *argv[]) {
     }*/ else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(true, true); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
-        runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
+        measureAllPrototypTasks(3);
+        //runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
         runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
@@ -127,13 +131,17 @@ int main(int argc, char *argv[]) {
         selectCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
 
-
-        selectCpuFrequency();
+        //testDiffSearch();
+        testPairSearch();
+        //testTripleSearch();
+        //selectCpuFrequency();
         /*for (int i = 0; i < 10 ; i++) {
             printf("\n%d %lu", i, measureIdle(1000));
             //measureIdle(1000);
             //printf("\nCounter: %lld\n",readEnergy_UJ());
         }*/
+
+
 
     } else if (strcasecmp(parameter, "V")==0) {
 

@@ -7,7 +7,17 @@ public:
 };
 
 class PrototypTask : public Task {
+public:
     std::vector<bool> hit; // Übereinstimmung bei Vergleich
+    std::map<std::string, std::map<std::string, bool>> uniqueEntryPairMap; // für Pairsearch!
+
+
+    void initHit() {
+        hit.clear();
+        for (std::string s : sequenzen) {
+            hit.push_back(false);
+        }
+    }
 
     void resetHit(Task anwTask) {
         hit.clear();
@@ -15,6 +25,17 @@ class PrototypTask : public Task {
             hit.push_back(false);
         }
     }
+
+    int countNotFound() {
+        int count = 0;
+        for (bool b : hit) {
+            if (!b) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 };
 
 class AnwTask : public Task {
