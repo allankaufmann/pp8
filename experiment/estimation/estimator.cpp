@@ -50,6 +50,7 @@ void logEmptyline() {
 }
 
 void estimateApptask(std::string apptaskname) {
+    smtoff();
     std::string oneToOneTask = readOneToOneMapping(apptaskname);
 
     MeasureResult result = estimateAppTask(apptaskname, oneToOneTask, currentCPUFreq, currentParallelism);
@@ -101,7 +102,7 @@ void testEstimation() {
         logEmptyline();
     }
 
-    setupCpuFrequenzlevel(cpuFrequencyVektor[4]);
+    /*setupCpuFrequenzlevel(cpuFrequencyVektor[4]);
 
     setCurrentParallelism(parallelismVektor[0]);
     logEmptyline();
@@ -124,7 +125,7 @@ void testEstimation() {
         estimateApptask(apptaskname);
         estimateApptask(apptaskname);
         logEmptyline();
-    }
+    }*/
 
 
 

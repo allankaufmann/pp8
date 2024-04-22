@@ -361,7 +361,7 @@ void measureAllPrototypTasks(int count) {
         }
     //}
 
-    cpuFrequency = cpuFrequencyVektor[4];
+    /*cpuFrequency = cpuFrequencyVektor[4];
     for (std::string parallelism : parallelismVektor) {
         for(std::string tasktype: tasktypeVektor) {
             for (int i = 0; i < count; i++) {
@@ -375,7 +375,7 @@ void measureAllPrototypTasks(int count) {
             }
             logMeasureNewLine();
         }
-    }
+    }*/
     closeMeasureLogFile();
 }
 
