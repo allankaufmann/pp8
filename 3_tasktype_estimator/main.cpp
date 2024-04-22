@@ -70,18 +70,23 @@ int main(int argc, char *argv[]) {
             strcasecmp(parameter, "V")!=0
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
+        printf("\t--------- Init -------------------------------------------------------------------\n");
         printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
+        printf("\t--------- Taskmapper--------------------------------------------------------------\n");
+
         printf("\tA (=Abbildung - 1 AnwTask auf 1 Prototyptask - Test)\n");
         printf("\tB (=Abbildung - 1 AnwTask auf 1 Prototyptask - alle)\n");
         printf("\tD (=Abbildung - 1 AnwTask auf N Prototyptasks - Test)\n");
         printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
+        printf("\t--------- Tasktype Estimator -----------------------------------------------------\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
-        printf("\tT (=Test: Alternatives Mapping)\n");
         printf("\tU (=Estimation)\n");
+        printf("\t--------- Sonstiges -----------------------------------------------------\n");
+        printf("\tT (=Test: Transfer to epebench)\n");
         printf("\tV (=Versuch...greyscale 1:N)\n");
         printf("\tW (CPU Frequence)\n");
-        printf("\tX (=Exit )\n");
+        printf("\tX (=Exit)\n");
         char inputParameter[1];
         scanf("%s", inputParameter);
         parameter=inputParameter;
@@ -130,9 +135,9 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "W")==0) {
         selectCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
-
+        transferTaskMapToEpEBench();
         //testDiffSearch();
-        testPairSearch();
+        //testPairSearch();
         //testTripleSearch();
         //selectCpuFrequency();
         /*for (int i = 0; i < 10 ; i++) {

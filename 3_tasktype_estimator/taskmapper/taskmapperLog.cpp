@@ -12,6 +12,7 @@ std::string result_section_one2one="OneToOne";
 std::string result_section_one2many="OneToMany";
 std::string result_section_model="model";
 std::string result_section_end_model="end_model";
+std::string result_section_end_model_space="end_model ";
 
 char* currentLogfileName;
 
@@ -131,9 +132,49 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
     }
 }
 
+/**
+ * Aus einer vorherigen Abbildung werden zunächst die 1:N-Einträge eines Modells entfernt, damit bei der Abbildung kein Mix aus alten und neuen Werten entsteht!
+ *
+ * @param model das Modell, das entfernt werden soll
+ */
+void dropModelInTaskmapFile(std::string model) {
+    std::ifstream infile(filename_taskmap_result);
+    std::list<std::string> lines;
+    std::string currentSection;
+    std::string currentModel;
+
+    std::string line;
+    while (std::getline(infile, line)) {
+        if (line[0] == '[' && line[line.length() - 1] == ']') {
+            currentSection = line.substr(1, line.length() - 2);
+            lines.push_back(line);
+            continue;
+        }
+
+        if (currentSection == result_section_one2many) {
+            size_t delimiterPos = line.find('=');
+            std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+            std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+            if (keyOfCurrentLine == result_section_model) {
+                currentModel = valueOfCurrentLine;
+            }
+            if (currentModel != model) {
+                lines.push_back(line);
+            }
+        } else {
+            lines.push_back(line);
+        }
+    }
+    infile.close();
+    std::ofstream oufile(filename_taskmap_result);
+    for (std::string l : lines) {
+        oufile << l << "\n";
+    }
+    oufile.close();
+}
+
 void saveLineToTaskmapFile(std::string sectionToUpdate, std::string newLineToUpdate) {
     std::ifstream infile(filename_taskmap_result);
-
     std::set<std::string> logs;
     std::list<std::string> oneToOne;
     bool updateOneToOneKey = false;
@@ -263,6 +304,7 @@ void logBestTasks(AnwTask appTask) {
         countAlleTasks+=it->second;
     }
 
+    dropModelInTaskmapFile(appTask.taskname);
     for (it = appTask.resultOneToOne.abgebildeteTaskMap.begin(); it != appTask.resultOneToOne.abgebildeteTaskMap.end(); it++) {
         std::string key = it->first;
         int anzahl = it->second;
@@ -295,3 +337,76 @@ AnwTask logBestTask(AnwTask appTask, bool percent, bool savetofile) {
     }
     return appTask;
 }
+
+void transferTaskMapToEpEBench() {
+    std::ifstream infile(filename_taskmap_result);
+    std::string currentSection;
+    std::string currentModel;
+
+    std::string line;
+    std::map<std::string, std::list<std::string>> mapOfLine;
+
+
+    while (std::getline(infile, line)) {
+        size_t delimiterPos = line.find('=');
+        std::string keyInline = (delimiterPos!=0) ? line.substr(0, delimiterPos): NULL;
+        std::string valueInLine = (delimiterPos!=0) ? line.substr(delimiterPos + 1):NULL;
+        if (line[0] == '[' && line[line.length() - 1] == ']') {
+            currentSection = line.substr(1, line.length() - 2);
+            continue;
+        }
+        if (currentSection == result_section_one2many) {
+            if (keyInline == result_section_model) {
+                currentModel = valueInLine;
+                mapOfLine[currentModel].push_back(line);
+                continue;
+            }
+            mapOfLine[currentModel].push_back(line);
+        } else {
+            continue;
+        }
+    }
+    infile.close();
+
+    std::list<std::string> linesEbmodels;
+
+    currentModel = "";
+    std::ifstream ebmodelsfile(filename_epebench_ebmodels);
+    bool skipModel = false;
+    while (std::getline(ebmodelsfile, line)) {
+        size_t delimiterPos = line.find('=');
+        std::string keyInline = (delimiterPos!=0) ? line.substr(0, delimiterPos): NULL;
+        std::string valueInLine = (delimiterPos!=0) ? line.substr(delimiterPos + 1):NULL;
+
+        if (keyInline == result_section_model) {
+            currentModel = valueInLine;
+
+            if (mapOfLine[valueInLine].size()==0){
+                linesEbmodels.push_back(line);
+                continue;
+            } else if (!skipModel){
+                skipModel=true;
+                for (std::string s : mapOfLine[valueInLine]) {
+                    linesEbmodels.push_back(s);
+                }
+            }
+        } else if (keyInline == result_section_end_model || keyInline == result_section_end_model_space) {
+            if (skipModel) {
+                skipModel=false;
+                continue;
+            }
+            linesEbmodels.push_back(line);
+        } else if (!skipModel) {
+            linesEbmodels.push_back(line);
+        }
+    }
+    ebmodelsfile.close();
+
+    std::ofstream oufile(filename_epebench_ebmodels);
+    for (std::string s : linesEbmodels) {
+        oufile << s << "\n";
+    }
+    oufile.close();
+}
+
+

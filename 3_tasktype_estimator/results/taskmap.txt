@@ -1,5 +1,5 @@
 [Log]
-logs/taskmapper/202404221612.log
+logs/taskmapper/202404221826.log
 logs/taskmapper/202404021746.log
 logs/taskmapper/202404021815.log
 logs/taskmapper/202404021956.log
@@ -13,6 +13,8 @@ logs/taskmapper/202404101919.log
 logs/taskmapper/202404110957.log
 logs/taskmapper/202404110958.log
 logs/taskmapper/202404110959.log
+logs/taskmapper/202404221612.log
+logs/taskmapper/202404221826.log
 
 [OneToOne]
 sobelv=m4x4smul
@@ -44,13 +46,6 @@ model=copyimage
  imem=0.330000
  m4x4smul=0.330000
  shift=0.330000
-end_model
-model=testWithNopBitByteShiftIMulLogic
- bitbyte=0.200000
- imul=0.200000
- logic=0.200000
- nop=0.200000
- shift=0.200000
 end_model
 model=testWithNopAndBitByteAndShift
  bitbyte=0.330000
@@ -98,4 +93,11 @@ model=greyscale
 end_model
 model=testWithNop
  nop=1.000000
+end_model
+model=testWithNopBitByteShiftIMulLogic
+ bitbyte=0.200000
+ imul=0.200000
+ logic=0.200000
+ nop=0.200000
+ shift=0.200000
 end_model

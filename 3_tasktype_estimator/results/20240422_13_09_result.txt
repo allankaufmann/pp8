@@ -36,6 +36,7 @@ CPUFrequency;Parallelism;apptask;apptaskduration;apptaskpower:	estimationOneToOn
 2400;1;writeimage;5015 MS; 6169 MJ/MS:	4005 MJ/MS; -35.0786%;	3724 MJ/MS;-39.6337%;
 
 
+
 2400;2;checkcontrast;5012 MS; 5460 MJ/MS:	6804 MJ/MS; 24.6154%;	5789 MJ/MS;6.02564%;
 2400;2;checkcontrast;5012 MS; 5462 MJ/MS:	6831 MJ/MS; 25.0641%;	5827 MJ/MS;6.68253%;
 2400;2;checkcontrast;5011 MS; 5469 MJ/MS:	6837 MJ/MS; 25.0137%;	5790 MJ/MS;5.86945%;
@@ -71,6 +72,7 @@ CPUFrequency;Parallelism;apptask;apptaskduration;apptaskpower:	estimationOneToOn
 2400;2;writeimage;5014 MS; 8333 MJ/MS:	6312 MJ/MS; -24.253%;	5206 MJ/MS;-37.5255%;
 2400;2;writeimage;5014 MS; 8311 MJ/MS:	6304 MJ/MS; -24.1487%;	5374 MJ/MS;-35.3387%;
 2400;2;writeimage;5015 MS; 8396 MJ/MS:	6299 MJ/MS; -24.9762%;	5372 MJ/MS;-36.0172%;
+
 
 
 2400;3;checkcontrast;5013 MS; 5637 MJ/MS:	9489 MJ/MS; 68.3342%;	7959 MJ/MS;41.1921%;

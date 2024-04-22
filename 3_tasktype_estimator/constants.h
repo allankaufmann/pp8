@@ -5,7 +5,6 @@
 
 #ifndef EXPERIMENT_CONSTANTS_H
 #define EXPERIMENT_CONSTANTS_H
-const char* config_filename = "experiment.ini";
 const char* config_filename2 = "experiment.config";
 const char* foldername_generated_scripts = "gen";
 std::string foldername_generated_scripts_tasktypes = "gen/tasktypes";
@@ -19,4 +18,5 @@ const char* foldername_edgedetction_scripts = "scripts/edgedetection";
 std::string filename_taskmap_result = "./results/taskmap.txt";
 std::string filename_estimation_result = "./results/result.txt";
 std::string folder_measure = "../edgedetection/measure";
+std::string filename_epebench_ebmodels = "../epEBench/bin/Release/ebmodels.ini";
 #endif //EXPERIMENT_CONSTANTS_H
