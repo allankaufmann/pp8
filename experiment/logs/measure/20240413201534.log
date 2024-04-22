@@ -1,0 +1,152 @@
+app;duration;power;leistung
+./gen/tasktypes/nop.sh 1;5045;19757762;3916
+gen/tasktypes/onetomany/checkcontrast.sh 1;5035;19548778;3882
+
+checkcontrast;5011;26284173;5245
+
+./gen/tasktypes/nop.sh 1;5025;19749522;3930
+gen/tasktypes/onetomany/checkcontrast.sh 1;5023;19434154;3869
+
+checkcontrast;5011;26199335;5228
+
+./gen/tasktypes/nop.sh 1;5026;19720348;3923
+gen/tasktypes/onetomany/checkcontrast.sh 1;5025;20095835;3999
+
+checkcontrast;5011;26158442;5220
+
+./gen/tasktypes/nop.sh 1;5029;19695812;3916
+gen/tasktypes/onetomany/loadimage.sh 1;5033;18646559;3704
+
+loadimage;5012;29617173;5909
+
+./gen/tasktypes/nop.sh 1;5030;19626354;3901
+gen/tasktypes/onetomany/loadimage.sh 1;5030;18728833;3723
+
+loadimage;5013;29593979;5903
+
+./gen/tasktypes/nop.sh 1;5027;19650707;3909
+gen/tasktypes/onetomany/loadimage.sh 1;5031;18747083;3726
+
+loadimage;5011;29441819;5875
+
+./gen/tasktypes/nop.sh 1;5032;19645397;3904
+gen/tasktypes/onetomany/greyscale.sh 1;5040;24597105;4880
+
+greyscale;5068;23711548;4678
+
+./gen/tasktypes/nop.sh 1;5027;19699107;3918
+gen/tasktypes/onetomany/greyscale.sh 1;5039;24587645;4879
+
+greyscale;5064;24083923;4755
+
+./gen/tasktypes/nop.sh 1;5026;19609081;3901
+gen/tasktypes/onetomany/greyscale.sh 1;5032;24643248;4897
+
+greyscale;5062;23936035;4728
+
+./gen/tasktypes/nop.sh 1;5026;19670237;3913
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5032;22801028;4531
+
+sharpencontrast;5080;24108642;4745
+
+./gen/tasktypes/nop.sh 1;5027;19684642;3915
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5035;22889224;4546
+
+sharpencontrast;5078;23914307;4709
+
+./gen/tasktypes/nop.sh 1;5023;19705455;3923
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5034;22858889;4540
+
+sharpencontrast;5085;23986389;4717
+
+./gen/tasktypes/nop.sh 1;5023;19671946;3916
+gen/tasktypes/onetomany/copyimage.sh 1;5030;24471129;4865
+
+copyimage;5016;23465150;4678
+
+./gen/tasktypes/nop.sh 1;5018;19551159;3896
+gen/tasktypes/onetomany/copyimage.sh 1;5033;24404601;4848
+
+copyimage;5021;23459107;4672
+
+./gen/tasktypes/nop.sh 1;5018;19557323;3897
+gen/tasktypes/onetomany/copyimage.sh 1;5033;24402037;4848
+
+copyimage;5021;23487427;4677
+
+./gen/tasktypes/nop.sh 1;5018;19537425;3893
+gen/tasktypes/onetomany/sobelh.sh 1;5039;24684568;4898
+
+sobelh;5105;23505982;4604
+
+./gen/tasktypes/nop.sh 1;5028;19567150;3891
+gen/tasktypes/onetomany/sobelh.sh 1;5032;24803465;4929
+
+sobelh;87976;76291858;867
+
+./gen/tasktypes/nop.sh 1;5024;20440316;4068
+gen/tasktypes/onetomany/sobelh.sh 1;5030;24709165;4912
+
+sobelh;5115;23378481;4570
+
+./gen/tasktypes/nop.sh 1;5026;19564526;3892
+gen/tasktypes/onetomany/sobelv.sh 1;5036;24348204;4834
+
+sobelv;38803;46891848;1208
+
+./gen/tasktypes/nop.sh 1;5020;19446789;3873
+gen/tasktypes/onetomany/sobelv.sh 1;5038;24696775;4902
+
+sobelv;5173;22854128;4417
+
+./gen/tasktypes/nop.sh 1;5027;19624279;3903
+gen/tasktypes/onetomany/sobelv.sh 1;5039;24821775;4925
+
+sobelv;60368;64317280;1065
+
+./gen/tasktypes/nop.sh 1;5020;19226391;3829
+gen/tasktypes/onetomany/combineimgs.sh 1;5036;24547056;4874
+
+combineimgs;5058;23100405;4567
+
+./gen/tasktypes/nop.sh 1;5026;19587596;3897
+gen/tasktypes/onetomany/combineimgs.sh 1;5034;24614622;4889
+
+combineimgs;13261;27657033;2085
+
+./gen/tasktypes/nop.sh 1;5019;19628978;3910
+gen/tasktypes/onetomany/combineimgs.sh 1;5032;24696165;4907
+
+combineimgs;5051;23237306;4600
+
+./gen/tasktypes/nop.sh 1;5023;19603038;3902
+gen/tasktypes/onetomany/writeimage.sh 1;5030;17811233;3541
+
+writeimage;32477;55455058;1707
+
+./gen/tasktypes/nop.sh 1;5018;19342968;3854
+gen/tasktypes/onetomany/writeimage.sh 1;5026;17926040;3566
+
+writeimage;5014;31766826;6335
+
+./gen/tasktypes/nop.sh 1;5028;19753673;3928
+gen/tasktypes/onetomany/writeimage.sh 1;5029;17824722;3544
+
+writeimage;126478;145777093;1152
+
+./gen/tasktypes/nop.sh 2;5017;27886708;5558
+gen/tasktypes/onetomany/checkcontrast.sh 2;5025;27449514;5462
+
+checkcontrast;5011;26509149;5290
+
+./gen/tasktypes/nop.sh 2;5027;28808154;5730
+gen/tasktypes/onetomany/checkcontrast.sh 2;5028;27552420;5479
+
+checkcontrast;90568;92750312;1024
+
+./gen/tasktypes/nop.sh 2;5026;27778005;5526
+gen/tasktypes/onetomany/checkcontrast.sh 2;5024;27421987;5458
+
+checkcontrast;5011;26453851;5279
+
+./ge
