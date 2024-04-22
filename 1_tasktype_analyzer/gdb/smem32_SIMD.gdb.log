@@ -1,0 +1,60 @@
+Haltepunkt 1 at 0x362f: file /home/allan/git/pp8/prototyptaskscpp/ebloads.cpp, line 366.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, run_smem32_SIMD (counts=1) at /home/allan/git/pp8/prototyptaskscpp/ebloads.cpp:366
+366	    float *A = (float*)fmemBuf;
+Haltepunkt 2 at 0x555555557829: file /home/allan/git/pp8/prototyptaskscpp/ebloads.cpp, line 387.
+0x0000555555557636	366	    float *A = (float*)fmemBuf;
+368	    int idx = 0;
+370	    instcnt += counts*CNT_DIV;
+0x0000555555557645	370	    instcnt += counts*CNT_DIV;
+0x000055555555764a	370	    instcnt += counts*CNT_DIV;
+0x0000555555557652	370	    instcnt += counts*CNT_DIV;
+370	    instcnt += counts*CNT_DIV;
+0x000055555555765e	370	    instcnt += counts*CNT_DIV;
+0x0000555555557662	370	    instcnt += counts*CNT_DIV;
+371	    while ((counts--) && !done0) {
+371	    while ((counts--) && !done0) {
+0x0000555555557801	371	    while ((counts--) && !done0) {
+0x0000555555557804	371	    while ((counts--) && !done0) {
+371	    while ((counts--) && !done0) {
+0x0000555555557809	371	    while ((counts--) && !done0) {
+0x000055555555780b	371	    while ((counts--) && !done0) {
+0x0000555555557811	371	    while ((counts--) && !done0) {
+0x0000555555557813	371	    while ((counts--) && !done0) {
+0x0000555555557815	371	    while ((counts--) && !done0) {
+0x000055555555781a	371	    while ((counts--) && !done0) {
+0x0000555555557821	371	    while ((counts--) && !done0) {
+0x0000555555557823	371	    while ((counts--) && !done0) {
+373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557672	373	        idx = (idx + 14564) % MEM_SIZE-10;
+373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x000055555555767b	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557682	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557686	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557689	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x000055555555768b	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x000055555555768e	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557690	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557696	373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x0000555555557698	373	        idx = (idx + 14564) % MEM_SIZE-10;
+373	        idx = (idx + 14564) % MEM_SIZE-10;
+0x000055555555769d	373	        idx = (idx + 14564) % MEM_SIZE-10;
+375	        vec1 = _mm_load_ps(&A[idx]);
+0x00005555555576a3	375	        vec1 = _mm_load_ps(&A[idx]);
+375	        vec1 = _mm_load_ps(&A[idx]);
+375	        vec1 = _mm_load_ps(&A[idx]);
+0x00005555555576b1	375	        vec1 = _mm_load_ps(&A[idx]);
+0x00005555555576b4	375	        vec1 = _mm_load_ps(&A[idx]);
+_mm_load_ps (__P=0x5555560dbec8 <fmemBuf+58216>) at /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:927
+927	  return *(__m128 *)__P;
+0x00005555555576bc	927	  return *(__m128 *)__P;
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555576bc in _mm_load_ps (__P=0x5555560dbec8 <fmemBuf+58216>) at /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:927
+927	  return *(__m128 *)__P;
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+Error 

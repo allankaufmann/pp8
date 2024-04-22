@@ -1,0 +1,3 @@
+/home/allan/git/pp8/1_tasktype_analyzer/CMakeFiles/tasktype_analyzer.dir
+/home/allan/git/pp8/1_tasktype_analyzer/CMakeFiles/edit_cache.dir
+/home/allan/git/pp8/1_tasktype_analyzer/CMakeFiles/rebuild_cache.dir

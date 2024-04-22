@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/prototyptaskscpp.dir/main.cpp.o -o prototyptaskscpp 

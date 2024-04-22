@@ -1,0 +1,2091 @@
+Haltepunkt 1 at 0x51b1: file /home/allan/git/pp8/1_tasktype_analyzer/ebloads.cpp, line 1521.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, run_shift (counts=1) at /home/allan/git/pp8/1_tasktype_analyzer/ebloads.cpp:1521
+1521	    instcnt += counts*CNT_DIV;
+Haltepunkt 2 at 0x55555555922b: file /home/allan/git/pp8/1_tasktype_analyzer/ebloads.cpp, line 1549.
+0x00005555555591b5	1521	    instcnt += counts*CNT_DIV;
+0x00005555555591ba	1521	    instcnt += counts*CNT_DIV;
+0x00005555555591c2	1521	    instcnt += counts*CNT_DIV;
+1521	    instcnt += counts*CNT_DIV;
+0x00005555555591ce	1521	    instcnt += counts*CNT_DIV;
+0x00005555555591d2	1521	    instcnt += counts*CNT_DIV;
+1522	    while ((counts--) && !done0) {
+1522	    while ((counts--) && !done0) {
+0x0000555555559207	1522	    while ((counts--) && !done0) {
+0x000055555555920a	1522	    while ((counts--) && !done0) {
+1522	    while ((counts--) && !done0) {
+0x000055555555920f	1522	    while ((counts--) && !done0) {
+0x0000555555559211	1522	    while ((counts--) && !done0) {
+0x0000555555559217	1522	    while ((counts--) && !done0) {
+0x0000555555559219	1522	    while ((counts--) && !done0) {
+0x000055555555921b	1522	    while ((counts--) && !done0) {
+0x0000555555559220	1522	    while ((counts--) && !done0) {
+0x0000555555559227	1522	    while ((counts--) && !done0) {
+0x0000555555559229	1522	    while ((counts--) && !done0) {
+1523	        asm volatile (
+0x00005555555591de	1523	        asm volatile (
+0x00005555555591e0	1523	        asm volatile (
+0x00005555555591e2	1523	        asm volatile (
+0x00005555555591e4	1523	        asm volatile (
+0x00005555555591e6	1523	        asm volatile (
+0x00005555555591e8	1523	        asm volatile (
+0x00005555555591ea	1523	        asm volatile (
+0x00005555555591ec	1523	        asm volatile (
+0x00005555555591ee	1523	        asm volatile (
+0x00005555555591f0	1523	        asm volatile (
+0x00005555555591f2	1523	        asm volatile (
+0x00005555555591f4	1523	        asm volatile (
+0x00005555555591f6	1523	        asm volatile (
+0x00005555555591f8	1523	        asm volatile (
+0x00005555555591fa	1523	        asm volatile (
+0x00005555555591fc	1523	        asm volatile (
+0x00005555555591fe	1523	        asm volatile (
+0x0000555555559200	1523	        asm volatile (
+0x0000555555559202	1523	        asm volatile (
+1522	    while ((counts--) && !done0) {
+0x0000555555559207	1522	    while ((counts--) && !done0) {
+0x000055555555920a	1522	    while ((counts--) && !done0) {
+1522	    while ((counts--) && !done0) {
+0x000055555555920f	1522	    while ((counts--) && !done0) {
+0x0000555555559222	1522	    while ((counts--) && !done0) {
+0x0000555555559227	1522	    while ((counts--) && !done0) {
+0x0000555555559229	1522	    while ((counts--) && !done0) {
+
+Breakpoint 2, run_shift (counts=-1) at /home/allan/git/pp8/1_tasktype_analyzer/ebloads.cpp:1549
+1549	    return NULL;
+1550	}
+0x0000555555559231	1550	}
+main (argc=2, argv=0x7fffffffdc68) at main.cpp:185
+185	            printf("run_%s wurde ausgefuehrt", shift);
+0x0000555555559a9f	185	            printf("run_%s wurde ausgefuehrt", shift);
+0x0000555555559aa2	185	            printf("run_%s wurde ausgefuehrt", shift);
+0x0000555555559aa9	185	            printf("run_%s wurde ausgefuehrt", shift);
+0x0000555555559aac	185	            printf("run_%s wurde ausgefuehrt", shift);
+0x0000555555559ab1	185	            printf("run_%s wurde ausgefuehrt", shift);
+0x00005555555550a0 in printf@plt ()
+0x00005555555550a4 in printf@plt ()
+__printf (format=0x55555555a14e "run_%s wurde ausgefuehrt") at ./stdio-common/printf.c:28
+0x00007ffff7c606f4	28	in ./stdio-common/printf.c
+0x00007ffff7c606fb	28	in ./stdio-common/printf.c
+0x00007ffff7c606fe	28	in ./stdio-common/printf.c
+0x00007ffff7c60703	28	in ./stdio-common/printf.c
+0x00007ffff7c60708	28	in ./stdio-common/printf.c
+0x00007ffff7c6070d	28	in ./stdio-common/printf.c
+0x00007ffff7c60712	28	in ./stdio-common/printf.c
+0x00007ffff7c60717	28	in ./stdio-common/printf.c
+0x00007ffff7c60719	28	in ./stdio-common/printf.c
+0x00007ffff7c60752	28	in ./stdio-common/printf.c
+0x00007ffff7c6075b	28	in ./stdio-common/printf.c
+0x00007ffff7c60760	28	in ./stdio-common/printf.c
+32	in ./stdio-common/printf.c
+0x00007ffff7c6076a	33	in ./stdio-common/printf.c
+0x00007ffff7c6076d	33	in ./stdio-common/printf.c
+0x00007ffff7c6076f	32	in ./stdio-common/printf.c
+0x00007ffff7c60774	32	in ./stdio-common/printf.c
+0x00007ffff7c60779	33	in ./stdio-common/printf.c
+0x00007ffff7c6077c	32	in ./stdio-common/printf.c
+33	in ./stdio-common/printf.c
+0x00007ffff7c60788	32	in ./stdio-common/printf.c
+0x00007ffff7c6078f	33	in ./stdio-common/printf.c
+0x00007ffff7c60792	32	in ./stdio-common/printf.c
+0x00007ffff7c6079a	33	in ./stdio-common/printf.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1180
+0x00007ffff7c75034	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75036	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75038	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7503a	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7503c	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7503d	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75040	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75041	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75048	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7504d	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75052	1180	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75056	1210	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7505f	1210	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75067	1210	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7506e	1210	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75071	1210	in ./stdio-common/vfprintf-internal.c
+1218	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7507e	1218	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75080	1218	in ./stdio-common/vfprintf-internal.c
+1218	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75503	1218	in ./stdio-common/vfprintf-internal.c
+1222	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75093	1222	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75096	1222	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7509c	1222	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750a2	1222	in ./stdio-common/vfprintf-internal.c
+1233	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750ab	1233	in ./stdio-common/vfprintf-internal.c
+1244	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750b6 in __find_specmb (format=<optimized out>) at ./stdio-common/printf-parse.h:111
+0x00007ffff7c750bb	111	in ./stdio-common/printf-parse.h
+0x00007ffff7c750c0 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1244
+0x00007ffff7c750c4	1244	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750cc	1244	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750d0	1244	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750d5	1244	in ./stdio-common/vfprintf-internal.c
+__find_specmb (format=0x55555555a14e "run_%s wurde ausgefuehrt") at ./stdio-common/printf-parse.h:111
+0x00007ffff7c284d0 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c284d4 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
+53	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+54	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+55	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+56	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+57	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+60	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+61	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+65	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+66	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+67	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+68	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+69	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+70	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+71	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+72	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+78	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+0x00007ffff7d9d448 in __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:79
+79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+0x00007ffff7c750e2 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+0x00007ffff7c750ea in __find_specmb (format=0x55555555a14e "run_%s wurde ausgefuehrt") at ./stdio-common/printf-parse.h:111
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+0x00007ffff7c750f7	1259	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c750fa	1259	in ./stdio-common/vfprintf-internal.c
+1259	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7551f	1259	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75527	1259	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7552f	1259	in ./stdio-common/vfprintf-internal.c
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd5d0) at ./nptl/libc-cleanup.c:24
+27	in ./nptl/libc-cleanup.c
+27	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911d3	30	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911de	30	in ./nptl/libc-cleanup.c
+31	in ./nptl/libc-cleanup.c
+33	in ./nptl/libc-cleanup.c
+0x00007ffff7c911f3	34	in ./nptl/libc-cleanup.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1260
+0x00007ffff7c75537	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7553c	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75542	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7554b	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75552	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75556	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75558	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7555d	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75561	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75567	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7556e	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75572	1260	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75576	1259	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7557e	1259	in ./stdio-common/vfprintf-internal.c
+outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:1263
+1263	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75107 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:940
+0x00007ffff7c7510e in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+0x00007ffff7c75113 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
+0x00007ffff7c7511a	940	in ../libio/libioP.h
+0x00007ffff7c75121 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:940
+0x00007ffff7c7512b	940	in ../libio/libioP.h
+943	in ../libio/libioP.h
+0x00007ffff7c75131	943	in ../libio/libioP.h
+0x00007ffff7c75134	943	in ../libio/libioP.h
+0x00007ffff7c75137	943	in ../libio/libioP.h
+outstring_func (done=0, length=4, string=0x55555555a14e "run_%s wurde ausgefuehrt", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ../libio/libioP.h:947
+947	in ../libio/libioP.h
+0x00007ffff7c75142	947	in ../libio/libioP.h
+0x00007ffff7c75145	947	in ../libio/libioP.h
+0x00007ffff7c75148	947	in ../libio/libioP.h
+_IO_new_file_xsputn (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555555a14e, n=4) at ./libio/fileops.c:1197
+1203	in ./libio/fileops.c
+0x00007ffff7c8b606	1203	in ./libio/fileops.c
+0x00007ffff7c8b608	1203	in ./libio/fileops.c
+0x00007ffff7c8b60a	1203	in ./libio/fileops.c
+0x00007ffff7c8b60c	1204	in ./libio/fileops.c
+0x00007ffff7c8b60f	1197	in ./libio/fileops.c
+0x00007ffff7c8b610	1197	in ./libio/fileops.c
+0x00007ffff7c8b611	1197	in ./libio/fileops.c
+0x00007ffff7c8b615	1203	in ./libio/fileops.c
+0x00007ffff7c8b618	1203	in ./libio/fileops.c
+0x00007ffff7c8b61a	1203	in ./libio/fileops.c
+0x00007ffff7c8b61d	1203	in ./libio/fileops.c
+0x00007ffff7c8b620 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1212
+1212	in ./libio/fileops.c
+0x00007ffff7c8b624	1212	in ./libio/fileops.c
+1210	in ./libio/fileops.c
+0x00007ffff7c8b62a	1210	in ./libio/fileops.c
+0x00007ffff7c8b62f	1210	in ./libio/fileops.c
+0x00007ffff7c8b634	1210	in ./libio/fileops.c
+1227	in ./libio/fileops.c
+0x00007ffff7c8b63a	1227	in ./libio/fileops.c
+0x00007ffff7c8b63d	1227	in ./libio/fileops.c
+1228	in ./libio/fileops.c
+1231	in ./libio/fileops.c
+0x00007ffff7c8b645	1231	in ./libio/fileops.c
+0x00007ffff7c8b648	1231	in ./libio/fileops.c
+1233	in ./libio/fileops.c
+0x00007ffff7c8b64d	1235	in ./libio/fileops.c
+0x00007ffff7c8b650	1237	in ./libio/fileops.c
+0x00007ffff7c8b653	1237	in ./libio/fileops.c
+1235	in ./libio/fileops.c
+0x00007ffff7c8b65a	1236	in ./libio/fileops.c
+0x00007ffff7c8b65d	1237	in ./libio/fileops.c
+0x00007ffff7c8b660	1235	in ./libio/fileops.c
+0x00007ffff7c283e0 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c283e4 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__mempcpy_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:294
+295	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+296	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+297	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:314
+314	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+315	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+357	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+358	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+360	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+361	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+363	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+367	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+383	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+384	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+385	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+386	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:387
+387	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+0x00007ffff7c8b665 in _IO_new_file_xsputn (n=4, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1235
+1239	in ./libio/fileops.c
+0x00007ffff7c8b66c	1239	in ./libio/fileops.c
+0x00007ffff7c8b66e in _IO_new_file_xsputn (f=<optimized out>, data=<optimized out>, n=<optimized out>) at ./libio/fileops.c:1267
+1267	in ./libio/fileops.c
+0x00007ffff7c8b672	1267	in ./libio/fileops.c
+0x00007ffff7c8b675	1267	in ./libio/fileops.c
+0x00007ffff7c8b676	1267	in ./libio/fileops.c
+0x00007ffff7c8b677	1267	in ./libio/fileops.c
+0x00007ffff7c8b679	1267	in ./libio/fileops.c
+0x00007ffff7c8b67b	1267	in ./libio/fileops.c
+0x00007ffff7c8b67d	1267	in ./libio/fileops.c
+0x00007ffff7c8b67f	1267	in ./libio/fileops.c
+0x00007ffff7c7514d in outstring_func (done=0, length=4, string=0x55555555a14e "run_%s wurde ausgefuehrt", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c75150	239	in ./stdio-common/vfprintf-internal.c
+done_add_func (done=0, length=4) at ./stdio-common/vfprintf-internal.c:127
+127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75159	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7515c	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7515f	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75163	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75166	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7516b	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7516e	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75170	127	in ./stdio-common/vfprintf-internal.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+1263	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75178	1263	in ./stdio-common/vfprintf-internal.c
+1267	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75183	1267	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75188	1267	in ./stdio-common/vfprintf-internal.c
+1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75195	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7519d	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751a0	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751a6	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751ae	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751b4	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751bc	1271	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751c2	1532	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751c6	1214	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751d1	1248	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751d9	1240	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751e5	1532	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751e7	1532	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751ea	1532	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751f1	1555	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751f3	1516	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751f6	1555	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c751f9	1516	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75200	1555	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75207	1555	in ./stdio-common/vfprintf-internal.c
+1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75214	1313	in ./stdio-common/vfprintf-internal.c
+1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75220	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75224	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75226	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75228	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7522c	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75233	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7523a	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7523d	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7523f	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75243	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75247	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7524e	1313	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75251	1352	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75258	1301	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7525b	1300	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7525e	1299	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75261	1298	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75263	1303	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75269	1501	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75270 in read_int (pstr=<optimized out>) at ./stdio-common/printf-parse.h:88
+0x00007ffff7c75276 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
+0x00007ffff7c7527a	1306	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75282	1302	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7528a	1352	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7528f	1501	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75296	1295	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7529e	1294	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c752a6	1293	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c752ae	1292	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c752b6	1291	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c752be	1307	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c752c3	1307	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75710	1564	in ./stdio-common/vfprintf-internal.c
+1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75719	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7571b	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7571e	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75724	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75726	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75729	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7572d	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7572f	1517	in ./stdio-common/vfprintf-internal.c
+1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75735	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75738	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7573b	1517	in ./stdio-common/vfprintf-internal.c
+1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758b3	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758b9	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758bb	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758c1	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758c5	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c76d29	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c76d2c	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c28490 in *ABS*+0xa86a0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c28494 in *ABS*+0xa86a0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:50
+63	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+64	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+65	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+68	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+70	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+71	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+74	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+75	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+83	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+84	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+85	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+0x00007ffff7d9d810 in __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:90
+90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
+0x00007ffff7c76d31 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+0x00007ffff7c76d34	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758d9	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758de	1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c758e1	1517	in ./stdio-common/vfprintf-internal.c
+outstring_func (done=4, length=5, string=0x55555555a0c6 "shift", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+239	in ./stdio-common/vfprintf-internal.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:943
+0x00007ffff7c76fee	943	in ../libio/libioP.h
+0x00007ffff7c76ff1	942	in ../libio/libioP.h
+0x00007ffff7c76ff4	943	in ../libio/libioP.h
+0x00007ffff7c76ff9	943	in ../libio/libioP.h
+outstring_func (done=4, length=5, string=0x55555555a0c6 "shift", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ../libio/libioP.h:947
+947	in ../libio/libioP.h
+0x00007ffff7c77002	947	in ../libio/libioP.h
+0x00007ffff7c77005	947	in ../libio/libioP.h
+0x00007ffff7c77008	947	in ../libio/libioP.h
+_IO_new_file_xsputn (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555555a0c6, n=5) at ./libio/fileops.c:1197
+1203	in ./libio/fileops.c
+0x00007ffff7c8b606	1203	in ./libio/fileops.c
+0x00007ffff7c8b608	1203	in ./libio/fileops.c
+0x00007ffff7c8b60a	1203	in ./libio/fileops.c
+0x00007ffff7c8b60c	1204	in ./libio/fileops.c
+0x00007ffff7c8b60f	1197	in ./libio/fileops.c
+0x00007ffff7c8b610	1197	in ./libio/fileops.c
+0x00007ffff7c8b611	1197	in ./libio/fileops.c
+0x00007ffff7c8b615	1203	in ./libio/fileops.c
+0x00007ffff7c8b618	1203	in ./libio/fileops.c
+0x00007ffff7c8b61a	1203	in ./libio/fileops.c
+0x00007ffff7c8b61d	1203	in ./libio/fileops.c
+0x00007ffff7c8b620 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1212
+1212	in ./libio/fileops.c
+0x00007ffff7c8b624	1212	in ./libio/fileops.c
+1210	in ./libio/fileops.c
+0x00007ffff7c8b62a	1210	in ./libio/fileops.c
+0x00007ffff7c8b62f	1210	in ./libio/fileops.c
+0x00007ffff7c8b634	1210	in ./libio/fileops.c
+1227	in ./libio/fileops.c
+0x00007ffff7c8b63a	1227	in ./libio/fileops.c
+0x00007ffff7c8b63d	1227	in ./libio/fileops.c
+1228	in ./libio/fileops.c
+1231	in ./libio/fileops.c
+0x00007ffff7c8b645	1231	in ./libio/fileops.c
+0x00007ffff7c8b648	1231	in ./libio/fileops.c
+1233	in ./libio/fileops.c
+0x00007ffff7c8b64d	1235	in ./libio/fileops.c
+0x00007ffff7c8b650	1237	in ./libio/fileops.c
+0x00007ffff7c8b653	1237	in ./libio/fileops.c
+1235	in ./libio/fileops.c
+0x00007ffff7c8b65a	1236	in ./libio/fileops.c
+0x00007ffff7c8b65d	1237	in ./libio/fileops.c
+0x00007ffff7c8b660	1235	in ./libio/fileops.c
+0x00007ffff7c283e0 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c283e4 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__mempcpy_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:294
+295	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+296	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+297	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:314
+314	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+315	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+357	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+358	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+360	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+361	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+363	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+367	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+383	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+384	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+385	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+386	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:387
+387	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+0x00007ffff7c8b665 in _IO_new_file_xsputn (n=5, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1235
+1239	in ./libio/fileops.c
+0x00007ffff7c8b66c	1239	in ./libio/fileops.c
+0x00007ffff7c8b66e in _IO_new_file_xsputn (f=<optimized out>, data=<optimized out>, n=<optimized out>) at ./libio/fileops.c:1267
+1267	in ./libio/fileops.c
+0x00007ffff7c8b672	1267	in ./libio/fileops.c
+0x00007ffff7c8b675	1267	in ./libio/fileops.c
+0x00007ffff7c8b676	1267	in ./libio/fileops.c
+0x00007ffff7c8b677	1267	in ./libio/fileops.c
+0x00007ffff7c8b679	1267	in ./libio/fileops.c
+0x00007ffff7c8b67b	1267	in ./libio/fileops.c
+0x00007ffff7c8b67d	1267	in ./libio/fileops.c
+0x00007ffff7c8b67f	1267	in ./libio/fileops.c
+0x00007ffff7c7700c in outstring_func (done=4, length=5, string=0x55555555a0c6 "shift", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c7700f	239	in ./stdio-common/vfprintf-internal.c
+done_add_func (done=4, length=5) at ./stdio-common/vfprintf-internal.c:127
+127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c77018	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7701a	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7701d	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7701f	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c77022	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75cc9	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ccc	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ccf	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75cd2	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75cd7	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75cda	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75cdc	127	in ./stdio-common/vfprintf-internal.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+1517	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ce4	1517	in ./stdio-common/vfprintf-internal.c
+1589	in ./stdio-common/vfprintf-internal.c
+__find_specmb (format=0x55555555a154 " wurde ausgefuehrt") at ./stdio-common/printf-parse.h:111
+0x00007ffff7c75f89 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
+0x00007ffff7c75f8e in __find_specmb (format=0x55555555a154 " wurde ausgefuehrt") at ./stdio-common/printf-parse.h:111
+0x00007ffff7c75f91	111	in ./stdio-common/printf-parse.h
+0x00007ffff7c284d0 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c284d4 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
+53	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+54	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+55	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+56	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+57	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+60	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+61	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+65	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+66	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+67	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+68	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+69	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+70	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+71	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+72	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+78	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+0x00007ffff7d9d448 in __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:79
+79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
+0x00007ffff7c75f96 in outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c75f9d in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
+0x00007ffff7c75fa4 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fa7 in __find_specmb (format=0x55555555a154 " wurde ausgefuehrt") at ./stdio-common/printf-parse.h:111
+IO_validate_vtable (vtable=<optimized out>) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fad in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+1593	in ./stdio-common/vfprintf-internal.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:943
+0x00007ffff7c75fb3	943	in ../libio/libioP.h
+0x00007ffff7c75fb8	943	in ../libio/libioP.h
+outstring_func (done=9, length=18, string=0x55555555a154 " wurde ausgefuehrt", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ../libio/libioP.h:947
+947	in ../libio/libioP.h
+0x00007ffff7c75fc1	947	in ../libio/libioP.h
+0x00007ffff7c75fc4	947	in ../libio/libioP.h
+0x00007ffff7c75fc7	947	in ../libio/libioP.h
+_IO_new_file_xsputn (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555555a154, n=18) at ./libio/fileops.c:1197
+1203	in ./libio/fileops.c
+0x00007ffff7c8b606	1203	in ./libio/fileops.c
+0x00007ffff7c8b608	1203	in ./libio/fileops.c
+0x00007ffff7c8b60a	1203	in ./libio/fileops.c
+0x00007ffff7c8b60c	1204	in ./libio/fileops.c
+0x00007ffff7c8b60f	1197	in ./libio/fileops.c
+0x00007ffff7c8b610	1197	in ./libio/fileops.c
+0x00007ffff7c8b611	1197	in ./libio/fileops.c
+0x00007ffff7c8b615	1203	in ./libio/fileops.c
+0x00007ffff7c8b618	1203	in ./libio/fileops.c
+0x00007ffff7c8b61a	1203	in ./libio/fileops.c
+0x00007ffff7c8b61d	1203	in ./libio/fileops.c
+0x00007ffff7c8b620 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1212
+1212	in ./libio/fileops.c
+0x00007ffff7c8b624	1212	in ./libio/fileops.c
+1210	in ./libio/fileops.c
+0x00007ffff7c8b62a	1210	in ./libio/fileops.c
+0x00007ffff7c8b62f	1210	in ./libio/fileops.c
+0x00007ffff7c8b634	1210	in ./libio/fileops.c
+1227	in ./libio/fileops.c
+0x00007ffff7c8b63a	1227	in ./libio/fileops.c
+0x00007ffff7c8b63d	1227	in ./libio/fileops.c
+1228	in ./libio/fileops.c
+1231	in ./libio/fileops.c
+0x00007ffff7c8b645	1231	in ./libio/fileops.c
+0x00007ffff7c8b648	1231	in ./libio/fileops.c
+1233	in ./libio/fileops.c
+0x00007ffff7c8b64d	1235	in ./libio/fileops.c
+0x00007ffff7c8b650	1237	in ./libio/fileops.c
+0x00007ffff7c8b653	1237	in ./libio/fileops.c
+1235	in ./libio/fileops.c
+0x00007ffff7c8b65a	1236	in ./libio/fileops.c
+0x00007ffff7c8b65d	1237	in ./libio/fileops.c
+0x00007ffff7c8b660	1235	in ./libio/fileops.c
+0x00007ffff7c283e0 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+0x00007ffff7c283e4 in *ABS*+0xa97d0@plt () from /lib/x86_64-linux-gnu/libc.so.6
+__mempcpy_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:294
+295	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+296	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+297	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:314
+314	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+315	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+357	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+358	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+394	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+395	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+396	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+397	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+__memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:399
+399	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+0x00007ffff7c8b665 in _IO_new_file_xsputn (n=18, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1235
+1239	in ./libio/fileops.c
+0x00007ffff7c8b66c	1239	in ./libio/fileops.c
+0x00007ffff7c8b66e in _IO_new_file_xsputn (f=<optimized out>, data=<optimized out>, n=<optimized out>) at ./libio/fileops.c:1267
+1267	in ./libio/fileops.c
+0x00007ffff7c8b672	1267	in ./libio/fileops.c
+0x00007ffff7c8b675	1267	in ./libio/fileops.c
+0x00007ffff7c8b676	1267	in ./libio/fileops.c
+0x00007ffff7c8b677	1267	in ./libio/fileops.c
+0x00007ffff7c8b679	1267	in ./libio/fileops.c
+0x00007ffff7c8b67b	1267	in ./libio/fileops.c
+0x00007ffff7c8b67d	1267	in ./libio/fileops.c
+0x00007ffff7c8b67f	1267	in ./libio/fileops.c
+0x00007ffff7c75fca in outstring_func (done=9, length=18, string=0x55555555a154 " wurde ausgefuehrt", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c75fcd	239	in ./stdio-common/vfprintf-internal.c
+done_add_func (done=9, length=18) at ./stdio-common/vfprintf-internal.c:127
+127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fd6	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fd8	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fdb	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fe1	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fe4	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fea	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75fed	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ff0	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ff3	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ff8	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ffb	127	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75ffd	127	in ./stdio-common/vfprintf-internal.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x55555555a14e "run_%s wurde ausgefuehrt", ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+1593	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c76005	1593	in ./stdio-common/vfprintf-internal.c
+1595	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c76010	1595	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c76016	1595	in ./stdio-common/vfprintf-internal.c
+1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75344	1608	in ./stdio-common/vfprintf-internal.c
+1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75387	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7538a	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7538d	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75390	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75392	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7539a	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7539c	1608	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7539f	1608	in ./stdio-common/vfprintf-internal.c
+1609	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7534e	1609	in ./stdio-common/vfprintf-internal.c
+1609	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75590	1609	in ./stdio-common/vfprintf-internal.c
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd5d0) at ./nptl/libc-cleanup.c:39
+42	in ./nptl/libc-cleanup.c
+0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
+44	in ./nptl/libc-cleanup.c
+0x00007ffff7c91214	44	in ./nptl/libc-cleanup.c
+45	in ./nptl/libc-cleanup.c
+0x00007ffff7c9121f	45	in ./nptl/libc-cleanup.c
+0x00007ffff7c91221	47	in ./nptl/libc-cleanup.c
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=<optimized out>, ap=ap@entry=0x7fffffffda50, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1611
+0x00007ffff7c75354	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7535c	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75365	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7536b	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75372	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75375	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75376	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75377	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c75379	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7537b	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7537d	1612	in ./stdio-common/vfprintf-internal.c
+0x00007ffff7c7537f	1612	in ./stdio-common/vfprintf-internal.c
+__printf (format=<optimized out>) at ./stdio-common/printf.c:36
+0x00007ffff7c607a4	36	in ./stdio-common/printf.c
+0x00007ffff7c607ad	36	in ./stdio-common/printf.c
+0x00007ffff7c607af	36	in ./stdio-common/printf.c
+0x00007ffff7c607b6	36	in ./stdio-common/printf.c
+0x0000555555559ab6 in main (argc=2, argv=0x7fffffffdc68) at main.cpp:185
+185	            printf("run_%s wurde ausgefuehrt", shift);
+205	    return 0;
+206	}
+0x0000555555559b81	206	}
+0x00007ffff7c29d90 in __libc_start_call_main (main=main@entry=0x5555555593e7 <main(int, char**)>, argc=argc@entry=2, argv=argv@entry=0x7fffffffdc68) at ../sysdeps/nptl/libc_start_call_main.h:58
+74	in ../sysdeps/nptl/libc_start_call_main.h
+__GI_exit (status=0) at ./stdlib/exit.c:142
+0x00007ffff7c455f4	142	in ./stdlib/exit.c
+0x00007ffff7c455f5	142	in ./stdlib/exit.c
+143	in ./stdlib/exit.c
+0x00007ffff7c455fb	143	in ./stdlib/exit.c
+0x00007ffff7c45600	143	in ./stdlib/exit.c
+0x00007ffff7c45607	142	in ./stdlib/exit.c
+0x00007ffff7c4560b	143	in ./stdlib/exit.c
+__run_exit_handlers (status=0, listp=0x7ffff7e1a838 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:40
+40	in ./stdlib/exit.c
+45	in ./stdlib/exit.c
+0x00007ffff7c45396	45	in ./stdlib/exit.c
+0x00007ffff7c45398	45	in ./stdlib/exit.c
+0x00007ffff7c4539a	45	in ./stdlib/exit.c
+0x00007ffff7c4539c	45	in ./stdlib/exit.c
+0x00007ffff7c4539f	45	in ./stdlib/exit.c
+0x00007ffff7c453a0	45	in ./stdlib/exit.c
+0x00007ffff7c453a2	45	in ./stdlib/exit.c
+0x00007ffff7c453a3	45	in ./stdlib/exit.c
+0x00007ffff7c453a7	40	in ./stdlib/exit.c
+0x00007ffff7c453ab	45	in ./stdlib/exit.c
+0x00007ffff7c453ad	45	in ./stdlib/exit.c
+46	in ./stdlib/exit.c
+__GI___call_tls_dtors () at ./stdlib/cxa_thread_atexit_impl.c:149
+150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d65	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d66	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d6a	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d71	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d75	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45d78	150	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45dbd	168	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45dc1	168	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45dc2	168	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c45dc3	168	in ./stdlib/cxa_thread_atexit_impl.c
+0x00007ffff7c455c9 in __run_exit_handlers (status=0, listp=0x7ffff7e1a838 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:46
+48	in ./stdlib/exit.c
+0x00007ffff7c453ba	48	in ./stdlib/exit.c
+0x00007ffff7c453bc	48	in ./stdlib/exit.c
+0x00007ffff7c453c1	48	in ./stdlib/exit.c
+0x00007ffff7c453c6	48	in ./stdlib/exit.c
+0x00007ffff7c453cc	98	in ./stdlib/exit.c
+0x00007ffff7c453ce	56	in ./stdlib/exit.c
+58	in ./stdlib/exit.c
+0x00007ffff7c453d5	58	in ./stdlib/exit.c
+0x00007ffff7c453db	58	in ./stdlib/exit.c
+0x00007ffff7c453e0	66	in ./stdlib/exit.c
+66	in ./stdlib/exit.c
+0x00007ffff7c453e7	66	in ./stdlib/exit.c
+68	in ./stdlib/exit.c
+0x00007ffff7c453f1	71	in ./stdlib/exit.c
+0x00007ffff7c453f4	68	in ./stdlib/exit.c
+71	in ./stdlib/exit.c
+0x00007ffff7c453fc	71	in ./stdlib/exit.c
+0x00007ffff7c45401	71	in ./stdlib/exit.c
+0x00007ffff7c45405	71	in ./stdlib/exit.c
+0x00007ffff7c4540b	71	in ./stdlib/exit.c
+0x00007ffff7c4540f	71	in ./stdlib/exit.c
+105	in ./stdlib/exit.c
+0x00007ffff7c45463	106	in ./stdlib/exit.c
+0x00007ffff7c45467	107	in ./stdlib/exit.c
+0x00007ffff7c4546b	105	in ./stdlib/exit.c
+109	in ./stdlib/exit.c
+0x00007ffff7c45475	109	in ./stdlib/exit.c
+0x00007ffff7c45479	109	in ./stdlib/exit.c
+112	in ./stdlib/exit.c
+112	in ./stdlib/exit.c
+0x00007ffff7c45488	112	in ./stdlib/exit.c
+113	in ./stdlib/exit.c
+0x00007ffff7c45490	113	in ./stdlib/exit.c
+0x00007ffff7c45493	113	in ./stdlib/exit.c
+_dl_fini () at ./elf/dl-fini.c:31
+51	in ./elf/dl-fini.c
+0x00007ffff7fc9045	51	in ./elf/dl-fini.c
+0x00007ffff7fc9048	51	in ./elf/dl-fini.c
+0x00007ffff7fc904a	51	in ./elf/dl-fini.c
+0x00007ffff7fc904c	51	in ./elf/dl-fini.c
+0x00007ffff7fc904e	51	in ./elf/dl-fini.c
+0x00007ffff7fc9050	51	in ./elf/dl-fini.c
+0x00007ffff7fc9051	51	in ./elf/dl-fini.c
+0x00007ffff7fc9055	51	in ./elf/dl-fini.c
+0x00007ffff7fc905c	51	in ./elf/dl-fini.c
+0x00007ffff7fc9060	51	in ./elf/dl-fini.c
+0x00007ffff7fc9066	48	in ./elf/dl-fini.c
+0x00007ffff7fc906d	48	in ./elf/dl-fini.c
+0x00007ffff7fc9074	48	in ./elf/dl-fini.c
+0x00007ffff7fc9078	48	in ./elf/dl-fini.c
+0x00007ffff7fc907f	48	in ./elf/dl-fini.c
+0x00007ffff7fc9083	48	in ./elf/dl-fini.c
+0x00007ffff7fc9086	48	in ./elf/dl-fini.c
+54	in ./elf/dl-fini.c
+0x00007ffff7fc90b1	54	in ./elf/dl-fini.c
+___pthread_mutex_lock (mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_lock.c:77
+80	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97ef7	80	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97ef9	80	in ./nptl/pthread_mutex_lock.c
+82	in ./nptl/pthread_mutex_lock.c
+84	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f03	84	in ./nptl/pthread_mutex_lock.c
+88	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f0a	88	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f0e	88	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f10	88	in ./nptl/pthread_mutex_lock.c
+97	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97fbe	97	in ./nptl/pthread_mutex_lock.c
+108	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97fc3	108	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97fc6	108	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97fc9	108	in ./nptl/pthread_mutex_lock.c
+112	in ./nptl/pthread_mutex_lock.c
+115	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97fda	115	in ./nptl/pthread_mutex_lock.c
+lll_mutex_lock_optimized (mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_lock.c:44
+44	in ./nptl/pthread_mutex_lock.c
+45	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98015	45	in ./nptl/pthread_mutex_lock.c
+45	in ./nptl/pthread_mutex_lock.c
+45	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98021	45	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98023	45	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98025	45	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98027	45	in ./nptl/pthread_mutex_lock.c
+46	in ./nptl/pthread_mutex_lock.c
+___pthread_mutex_lock (mutex=<optimized out>) at ./nptl/pthread_mutex_lock.c:130
+130	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98032	130	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98034	130	in ./nptl/pthread_mutex_lock.c
+131	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c98041	131	in ./nptl/pthread_mutex_lock.c
+167	in ./nptl/pthread_mutex_lock.c
+170	in ./nptl/pthread_mutex_lock.c
+172	in ./nptl/pthread_mutex_lock.c
+175	in ./nptl/pthread_mutex_lock.c
+177	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f67	178	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f6b	178	in ./nptl/pthread_mutex_lock.c
+0x00007ffff7c97f6c	178	in ./nptl/pthread_mutex_lock.c
+_dl_fini () at ./elf/dl-fini.c:56
+59	in ./elf/dl-fini.c
+0x00007ffff7fc90be	59	in ./elf/dl-fini.c
+0x00007ffff7fc90c0	61	in ./elf/dl-fini.c
+0x00007ffff7fc90c3	61	in ./elf/dl-fini.c
+0x00007ffff7fc90ca	61	in ./elf/dl-fini.c
+0x00007ffff7fc90cd	61	in ./elf/dl-fini.c
+0x00007ffff7fc90d0	61	in ./elf/dl-fini.c
+0x00007ffff7fc90d3	61	in ./elf/dl-fini.c
+0x00007ffff7fc90d5	68	in ./elf/dl-fini.c
+0x00007ffff7fc90da	68	in ./elf/dl-fini.c
+0x00007ffff7fc90dd	66	in ./elf/dl-fini.c
+68	in ./elf/dl-fini.c
+_dl_audit_activity_nsid (nsid=nsid@entry=0, action=action@entry=2) at ./elf/dl-audit.c:40
+44	in ./elf/dl-audit.c
+0x00007ffff7fde256	44	in ./elf/dl-audit.c
+0x00007ffff7fde25a	40	in ./elf/dl-audit.c
+0x00007ffff7fde25c	44	in ./elf/dl-audit.c
+0x00007ffff7fde260	40	in ./elf/dl-audit.c
+0x00007ffff7fde261	44	in ./elf/dl-audit.c
+0x00007ffff7fde268	40	in ./elf/dl-audit.c
+0x00007ffff7fde269	40	in ./elf/dl-audit.c
+0x00007ffff7fde26d	44	in ./elf/dl-audit.c
+45	in ./elf/dl-audit.c
+0x00007ffff7fde278	46	in ./elf/dl-audit.c
+0x00007ffff7fde27b	46	in ./elf/dl-audit.c
+0x00007ffff7fde27d	46	in ./elf/dl-audit.c
+0x00007ffff7fde27f	46	in ./elf/dl-audit.c
+0x00007ffff7fde281	50	in ./elf/dl-audit.c
+0x00007ffff7fde285	50	in ./elf/dl-audit.c
+0x00007ffff7fde286	50	in ./elf/dl-audit.c
+0x00007ffff7fde287	50	in ./elf/dl-audit.c
+0x00007ffff7fde289	50	in ./elf/dl-audit.c
+0x00007ffff7fde28b	50	in ./elf/dl-audit.c
+_dl_fini () at ./elf/dl-fini.c:73
+0x00007ffff7fc90e9	73	in ./elf/dl-fini.c
+0x00007ffff7fc90ec	73	in ./elf/dl-fini.c
+0x00007ffff7fc90f4	73	in ./elf/dl-fini.c
+0x00007ffff7fc90f8	73	in ./elf/dl-fini.c
+0x00007ffff7fc90fc	73	in ./elf/dl-fini.c
+0x00007ffff7fc90ff	73	in ./elf/dl-fini.c
+0x00007ffff7fc9106	73	in ./elf/dl-fini.c
+0x00007ffff7fc9109	73	in ./elf/dl-fini.c
+0x00007ffff7fc910c	73	in ./elf/dl-fini.c
+0x00007ffff7fc9123	73	in ./elf/dl-fini.c
+0x00007ffff7fc9128	73	in ./elf/dl-fini.c
+0x00007ffff7fc912b	73	in ./elf/dl-fini.c
+0x00007ffff7fc912e	73	in ./elf/dl-fini.c
+0x00007ffff7fc9333	73	in ./elf/dl-fini.c
+0x00007ffff7fc9339	73	in ./elf/dl-fini.c
+0x00007ffff7fc9134	78	in ./elf/dl-fini.c
+0x00007ffff7fc9137	73	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+0x00007ffff7fc913c	78	in ./elf/dl-fini.c
+0x00007ffff7fc913f	78	in ./elf/dl-fini.c
+80	in ./elf/dl-fini.c
+0x00007ffff7fc9155	80	in ./elf/dl-fini.c
+82	in ./elf/dl-fini.c
+0x00007ffff7fc915a	82	in ./elf/dl-fini.c
+84	in ./elf/dl-fini.c
+0x00007ffff7fc9162	84	in ./elf/dl-fini.c
+85	in ./elf/dl-fini.c
+86	in ./elf/dl-fini.c
+90	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+0x00007ffff7fc917d	78	in ./elf/dl-fini.c
+80	in ./elf/dl-fini.c
+0x00007ffff7fc9155	80	in ./elf/dl-fini.c
+82	in ./elf/dl-fini.c
+0x00007ffff7fc915a	82	in ./elf/dl-fini.c
+84	in ./elf/dl-fini.c
+0x00007ffff7fc9162	84	in ./elf/dl-fini.c
+85	in ./elf/dl-fini.c
+86	in ./elf/dl-fini.c
+90	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+0x00007ffff7fc917d	78	in ./elf/dl-fini.c
+80	in ./elf/dl-fini.c
+0x00007ffff7fc9155	80	in ./elf/dl-fini.c
+82	in ./elf/dl-fini.c
+0x00007ffff7fc915a	82	in ./elf/dl-fini.c
+84	in ./elf/dl-fini.c
+0x00007ffff7fc9162	84	in ./elf/dl-fini.c
+85	in ./elf/dl-fini.c
+86	in ./elf/dl-fini.c
+90	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+0x00007ffff7fc917d	78	in ./elf/dl-fini.c
+80	in ./elf/dl-fini.c
+0x00007ffff7fc9155	80	in ./elf/dl-fini.c
+82	in ./elf/dl-fini.c
+0x00007ffff7fc915a	82	in ./elf/dl-fini.c
+84	in ./elf/dl-fini.c
+0x00007ffff7fc9162	84	in ./elf/dl-fini.c
+85	in ./elf/dl-fini.c
+86	in ./elf/dl-fini.c
+90	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+78	in ./elf/dl-fini.c
+0x00007ffff7fc917d	78	in ./elf/dl-fini.c
+92	in ./elf/dl-fini.c
+0x00007ffff7fc9182	92	in ./elf/dl-fini.c
+0x00007ffff7fc9185	92	in ./elf/dl-fini.c
+0x00007ffff7fc9188	92	in ./elf/dl-fini.c
+0x00007ffff7fc918a	92	in ./elf/dl-fini.c
+0x00007ffff7fc918c	92	in ./elf/dl-fini.c
+93	in ./elf/dl-fini.c
+0x00007ffff7fc9195	93	in ./elf/dl-fini.c
+0x00007ffff7fc9198	93	in ./elf/dl-fini.c
+0x00007ffff7fc919a	93	in ./elf/dl-fini.c
+99	in ./elf/dl-fini.c
+0x00007ffff7fc91b0	99	in ./elf/dl-fini.c
+0x00007ffff7fc91b5	99	in ./elf/dl-fini.c
+0x00007ffff7fc91b8	99	in ./elf/dl-fini.c
+0x00007ffff7fc91bb	99	in ./elf/dl-fini.c
+_dl_sort_maps (maps=maps@entry=0x7fffffffda60, nmaps=nmaps@entry=4, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:290
+0x00007ffff7fd6734	290	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6735	290	in ./elf/dl-sort-maps.c
+298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd673b	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd673d	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd673f	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6741	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6743	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6744	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6748	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd674f	290	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6752	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6755	298	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69cd in _dl_sort_maps_dfs (skip=<optimized out>, for_fini=<optimized out>, nmaps=<optimized out>, maps=<optimized out>) at ./elf/dl-sort-maps.c:223
+223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69d0	223	in ./elf/dl-sort-maps.c
+184	in ./elf/dl-sort-maps.c
+187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69d9	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69dc	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69df	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69e5	187	in ./elf/dl-sort-maps.c
+188	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69ec	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f0	188	in ./elf/dl-sort-maps.c
+187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f9	187	in ./elf/dl-sort-maps.c
+188	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69ec	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f0	188	in ./elf/dl-sort-maps.c
+187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f9	187	in ./elf/dl-sort-maps.c
+188	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69ec	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f0	188	in ./elf/dl-sort-maps.c
+187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f9	187	in ./elf/dl-sort-maps.c
+188	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69ec	187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f0	188	in ./elf/dl-sort-maps.c
+187	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69f9	187	in ./elf/dl-sort-maps.c
+223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd69ff	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a02	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a06	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a0a	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a0d	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a14	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a17	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a1a	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a31	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a37	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a3a	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a3d	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a3f	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a45	223	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a48	231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a4a	231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a4e	231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a53	228	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a57	230	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a5b	231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a5f	223	in ./elf/dl-sort-maps.c
+228	in ./elf/dl-sort-maps.c
+231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a69 in dfs_traversal (do_reldeps=<optimized out>, map=<optimized out>, rpo=<optimized out>) at ./elf/dl-sort-maps.c:231
+231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a6d in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=4, maps=0x7fffffffda60) at ./elf/dl-sort-maps.c:231
+231	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a70	231	in ./elf/dl-sort-maps.c
+235	in ./elf/dl-sort-maps.c
+dfs_traversal (do_reldeps=0x7fffffffda0f, map=0x7ffff7ffdaf0 <_rtld_global+2736>, rpo=0x7fffffffda10) at ./elf/dl-sort-maps.c:145
+145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
+dfs_traversal (rpo=rpo@entry=0x7fffffffda10, map=0x7ffff7ffdaf0 <_rtld_global+2736>, do_reldeps=do_reldeps@entry=0x7fffffffda0f) at ./elf/dl-sort-maps.c:148
+148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6627	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662a	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662b	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662e	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662f	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6633	150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd663a	148	in ./elf/dl-sort-maps.c
+150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6644	150	in ./elf/dl-sort-maps.c
+161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd666e	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b0	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b7	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66ba	161	in ./elf/dl-sort-maps.c
+176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6674	176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6678	176	in ./elf/dl-sort-maps.c
+177	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6680	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6684	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6685	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=4, maps=0x7fffffffda60) at ./elf/dl-sort-maps.c:238
+238	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
+233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
+235	in ./elf/dl-sort-maps.c
+dfs_traversal (do_reldeps=0x7fffffffda0f, map=0x7ffff7fbb160, rpo=0x7fffffffda10) at ./elf/dl-sort-maps.c:145
+145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
+dfs_traversal (rpo=rpo@entry=0x7fffffffda10, map=0x7ffff7fbb160, do_reldeps=do_reldeps@entry=0x7fffffffda0f) at ./elf/dl-sort-maps.c:148
+148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6627	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662a	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662b	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662e	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662f	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6633	150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd663a	148	in ./elf/dl-sort-maps.c
+150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6644	150	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6649	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd664c	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd664e	152	in ./elf/dl-sort-maps.c
+155	in ./elf/dl-sort-maps.c
+0x00007ffff7fd665c	155	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6662	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6666	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6669	152	in ./elf/dl-sort-maps.c
+155	in ./elf/dl-sort-maps.c
+0x00007ffff7fd665c	155	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6662	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6666	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6669	152	in ./elf/dl-sort-maps.c
+161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd666e	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b0	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b7	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66ba	161	in ./elf/dl-sort-maps.c
+176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6674	176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6678	176	in ./elf/dl-sort-maps.c
+177	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6680	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6684	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6685	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=4, maps=0x7fffffffda60) at ./elf/dl-sort-maps.c:238
+238	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
+233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
+235	in ./elf/dl-sort-maps.c
+dfs_traversal (do_reldeps=0x7fffffffda0f, map=0x7ffff7ffe890, rpo=0x7fffffffda10) at ./elf/dl-sort-maps.c:145
+145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
+dfs_traversal (rpo=rpo@entry=0x7fffffffda10, map=0x7ffff7ffe890, do_reldeps=do_reldeps@entry=0x7fffffffda0f) at ./elf/dl-sort-maps.c:148
+148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6627	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662a	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662b	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662e	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662f	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6633	150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd663a	148	in ./elf/dl-sort-maps.c
+150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6644	150	in ./elf/dl-sort-maps.c
+161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd666e	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b0	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b7	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66ba	161	in ./elf/dl-sort-maps.c
+176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6674	176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6678	176	in ./elf/dl-sort-maps.c
+177	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6680	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6684	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6685	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=4, maps=0x7fffffffda60) at ./elf/dl-sort-maps.c:238
+238	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
+233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
+235	in ./elf/dl-sort-maps.c
+dfs_traversal (do_reldeps=0x7fffffffda0f, map=0x7ffff7ffe2e0, rpo=0x7fffffffda10) at ./elf/dl-sort-maps.c:145
+145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
+dfs_traversal (rpo=rpo@entry=0x7fffffffda10, map=0x7ffff7ffe2e0, do_reldeps=do_reldeps@entry=0x7fffffffda0f) at ./elf/dl-sort-maps.c:148
+148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6627	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662a	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662b	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662e	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd662f	148	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6633	150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd663a	148	in ./elf/dl-sort-maps.c
+150	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6644	150	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6649	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd664c	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd664e	152	in ./elf/dl-sort-maps.c
+155	in ./elf/dl-sort-maps.c
+0x00007ffff7fd665c	155	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6662	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6666	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6669	152	in ./elf/dl-sort-maps.c
+155	in ./elf/dl-sort-maps.c
+0x00007ffff7fd665c	155	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6662	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6666	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6669	152	in ./elf/dl-sort-maps.c
+155	in ./elf/dl-sort-maps.c
+0x00007ffff7fd665c	155	in ./elf/dl-sort-maps.c
+152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6662	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6666	152	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6669	152	in ./elf/dl-sort-maps.c
+161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd666e	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b0	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66b7	161	in ./elf/dl-sort-maps.c
+0x00007ffff7fd66ba	161	in ./elf/dl-sort-maps.c
+176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6674	176	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6678	176	in ./elf/dl-sort-maps.c
+177	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6680	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6684	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6685	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
+0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=4, maps=0x7fffffffda60) at ./elf/dl-sort-maps.c:238
+238	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
+256	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6aa7	256	in ./elf/dl-sort-maps.c
+276	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6b81	276	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6b84	276	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6b87	276	in ./elf/dl-sort-maps.c
+memmove () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:212
+213	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+219	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+220	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+222	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+223	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+224	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+226	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+227	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+228	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+memmove () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:230
+230	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+0x00007ffff7fd6b8c in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=0, maps=0x7fffffffd990) at ./elf/dl-sort-maps.c:276
+0x00007ffff7fd6afa	269	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6afd in _dl_sort_maps (maps=maps@entry=0x7fffffffda60, nmaps=nmaps@entry=4, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:302
+302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6870	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6874	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6875	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6877	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd6879	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd687b	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd687d	302	in ./elf/dl-sort-maps.c
+0x00007ffff7fd687e	302	in ./elf/dl-sort-maps.c
+_dl_fini () at ./elf/dl-fini.c:108
+0x00007ffff7fc91c3	108	in ./elf/dl-fini.c
+___pthread_mutex_unlock (mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_unlock.c:367
+__GI___pthread_mutex_unlock_usercnt (decr=1, mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_unlock.c:51
+51	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a77	51	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a79	51	in ./nptl/pthread_mutex_unlock.c
+52	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a82	52	in ./nptl/pthread_mutex_unlock.c
+___pthread_mutex_unlock (mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_unlock.c:57
+57	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a88 in __GI___pthread_mutex_unlock_usercnt (decr=1, mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_unlock.c:57
+57	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a8a	57	in ./nptl/pthread_mutex_unlock.c
+74	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99ae6	74	in ./nptl/pthread_mutex_unlock.c
+80	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b1a	80	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b1d	80	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b20	80	in ./nptl/pthread_mutex_unlock.c
+84	in ./nptl/pthread_mutex_unlock.c
+84	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b2d	84	in ./nptl/pthread_mutex_unlock.c
+87	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b3d	87	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99b43	87	in ./nptl/pthread_mutex_unlock.c
+62	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99a90	62	in ./nptl/pthread_mutex_unlock.c
+lll_mutex_unlock_optimized (mutex=0x7ffff7ffda48 <_rtld_global+2568>) at ./nptl/pthread_mutex_unlock.c:39
+39	in ./nptl/pthread_mutex_unlock.c
+40	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99aa0	40	in ./nptl/pthread_mutex_unlock.c
+40	in ./nptl/pthread_mutex_unlock.c
+40	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99ac2	40	in ./nptl/pthread_mutex_unlock.c
+41	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99aca	41	in ./nptl/pthread_mutex_unlock.c
+__GI___pthread_mutex_unlock_usercnt (decr=1, mutex=<optimized out>) at ./nptl/pthread_mutex_unlock.c:70
+70	in ./nptl/pthread_mutex_unlock.c
+___pthread_mutex_unlock (mutex=<optimized out>) at ./nptl/pthread_mutex_unlock.c:72
+72	in ./nptl/pthread_mutex_unlock.c
+0x00007ffff7c99ab0	72	in ./nptl/pthread_mutex_unlock.c
+_dl_fini () at ./elf/dl-fini.c:113
+0x00007ffff7fc91cc	113	in ./elf/dl-fini.c
+0x00007ffff7fc91ce	113	in ./elf/dl-fini.c
+0x00007ffff7fc91d4	113	in ./elf/dl-fini.c
+0x00007ffff7fc91d7	113	in ./elf/dl-fini.c
+0x00007ffff7fc91dc	113	in ./elf/dl-fini.c
+115	in ./elf/dl-fini.c
+117	in ./elf/dl-fini.c
+0x00007ffff7fc91eb	117	in ./elf/dl-fini.c
+0x00007ffff7fc91ed	117	in ./elf/dl-fini.c
+120	in ./elf/dl-fini.c
+0x00007ffff7fc91f6	120	in ./elf/dl-fini.c
+123	in ./elf/dl-fini.c
+0x00007ffff7fc9204	123	in ./elf/dl-fini.c
+0x00007ffff7fc9207	123	in ./elf/dl-fini.c
+127	in ./elf/dl-fini.c
+0x00007ffff7fc9214	127	in ./elf/dl-fini.c
+136	in ./elf/dl-fini.c
+0x00007ffff7fc921e	136	in ./elf/dl-fini.c
+0x00007ffff7fc9221	136	in ./elf/dl-fini.c
+0x00007ffff7fc9224	136	in ./elf/dl-fini.c
+139	in ./elf/dl-fini.c
+0x00007ffff7fc922f	140	in ./elf/dl-fini.c
+0x00007ffff7fc9233	140	in ./elf/dl-fini.c
+141	in ./elf/dl-fini.c
+0x00007ffff7fc923a	141	in ./elf/dl-fini.c
+0x00007ffff7fc923e	141	in ./elf/dl-fini.c
+0x00007ffff7fc9240	141	in ./elf/dl-fini.c
+0x00007ffff7fc9242	141	in ./elf/dl-fini.c
+142	in ./elf/dl-fini.c
+0x00007ffff7fc924c	142	in ./elf/dl-fini.c
+0x0000555555555160 in __do_global_dtors_aux ()
+0x0000555555555164 in __do_global_dtors_aux ()
+0x000055555555516b in __do_global_dtors_aux ()
+0x000055555555516d in __do_global_dtors_aux ()
+0x000055555555516e in __do_global_dtors_aux ()
+0x0000555555555176 in __do_global_dtors_aux ()
+0x0000555555555179 in __do_global_dtors_aux ()
+0x000055555555517b in __do_global_dtors_aux ()
+0x0000555555555182 in __do_global_dtors_aux ()
+0x0000555555555070 in __cxa_finalize@plt ()
+0x0000555555555074 in __cxa_finalize@plt ()
+__cxa_finalize (d=0x55555555c008) at ./stdlib/cxa_finalize.c:30
+33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459a6	33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459a8	33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459ad	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459af	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459b1	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459b3	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459b6	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459b7	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459b8	30	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459bc	33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459c3	33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459c9	33	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459cf	33	in ./stdlib/cxa_finalize.c
+36	in ./stdlib/cxa_finalize.c
+36	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459da	36	in ./stdlib/cxa_finalize.c
+40	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459e4	40	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459e8	40	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459ec	40	in ./stdlib/cxa_finalize.c
+40	in ./stdlib/cxa_finalize.c
+0x00007ffff7c459f4	40	in ./stdlib/cxa_finalize.c
+36	in ./stdlib/cxa_finalize.c
+36	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45a86	36	in ./stdlib/cxa_finalize.c
+94	in ./stdlib/cxa_finalize.c
+94	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45a96	94	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45a98	94	in ./stdlib/cxa_finalize.c
+98	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45aa4	98	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45aa8	98	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45aac	98	in ./stdlib/cxa_finalize.c
+98	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45ab4	98	in ./stdlib/cxa_finalize.c
+94	in ./stdlib/cxa_finalize.c
+94	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45adc	94	in ./stdlib/cxa_finalize.c
+105	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45ae1	105	in ./stdlib/cxa_finalize.c
+106	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45ae6	106	in ./stdlib/cxa_finalize.c
+__unregister_atfork (dso_handle=dso_handle@entry=0x55555555c008) at ./posix/register-atfork.c:76
+77	in ./posix/register-atfork.c
+0x00007ffff7ceadd5	77	in ./posix/register-atfork.c
+0x00007ffff7ceadd7	76	in ./posix/register-atfork.c
+0x00007ffff7ceadda	77	in ./posix/register-atfork.c
+0x00007ffff7ceaddf	77	in ./posix/register-atfork.c
+0x00007ffff7ceade7	77	in ./posix/register-atfork.c
+fork_handler_list_size (list=0x7ffff7e21ae0 <fork_handlers>) at ../malloc/dynarray-skeleton.c:243
+0x00007ffff7ceadf4 in fork_handler_list_find (dso_handle=0x55555555c008, fork_handlers=0x7ffff7e21ae0 <fork_handlers>) at ./posix/register-atfork.c:65
+0x00007ffff7ceadf7	65	in ./posix/register-atfork.c
+__unregister_atfork (dso_handle=dso_handle@entry=0x55555555c008) at ./posix/register-atfork.c:103
+103	in ./posix/register-atfork.c
+0x00007ffff7ceaeb2	103	in ./posix/register-atfork.c
+103	in ./posix/register-atfork.c
+0x00007ffff7ceaebb	103	in ./posix/register-atfork.c
+0x00007ffff7ceaebd	104	in ./posix/register-atfork.c
+0x00007ffff7ceaebe	104	in ./posix/register-atfork.c
+__cxa_finalize (d=0x55555555c008) at ./stdlib/cxa_finalize.c:107
+0x00007ffff7c45aed	107	in ./stdlib/cxa_finalize.c
+107	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45af4	107	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45afa	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45afe	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45aff	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45b00	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45b02	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45b04	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45b06	108	in ./stdlib/cxa_finalize.c
+0x00007ffff7c45b08	108	in ./stdlib/cxa_finalize.c
+0x0000555555555187 in __do_global_dtors_aux ()
+0x00005555555550f0 in deregister_tm_clones ()
+0x00005555555550f7 in deregister_tm_clones ()
+0x00005555555550fe in deregister_tm_clones ()
+0x0000555555555101 in deregister_tm_clones ()
+0x0000555555555118 in deregister_tm_clones ()
+0x000055555555518c in __do_global_dtors_aux ()
+0x0000555555555193 in __do_global_dtors_aux ()
+0x0000555555555194 in __do_global_dtors_aux ()
+_dl_fini () at ./elf/dl-fini.c:141
+0x00007ffff7fc9252	141	in ./elf/dl-fini.c
+0x00007ffff7fc9255	141	in ./elf/dl-fini.c
+0x00007ffff7fc9259	141	in ./elf/dl-fini.c
+0x00007ffff7fc925d	141	in ./elf/dl-fini.c
+0x00007ffff7fc925f	146	in ./elf/dl-fini.c
+146	in ./elf/dl-fini.c
+0x00007ffff7fc9269	146	in ./elf/dl-fini.c
+147	in ./elf/dl-fini.c
+0x00007ffff7fc926f	147	in ./elf/dl-fini.c
+0x00007ffff7fc9272	147	in ./elf/dl-fini.c
+0x0000555555559b84 in _fini ()
+0x0000555555559b88 in _fini ()
+0x0000555555559b8c in _fini ()
+0x0000555555559b90 in _fini ()
+_dl_fini () at ./elf/dl-fini.c:153
+153	in ./elf/dl-fini.c
+0x00007ffff7fc9277	153	in ./elf/dl-fini.c
+_dl_audit_objclose (l=l@entry=0x7ffff7ffe2e0) at ./elf/dl-audit.c:96
+97	in ./elf/dl-audit.c
+0x00007ffff7fde57a	97	in ./elf/dl-audit.c
+0x00007ffff7fde57c	97	in ./elf/dl-audit.c
+0x00007ffff7fde57e	97	in ./elf/dl-audit.c
+_dl_fini () at ./elf/dl-fini.c:158
+113	in ./elf/dl-fini.c
+0x00007ffff7fc9288	113	in ./elf/dl-fini.c
+0x00007ffff7fc928c	113	in ./elf/dl-fini.c
+115	in ./elf/dl-fini.c
+117	in ./elf/dl-fini.c
+0x00007ffff7fc91eb	117	in ./elf/dl-fini.c
+0x00007ffff7fc91ed	117	in ./elf/dl-fini.c
+158	in ./elf/dl-fini.c
+113	in ./elf/dl-fini.c
+0x00007ffff7fc9288	113	in ./elf/dl-fini.c
+0x00007ffff7fc928c	113	in ./elf/dl-fini.c
+115	in ./elf/dl-fini.c
+117	in ./elf/dl-fini.c
+0x00007ffff7fc91eb	117	in ./elf/dl-fini.c
+0x00007ffff7fc91ed	117	in ./elf/dl-fini.c
+120	in ./elf/dl-fini.c
+0x00007ffff7fc91f6	120	in ./elf/dl-fini.c
+123	in ./elf/dl-fini.c
+0x00007ffff7fc9204	123	in ./elf/dl-fini.c
+0x00007ffff7fc9207	123	in ./elf/dl-fini.c
+0x00007ffff7fc92a8	124	in ./elf/dl-fini.c
+0x00007ffff7fc92af	124	in ./elf/dl-fini.c
+0x00007ffff7fc92b2	124	in ./elf/dl-fini.c
+153	in ./elf/dl-fini.c
+0x00007ffff7fc9277	153	in ./elf/dl-fini.c
+_dl_audit_objclose (l=l@entry=0x7ffff7fbb160) at ./elf/dl-audit.c:96
+97	in ./elf/dl-audit.c
+0x00007ffff7fde57a	97	in ./elf/dl-audit.c
+0x00007ffff7fde57c	97	in ./elf/dl-audit.c
+0x00007ffff7fde57e	97	in ./elf/dl-audit.c
+_dl_fini () at ./elf/dl-fini.c:158
+113	in ./elf/dl-fini.c
+0x00007ffff7fc9288	113	in ./elf/dl-fini.c
+0x00007ffff7fc928c	113	in ./elf/dl-fini.c
+115	in ./elf/dl-fini.c
+117	in ./elf/dl-fini.c
+0x00007ffff7fc91eb	117	in ./elf/dl-fini.c
+0x00007ffff7fc91ed	117	in ./elf/dl-fini.c
+120	in ./elf/dl-fini.c
+0x00007ffff7fc91f6	120	in ./elf/dl-fini.c
+123	in ./elf/dl-fini.c
+0x00007ffff7fc9204	123	in ./elf/dl-fini.c
+0x00007ffff7fc9207	123	in ./elf/dl-fini.c
+0x00007ffff7fc92a8	124	in ./elf/dl-fini.c
+0x00007ffff7fc92af	124	in ./elf/dl-fini.c
+0x00007ffff7fc92b2	124	in ./elf/dl-fini.c
+153	in ./elf/dl-fini.c
+0x00007ffff7fc9277	153	in ./elf/dl-fini.c
+_dl_audit_objclose (l=l@entry=0x7ffff7ffdaf0 <_rtld_global+2736>) at ./elf/dl-audit.c:96
+97	in ./elf/dl-audit.c
+0x00007ffff7fde57a	97	in ./elf/dl-audit.c
+0x00007ffff7fde57c	97	in ./elf/dl-audit.c
+0x00007ffff7fde57e	97	in ./elf/dl-audit.c
+_dl_fini () at ./elf/dl-fini.c:158
+113	in ./elf/dl-fini.c
+0x00007ffff7fc9288	113	in ./elf/dl-fini.c
+0x00007ffff7fc928c	113	in ./elf/dl-fini.c
+162	in ./elf/dl-fini.c
+0x00007ffff7fc9294	162	in ./elf/dl-fini.c
+0x00007ffff7fc9297	162	in ./elf/dl-fini.c
+_dl_audit_activity_nsid (nsid=nsid@entry=0, action=action@entry=0) at ./elf/dl-audit.c:40
+44	in ./elf/dl-audit.c
+0x00007ffff7fde256	44	in ./elf/dl-audit.c
+0x00007ffff7fde25a	40	in ./elf/dl-audit.c
+0x00007ffff7fde25c	44	in ./elf/dl-audit.c
+0x00007ffff7fde260	40	in ./elf/dl-audit.c
+0x00007ffff7fde261	44	in ./elf/dl-audit.c
+0x00007ffff7fde268	40	in ./elf/dl-audit.c
+0x00007ffff7fde269	40	in ./elf/dl-audit.c
+0x00007ffff7fde26d	44	in ./elf/dl-audit.c
+45	in ./elf/dl-audit.c
+0x00007ffff7fde278	46	in ./elf/dl-audit.c
+0x00007ffff7fde27b	46	in ./elf/dl-audit.c
+0x00007ffff7fde27d	46	in ./elf/dl-audit.c
+0x00007ffff7fde27f	46	in ./elf/dl-audit.c
+0x00007ffff7fde281	50	in ./elf/dl-audit.c
+0x00007ffff7fde285	50	in ./elf/dl-audit.c
+0x00007ffff7fde286	50	in ./elf/dl-audit.c
+0x00007ffff7fde287	50	in ./elf/dl-audit.c
+0x00007ffff7fde289	50	in ./elf/dl-audit.c
+0x00007ffff7fde28b	50	in ./elf/dl-audit.c
+0x00007ffff7fc929c in _dl_fini () at ./elf/dl-fini.c:162
+0x00007ffff7fc92a0	162	in ./elf/dl-fini.c
+51	in ./elf/dl-fini.c
+0x00007ffff7fc909d	51	in ./elf/dl-fini.c
+0x00007ffff7fc90a4	51	in ./elf/dl-fini.c
+0x00007ffff7fc90a8	51	in ./elf/dl-fini.c
+168	in ./elf/dl-fini.c
+0x00007ffff7fc92f3	168	in ./elf/dl-fini.c
+0x00007ffff7fc92f5	168	in ./elf/dl-fini.c
+0x00007ffff7fc92f7	168	in ./elf/dl-fini.c
+0x00007ffff7fc92fd	168	in ./elf/dl-fini.c
+0x00007ffff7fc92ff	168	in ./elf/dl-fini.c
+174	in ./elf/dl-fini.c
+0x00007ffff7fc9308	174	in ./elf/dl-fini.c
+0x00007ffff7fc930a	181	in ./elf/dl-fini.c
+0x00007ffff7fc930e	181	in ./elf/dl-fini.c
+0x00007ffff7fc930f	181	in ./elf/dl-fini.c
+0x00007ffff7fc9311	181	in ./elf/dl-fini.c
+0x00007ffff7fc9313	181	in ./elf/dl-fini.c
+0x00007ffff7fc9315	181	in ./elf/dl-fini.c
+0x00007ffff7fc9317	181	in ./elf/dl-fini.c
+0x00007ffff7fc9318	181	in ./elf/dl-fini.c
+__run_exit_handlers (status=0, listp=0x7ffff7e1a838 <__exit_funcs>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:114
+0x00007ffff7c4549a	114	in ./stdlib/exit.c
+0x00007ffff7c4549c	114	in ./stdlib/exit.c
+0x00007ffff7c454a1	114	in ./stdlib/exit.c
+0x00007ffff7c453e0	66	in ./stdlib/exit.c
+66	in ./stdlib/exit.c
+0x00007ffff7c453e7	66	in ./stdlib/exit.c
+124	in ./stdlib/exit.c
+0x00007ffff7c45503	124	in ./stdlib/exit.c
+125	in ./stdlib/exit.c
+0x00007ffff7c4550a	125	in ./stdlib/exit.c
+62	in ./stdlib/exit.c
+131	in ./stdlib/exit.c
+0x00007ffff7c45519	131	in ./stdlib/exit.c
+131	in ./stdlib/exit.c
+0x00007ffff7c4551f	131	in ./stdlib/exit.c
+133	in ./stdlib/exit.c
+0x00007ffff7c4552a	133	in ./stdlib/exit.c
+134	in ./stdlib/exit.c
+0x00007ffff7c45533	134	in ./stdlib/exit.c
+0x00007ffff7c4553a	134	in ./stdlib/exit.c
+0x00007ffff7c4553d	134	in ./stdlib/exit.c
+0x00007ffff7c4553f	134	in ./stdlib/exit.c
+0x00007ffff7c45540	134	in ./stdlib/exit.c
+_IO_cleanup () at ./libio/genops.c:863
+0x00007ffff7c8eb54	863	in ./libio/genops.c
+0x00007ffff7c8eb56	866	in ./libio/genops.c
+0x00007ffff7c8eb58	863	in ./libio/genops.c
+0x00007ffff7c8eb5a	863	in ./libio/genops.c
+0x00007ffff7c8eb5c	863	in ./libio/genops.c
+0x00007ffff7c8eb5e	863	in ./libio/genops.c
+0x00007ffff7c8eb5f	863	in ./libio/genops.c
+0x00007ffff7c8eb60	863	in ./libio/genops.c
+0x00007ffff7c8eb64	863	in ./libio/genops.c
+0x00007ffff7c8eb6d	863	in ./libio/genops.c
+0x00007ffff7c8eb72	863	in ./libio/genops.c
+_IO_unbuffer_all () at ./libio/genops.c:866
+866	in ./libio/genops.c
+0x00007ffff7c8eb79 in _IO_cleanup () at ./libio/genops.c:866
+866	in ./libio/genops.c
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:686
+686	in ./libio/genops.c
+0x00007ffff7c8e8e4	686	in ./libio/genops.c
+0x00007ffff7c8e8e6	686	in ./libio/genops.c
+0x00007ffff7c8e8e8	686	in ./libio/genops.c
+0x00007ffff7c8e8eb	686	in ./libio/genops.c
+0x00007ffff7c8e8ed	686	in ./libio/genops.c
+0x00007ffff7c8e8ef	686	in ./libio/genops.c
+0x00007ffff7c8e8f0	686	in ./libio/genops.c
+0x00007ffff7c8e8f1	686	in ./libio/genops.c
+0x00007ffff7c8e8f5	686	in ./libio/genops.c
+0x00007ffff7c8e8fe	686	in ./libio/genops.c
+0x00007ffff7c8e903	686	in ./libio/genops.c
+691	in ./libio/genops.c
+0x00007ffff7c8e90a	691	in ./libio/genops.c
+0x00007ffff7c8e911	691	in ./libio/genops.c
+691	in ./libio/genops.c
+0x00007ffff7c8e91d	691	in ./libio/genops.c
+691	in ./libio/genops.c
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffda00) at ./nptl/libc-cleanup.c:24
+27	in ./nptl/libc-cleanup.c
+27	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911d3	30	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911de	30	in ./nptl/libc-cleanup.c
+31	in ./nptl/libc-cleanup.c
+33	in ./nptl/libc-cleanup.c
+0x00007ffff7c911f3	34	in ./nptl/libc-cleanup.c
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:692
+692	in ./libio/genops.c
+0x00007ffff7c8e937	692	in ./libio/genops.c
+0x00007ffff7c8e939	692	in ./libio/genops.c
+0x00007ffff7c8e93b	692	in ./libio/genops.c
+0x00007ffff7c8e940	692	in ./libio/genops.c
+0x00007ffff7c8e948	692	in ./libio/genops.c
+0x00007ffff7c8e94e	692	in ./libio/genops.c
+0x00007ffff7c8e955	692	in ./libio/genops.c
+0x00007ffff7c8e95b	695	in ./libio/genops.c
+0x00007ffff7c8e962	687	in ./libio/genops.c
+0x00007ffff7c8e965	692	in ./libio/genops.c
+0x00007ffff7c8e968	692	in ./libio/genops.c
+695	in ./libio/genops.c
+0x00007ffff7c8e971	695	in ./libio/genops.c
+0x00007ffff7c8e977 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8e97e	940	in ./libio/libioP.h
+0x00007ffff7c8e985	940	in ./libio/libioP.h
+0x00007ffff7c8e988	940	in ./libio/libioP.h
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:697
+698	in ./libio/genops.c
+0x00007ffff7c8ea26	698	in ./libio/genops.c
+701	in ./libio/genops.c
+0x00007ffff7c8ea6d	701	in ./libio/genops.c
+0x00007ffff7c8ea6f	701	in ./libio/genops.c
+0x00007ffff7c8ea75	701	in ./libio/genops.c
+0x00007ffff7c8ea79	701	in ./libio/genops.c
+0x00007ffff7c8ea7d	701	in ./libio/genops.c
+0x00007ffff7c8ea83	701	in ./libio/genops.c
+709	in ./libio/genops.c
+0x00007ffff7c8e9d1	709	in ./libio/genops.c
+711	in ./libio/genops.c
+695	in ./libio/genops.c
+0x00007ffff7c8ea17	695	in ./libio/genops.c
+0x00007ffff7c8ea1a	695	in ./libio/genops.c
+697	in ./libio/genops.c
+698	in ./libio/genops.c
+0x00007ffff7c8ea26	698	in ./libio/genops.c
+701	in ./libio/genops.c
+0x00007ffff7c8ea6d	701	in ./libio/genops.c
+0x00007ffff7c8ea6f	701	in ./libio/genops.c
+0x00007ffff7c8ea75	701	in ./libio/genops.c
+0x00007ffff7c8ea79	701	in ./libio/genops.c
+0x00007ffff7c8ea7d	701	in ./libio/genops.c
+0x00007ffff7c8e9a1	706	in ./libio/genops.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ./libio/libioP.h:943
+0x00007ffff7c8e9ab	943	in ./libio/libioP.h
+0x00007ffff7c8e9ae	943	in ./libio/libioP.h
+0x00007ffff7c8e9b1	943	in ./libio/libioP.h
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/libioP.h:947
+947	in ./libio/libioP.h
+0x00007ffff7c8e9bc	947	in ./libio/libioP.h
+0x00007ffff7c8e9bf	947	in ./libio/libioP.h
+_IO_new_file_overflow (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:731
+732	in ./libio/fileops.c
+0x00007ffff7c8cdc6	732	in ./libio/fileops.c
+0x00007ffff7c8cdc7	732	in ./libio/fileops.c
+0x00007ffff7c8cdca	732	in ./libio/fileops.c
+0x00007ffff7c8cdcb	732	in ./libio/fileops.c
+0x00007ffff7c8cdcd	732	in ./libio/fileops.c
+0x00007ffff7c8cdcf	732	in ./libio/fileops.c
+0x00007ffff7c8cdd5	732	in ./libio/fileops.c
+739	in ./libio/fileops.c
+0x00007ffff7c8cddb	739	in ./libio/fileops.c
+0x00007ffff7c8cdde	739	in ./libio/fileops.c
+0x00007ffff7c8cde0	739	in ./libio/fileops.c
+0x00007ffff7c8cde3	739	in ./libio/fileops.c
+0x00007ffff7c8cde9	776	in ./libio/fileops.c
+774	in ./libio/fileops.c
+0x00007ffff7c8cdf0	774	in ./libio/fileops.c
+775	in ./libio/fileops.c
+0x00007ffff7c8ce9d	775	in ./libio/fileops.c
+0x00007ffff7c8cea0	776	in ./libio/fileops.c
+0x00007ffff7c8cea3	787	in ./libio/fileops.c
+0x00007ffff7c8cea4	787	in ./libio/fileops.c
+0x00007ffff7c8cea6	775	in ./libio/fileops.c
+_IO_new_do_write (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", to_do=194) at ./libio/fileops.c:423
+423	in ./libio/fileops.c
+424	in ./libio/fileops.c
+0x00007ffff7c8c936	424	in ./libio/fileops.c
+0x00007ffff7c8c939	424	in ./libio/fileops.c
+0x00007ffff7c8c940	423	in ./libio/fileops.c
+0x00007ffff7c8c942 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8c949 in _IO_new_do_write (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", to_do=194) at ./libio/fileops.c:423
+0x00007ffff7c8c94b	423	in ./libio/fileops.c
+0x00007ffff7c8c94d in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8c954 in _IO_new_do_write (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", to_do=194) at ./libio/fileops.c:423
+0x00007ffff7c8c956 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8c959	940	in ./libio/libioP.h
+0x00007ffff7c8c95c in _IO_new_do_write (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", to_do=194) at ./libio/fileops.c:423
+0x00007ffff7c8c95d	423	in ./libio/fileops.c
+433	in ./libio/fileops.c
+0x00007ffff7c8c961	433	in ./libio/fileops.c
+0x00007fAnzahl Argumente: 2
+0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main
+1. Argument: shift
+Es wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!
+run_shift wurde ausgefuehrtfff7c8c964	433	in ./libio/fileops.c
+0x00007ffff7c8c968 in new_do_write (to_do=194, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", fp=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/fileops.c:443
+443	in ./libio/fileops.c
+0x00007ffff7c8c96f	433	in ./libio/fileops.c
+0x00007ffff7c8c975	433	in ./libio/fileops.c
+440	in ./libio/fileops.c
+0x00007ffff7c8c97f	440	in ./libio/fileops.c
+0x00007ffff7c8c983	440	in ./libio/fileops.c
+0x00007ffff7c8c986	440	in ./libio/fileops.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ./libio/libioP.h:943
+0x00007ffff7c8c9c8	943	in ./libio/libioP.h
+0x00007ffff7c8c9cb	943	in ./libio/libioP.h
+0x00007ffff7c8c9ce	943	in ./libio/libioP.h
+new_do_write (to_do=194, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", fp=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/libioP.h:947
+947	in ./libio/libioP.h
+0x00007ffff7c8c9d7	947	in ./libio/libioP.h
+0x00007ffff7c8c9da	947	in ./libio/libioP.h
+0x00007ffff7c8c9dd	947	in ./libio/libioP.h
+_IO_new_file_write (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0, n=194) at ./libio/fileops.c:1173
+0x00007ffff7c8aec4	1173	in ./libio/fileops.c
+0x00007ffff7c8aec6	1173	in ./libio/fileops.c
+1175	in ./libio/fileops.c
+0x00007ffff7c8aecb	1175	in ./libio/fileops.c
+0x00007ffff7c8aecc	1175	in ./libio/fileops.c
+0x00007ffff7c8aecd	1175	in ./libio/fileops.c
+0x00007ffff7c8aed1	1175	in ./libio/fileops.c
+0x00007ffff7c8aed4	1175	in ./libio/fileops.c
+0x00007ffff7c8aeda	1175	in ./libio/fileops.c
+0x00007ffff7c8aedd	1175	in ./libio/fileops.c
+0x00007ffff7c8aee0	1175	in ./libio/fileops.c
+0x00007ffff7c8aee3	1175	in ./libio/fileops.c
+1177	in ./libio/fileops.c
+0x00007ffff7c8af01	1177	in ./libio/fileops.c
+0x00007ffff7c8af04	1177	in ./libio/fileops.c
+0x00007ffff7c8af07	1180	in ./libio/fileops.c
+0x00007ffff7c8af0c	1180	in ./libio/fileops.c
+0x00007ffff7c8aee8	1180	in ./libio/fileops.c
+__GI___libc_write (fd=1, buf=0x55555649f2a0, nbytes=194) at ../sysdeps/unix/sysv/linux/write.c:25
+26	in ../sysdeps/unix/sysv/linux/write.c
+26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d1487e	26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d14880	26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d14885	26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d14887	26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d1488d	26	in ../sysdeps/unix/sysv/linux/write.c
+0x00007ffff7d1488f	27	in ../sysdeps/unix/sysv/linux/write.c
+_IO_new_file_write (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0, n=194) at ./libio/fileops.c:1181
+0x00007ffff7c8aef0	1181	in ./libio/fileops.c
+1186	in ./libio/fileops.c
+1187	in ./libio/fileops.c
+1175	in ./libio/fileops.c
+0x00007ffff7c8aefb	1175	in ./libio/fileops.c
+0x00007ffff7c8af50	1189	in ./libio/fileops.c
+0x00007ffff7c8af53	1189	in ./libio/fileops.c
+0x00007ffff7c8af56	1189	in ./libio/fileops.c
+1190	in ./libio/fileops.c
+0x00007ffff7c8af32	1190	in ./libio/fileops.c
+0x00007ffff7c8af35	1190	in ./libio/fileops.c
+1192	in ./libio/fileops.c
+0x00007ffff7c8af45	1192	in ./libio/fileops.c
+0x00007ffff7c8af46	1192	in ./libio/fileops.c
+0x00007ffff7c8af47	1192	in ./libio/fileops.c
+0x00007ffff7c8af49	1192	in ./libio/fileops.c
+0x00007ffff7c8af4b	1193	in ./libio/fileops.c
+0x00007ffff7c8c9e1 in new_do_write (to_do=194, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", fp=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/libioP.h:947
+0x00007ffff7c8c9eb	449	in ./libio/fileops.c
+0x00007ffff7c8c9ee	449	in ./libio/fileops.c
+0x00007ffff7c8c9f0	449	in ./libio/fileops.c
+0x00007ffff7c8c9f3	449	in ./libio/fileops.c
+451	in ./libio/fileops.c
+0x00007ffff7c8c9f9	455	in ./libio/fileops.c
+0x00007ffff7c8c9ff	455	in ./libio/fileops.c
+0x00007ffff7c8ca04	452	in ./libio/fileops.c
+0x00007ffff7c8ca08	452	in ./libio/fileops.c
+452	in ./libio/fileops.c
+0x00007ffff7c8ca10	452	in ./libio/fileops.c
+453	in ./libio/fileops.c
+0x00007ffff7c8ca16	453	in ./libio/fileops.c
+0x00007ffff7c8ca50	454	in ./libio/fileops.c
+0x00007ffff7c8ca56	454	in ./libio/fileops.c
+0x00007ffff7c8ca58	454	in ./libio/fileops.c
+0x00007ffff7c8ca18	453	in ./libio/fileops.c
+0x00007ffff7c8ca1c	453	in ./libio/fileops.c
+_IO_new_do_write (to_do=194, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", fp=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/fileops.c:456
+456	in ./libio/fileops.c
+0x00007ffff7c8ca22	456	in ./libio/fileops.c
+0x00007ffff7c8ca25	456	in ./libio/fileops.c
+0x00007ffff7c8ca28	456	in ./libio/fileops.c
+0x00007ffff7c8ca2a in _IO_new_do_write (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x55555649f2a0 "Anzahl Argumente: 2\n0. Argument: /home/allan/git/pp8/1_tasktype_analyzer/main\n1. Argument: shift\nEs wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\nrun_shift wurde ausgefuehrt", to_do=194) at ./libio/fileops.c:426
+426	in ./libio/fileops.c
+0x00007ffff7c8ca2e	426	in ./libio/fileops.c
+0x00007ffff7c8ca2f	426	in ./libio/fileops.c
+0x00007ffff7c8ca30	426	in ./libio/fileops.c
+0x00007ffff7c8ca32	426	in ./libio/fileops.c
+0x00007ffff7c8ca34	426	in ./libio/fileops.c
+0x00007ffff7c8ca36	426	in ./libio/fileops.c
+0x00007ffff7c8ca38	426	in ./libio/fileops.c
+0x00007ffff7c8e9c2 in _IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:707
+0x00007ffff7c8e9c5	707	in ./libio/genops.c
+0x00007ffff7c8e9ca	707	in ./libio/genops.c
+709	in ./libio/genops.c
+0x00007ffff7c8e9d1	709	in ./libio/genops.c
+711	in ./libio/genops.c
+695	in ./libio/genops.c
+0x00007ffff7c8ea17	695	in ./libio/genops.c
+0x00007ffff7c8ea1a	695	in ./libio/genops.c
+697	in ./libio/genops.c
+698	in ./libio/genops.c
+0x00007ffff7c8ea26	698	in ./libio/genops.c
+701	in ./libio/genops.c
+0x00007ffff7c8ea6d	701	in ./libio/genops.c
+0x00007ffff7c8ea6f	701	in ./libio/genops.c
+0x00007ffff7c8ea75	701	in ./libio/genops.c
+0x00007ffff7c8ea79	701	in ./libio/genops.c
+0x00007ffff7c8ea7d	701	in ./libio/genops.c
+0x00007ffff7c8ea83	701	in ./libio/genops.c
+709	in ./libio/genops.c
+0x00007ffff7c8e9d1	709	in ./libio/genops.c
+711	in ./libio/genops.c
+695	in ./libio/genops.c
+0x00007ffff7c8ea17	695	in ./libio/genops.c
+0x00007ffff7c8ea1a	695	in ./libio/genops.c
+0x00007ffff7c8ea90	715	in ./libio/genops.c
+0x00007ffff7c8ea96	715	in ./libio/genops.c
+715	in ./libio/genops.c
+0x00007ffff7c8ea9f	715	in ./libio/genops.c
+0x00007ffff7c8eaa1	715	in ./libio/genops.c
+0x00007ffff7c8eaa3	715	in ./libio/genops.c
+0x00007ffff7c8eaae	715	in ./libio/genops.c
+0x00007ffff7c8eab4	715	in ./libio/genops.c
+0x00007ffff7c8eab7	715	in ./libio/genops.c
+716	in ./libio/genops.c
+0x00007ffff7c8eabc	716	in ./libio/genops.c
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffda00) at ./nptl/libc-cleanup.c:39
+42	in ./nptl/libc-cleanup.c
+0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
+44	in ./nptl/libc-cleanup.c
+0x00007ffff7c91214	44	in ./nptl/libc-cleanup.c
+45	in ./nptl/libc-cleanup.c
+0x00007ffff7c9121f	45	in ./nptl/libc-cleanup.c
+0x00007ffff7c91221	47	in ./nptl/libc-cleanup.c
+_IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:719
+0x00007ffff7c8eac6	719	in ./libio/genops.c
+0x00007ffff7c8eacf	719	in ./libio/genops.c
+0x00007ffff7c8ead1	719	in ./libio/genops.c
+0x00007ffff7c8ead5	719	in ./libio/genops.c
+0x00007ffff7c8ead8	719	in ./libio/genops.c
+0x00007ffff7c8ead9	719	in ./libio/genops.c
+0x00007ffff7c8eada	719	in ./libio/genops.c
+0x00007ffff7c8eadc	719	in ./libio/genops.c
+0x00007ffff7c8eade	719	in ./libio/genops.c
+0x00007ffff7c8eae0	719	in ./libio/genops.c
+0x00007ffff7c8eae2	719	in ./libio/genops.c
+0x00007ffff7c8eb7e in _IO_unbuffer_all () at ./libio/genops.c:786
+786	in ./libio/genops.c
+0x00007ffff7c8eb81	786	in ./libio/genops.c
+0x00007ffff7c8eb8a in _IO_cleanup () at ./libio/genops.c:866
+866	in ./libio/genops.c
+_IO_unbuffer_all () at ./libio/genops.c:786
+786	in ./libio/genops.c
+0x00007ffff7c8eb94	786	in ./libio/genops.c
+786	in ./libio/genops.c
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffda80) at ./nptl/libc-cleanup.c:24
+27	in ./nptl/libc-cleanup.c
+27	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911d3	30	in ./nptl/libc-cleanup.c
+30	in ./nptl/libc-cleanup.c
+0x00007ffff7c911de	30	in ./nptl/libc-cleanup.c
+31	in ./nptl/libc-cleanup.c
+33	in ./nptl/libc-cleanup.c
+0x00007ffff7c911f3	34	in ./nptl/libc-cleanup.c
+_IO_unbuffer_all () at ./libio/genops.c:787
+787	in ./libio/genops.c
+0x00007ffff7c8ebae	787	in ./libio/genops.c
+787	in ./libio/genops.c
+0x00007ffff7c8ebb2	787	in ./libio/genops.c
+0x00007ffff7c8ebb7	787	in ./libio/genops.c
+0x00007ffff7c8ebbf	787	in ./libio/genops.c
+787	in ./libio/genops.c
+787	in ./libio/genops.c
+0x00007ffff7c8ebd2	790	in ./libio/genops.c
+0x00007ffff7c8ebd9	787	in ./libio/genops.c
+0x00007ffff7c8ebdc	787	in ./libio/genops.c
+790	in ./libio/genops.c
+0x00007ffff7c8ebe5	790	in ./libio/genops.c
+0x00007ffff7c8ebeb in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8ebf2	940	in ./libio/libioP.h
+0x00007ffff7c8ebf9	940	in ./libio/libioP.h
+0x00007ffff7c8ebfc	940	in ./libio/libioP.h
+_IO_unbuffer_all () at ./libio/genops.c:799
+0x00007ffff7c8ec1b	799	in ./libio/genops.c
+0x00007ffff7c8ec1f	799	in ./libio/genops.c
+838	in ./libio/genops.c
+790	in ./libio/genops.c
+790	in ./libio/genops.c
+0x00007ffff7c8ec12	790	in ./libio/genops.c
+799	in ./libio/genops.c
+0x00007ffff7c8ec1b	799	in ./libio/genops.c
+0x00007ffff7c8ec1f	799	in ./libio/genops.c
+0x00007ffff7c8ec21	801	in ./libio/genops.c
+0x00007ffff7c8ec28	801	in ./libio/genops.c
+0x00007ffff7c8ec2a	801	in ./libio/genops.c
+807	in ./libio/genops.c
+0x00007ffff7c8ec33	807	in ./libio/genops.c
+0x00007ffff7c8ec36	807	in ./libio/genops.c
+807	in ./libio/genops.c
+807	in ./libio/genops.c
+0x00007ffff7c8ec45	807	in ./libio/genops.c
+807	in ./libio/genops.c
+0x00007ffff7c8ec50	807	in ./libio/genops.c
+0x00007ffff7c8ec52	807	in ./libio/genops.c
+0x00007ffff7c8ec56	807	in ./libio/genops.c
+807	in ./libio/genops.c
+0x00007ffff7c8ec63	807	in ./libio/genops.c
+807	in ./libio/genops.c
+815	in ./libio/genops.c
+0x00007ffff7c8ec75	815	in ./libio/genops.c
+0x00007ffff7c8ec77	815	in ./libio/genops.c
+0x00007ffff7c8ec7a	815	in ./libio/genops.c
+0x00007ffff7c8ec7c	815	in ./libio/genops.c
+817	in ./libio/genops.c
+0x00007ffff7c8ed68	817	in ./libio/genops.c
+0x00007ffff7c8ed6b	820	in ./libio/genops.c
+0x00007ffff7c8ed72	817	in ./libio/genops.c
+821	in ./libio/genops.c
+0x00007ffff7c8ed7a	821	in ./libio/genops.c
+0x00007ffff7c8ed82	821	in ./libio/genops.c
+824	in ./libio/genops.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ./libio/libioP.h:943
+0x00007ffff7c8ec8c	943	in ./libio/libioP.h
+0x00007ffff7c8ec8f	943	in ./libio/libioP.h
+0x00007ffff7c8ec92	943	in ./libio/libioP.h
+_IO_unbuffer_all () at ./libio/libioP.h:947
+947	in ./libio/libioP.h
+0x00007ffff7c8ec9a	947	in ./libio/libioP.h
+0x00007ffff7c8ec9c	947	in ./libio/libioP.h
+0x00007ffff7c8ec9f	947	in ./libio/libioP.h
+_IO_new_file_setbuf (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/fileops.c:381
+382	in ./libio/fileops.c
+0x00007ffff7c8a5a5	381	in ./libio/fileops.c
+0x00007ffff7c8a5a8	382	in ./libio/fileops.c
+_IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:452
+453	in ./libio/genops.c
+0x00007ffff7c8e3b6 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8e3bd in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:452
+0x00007ffff7c8e3bf	452	in ./libio/genops.c
+0x00007ffff7c8e3c2 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8e3c9 in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:452
+0x00007ffff7c8e3ca in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
+0x00007ffff7c8e3cd in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:452
+0x00007ffff7c8e3d0	452	in ./libio/genops.c
+0x00007ffff7c8e3d1	452	in ./libio/genops.c
+0x00007ffff7c8e3d4	452	in ./libio/genops.c
+0x00007ffff7c8e3d8	453	in ./libio/genops.c
+IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ./libio/libioP.h:943
+0x00007ffff7c8e3e2	943	in ./libio/libioP.h
+0x00007ffff7c8e3e5	943	in ./libio/libioP.h
+0x00007ffff7c8e3e8	943	in ./libio/libioP.h
+_IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/libioP.h:947
+947	in ./libio/libioP.h
+0x00007ffff7c8e3f1	947	in ./libio/libioP.h
+_IO_new_file_sync (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/fileops.c:792
+797	in ./libio/fileops.c
+0x00007ffff7c8a435	797	in ./libio/fileops.c
+0x00007ffff7c8a436	797	in ./libio/fileops.c
+0x00007ffff7c8a439	797	in ./libio/fileops.c
+0x00007ffff7c8a43d	797	in ./libio/fileops.c
+0x00007ffff7c8a441	797	in ./libio/fileops.c
+0x00007ffff7c8a445	797	in ./libio/fileops.c
+0x00007ffff7c8a448	797	in ./libio/fileops.c
+799	in ./libio/fileops.c
+800	in ./libio/fileops.c
+0x00007ffff7c8a47b	800	in ./libio/fileops.c
+811	in ./libio/fileops.c
+0x00007ffff7c8a4c7	811	in ./libio/fileops.c
+0x00007ffff7c8a4c9	815	in ./libio/fileops.c
+0x00007ffff7c8a4cd	815	in ./libio/fileops.c
+0x00007ffff7c8a4ce	815	in ./libio/fileops.c
+0x00007ffff7c8a4cf	815	in ./libio/fileops.c
+0x00007ffff7c8e3f5 in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:453
+0x00007ffff7c8e3f8	453	in ./libio/genops.c
+455	in ./libio/genops.c
+0x00007ffff7c8e400 in __GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:330
+330	in ./libio/genops.c
+0x00007ffff7c8e404 in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=0x0, len=0) at ./libio/genops.c:462
+462	in ./libio/genops.c
+0x00007ffff7c8e406	455	in ./libio/genops.c
+0x00007ffff7c8e409	455	in ./libio/genops.c
+457	in ./libio/genops.c
+0x00007ffff7c8e463	458	in ./libio/genops.c
+0x00007ffff7c8e46a	458	in ./libio/genops.c
+0x00007ffff7c8e471	457	in ./libio/genops.c
+__GI__IO_setb (a=0, eb=0x7ffff7e1b804 <_IO_2_1_stdout_+132> "", b=0x7ffff7e1b803 <_IO_2_1_stdout_+131> "", f=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./libio/genops.c:330
+330	in ./libio/genops.c
+0x00007ffff7c8e476	330	in ./libio/genops.c
+0x00007ffff7c8e478 in __GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:330
+330	in ./libio/genops.c
+0x00007ffff7c8e47b	330	in ./libio/genops.c
+__GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:337
+337	in ./libio/genops.c
+0x00007ffff7c8e427	337	in ./libio/genops.c
+0x00007ffff7c8e42c in __GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:337
+337	in ./libio/genops.c
+0x00007ffff7c8e42f in __GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:332
+332	in ./libio/genops.c
+0x00007ffff7c8e433	337	in ./libio/genops.c
+_IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=<optimized out>, len=<optimized out>) at ./libio/genops.c:466
+466	in ./libio/genops.c
+0x00007ffff7c8e438 in __GI__IO_setb (a=<optimized out>, eb=<optimized out>, b=<optimized out>, f=<optimized out>) at ./libio/genops.c:332
+332	in ./libio/genops.c
+0x00007ffff7c8e43c in _IO_default_setbuf (fp=fp@entry=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=<optimized out>, len=<optimized out>) at ./libio/genops.c:466
+466	in ./libio/genops.c
+0x00007ffff7c8e440	466	in ./libio/genops.c
+0x00007ffff7c8e444	466	in ./libio/genops.c
+0x00007ffff7c8e448	466	in ./libio/genops.c
+467	in ./libio/genops.c
+0x00007ffff7c8e450	467	in ./libio/genops.c
+0x00007ffff7c8e451	468	in ./libio/genops.c
+0x00007ffff7c8e452	468	in ./libio/genops.c
+0x00007ffff7c8e454	468	in ./libio/genops.c
+0x00007ffff7c8e456	468	in ./libio/genops.c
+0x00007ffff7c8a5ad in _IO_new_file_setbuf (fp=0x7ffff7e1b780 <_IO_2_1_stdout_>, p=<optimized out>, len=<optimized out>) at ./libio/fileops.c:382
+0x00007ffff7c8a5b0	382	in ./libio/fileops.c
+385	in ./libio/fileops.c
+0x00007ffff7c8a5b7	389	in ./libio/fileops.c
+0x00007ffff7c8a5ba	389	in ./libio/fileops.c
+387	in ./libio/fileops.c
+0x00007ffff7c8a5c2	387	in ./libio/fileops.c
+0x00007ffff7c8a5c6	387	in ./libio/fileops.c
+389	in ./libio/fileops.c
+0x00007ffff7c8a5cb	390	in ./libio/fileops.c
+_IO_unbuffer_all () at ./libio/genops.c:826
+0x00007ffff7c8eca9	826	in ./libio/genops.c
+0x00007ffff7c8ecab	826	in ./libio/genops.c
+830	in ./libio/genops.c
+0x00007ffff7c8ecbf	830	in ./libio/genops.c
+0x00007ffff7c8ecc5	830	in ./libio/genops.c
+0x00007ffff7c8eccc	830	in ./libio/genops.c
+0x00007ffff7c8eccf	830	in ./libio/genops.c
+831	in ./libio/genops.c
+0x00007ffff7c8ecd8	831	in ./libio/genops.c
+0x00007ffff7c8ecdb	831	in ./libio/genops.c
+0x00007ffff7c8ecde	831	in ./libio/genops.c
+831	in ./libio/genops.c
+831	in ./libio/genops.c
+831	in ./libio/genops.c
+0x00007ffff7c8ecf1	831	in ./libio/genops.c
+838	in ./libio/genops.c
+790	in ./libio/genops.c
+790	in ./libio/genops.c
+0x00007ffff7c8ec12	790	in ./libio/genops.c
+799	in ./libio/genops.c
+0x00007ffff7c8ec1b	799	in ./libio/genops.c
+0x00007ffff7c8ec1f	799	in ./libio/genops.c
+0x00007ffff7c8ec21	801	in ./libio/genops.c
+0x00007ffff7c8ec28	801	in ./libio/genops.c
+0x00007ffff7c8ec2a	801	in ./libio/genops.c
+838	in ./libio/genops.c
+790	in ./libio/genops.c
+790	in ./libio/genops.c
+0x00007ffff7c8ec12	790	in ./libio/genops.c
+0x00007ffff7c8ed08	842	in ./libio/genops.c
+0x00007ffff7c8ed0e	842	in ./libio/genops.c
+842	in ./libio/genops.c
+0x00007ffff7c8ed17	842	in ./libio/genops.c
+0x00007ffff7c8ed19	842	in ./libio/genops.c
+842	in ./libio/genops.c
+842	in ./libio/genops.c
+842	in ./libio/genops.c
+0x00007ffff7c8ed2f	842	in ./libio/genops.c
+843	in ./libio/genops.c
+0x00007ffff7c8ed34	843	in ./libio/genops.c
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffda80) at ./nptl/libc-cleanup.c:39
+42	in ./nptl/libc-cleanup.c
+0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
+44	in ./nptl/libc-cleanup.c
+0x00007ffff7c91214	44	in ./nptl/libc-cleanup.c
+45	in ./nptl/libc-cleanup.c
+0x00007ffff7c9121f	45	in ./nptl/libc-cleanup.c
+0x00007ffff7c91221	47	in ./nptl/libc-cleanup.c
+_IO_cleanup () at ./libio/genops.c:877
+0x00007ffff7c8ed3e	877	in ./libio/genops.c
+0x00007ffff7c8ed47	877	in ./libio/genops.c
+0x00007ffff7c8ed4d	877	in ./libio/genops.c
+0x00007ffff7c8ed51	877	in ./libio/genops.c
+0x00007ffff7c8ed54	877	in ./libio/genops.c
+0x00007ffff7c8ed55	877	in ./libio/genops.c
+0x00007ffff7c8ed56	877	in ./libio/genops.c
+0x00007ffff7c8ed58	878	in ./libio/genops.c
+0x00007ffff7c8ed5a	878	in ./libio/genops.c
+0x00007ffff7c8ed5c	878	in ./libio/genops.c
+0x00007ffff7c8ed5e	878	in ./libio/genops.c
+0x00007ffff7c45542 in __run_exit_handlers (status=0, listp=<optimized out>, run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true) at ./stdlib/exit.c:134
+0x00007ffff7c45546	134	in ./stdlib/exit.c
+0x00007ffff7c45549	134	in ./stdlib/exit.c
+136	in ./stdlib/exit.c
+0x00007ffff7c4554d	136	in ./stdlib/exit.c
+__GI__exit (status=status@entry=0) at ../sysdeps/unix/sysv/linux/_exit.c:27
+0x00007ffff7ceac04	27	in ../sysdeps/unix/sysv/linux/_exit.c
+0x00007ffff7ceac0b	30	in ../sysdeps/unix/sysv/linux/_exit.c
+0x00007ffff7ceac10	31	in ../sysdeps/unix/sysv/linux/_exit.c
+0x00007ffff7ceac15	31	in ../sysdeps/unix/sysv/linux/_exit.c
+30	in ../sysdeps/unix/sysv/linux/_exit.c
+0x00007ffff7ceac2f	30	in ../sysdeps/unix/sysv/linux/_exit.c
+[Inferior 1 (process 6575) exited normally]
+Error 

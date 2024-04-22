@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/allan/git/pp8/prototyptaskscpp/build
+CMAKE_SOURCE_DIR = /home/allan/git/pp8/1_tasktype_analyzer/build
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/allan/git/pp8/prototyptaskscpp
+CMAKE_BINARY_DIR = /home/allan/git/pp8/1_tasktype_analyzer
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allan/git/pp8/prototyptaskscpp/CMakeFiles /home/allan/git/pp8/prototyptaskscpp//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/allan/git/pp8/1_tasktype_analyzer/CMakeFiles /home/allan/git/pp8/1_tasktype_analyzer//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/allan/git/pp8/prototyptaskscpp/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/allan/git/pp8/1_tasktype_analyzer/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named prototyptaskscpp
+# Target rules for targets named tasktype_analyzer
 
 # Build rule for target.
-prototyptaskscpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prototyptaskscpp
-.PHONY : prototyptaskscpp
+tasktype_analyzer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tasktype_analyzer
+.PHONY : tasktype_analyzer
 
 # fast build rule for target.
-prototyptaskscpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prototyptaskscpp.dir/build.make CMakeFiles/prototyptaskscpp.dir/build
-.PHONY : prototyptaskscpp/fast
+tasktype_analyzer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tasktype_analyzer.dir/build.make CMakeFiles/tasktype_analyzer.dir/build
+.PHONY : tasktype_analyzer/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prototyptaskscpp.dir/build.make CMakeFiles/prototyptaskscpp.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tasktype_analyzer.dir/build.make CMakeFiles/tasktype_analyzer.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prototyptaskscpp.dir/build.make CMakeFiles/prototyptaskscpp.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tasktype_analyzer.dir/build.make CMakeFiles/tasktype_analyzer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prototyptaskscpp.dir/build.make CMakeFiles/prototyptaskscpp.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tasktype_analyzer.dir/build.make CMakeFiles/tasktype_analyzer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... prototyptaskscpp"
+	@echo "... tasktype_analyzer"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
