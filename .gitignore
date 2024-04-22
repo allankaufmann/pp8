@@ -21,13 +21,14 @@ sampleapp/ci.py
 sampleapp/sampleapp.gdb.log
 sampleapp/sampleapp.seq
 uarch-configure/
-3_tasktype_estimator/build
+3_tasktype_estimator/build/
 3_tasktype_estimator/.idea/
 3_tasktype_estimator/CMakeFiles/
 3_tasktype_estimator/cmake-build-debug/
 3_tasktype_estimator/experiment
 3_tasktype_estimator/main
 3_tasktype_estimator/tools
+3_tasktype_estimator/cmake_install.cmake
 2_apptask_analyzer/gdb/
 2_apptask_analyzer/main
 2_apptask_analyzer/cmake-build-debug/
