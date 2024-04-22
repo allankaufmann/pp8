@@ -1,0 +1,2107 @@
+mov    %rax,-0x8(%rbp)
+xor    %eax,%eax
+mov    -0xc0(%rbp),%rdx
+lea    -0x90(%rbp),%rax
+mov    %rdx,%r8
+lea    0x136e(%rip),%rdx        # 0x5555555570e9
+mov    %rdx,%rcx
+lea    0x1371(%rip),%rdx        # 0x5555555570f6
+mov    $0x80,%esi
+mov    %rax,%rdi
+mov    $0x0,%eax
+call   0x555555555160 <snprintf@plt>
+endbr64 
+bnd jmp *0x3e3d(%rip)        # 0x555555558fa8 <snprintf@got.plt>
+endbr64 
+sub    $0xd8,%rsp
+mov    %rcx,0x38(%rsp)
+mov    %r8,0x40(%rsp)
+mov    %r9,0x48(%rsp)
+test   %al,%al
+je     0x7ffff7c60815 <__GI___snprintf+85>
+mov    %fs:0x28,%rax
+mov    %rax,0x18(%rsp)
+xor    %eax,%eax
+lea    0xe0(%rsp),%rax
+xor    %r8d,%r8d
+mov    %rsp,%rcx
+mov    %rax,0x8(%rsp)
+lea    0x20(%rsp),%rax
+movl   $0x18,(%rsp)
+movl   $0x30,0x4(%rsp)
+mov    %rax,0x10(%rsp)
+call   0x7ffff7c883f0 <__vsnprintf_internal>
+endbr64 
+push   %r15
+mov    %rcx,%r15
+push   %r14
+mov    %rdx,%r14
+push   %r13
+push   %r12
+push   %rbp
+push   %rbx
+mov    %r8d,%ebx
+sub    $0x158,%rsp
+mov    %fs:0x28,%rax
+mov    %rax,0x148(%rsp)
+xor    %eax,%eax
+movq   $0x0,0x98(%rsp)
+test   %rsi,%rsi
+je     0x7ffff7c884d8 <__vsnprintf_internal+232>
+mov    %rdi,%rbp
+lea    -0x1(%rsi),%r12
+lea    0x100(%rsp),%r9
+lea    0x10(%rsp),%r13
+xor    %r8d,%r8d
+xor    %ecx,%ecx
+mov    $0xffffffff,%edx
+mov    $0x8000,%esi
+mov    %r13,%rdi
+mov    %r9,0x8(%rsp)
+call   0x7ffff7c8e650 <_IO_no_init>
+endbr64 
+push   %r13
+mov    %r8,%r13
+push   %r12
+mov    %edx,%r12d
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+mov    %rcx,%rbx
+sub    $0x8,%rsp
+call   0x7ffff7c8e5e0 <_IO_old_init>
+endbr64 
+mov    0x18e452(%rip),%edx        # 0x7ffff7e1ca3c <stdio_needs_locking>
+or     $0xfbad0000,%esi
+xor    %eax,%eax
+pxor   %xmm0,%xmm0
+mov    %esi,(%rdi)
+test   %edx,%edx
+movq   $0x0,0x68(%rdi)
+setne  %al
+xor    %ecx,%ecx
+movups %xmm0,0x8(%rdi)
+shl    $0x7,%eax
+mov    %cx,0x80(%rdi)
+mov    %eax,0x74(%rdi)
+mov    0x88(%rdi),%rax
+movups %xmm0,0x18(%rdi)
+movups %xmm0,0x28(%rdi)
+movups %xmm0,0x38(%rdi)
+movups %xmm0,0x48(%rdi)
+movups %xmm0,0x58(%rdi)
+test   %rax,%rax
+je     0x7ffff7c8e647 <_IO_old_init+103>
+ret    
+mov    %r12d,0xc0(%rbp)
+test   %r12d,%r12d
+js     0x7ffff7c8e6c0 <_IO_no_init+112>
+movq   $0xffffffffffffffff,0xa0(%rbp)
+jmp    0x7ffff7c8e6a8 <_IO_no_init+88>
+movq   $0x0,0xa8(%rbp)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    %rbp,%rcx
+mov    %r12,%rdx
+mov    %rbp,%rsi
+lea    0x18ee8a(%rip),%rax        # 0x7ffff7e17300 <_IO_strn_jumps>
+mov    %r13,%rdi
+mov    %rax,0xe8(%rsp)
+movb   $0x0,0x0(%rbp)
+call   0x7ffff7c8f9b0 <_IO_str_init_static_internal>
+endbr64 
+push   %r14
+movq   %rsi,%xmm1
+mov    %rdi,%r14
+push   %r13
+punpcklqdq %xmm1,%xmm1
+mov    %rsi,%r13
+push   %r12
+mov    %rcx,%r12
+push   %rbp
+push   %rbx
+mov    %rsi,%rbx
+sub    $0x10,%rsp
+movaps %xmm1,(%rsp)
+test   %rdx,%rdx
+jne    0x7ffff7c8fa50 <_IO_str_init_static_internal+160>
+add    %rsi,%rdx
+mov    $0xffffffffffffffff,%rax
+cmp    %rdx,%rsi
+cmovb  %rdx,%rax
+mov    %rax,%rbp
+jmp    0x7ffff7c8f9eb <_IO_str_init_static_internal+59>
+xor    %ecx,%ecx
+mov    %rbp,%rdx
+mov    %rbx,%rsi
+mov    %r14,%rdi
+call   0x7ffff7c8dc20 <__GI__IO_setb>
+endbr64 
+push   %rbp
+movq   %rsi,%xmm0
+movq   %rdx,%xmm1
+mov    %ecx,%ebp
+push   %rbx
+mov    %rdi,%rbx
+punpcklqdq %xmm1,%xmm0
+sub    $0x18,%rsp
+mov    0x38(%rdi),%rdi
+mov    (%rbx),%eax
+test   %rdi,%rdi
+je     0x7ffff7c8dc4c <__GI__IO_setb+44>
+mov    %eax,%edx
+or     $0x1,%eax
+movups %xmm0,0x38(%rbx)
+and    $0xfffffffe,%edx
+test   %ebp,%ebp
+cmovne %edx,%eax
+mov    %eax,(%rbx)
+add    $0x18,%rsp
+pop    %rbx
+pop    %rbp
+ret    
+test   %r12,%r12
+je     0x7ffff7c8fa70 <_IO_str_init_static_internal+192>
+mov    %r12,%rbx
+movq   %r13,%xmm0
+movq   %r12,%xmm2
+movdqa (%rsp),%xmm3
+movq   %rbp,%xmm4
+movq   $0x0,0xe0(%r14)
+punpcklqdq %xmm2,%xmm0
+movups %xmm0,0x8(%r14)
+movq   %rbx,%xmm0
+punpcklqdq %xmm4,%xmm0
+movups %xmm3,0x18(%r14)
+movups %xmm0,0x28(%r14)
+add    $0x10,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+ret    
+mov    %ebx,%ecx
+mov    %r15,%rdx
+mov    %r14,%rsi
+mov    %r13,%rdi
+call   0x7ffff7c75030 <__vfprintf_internal>
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+sub    $0x538,%rsp
+mov    %rsi,0x8(%rsp)
+mov    %rdx,0x20(%rsp)
+mov    %ecx,0x7c(%rsp)
+mov    %fs:0x28,%rax
+mov    %rax,0x528(%rsp)
+mov    0x1a4da2(%rip),%rax        # 0x7ffff7e19e10
+mov    %fs:(%rax),%eax
+mov    %eax,0x90(%rsp)
+mov    0xc0(%rdi),%eax
+test   %eax,%eax
+jne    0x7ffff7c75500 <__vfprintf_internal+1232>
+cmp    $0xffffffff,%eax
+je     0x7ffff7c75090 <__vfprintf_internal+96>
+mov    0x0(%rbp),%ebx
+test   $0x8,%bl
+jne    0x7ffff7c77380 <__vfprintf_internal+9040>
+cmpq   $0x0,0x8(%rsp)
+je     0x7ffff7c77440 <__vfprintf_internal+9232>
+test   $0x2,%bl
+jne    0x7ffff7c76620 <__vfprintf_internal+5616>
+mov    0x20(%rsp),%rax
+mov    0x8(%rsp),%rdi
+mov    $0x25,%esi
+movdqu (%rax),%xmm1
+movups %xmm1,0x118(%rsp)
+mov    0x10(%rax),%rax
+movaps %xmm1,0x10(%rsp)
+mov    %rax,0x128(%rsp)
+call   0x7ffff7c284d0 <*ABS*+0xab010@plt>
+endbr64 
+bnd jmp *0x1f1bdd(%rip)        # 0x7ffff7e1a0b8 <*ABS*@got.plt>
+endbr64 
+vmovd  %esi,%xmm0
+mov    %edi,%eax
+and    $0xfff,%eax
+vpbroadcastb %xmm0,%ymm0
+vpxor  %xmm9,%xmm9,%xmm9
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d5d0 <__strchrnul_avx2+464>
+vmovdqu (%rdi),%ymm8
+vpcmpeqb %ymm8,%ymm0,%ymm1
+vpcmpeqb %ymm8,%ymm9,%ymm2
+vpor   %ymm1,%ymm2,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d4a0 <__strchrnul_avx2+160>
+tzcnt  %eax,%eax
+add    %rdi,%rax
+vzeroupper 
+ret    
+mov    %rbp,0xf8(%rsp)
+mov    %rax,0x68(%rsp)
+movb   $0x0,0xa6(%rsp)
+and    $0x80,%bh
+je     0x7ffff7c75518 <__vfprintf_internal+1256>
+mov    0xd8(%rbp),%r12
+lea    0x1a265a(%rip),%rax        # 0x7ffff7e17768
+mov    0x68(%rsp),%rbx
+lea    0x1a18e6(%rip),%rcx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+sub    0x1a36f7(%rip),%rax        # 0x7ffff7e18818
+sub    0x8(%rsp),%rbx
+mov    %rax,0x30(%rsp)
+mov    %rax,%rdi
+mov    %r12,%rax
+sub    %rcx,%rax
+cmp    %rax,%rdi
+jbe    0x7ffff7c769d0 <__vfprintf_internal+6560>
+mov    0x8(%rsp),%rsi
+mov    %rbx,%rdx
+mov    %rbp,%rdi
+call   *0x38(%r12)
+endbr64 
+test   %rdx,%rdx
+je     0x7ffff7c8dfa0 <__GI__IO_default_xsputn+480>
+xor    %eax,%eax
+ret    
+cmp    %rax,%rbx
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %ebx,%rdx
+mov    %rbx,%rax
+mov    %ebx,%r12d
+shr    $0x3f,%rax
+cmp    %rdx,%rbx
+mov    $0x1,%edx
+cmovne %edx,%eax
+test   %eax,%eax
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %ebx,%ebx
+js     0x7ffff7c7533d <__vfprintf_internal+781>
+mov    0x68(%rsp),%r13
+cmpb   $0x0,0x0(%r13)
+je     0x7ffff7c7533d <__vfprintf_internal+781>
+mov    0x1a7833(%rip),%rbx        # 0x7ffff7e1c9c8 <__printf_function_table>
+mov    %rbx,0x98(%rsp)
+test   %rbx,%rbx
+jne    0x7ffff7c77128 <__vfprintf_internal+8440>
+cmpq   $0x0,0x1a782a(%rip)        # 0x7ffff7e1c9d8 <__printf_modifier_table>
+jne    0x7ffff7c752c8 <__vfprintf_internal+664>
+cmpq   $0x0,0x1a66fc(%rip)        # 0x7ffff7e1b8b8 <__printf_va_arg_table>
+jne    0x7ffff7c752c8 <__vfprintf_internal+664>
+mov    0x7c(%rsp),%eax
+movl   $0x0,0xa0(%rsp)
+movl   $0x0,0x78(%rsp)
+movq   $0xffffffffffffffff,0x80(%rsp)
+mov    %eax,%ebx
+and    $0x1,%ebx
+mov    %bl,0xa7(%rsp)
+mov    %eax,%ebx
+and    $0x2,%eax
+and    $0x8,%ebx
+mov    %eax,0xa8(%rsp)
+mov    %ebx,0xac(%rsp)
+nopw   0x0(%rax,%rax,1)
+lea    0x1(%r13),%rbx
+movzbl 0x1(%r13),%r13d
+lea    0x550(%rip),%rsi        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+lea    -0x20(%r13),%eax
+cmp    $0x5a,%al
+ja     0x7ffff7c75251 <__vfprintf_internal+545>
+movsbl %r13b,%eax
+lea    0x15c4ad(%rip),%rdx        # 0x7ffff7dd16e0 <jump_table>
+lea    0x15c426(%rip),%rdi        # 0x7ffff7dd1660 <step0_jumps.9>
+sub    $0x20,%eax
+cltq   
+movzbl (%rdx,%rax,1),%eax
+movslq (%rdi,%rax,4),%rsi
+lea    0x522(%rip),%rax        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+add    %rax,%rsi
+mov    0x1a4d18(%rip),%rax        # 0x7ffff7e19f70
+xor    %r11d,%r11d
+xor    %r10d,%r10d
+xor    %r15d,%r15d
+xor    %edx,%edx
+mov    $0xffffffff,%r14d
+lea    0x15c1f0(%rip),%r8        # 0x7ffff7dd1460 <step4_jumps.5>
+mov    $0x7fffffff,%r9d
+mov    %fs:(%rax),%rax
+movl   $0x0,0x5c(%rsp)
+movl   $0x0,0x10(%rsp)
+mov    %rax,0x60(%rsp)
+lea    0x15c44a(%rip),%rax        # 0x7ffff7dd16e0 <jump_table>
+movl   $0x0,0x50(%rsp)
+movl   $0x0,0x40(%rsp)
+movl   $0x0,0x28(%rsp)
+movl   $0x0,0x58(%rsp)
+movl   $0x0,0x4c(%rsp)
+movb   $0x20,0x38(%rsp)
+jmp    *%rsi
+endbr64 
+mov    0x20(%rsp),%rdi
+mov    (%rdi),%eax
+cmp    $0x2f,%eax
+ja     0x7ffff7c76c18 <__vfprintf_internal+7144>
+mov    %eax,%edx
+add    $0x8,%eax
+add    0x10(%rdi),%rdx
+mov    %eax,(%rdi)
+mov    (%rdx),%r15
+mov    %r10d,%eax
+xor    $0x1,%eax
+test   %r15,%r15
+jne    0x7ffff7c758af <__vfprintf_internal+2175>
+cmp    $0x53,%r13b
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+test   %al,%al
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+cmp    $0xffffffff,%r14d
+je     0x7ffff7c76d29 <__vfprintf_internal+7417>
+mov    %r15,%rdi
+call   0x7ffff7c28490 <*ABS*+0xa86a0@plt>
+endbr64 
+bnd jmp *0x1f1bfd(%rip)        # 0x7ffff7e1a098 <*ABS*@got.plt>
+endbr64 
+mov    %edi,%eax
+mov    %rdi,%rdx
+vpxor  %xmm0,%xmm0,%xmm0
+and    $0xfff,%eax
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d930 <__strlen_avx2+336>
+vpcmpeqb (%rdi),%ymm0,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d860 <__strlen_avx2+128>
+tzcnt  %eax,%eax
+vzeroupper 
+ret    
+mov    %rax,%r14
+jmp    0x7ffff7c758d9 <__vfprintf_internal+2217>
+mov    0x10(%rsp),%r13d
+sub    %eax,%r13d
+js     0x7ffff7c76fe0 <__vfprintf_internal+8112>
+mov    0xd8(%rbp),%r13
+lea    0x19fa12(%rip),%rdx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %r13,%rax
+sub    %rdx,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c77459 <__vfprintf_internal+9257>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%r13)
+endbr64 
+test   %rdx,%rdx
+je     0x7ffff7c8dfa0 <__GI__IO_default_xsputn+480>
+push   %r15
+mov    %rsi,%rcx
+mov    %rdi,%r15
+push   %r14
+mov    %rdx,%r14
+push   %r13
+mov    %rdx,%r13
+push   %r12
+lea    0x188c18(%rip),%r12        # 0x7ffff7e16a00 <_IO_helper_jumps>
+push   %rbp
+lea    0x189978(%rip),%rbp        # 0x7ffff7e17768
+push   %rbx
+sub    %r12,%rbp
+sub    $0x18,%rsp
+jmp    0x7ffff7c8de40 <__GI__IO_default_xsputn+128>
+mov    0x28(%r15),%rdi
+mov    0x30(%r15),%rbx
+cmp    %rbx,%rdi
+jae    0x7ffff7c8de0c <__GI__IO_default_xsputn+76>
+sub    %rdi,%rbx
+cmp    %r14,%rbx
+cmova  %r14,%rbx
+cmp    $0x14,%rbx
+jbe    0x7ffff7c8de00 <__GI__IO_default_xsputn+64>
+test   %rbx,%rbx
+jne    0x7ffff7c8dec8 <__GI__IO_default_xsputn+264>
+lea    0x1(%rcx),%rsi
+mov    %rdi,%rdx
+lea    -0x1(%rbx),%rax
+sub    %rsi,%rdx
+cmp    $0xe,%rdx
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0x6,%rax
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0xe,%rax
+jbe    0x7ffff7c8df7a <__GI__IO_default_xsputn+442>
+mov    (%rcx),%rax
+lea    0x8(%rcx),%rdx
+lea    -0x9(%rbx),%rsi
+mov    %rax,(%rdi)
+lea    0x8(%rdi),%rax
+cmp    $0x8,%rbx
+jne    0x7ffff7c8df0d <__GI__IO_default_xsputn+333>
+movzbl (%rdx),%r8d
+mov    %r8b,(%rax)
+test   %rsi,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x1(%rdx),%r8d
+mov    %r8b,0x1(%rax)
+cmp    $0x1,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x2(%rdx),%r8d
+mov    %r8b,0x2(%rax)
+cmp    $0x2,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x3(%rdx),%r8d
+mov    %r8b,0x3(%rax)
+cmp    $0x3,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+add    %rbx,%rdi
+add    %rbx,%rcx
+mov    %rdi,0x28(%r15)
+jmp    0x7ffff7c8de09 <__GI__IO_default_xsputn+73>
+sub    %rbx,%r14
+test   %r14,%r14
+je     0x7ffff7c8deb3 <__GI__IO_default_xsputn+243>
+add    $0x18,%rsp
+mov    %r13,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77028 <__vfprintf_internal+8184>
+cmp    %r14,%rax
+jae    0x7ffff7c75cc9 <__vfprintf_internal+3225>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+jns    0x7ffff7c75f80 <__vfprintf_internal+3920>
+lea    0x1(%rbx),%r15
+mov    $0x25,%esi
+addl   $0x1,0x78(%rsp)
+mov    %r15,%rdi
+call   0x7ffff7c284d0 <*ABS*+0xab010@plt>
+endbr64 
+bnd jmp *0x1f1bdd(%rip)        # 0x7ffff7e1a0b8 <*ABS*@got.plt>
+endbr64 
+vmovd  %esi,%xmm0
+mov    %edi,%eax
+and    $0xfff,%eax
+vpbroadcastb %xmm0,%ymm0
+vpxor  %xmm9,%xmm9,%xmm9
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d5d0 <__strchrnul_avx2+464>
+vmovdqu (%rdi),%ymm8
+vpcmpeqb %ymm8,%ymm0,%ymm1
+vpcmpeqb %ymm8,%ymm9,%ymm2
+vpor   %ymm1,%ymm2,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d4a0 <__strchrnul_avx2+160>
+tzcnt  %eax,%eax
+add    %rdi,%rax
+vzeroupper 
+ret    
+mov    0xd8(%rbp),%rbx
+lea    0x1a0a5c(%rip),%rdi        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %rax,%r14
+mov    %rax,%r13
+mov    %rbx,%rax
+sub    %r15,%r14
+sub    %rdi,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c76770 <__vfprintf_internal+5952>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%rbx)
+endbr64 
+test   %rdx,%rdx
+je     0x7ffff7c8dfa0 <__GI__IO_default_xsputn+480>
+xor    %eax,%eax
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77500 <__vfprintf_internal+9424>
+cmp    %r14,%rax
+jb     0x7ffff7c77500 <__vfprintf_internal+9424>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+js     0x7ffff7c7533d <__vfprintf_internal+781>
+cmpb   $0x0,0x0(%r13)
+jne    0x7ffff7c75210 <__vfprintf_internal+480>
+lea    0x1(%r13),%rbx
+movzbl 0x1(%r13),%r13d
+lea    0x550(%rip),%rsi        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+lea    -0x20(%r13),%eax
+cmp    $0x5a,%al
+ja     0x7ffff7c75251 <__vfprintf_internal+545>
+movsbl %r13b,%eax
+lea    0x15c4ad(%rip),%rdx        # 0x7ffff7dd16e0 <jump_table>
+lea    0x15c426(%rip),%rdi        # 0x7ffff7dd1660 <step0_jumps.9>
+sub    $0x20,%eax
+cltq   
+movzbl (%rdx,%rax,1),%eax
+movslq (%rdi,%rax,4),%rsi
+lea    0x522(%rip),%rax        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+add    %rax,%rsi
+mov    0x1a4d18(%rip),%rax        # 0x7ffff7e19f70
+xor    %r11d,%r11d
+xor    %r10d,%r10d
+xor    %r15d,%r15d
+xor    %edx,%edx
+mov    $0xffffffff,%r14d
+lea    0x15c1f0(%rip),%r8        # 0x7ffff7dd1460 <step4_jumps.5>
+mov    $0x7fffffff,%r9d
+mov    %fs:(%rax),%rax
+movl   $0x0,0x5c(%rsp)
+movl   $0x0,0x10(%rsp)
+mov    %rax,0x60(%rsp)
+lea    0x15c44a(%rip),%rax        # 0x7ffff7dd16e0 <jump_table>
+movl   $0x0,0x50(%rsp)
+movl   $0x0,0x40(%rsp)
+movl   $0x0,0x28(%rsp)
+movl   $0x0,0x58(%rsp)
+movl   $0x0,0x4c(%rsp)
+movb   $0x20,0x38(%rsp)
+jmp    *%rsi
+endbr64 
+mov    0x20(%rsp),%rdi
+mov    (%rdi),%eax
+cmp    $0x2f,%eax
+ja     0x7ffff7c76c18 <__vfprintf_internal+7144>
+mov    %eax,%edx
+add    $0x8,%eax
+add    0x10(%rdi),%rdx
+mov    %eax,(%rdi)
+mov    (%rdx),%r15
+mov    %r10d,%eax
+xor    $0x1,%eax
+test   %r15,%r15
+jne    0x7ffff7c758af <__vfprintf_internal+2175>
+cmp    $0x53,%r13b
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+test   %al,%al
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+cmp    $0xffffffff,%r14d
+je     0x7ffff7c76d29 <__vfprintf_internal+7417>
+mov    %r15,%rdi
+call   0x7ffff7c28490 <*ABS*+0xa86a0@plt>
+endbr64 
+bnd jmp *0x1f1bfd(%rip)        # 0x7ffff7e1a098 <*ABS*@got.plt>
+endbr64 
+mov    %edi,%eax
+mov    %rdi,%rdx
+vpxor  %xmm0,%xmm0,%xmm0
+and    $0xfff,%eax
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d930 <__strlen_avx2+336>
+vpcmpeqb (%rdi),%ymm0,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d860 <__strlen_avx2+128>
+tzcnt  %eax,%eax
+vzeroupper 
+ret    
+mov    %rax,%r14
+jmp    0x7ffff7c758d9 <__vfprintf_internal+2217>
+mov    0x10(%rsp),%r13d
+sub    %eax,%r13d
+js     0x7ffff7c76fe0 <__vfprintf_internal+8112>
+mov    0xd8(%rbp),%r13
+lea    0x19fa12(%rip),%rdx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %r13,%rax
+sub    %rdx,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c77459 <__vfprintf_internal+9257>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%r13)
+endbr64 
+test   %rdx,%rdx
+je     0x7ffff7c8dfa0 <__GI__IO_default_xsputn+480>
+push   %r15
+mov    %rsi,%rcx
+mov    %rdi,%r15
+push   %r14
+mov    %rdx,%r14
+push   %r13
+mov    %rdx,%r13
+push   %r12
+lea    0x188c18(%rip),%r12        # 0x7ffff7e16a00 <_IO_helper_jumps>
+push   %rbp
+lea    0x189978(%rip),%rbp        # 0x7ffff7e17768
+push   %rbx
+sub    %r12,%rbp
+sub    $0x18,%rsp
+jmp    0x7ffff7c8de40 <__GI__IO_default_xsputn+128>
+mov    0x28(%r15),%rdi
+mov    0x30(%r15),%rbx
+cmp    %rbx,%rdi
+jae    0x7ffff7c8de0c <__GI__IO_default_xsputn+76>
+sub    %rdi,%rbx
+cmp    %r14,%rbx
+cmova  %r14,%rbx
+cmp    $0x14,%rbx
+jbe    0x7ffff7c8de00 <__GI__IO_default_xsputn+64>
+test   %rbx,%rbx
+jne    0x7ffff7c8dec8 <__GI__IO_default_xsputn+264>
+lea    0x1(%rcx),%rsi
+mov    %rdi,%rdx
+lea    -0x1(%rbx),%rax
+sub    %rsi,%rdx
+cmp    $0xe,%rdx
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0x6,%rax
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0xe,%rax
+jbe    0x7ffff7c8df7a <__GI__IO_default_xsputn+442>
+mov    (%rcx),%rax
+lea    0x8(%rcx),%rdx
+lea    -0x9(%rbx),%rsi
+mov    %rax,(%rdi)
+lea    0x8(%rdi),%rax
+cmp    $0x8,%rbx
+jne    0x7ffff7c8df0d <__GI__IO_default_xsputn+333>
+movzbl (%rdx),%r8d
+mov    %r8b,(%rax)
+test   %rsi,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x1(%rdx),%r8d
+mov    %r8b,0x1(%rax)
+cmp    $0x1,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+add    %rbx,%rdi
+add    %rbx,%rcx
+mov    %rdi,0x28(%r15)
+jmp    0x7ffff7c8de09 <__GI__IO_default_xsputn+73>
+sub    %rbx,%r14
+test   %r14,%r14
+je     0x7ffff7c8deb3 <__GI__IO_default_xsputn+243>
+add    $0x18,%rsp
+mov    %r13,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77028 <__vfprintf_internal+8184>
+cmp    %r14,%rax
+jae    0x7ffff7c75cc9 <__vfprintf_internal+3225>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+jns    0x7ffff7c75f80 <__vfprintf_internal+3920>
+lea    0x1(%rbx),%r15
+mov    $0x25,%esi
+addl   $0x1,0x78(%rsp)
+mov    %r15,%rdi
+call   0x7ffff7c284d0 <*ABS*+0xab010@plt>
+endbr64 
+bnd jmp *0x1f1bdd(%rip)        # 0x7ffff7e1a0b8 <*ABS*@got.plt>
+endbr64 
+vmovd  %esi,%xmm0
+mov    %edi,%eax
+and    $0xfff,%eax
+vpbroadcastb %xmm0,%ymm0
+vpxor  %xmm9,%xmm9,%xmm9
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d5d0 <__strchrnul_avx2+464>
+vmovdqu (%rdi),%ymm8
+vpcmpeqb %ymm8,%ymm0,%ymm1
+vpcmpeqb %ymm8,%ymm9,%ymm2
+vpor   %ymm1,%ymm2,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d4a0 <__strchrnul_avx2+160>
+tzcnt  %eax,%eax
+add    %rdi,%rax
+vzeroupper 
+ret    
+mov    0xd8(%rbp),%rbx
+lea    0x1a0a5c(%rip),%rdi        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %rax,%r14
+mov    %rax,%r13
+mov    %rbx,%rax
+sub    %r15,%r14
+sub    %rdi,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c76770 <__vfprintf_internal+5952>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%rbx)
+endbr64 
+test   %rdx,%rdx
+je     0x7ffff7c8dfa0 <__GI__IO_default_xsputn+480>
+push   %r15
+mov    %rsi,%rcx
+mov    %rdi,%r15
+push   %r14
+mov    %rdx,%r14
+push   %r13
+mov    %rdx,%r13
+push   %r12
+lea    0x188c18(%rip),%r12        # 0x7ffff7e16a00 <_IO_helper_jumps>
+push   %rbp
+lea    0x189978(%rip),%rbp        # 0x7ffff7e17768
+push   %rbx
+sub    %r12,%rbp
+sub    $0x18,%rsp
+jmp    0x7ffff7c8de40 <__GI__IO_default_xsputn+128>
+mov    0x28(%r15),%rdi
+mov    0x30(%r15),%rbx
+cmp    %rbx,%rdi
+jae    0x7ffff7c8de0c <__GI__IO_default_xsputn+76>
+sub    %rdi,%rbx
+cmp    %r14,%rbx
+cmova  %r14,%rbx
+cmp    $0x14,%rbx
+jbe    0x7ffff7c8de00 <__GI__IO_default_xsputn+64>
+test   %rbx,%rbx
+jne    0x7ffff7c8dec8 <__GI__IO_default_xsputn+264>
+lea    0x1(%rcx),%rsi
+mov    %rdi,%rdx
+lea    -0x1(%rbx),%rax
+sub    %rsi,%rdx
+cmp    $0xe,%rdx
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0x6,%rax
+jbe    0x7ffff7c8dfa8 <__GI__IO_default_xsputn+488>
+cmp    $0xe,%rax
+jbe    0x7ffff7c8df7a <__GI__IO_default_xsputn+442>
+mov    (%rcx),%rax
+lea    0x8(%rcx),%rdx
+lea    -0x9(%rbx),%rsi
+mov    %rax,(%rdi)
+lea    0x8(%rdi),%rax
+cmp    $0x8,%rbx
+jne    0x7ffff7c8df0d <__GI__IO_default_xsputn+333>
+movzbl (%rdx),%r8d
+mov    %r8b,(%rax)
+test   %rsi,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x1(%rdx),%r8d
+mov    %r8b,0x1(%rax)
+cmp    $0x1,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x2(%rdx),%r8d
+mov    %r8b,0x2(%rax)
+cmp    $0x2,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x3(%rdx),%r8d
+mov    %r8b,0x3(%rax)
+cmp    $0x3,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+movzbl 0x4(%rdx),%r8d
+mov    %r8b,0x4(%rax)
+cmp    $0x4,%rsi
+je     0x7ffff7c8df6b <__GI__IO_default_xsputn+427>
+add    %rbx,%rdi
+add    %rbx,%rcx
+mov    %rdi,0x28(%r15)
+jmp    0x7ffff7c8de09 <__GI__IO_default_xsputn+73>
+sub    %rbx,%r14
+test   %r14,%r14
+je     0x7ffff7c8deb3 <__GI__IO_default_xsputn+243>
+add    $0x18,%rsp
+mov    %r13,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77500 <__vfprintf_internal+9424>
+cmp    %r14,%rax
+jb     0x7ffff7c77500 <__vfprintf_internal+9424>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+js     0x7ffff7c7533d <__vfprintf_internal+781>
+cmpb   $0x0,0x0(%r13)
+jne    0x7ffff7c75210 <__vfprintf_internal+480>
+jmp    0x7ffff7c7533d <__vfprintf_internal+781>
+testl  $0x8000,0x0(%rbp)
+je     0x7ffff7c75380 <__vfprintf_internal+848>
+cmpb   $0x0,0xa6(%rsp)
+jne    0x7ffff7c75588 <__vfprintf_internal+1368>
+mov    0x528(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c7750a <__vfprintf_internal+9434>
+add    $0x538,%rsp
+mov    %r12d,%eax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+mov    0x8(%rsp),%r9
+cmp    %r9,0x48(%rsp)
+je     0x7ffff7c884ae <__vsnprintf_internal+190>
+mov    0x38(%rsp),%rdx
+movb   $0x0,(%rdx)
+mov    0x148(%rsp),%rdx
+sub    %fs:0x28,%rdx
+jne    0x7ffff7c884ee <__vsnprintf_internal+254>
+add    $0x158,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+mov    0x18(%rsp),%rdx
+sub    %fs:0x28,%rdx
+jne    0x7ffff7c6086e <__GI___snprintf+174>
+add    $0xd8,%rsp
+ret    
+lea    -0x90(%rbp),%rax
+mov    %rax,%rsi
+lea    0x1360(%rip),%rax        # 0x555555557108
+mov    %rax,%rdi
+mov    $0x0,%eax
+call   0x555555555150 <printf@plt>
+endbr64 
+bnd jmp *0x3e45(%rip)        # 0x555555558fa0 <printf@got.plt>
+endbr64 
+sub    $0xd8,%rsp
+mov    %rdi,%r10
+mov    %rsi,0x28(%rsp)
+mov    %rdx,0x30(%rsp)
+mov    %rcx,0x38(%rsp)
+mov    %r8,0x40(%rsp)
+mov    %r9,0x48(%rsp)
+test   %al,%al
+je     0x7ffff7c60752 <__printf+98>
+mov    %fs:0x28,%rax
+mov    %rax,0x18(%rsp)
+xor    %eax,%eax
+lea    0xe0(%rsp),%rax
+mov    %rsp,%rdx
+xor    %ecx,%ecx
+mov    %rax,0x8(%rsp)
+lea    0x20(%rsp),%rax
+mov    %r10,%rsi
+mov    %rax,0x10(%rsp)
+mov    0x1b96b0(%rip),%rax        # 0x7ffff7e19e38
+movl   $0x8,(%rsp)
+mov    (%rax),%rdi
+movl   $0x30,0x4(%rsp)
+call   0x7ffff7c75030 <__vfprintf_internal>
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+sub    $0x538,%rsp
+mov    %rsi,0x8(%rsp)
+mov    %rdx,0x20(%rsp)
+mov    %ecx,0x7c(%rsp)
+mov    %fs:0x28,%rax
+mov    %rax,0x528(%rsp)
+mov    0x1a4da2(%rip),%rax        # 0x7ffff7e19e10
+mov    %fs:(%rax),%eax
+mov    %eax,0x90(%rsp)
+mov    0xc0(%rdi),%eax
+test   %eax,%eax
+jne    0x7ffff7c75500 <__vfprintf_internal+1232>
+cmp    $0xffffffff,%eax
+je     0x7ffff7c75090 <__vfprintf_internal+96>
+mov    0x0(%rbp),%ebx
+test   $0x8,%bl
+jne    0x7ffff7c77380 <__vfprintf_internal+9040>
+cmpq   $0x0,0x8(%rsp)
+je     0x7ffff7c77440 <__vfprintf_internal+9232>
+test   $0x2,%bl
+jne    0x7ffff7c76620 <__vfprintf_internal+5616>
+mov    0x20(%rsp),%rax
+mov    0x8(%rsp),%rdi
+mov    $0x25,%esi
+movdqu (%rax),%xmm1
+movups %xmm1,0x118(%rsp)
+mov    0x10(%rax),%rax
+movaps %xmm1,0x10(%rsp)
+mov    %rax,0x128(%rsp)
+call   0x7ffff7c284d0 <*ABS*+0xab010@plt>
+endbr64 
+bnd jmp *0x1f1bdd(%rip)        # 0x7ffff7e1a0b8 <*ABS*@got.plt>
+endbr64 
+vmovd  %esi,%xmm0
+mov    %edi,%eax
+and    $0xfff,%eax
+vpbroadcastb %xmm0,%ymm0
+vpxor  %xmm9,%xmm9,%xmm9
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d5d0 <__strchrnul_avx2+464>
+vmovdqu (%rdi),%ymm8
+vpcmpeqb %ymm8,%ymm0,%ymm1
+vpcmpeqb %ymm8,%ymm9,%ymm2
+vpor   %ymm1,%ymm2,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d4a0 <__strchrnul_avx2+160>
+tzcnt  %eax,%eax
+add    %rdi,%rax
+vzeroupper 
+ret    
+mov    %rbp,0xf8(%rsp)
+mov    %rax,0x68(%rsp)
+movb   $0x0,0xa6(%rsp)
+and    $0x80,%bh
+je     0x7ffff7c75518 <__vfprintf_internal+1256>
+mov    0x1a4a21(%rip),%rax        # 0x7ffff7e19f40
+lea    0xf0(%rsp),%rdi
+mov    %rax,0xf0(%rsp)
+call   0x7ffff7c911c0 <__GI___libc_cleanup_push_defer>
+endbr64 
+mov    %fs:0x2f8,%rax
+mov    %rax,0x18(%rdi)
+xor    %eax,%eax
+mov    %fs:0x972,%al
+movzbl %al,%eax
+mov    %eax,0x10(%rdi)
+movb   $0x0,%fs:0x972
+mov    %rdi,%fs:0x2f8
+ret    
+mov    0x0(%rbp),%eax
+and    $0x8000,%eax
+jne    0x7ffff7c77590 <__vfprintf_internal+9568>
+mov    %fs:0x10,%rbx
+mov    0x88(%rbp),%rdi
+cmp    %rbx,0x8(%rdi)
+je     0x7ffff7c75572 <__vfprintf_internal+1346>
+mov    $0x1,%edx
+lock cmpxchg %edx,(%rdi)
+jne    0x7ffff7c76ee0 <__vfprintf_internal+7856>
+mov    0x88(%rbp),%rdi
+mov    %rbx,0x8(%rdi)
+addl   $0x1,0x4(%rdi)
+movb   $0x1,0xa6(%rsp)
+jmp    0x7ffff7c75100 <__vfprintf_internal+208>
+mov    0xd8(%rbp),%r12
+lea    0x1a265a(%rip),%rax        # 0x7ffff7e17768
+mov    0x68(%rsp),%rbx
+lea    0x1a18e6(%rip),%rcx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+sub    0x1a36f7(%rip),%rax        # 0x7ffff7e18818
+sub    0x8(%rsp),%rbx
+mov    %rax,0x30(%rsp)
+mov    %rax,%rdi
+mov    %r12,%rax
+sub    %rcx,%rax
+cmp    %rax,%rdi
+jbe    0x7ffff7c769d0 <__vfprintf_internal+6560>
+mov    0x8(%rsp),%rsi
+mov    %rbx,%rdx
+mov    %rbp,%rdi
+call   *0x38(%r12)
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+xor    %r12d,%r12d
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+test   %rdx,%rdx
+je     0x7ffff7c8b66e <_IO_new_file_xsputn+110>
+mov    %rdi,%rbp
+mov    %rsi,%r13
+mov    0x28(%rdi),%rdi
+mov    %rdx,%rbx
+mov    0x0(%rbp),%eax
+and    $0xa00,%eax
+cmp    $0xa00,%eax
+je     0x7ffff7c8b680 <_IO_new_file_xsputn+128>
+mov    0x30(%rbp),%r12
+cmp    %rdi,%r12
+jbe    0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+sub    %rdi,%r12
+xor    %r14d,%r14d
+test   %r12,%r12
+je     0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+cmp    %rbx,%r12
+mov    %r13,%rsi
+mov    %rbx,%r15
+cmova  %rbx,%r12
+mov    %r12,%rdx
+add    %r12,%r13
+sub    %r12,%r15
+call   0x7ffff7c283e0 <*ABS*+0xa97d0@plt>
+endbr64 
+bnd jmp *0x1f1c55(%rip)        # 0x7ffff7e1a040 <*ABS*@got.plt>
+endbr64 
+mov    %rdi,%rax
+add    %rdx,%rax
+jmp    0x7ffff7da07c7 <__memmove_avx_unaligned_erms+7>
+cmp    $0x20,%rdx
+jb     0x7ffff7da07f0 <__memmove_avx_unaligned_erms+48>
+cmp    $0x10,%edx
+jae    0x7ffff7da0822 <__memmove_avx_unaligned_erms+98>
+cmp    $0x8,%edx
+jae    0x7ffff7da0840 <__memmove_avx_unaligned_erms+128>
+mov    -0x8(%rsi,%rdx,1),%rcx
+mov    (%rsi),%rsi
+mov    %rsi,(%rdi)
+mov    %rcx,-0x8(%rdi,%rdx,1)
+ret    
+mov    %rax,0x28(%rbp)
+add    %r15,%r14
+jne    0x7ffff7c8b6a3 <_IO_new_file_xsputn+163>
+add    $0x18,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %rax,%rbx
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %ebx,%rdx
+mov    %rbx,%rax
+mov    %ebx,%r12d
+shr    $0x3f,%rax
+cmp    %rdx,%rbx
+mov    $0x1,%edx
+cmovne %edx,%eax
+test   %eax,%eax
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %ebx,%ebx
+js     0x7ffff7c7533d <__vfprintf_internal+781>
+mov    0x68(%rsp),%r13
+cmpb   $0x0,0x0(%r13)
+je     0x7ffff7c7533d <__vfprintf_internal+781>
+mov    0x1a7833(%rip),%rbx        # 0x7ffff7e1c9c8 <__printf_function_table>
+mov    %rbx,0x98(%rsp)
+test   %rbx,%rbx
+jne    0x7ffff7c77128 <__vfprintf_internal+8440>
+cmpq   $0x0,0x1a782a(%rip)        # 0x7ffff7e1c9d8 <__printf_modifier_table>
+jne    0x7ffff7c752c8 <__vfprintf_internal+664>
+cmpq   $0x0,0x1a66fc(%rip)        # 0x7ffff7e1b8b8 <__printf_va_arg_table>
+jne    0x7ffff7c752c8 <__vfprintf_internal+664>
+mov    0x7c(%rsp),%eax
+movl   $0x0,0xa0(%rsp)
+movl   $0x0,0x78(%rsp)
+movq   $0xffffffffffffffff,0x80(%rsp)
+mov    %eax,%ebx
+and    $0x1,%ebx
+mov    %bl,0xa7(%rsp)
+mov    %eax,%ebx
+and    $0x2,%eax
+and    $0x8,%ebx
+mov    %eax,0xa8(%rsp)
+mov    %ebx,0xac(%rsp)
+nopw   0x0(%rax,%rax,1)
+lea    0x1(%r13),%rbx
+movzbl 0x1(%r13),%r13d
+lea    0x550(%rip),%rsi        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+lea    -0x20(%r13),%eax
+cmp    $0x5a,%al
+ja     0x7ffff7c75251 <__vfprintf_internal+545>
+movsbl %r13b,%eax
+lea    0x15c4ad(%rip),%rdx        # 0x7ffff7dd16e0 <jump_table>
+lea    0x15c426(%rip),%rdi        # 0x7ffff7dd1660 <step0_jumps.9>
+sub    $0x20,%eax
+cltq   
+movzbl (%rdx,%rax,1),%eax
+movslq (%rdi,%rax,4),%rsi
+lea    0x522(%rip),%rax        # 0x7ffff7c75770 <__vfprintf_internal+1856>
+add    %rax,%rsi
+mov    0x1a4d18(%rip),%rax        # 0x7ffff7e19f70
+xor    %r11d,%r11d
+xor    %r10d,%r10d
+xor    %r15d,%r15d
+xor    %edx,%edx
+mov    $0xffffffff,%r14d
+lea    0x15c1f0(%rip),%r8        # 0x7ffff7dd1460 <step4_jumps.5>
+mov    $0x7fffffff,%r9d
+mov    %fs:(%rax),%rax
+movl   $0x0,0x5c(%rsp)
+movl   $0x0,0x10(%rsp)
+mov    %rax,0x60(%rsp)
+lea    0x15c44a(%rip),%rax        # 0x7ffff7dd16e0 <jump_table>
+movl   $0x0,0x50(%rsp)
+movl   $0x0,0x40(%rsp)
+movl   $0x0,0x28(%rsp)
+movl   $0x0,0x58(%rsp)
+movl   $0x0,0x4c(%rsp)
+movb   $0x20,0x38(%rsp)
+jmp    *%rsi
+endbr64 
+mov    0x20(%rsp),%rdi
+mov    (%rdi),%eax
+cmp    $0x2f,%eax
+ja     0x7ffff7c76c18 <__vfprintf_internal+7144>
+mov    %eax,%edx
+add    $0x8,%eax
+add    0x10(%rdi),%rdx
+mov    %eax,(%rdi)
+mov    (%rdx),%r15
+mov    %r10d,%eax
+xor    $0x1,%eax
+test   %r15,%r15
+jne    0x7ffff7c758af <__vfprintf_internal+2175>
+cmp    $0x53,%r13b
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+test   %al,%al
+je     0x7ffff7c76ca0 <__vfprintf_internal+7280>
+cmp    $0xffffffff,%r14d
+je     0x7ffff7c76d29 <__vfprintf_internal+7417>
+mov    %r15,%rdi
+call   0x7ffff7c28490 <*ABS*+0xa86a0@plt>
+endbr64 
+bnd jmp *0x1f1bfd(%rip)        # 0x7ffff7e1a098 <*ABS*@got.plt>
+endbr64 
+mov    %edi,%eax
+mov    %rdi,%rdx
+vpxor  %xmm0,%xmm0,%xmm0
+and    $0xfff,%eax
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d930 <__strlen_avx2+336>
+vpcmpeqb (%rdi),%ymm0,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d860 <__strlen_avx2+128>
+or     $0x1f,%rdi
+vpcmpeqb 0x1(%rdi),%ymm0,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+jne    0x7ffff7d9d820 <__strlen_avx2+64>
+tzcnt  %eax,%eax
+sub    %edx,%edi
+inc    %edi
+add    %edi,%eax
+vzeroupper 
+ret    
+mov    %rax,%r14
+jmp    0x7ffff7c758d9 <__vfprintf_internal+2217>
+mov    0x10(%rsp),%r13d
+sub    %eax,%r13d
+js     0x7ffff7c76fe0 <__vfprintf_internal+8112>
+mov    0xd8(%rbp),%r13
+lea    0x19fa12(%rip),%rdx        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %r13,%rax
+sub    %rdx,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c77459 <__vfprintf_internal+9257>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%r13)
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+xor    %r12d,%r12d
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+test   %rdx,%rdx
+je     0x7ffff7c8b66e <_IO_new_file_xsputn+110>
+mov    %rdi,%rbp
+mov    %rsi,%r13
+mov    0x28(%rdi),%rdi
+mov    %rdx,%rbx
+mov    0x0(%rbp),%eax
+and    $0xa00,%eax
+cmp    $0xa00,%eax
+je     0x7ffff7c8b680 <_IO_new_file_xsputn+128>
+mov    0x30(%rbp),%r12
+cmp    %rdi,%r12
+jbe    0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+sub    %rdi,%r12
+xor    %r14d,%r14d
+test   %r12,%r12
+je     0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+cmp    %rbx,%r12
+mov    %r13,%rsi
+mov    %rbx,%r15
+cmova  %rbx,%r12
+mov    %r12,%rdx
+add    %r12,%r13
+sub    %r12,%r15
+call   0x7ffff7c283e0 <*ABS*+0xa97d0@plt>
+endbr64 
+bnd jmp *0x1f1c55(%rip)        # 0x7ffff7e1a040 <*ABS*@got.plt>
+endbr64 
+mov    %rdi,%rax
+add    %rdx,%rax
+jmp    0x7ffff7da07c7 <__memmove_avx_unaligned_erms+7>
+cmp    $0x20,%rdx
+jb     0x7ffff7da07f0 <__memmove_avx_unaligned_erms+48>
+vmovdqu (%rsi),%ymm0
+cmp    $0x40,%rdx
+ja     0x7ffff7da0880 <__memmove_avx_unaligned_erms+192>
+vmovdqu -0x20(%rsi,%rdx,1),%ymm1
+vmovdqu %ymm0,(%rdi)
+vmovdqu %ymm1,-0x20(%rdi,%rdx,1)
+vzeroupper 
+ret    
+mov    %rax,0x28(%rbp)
+add    %r15,%r14
+jne    0x7ffff7c8b6a3 <_IO_new_file_xsputn+163>
+add    $0x18,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77028 <__vfprintf_internal+8184>
+cmp    %r14,%rax
+jae    0x7ffff7c75cc9 <__vfprintf_internal+3225>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+jns    0x7ffff7c75f80 <__vfprintf_internal+3920>
+lea    0x1(%rbx),%r15
+mov    $0x25,%esi
+addl   $0x1,0x78(%rsp)
+mov    %r15,%rdi
+call   0x7ffff7c284d0 <*ABS*+0xab010@plt>
+endbr64 
+bnd jmp *0x1f1bdd(%rip)        # 0x7ffff7e1a0b8 <*ABS*@got.plt>
+endbr64 
+vmovd  %esi,%xmm0
+mov    %edi,%eax
+and    $0xfff,%eax
+vpbroadcastb %xmm0,%ymm0
+vpxor  %xmm9,%xmm9,%xmm9
+cmp    $0xfe0,%eax
+ja     0x7ffff7d9d5d0 <__strchrnul_avx2+464>
+vmovdqu (%rdi),%ymm8
+vpcmpeqb %ymm8,%ymm0,%ymm1
+vpcmpeqb %ymm8,%ymm9,%ymm2
+vpor   %ymm1,%ymm2,%ymm1
+vpmovmskb %ymm1,%eax
+test   %eax,%eax
+je     0x7ffff7d9d4a0 <__strchrnul_avx2+160>
+tzcnt  %eax,%eax
+add    %rdi,%rax
+vzeroupper 
+ret    
+mov    0xd8(%rbp),%rbx
+lea    0x1a0a5c(%rip),%rdi        # 0x7ffff7e16a00 <_IO_helper_jumps>
+mov    %rax,%r14
+mov    %rax,%r13
+mov    %rbx,%rax
+sub    %r15,%r14
+sub    %rdi,%rax
+cmp    %rax,0x30(%rsp)
+jbe    0x7ffff7c76770 <__vfprintf_internal+5952>
+mov    %r14,%rdx
+mov    %r15,%rsi
+mov    %rbp,%rdi
+call   *0x38(%rbx)
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+xor    %r12d,%r12d
+push   %rbp
+push   %rbx
+sub    $0x18,%rsp
+test   %rdx,%rdx
+je     0x7ffff7c8b66e <_IO_new_file_xsputn+110>
+mov    %rdi,%rbp
+mov    %rsi,%r13
+mov    0x28(%rdi),%rdi
+mov    %rdx,%rbx
+mov    0x0(%rbp),%eax
+and    $0xa00,%eax
+cmp    $0xa00,%eax
+je     0x7ffff7c8b680 <_IO_new_file_xsputn+128>
+mov    0x30(%rbp),%r12
+cmp    %rdi,%r12
+jbe    0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+sub    %rdi,%r12
+xor    %r14d,%r14d
+test   %r12,%r12
+je     0x7ffff7c8b6a0 <_IO_new_file_xsputn+160>
+cmp    %rbx,%r12
+mov    %r13,%rsi
+mov    %rbx,%r15
+cmova  %rbx,%r12
+mov    %r12,%rdx
+add    %r12,%r13
+sub    %r12,%r15
+call   0x7ffff7c283e0 <*ABS*+0xa97d0@plt>
+endbr64 
+bnd jmp *0x1f1c55(%rip)        # 0x7ffff7e1a040 <*ABS*@got.plt>
+endbr64 
+mov    %rdi,%rax
+add    %rdx,%rax
+jmp    0x7ffff7da07c7 <__memmove_avx_unaligned_erms+7>
+cmp    $0x20,%rdx
+jb     0x7ffff7da07f0 <__memmove_avx_unaligned_erms+48>
+cmp    $0x10,%edx
+jae    0x7ffff7da0822 <__memmove_avx_unaligned_erms+98>
+cmp    $0x8,%edx
+jae    0x7ffff7da0840 <__memmove_avx_unaligned_erms+128>
+mov    -0x8(%rsi,%rdx,1),%rcx
+mov    (%rsi),%rsi
+mov    %rsi,(%rdi)
+mov    %rcx,-0x8(%rdi,%rdx,1)
+ret    
+mov    %rax,0x28(%rbp)
+add    %r15,%r14
+jne    0x7ffff7c8b6a3 <_IO_new_file_xsputn+163>
+add    $0x18,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+cmp    %r14,%rax
+jne    0x7ffff7c76728 <__vfprintf_internal+5880>
+movslq %r12d,%rax
+xor    %edx,%edx
+add    %r14,%rax
+js     0x7ffff7c77500 <__vfprintf_internal+9424>
+cmp    %r14,%rax
+jb     0x7ffff7c77500 <__vfprintf_internal+9424>
+movslq %eax,%rcx
+mov    %eax,%r12d
+cmp    %rcx,%rax
+mov    $0x1,%ecx
+cmovne %ecx,%edx
+test   %edx,%edx
+jne    0x7ffff7c75860 <__vfprintf_internal+2096>
+test   %eax,%eax
+js     0x7ffff7c7533d <__vfprintf_internal+781>
+cmpb   $0x0,0x0(%r13)
+jne    0x7ffff7c75210 <__vfprintf_internal+480>
+jmp    0x7ffff7c7533d <__vfprintf_internal+781>
+testl  $0x8000,0x0(%rbp)
+je     0x7ffff7c75380 <__vfprintf_internal+848>
+mov    0x88(%rbp),%rdi
+mov    0x4(%rdi),%eax
+sub    $0x1,%eax
+mov    %eax,0x4(%rdi)
+jne    0x7ffff7c75346 <__vfprintf_internal+790>
+movq   $0x0,0x8(%rdi)
+xchg   %eax,(%rdi)
+cmp    $0x1,%eax
+jle    0x7ffff7c75346 <__vfprintf_internal+790>
+cmpb   $0x0,0xa6(%rsp)
+jne    0x7ffff7c75588 <__vfprintf_internal+1368>
+lea    0xf0(%rsp),%rdi
+call   0x7ffff7c91200 <__GI___libc_cleanup_pop_restore>
+endbr64 
+mov    0x18(%rdi),%rax
+mov    %rax,%fs:0x2f8
+mov    0x10(%rdi),%eax
+mov    %al,%fs:0x972
+cmp    $0x1,%eax
+je     0x7ffff7c91228 <__GI___libc_cleanup_pop_restore+40>
+ret    
+jmp    0x7ffff7c75354 <__vfprintf_internal+804>
+mov    0x528(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c7750a <__vfprintf_internal+9434>
+add    $0x538,%rsp
+mov    %r12d,%eax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+mov    0x18(%rsp),%rdx
+sub    %fs:0x28,%rdx
+jne    0x7ffff7c607b7 <__printf+199>
+add    $0xd8,%rsp
+ret    
+mov    -0xb8(%rbp),%rax
+mov    (%rax),%eax
+mov    %eax,-0xa8(%rbp)
+mov    -0xb8(%rbp),%rax
+mov    0x4(%rax),%eax
+mov    %eax,-0xa4(%rbp)
+mov    -0xb8(%rbp),%rax
+mov    0x8(%rax),%rax
+mov    %rax,-0xa0(%rbp)
+lea    -0x90(%rbp),%rax
+lea    0x1331(%rip),%rdx        # 0x555555557125
+mov    %rdx,%rsi
+mov    %rax,%rdi
+call   0x555555555190 <fopen@plt>
+endbr64 
+bnd jmp *0x3e25(%rip)        # 0x555555558fc0 <fopen@got.plt>
+endbr64 
+push   %r13
+mov    %rsi,%r13
+push   %r12
+push   %rbp
+mov    %rdi,%rbp
+mov    $0x1d8,%edi
+push   %rbx
+sub    $0x8,%rsp
+call   0x7ffff7c28380 <malloc@plt>
+endbr64 
+bnd jmp *0x1f1c65(%rip)        # 0x7ffff7e19ff0
+endbr64 
+push   %r12
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+sub    $0x10,%rsp
+cmpb   $0x0,0x17c432(%rip)        # 0x7ffff7e214e8 <__malloc_initialized>
+je     0x7ffff7ca52d0 <__GI___libc_malloc+560>
+test   %rbp,%rbp
+js     0x7ffff7ca52de <__GI___libc_malloc+574>
+lea    0x17(%rbp),%rax
+xor    %r12d,%r12d
+cmp    $0x1f,%rax
+ja     0x7ffff7ca51b0 <__GI___libc_malloc+272>
+and    $0xfffffffffffffff0,%rax
+lea    -0x11(%rax),%r12
+shr    $0x4,%r12
+jmp    0x7ffff7ca50d6 <__GI___libc_malloc+54>
+mov    0x174ccb(%rip),%rbx        # 0x7ffff7e19da8
+mov    %fs:(%rbx),%rdx
+test   %rdx,%rdx
+je     0x7ffff7ca51c8 <__GI___libc_malloc+296>
+cmp    %r12,0x1752d7(%rip)        # 0x7ffff7e1a3c8 <mp_+104>
+ja     0x7ffff7ca5200 <__GI___libc_malloc+352>
+movzwl (%rdx,%r12,2),%ecx
+test   %cx,%cx
+je     0x7ffff7ca50f7 <__GI___libc_malloc+87>
+lea    0x10(%r12),%rdi
+mov    (%rdx,%rdi,8),%rax
+test   $0xf,%al
+jne    0x7ffff7ca53d0 <__GI___libc_malloc+816>
+mov    %rax,%rsi
+sub    $0x1,%ecx
+shr    $0xc,%rsi
+xor    (%rax),%rsi
+mov    %rsi,(%rdx,%rdi,8)
+mov    %cx,(%rdx,%r12,2)
+movq   $0x0,0x8(%rax)
+add    $0x10,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+ret    
+test   %rax,%rax
+je     0x7ffff7c7f721 <_IO_new_fopen+241>
+mov    %rax,%rbx
+lea    0xe0(%rax),%rax
+xor    %edx,%edx
+xor    %esi,%esi
+mov    %rax,0x88(%rbx)
+lea    0xf0(%rbx),%rcx
+mov    %rbx,%rdi
+mov    %rbx,%r12
+lea    0x197a40(%rip),%r8        # 0x7ffff7e170c0 <_IO_wfile_jumps>
+call   0x7ffff7c8e650 <_IO_no_init>
+endbr64 
+push   %r13
+mov    %r8,%r13
+push   %r12
+mov    %edx,%r12d
+push   %rbp
+mov    %rdi,%rbp
+push   %rbx
+mov    %rcx,%rbx
+sub    $0x8,%rsp
+call   0x7ffff7c8e5e0 <_IO_old_init>
+endbr64 
+mov    0x18e452(%rip),%edx        # 0x7ffff7e1ca3c <stdio_needs_locking>
+or     $0xfbad0000,%esi
+xor    %eax,%eax
+pxor   %xmm0,%xmm0
+mov    %esi,(%rdi)
+test   %edx,%edx
+movq   $0x0,0x68(%rdi)
+setne  %al
+xor    %ecx,%ecx
+movups %xmm0,0x8(%rdi)
+shl    $0x7,%eax
+mov    %cx,0x80(%rdi)
+mov    %eax,0x74(%rdi)
+mov    0x88(%rdi),%rax
+movups %xmm0,0x18(%rdi)
+movups %xmm0,0x28(%rdi)
+movups %xmm0,0x38(%rdi)
+movups %xmm0,0x48(%rdi)
+movups %xmm0,0x58(%rdi)
+test   %rax,%rax
+je     0x7ffff7c8e647 <_IO_old_init+103>
+movq   $0x0,(%rax)
+movq   $0x0,0x8(%rax)
+ret    
+mov    %r12d,0xc0(%rbp)
+test   %r12d,%r12d
+js     0x7ffff7c8e6c0 <_IO_no_init+112>
+mov    %rbx,0xa0(%rbp)
+pxor   %xmm0,%xmm0
+movq   $0x0,0x50(%rbx)
+mov    %r13,0xe0(%rbx)
+movups %xmm0,(%rbx)
+movups %xmm0,0x10(%rbx)
+movups %xmm0,0x20(%rbx)
+movups %xmm0,0x30(%rbx)
+movups %xmm0,0x40(%rbx)
+movq   $0x0,0xa8(%rbp)
+add    $0x8,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+lea    0x197f74(%rip),%rax        # 0x7ffff7e17600 <_IO_file_jumps>
+mov    %rbx,%rdi
+mov    %rax,0xd8(%rbx)
+call   0x7ffff7c8be10 <_IO_new_file_init_internal>
+endbr64 
+orl    $0x240c,(%rdi)
+push   %rbx
+mov    %rdi,%rbx
+movq   $0xffffffffffffffff,0x90(%rdi)
+call   0x7ffff7c8d2d0 <__GI__IO_link_in>
+endbr64 
+push   %r14
+push   %r13
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x30,%rsp
+mov    (%rdi),%edx
+mov    %fs:0x28,%rax
+mov    %rax,0x28(%rsp)
+xor    %eax,%eax
+mov    %edx,%ebp
+and    $0x80,%ebp
+je     0x7ffff7c8d320 <__GI__IO_link_in+80>
+or     $0x80,%dl
+mov    %rsp,%r12
+lea    -0x34d(%rip),%rax        # 0x7ffff7c8cfe0 <flush_cleanup>
+mov    %rdi,%rbx
+mov    %edx,(%rdi)
+mov    %r12,%rdi
+lea    0x18f714(%rip),%r13        # 0x7ffff7e1ca50 <list_all_lock>
+movq   $0x0,0x8(%rsp)
+mov    %rax,(%rsp)
+call   0x7ffff7c911c0 <__GI___libc_cleanup_push_defer>
+endbr64 
+mov    %fs:0x2f8,%rax
+mov    %rax,0x18(%rdi)
+xor    %eax,%eax
+mov    %fs:0x972,%al
+movzbl %al,%eax
+mov    %eax,0x10(%rdi)
+movb   $0x0,%fs:0x972
+mov    %rdi,%fs:0x2f8
+ret    
+mov    %fs:0x10,%r14
+cmp    %r14,0x18f6fa(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+je     0x7ffff7c8d37c <__GI__IO_link_in+172>
+mov    $0x1,%edx
+mov    %ebp,%eax
+lock cmpxchg %edx,0x18f6e1(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+jne    0x7ffff7c8d498 <__GI__IO_link_in+456>
+mov    %r14,0x18f6dc(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+mov    0x18f6d2(%rip),%edx        # 0x7ffff7e1ca54 <list_all_lock+4>
+mov    (%rbx),%eax
+mov    %rbx,0x18f6b5(%rip)        # 0x7ffff7e1ca40 <run_fp>
+add    $0x1,%edx
+mov    %edx,0x18f6c0(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+and    $0x8000,%eax
+jne    0x7ffff7c8d428 <__GI__IO_link_in+344>
+mov    %fs:0x10,%rbp
+mov    0x88(%rbx),%rdi
+cmp    %rbp,0x8(%rdi)
+je     0x7ffff7c8d478 <__GI__IO_link_in+424>
+mov    $0x1,%edx
+lock cmpxchg %edx,(%rdi)
+jne    0x7ffff7c8d4b2 <__GI__IO_link_in+482>
+mov    0x88(%rbx),%rdi
+mov    (%rbx),%eax
+mov    0x18e2a8(%rip),%rdx        # 0x7ffff7e1b680 <_IO_list_all>
+addl   $0x1,0x4(%rdi)
+mov    %rbp,0x8(%rdi)
+mov    %rbx,0x18e299(%rip)        # 0x7ffff7e1b680 <_IO_list_all>
+mov    %rdx,0x68(%rbx)
+test   $0x80,%ah
+jne    0x7ffff7c8d41b <__GI__IO_link_in+331>
+mov    0x4(%rdi),%eax
+sub    $0x1,%eax
+mov    %eax,0x4(%rdi)
+mov    0x18f655(%rip),%edx        # 0x7ffff7e1ca54 <list_all_lock+4>
+jne    0x7ffff7c8d43a <__GI__IO_link_in+362>
+movq   $0x0,0x8(%rdi)
+xchg   %eax,(%rdi)
+mov    0x18f643(%rip),%edx        # 0x7ffff7e1ca54 <list_all_lock+4>
+cmp    $0x1,%eax
+jle    0x7ffff7c8d43a <__GI__IO_link_in+362>
+movq   $0x0,0x18f5fb(%rip)        # 0x7ffff7e1ca40 <run_fp>
+sub    $0x1,%edx
+mov    %edx,0x18f606(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+jne    0x7ffff7c8d466 <__GI__IO_link_in+406>
+movq   $0x0,0x18f5fd(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+xchg   %edx,0x18f5ef(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+cmp    $0x1,%edx
+jg     0x7ffff7c8d4a8 <__GI__IO_link_in+472>
+mov    %r12,%rdi
+call   0x7ffff7c91200 <__GI___libc_cleanup_pop_restore>
+endbr64 
+mov    0x18(%rdi),%rax
+mov    %rax,%fs:0x2f8
+mov    0x10(%rdi),%eax
+mov    %al,%fs:0x972
+cmp    $0x1,%eax
+je     0x7ffff7c91228 <__GI___libc_cleanup_pop_restore+40>
+ret    
+jmp    0x7ffff7c8d2fc <__GI__IO_link_in+44>
+mov    0x28(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c8d4bc <__GI__IO_link_in+492>
+add    $0x30,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+ret    
+movl   $0xffffffff,0x70(%rbx)
+pop    %rbx
+ret    
+mov    $0x1,%ecx
+mov    %r13,%rdx
+mov    %rbp,%rsi
+mov    %rbx,%rdi
+call   0x7ffff7c8c180 <_IO_new_file_fopen>
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x38,%rsp
+mov    %fs:0x28,%rax
+mov    %rax,0x28(%rsp)
+xor    %eax,%eax
+cmpl   $0xffffffff,0x70(%rdi)
+jne    0x7ffff7c8c560 <_IO_new_file_fopen+992>
+movzbl (%rdx),%eax
+mov    %rdi,%rbp
+mov    %rdx,%rbx
+mov    %ecx,%r9d
+cmp    $0x72,%al
+je     0x7ffff7c8c750 <_IO_new_file_fopen+1488>
+cmp    $0x77,%al
+je     0x7ffff7c8c210 <_IO_new_file_fopen+144>
+mov    $0x4,%r8d
+mov    $0x1,%edi
+mov    $0x240,%edx
+movzbl 0x1(%rbx),%eax
+lea    0x1(%rbx),%rcx
+cmp    $0x78,%al
+jg     0x7ffff7c8c268 <_IO_new_file_fopen+232>
+cmp    $0x61,%al
+jle    0x7ffff7c8c518 <_IO_new_file_fopen+920>
+test   %al,%al
+je     0x7ffff7c8c403 <_IO_new_file_fopen+643>
+or     %edi,%edx
+mov    $0x1b6,%ecx
+mov    %rbp,%rdi
+call   0x7ffff7c8c090 <__GI__IO_file_open>
+endbr64 
+push   %r12
+xor    %eax,%eax
+push   %rbp
+mov    %r8d,%ebp
+push   %rbx
+mov    %rdi,%rbx
+mov    %rsi,%rdi
+mov    %edx,%esi
+mov    %ecx,%edx
+testb  $0x2,0x74(%rbx)
+jne    0x7ffff7c8c160 <__GI__IO_file_open+208>
+call   0x7ffff7d144e0 <__libc_open64>
+endbr64 
+push   %r12
+mov    %esi,%r10d
+mov    %esi,%r12d
+push   %rbp
+mov    %rdi,%rbp
+sub    $0x68,%rsp
+mov    %rdx,0x40(%rsp)
+mov    %fs:0x28,%rax
+mov    %rax,0x28(%rsp)
+xor    %eax,%eax
+and    $0x40,%r10d
+jne    0x7ffff7d14568 <__libc_open64+136>
+lea    0x80(%rsp),%rax
+movl   $0x10,0x10(%rsp)
+mov    0x40(%rsp),%r10d
+mov    %rax,0x18(%rsp)
+lea    0x30(%rsp),%rax
+mov    %rax,0x20(%rsp)
+jmp    0x7ffff7d1451d <__libc_open64+61>
+mov    %fs:0x18,%eax
+test   %eax,%eax
+jne    0x7ffff7d14590 <__libc_open64+176>
+mov    %r12d,%edx
+mov    %rbp,%rsi
+mov    $0xffffff9c,%edi
+mov    $0x101,%eax
+syscall 
+cmp    $0xfffffffffffff000,%rax
+ja     0x7ffff7d145d8 <__libc_open64+248>
+mov    0x105831(%rip),%rdx        # 0x7ffff7e19e10
+neg    %eax
+mov    %eax,%fs:(%rdx)
+mov    $0xffffffff,%eax
+jmp    0x7ffff7d14547 <__libc_open64+103>
+mov    0x28(%rsp),%rdx
+sub    %fs:0x28,%rdx
+jne    0x7ffff7d14603 <__libc_open64+291>
+add    $0x68,%rsp
+pop    %rbp
+pop    %r12
+ret    
+mov    %eax,%r12d
+test   %r12d,%r12d
+js     0x7ffff7c8c150 <__GI__IO_file_open+192>
+pop    %rbx
+xor    %eax,%eax
+pop    %rbp
+pop    %r12
+ret    
+mov    %rax,%r12
+test   %rax,%rax
+je     0x7ffff7c8c560 <_IO_new_file_fopen+992>
+xor    %r12d,%r12d
+jmp    0x7ffff7c8c1e0 <_IO_new_file_fopen+96>
+mov    0x28(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c8c818 <_IO_new_file_fopen+1688>
+add    $0x38,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+test   %rax,%rax
+je     0x7ffff7c7f700 <_IO_new_fopen+208>
+mov    %rbx,%rdi
+xor    %r12d,%r12d
+call   0x7ffff7c8d2b0 <__GI__IO_un_link>
+endbr64 
+testb  $0x80,(%rdi)
+jne    0x7ffff7c8d2c0 <__GI__IO_un_link+16>
+jmp    0x7ffff7c8d070 <__GI__IO_un_link>
+push   %r13
+push   %r12
+lea    0x18f9d5(%rip),%r12        # 0x7ffff7e1ca50 <list_all_lock>
+push   %rbp
+push   %rbx
+mov    %rdi,%rbx
+sub    $0x38,%rsp
+mov    %fs:0x28,%rax
+mov    %rax,0x28(%rsp)
+xor    %eax,%eax
+mov    %rsp,%rbp
+lea    -0xbe(%rip),%rax        # 0x7ffff7c8cfe0 <flush_cleanup>
+movq   $0x0,0x8(%rsp)
+mov    %rbp,%rdi
+mov    %rax,(%rsp)
+call   0x7ffff7c911c0 <__GI___libc_cleanup_push_defer>
+endbr64 
+mov    %fs:0x2f8,%rax
+mov    %rax,0x18(%rdi)
+xor    %eax,%eax
+mov    %fs:0x972,%al
+movzbl %al,%eax
+mov    %eax,0x10(%rdi)
+movb   $0x0,%fs:0x972
+mov    %rdi,%fs:0x2f8
+ret    
+mov    %fs:0x10,%r13
+cmp    0x18f995(%rip),%r13        # 0x7ffff7e1ca58 <list_all_lock+8>
+je     0x7ffff7c8d0e1 <__GI__IO_un_link+113>
+xor    %eax,%eax
+mov    $0x1,%edx
+lock cmpxchg %edx,0x18f97c(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+jne    0x7ffff7c8d270 <__GI__IO_un_link+512>
+mov    %r13,0x18f977(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+mov    0x18f96d(%rip),%edx        # 0x7ffff7e1ca54 <list_all_lock+4>
+mov    (%rbx),%esi
+mov    %rbx,0x18f950(%rip)        # 0x7ffff7e1ca40 <run_fp>
+lea    0x1(%rdx),%eax
+mov    %eax,0x18f95b(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+mov    %esi,%eax
+and    $0x8000,%eax
+jne    0x7ffff7c8d1f8 <__GI__IO_un_link+392>
+mov    %fs:0x10,%r13
+mov    0x88(%rbx),%rdi
+cmp    0x8(%rdi),%r13
+je     0x7ffff7c8d230 <__GI__IO_un_link+448>
+mov    $0x1,%edx
+lock cmpxchg %edx,(%rdi)
+jne    0x7ffff7c8d297 <__GI__IO_un_link+551>
+mov    (%rbx),%esi
+mov    0x88(%rbx),%rdi
+mov    0x18e541(%rip),%rcx        # 0x7ffff7e1b680 <_IO_list_all>
+mov    %esi,%eax
+addl   $0x1,0x4(%rdi)
+mov    %r13,0x8(%rdi)
+and    $0x8000,%eax
+test   %rcx,%rcx
+je     0x7ffff7c8d167 <__GI__IO_un_link+247>
+mov    0x68(%rcx),%rdx
+cmp    %rcx,%rbx
+jne    0x7ffff7c8d21c <__GI__IO_un_link+428>
+mov    %rdx,0x18e519(%rip)        # 0x7ffff7e1b680 <_IO_list_all>
+and    $0x7f,%sil
+mov    %esi,(%rbx)
+test   %eax,%eax
+jne    0x7ffff7c8d196 <__GI__IO_un_link+294>
+mov    0x88(%rbx),%rdi
+mov    0x4(%rdi),%eax
+sub    $0x1,%eax
+mov    %eax,0x4(%rdi)
+jne    0x7ffff7c8d196 <__GI__IO_un_link+294>
+movq   $0x0,0x8(%rdi)
+xchg   %eax,(%rdi)
+cmp    $0x1,%eax
+jg     0x7ffff7c8d28d <__GI__IO_un_link+541>
+mov    0x18f8b8(%rip),%eax        # 0x7ffff7e1ca54 <list_all_lock+4>
+lea    -0x1(%rax),%edx
+movq   $0x0,0x18f896(%rip)        # 0x7ffff7e1ca40 <run_fp>
+mov    %edx,0x18f8a4(%rip)        # 0x7ffff7e1ca54 <list_all_lock+4>
+test   %edx,%edx
+jne    0x7ffff7c8d1ce <__GI__IO_un_link+350>
+movq   $0x0,0x18f899(%rip)        # 0x7ffff7e1ca58 <list_all_lock+8>
+xchg   %edx,0x18f88b(%rip)        # 0x7ffff7e1ca50 <list_all_lock>
+cmp    $0x1,%edx
+jg     0x7ffff7c8d280 <__GI__IO_un_link+528>
+mov    %rbp,%rdi
+call   0x7ffff7c91200 <__GI___libc_cleanup_pop_restore>
+endbr64 
+mov    0x18(%rdi),%rax
+mov    %rax,%fs:0x2f8
+mov    0x10(%rdi),%eax
+mov    %al,%fs:0x972
+cmp    $0x1,%eax
+je     0x7ffff7c91228 <__GI___libc_cleanup_pop_restore+40>
+ret    
+mov    0x28(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7c8d2a1 <__GI__IO_un_link+561>
+add    $0x38,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    %rbx,%rdi
+call   0x7ffff7c28370 <free@plt>
+endbr64 
+bnd jmp *0x1f1aa5(%rip)        # 0x7ffff7e19e20
+endbr64 
+test   %rdi,%rdi
+je     0x7ffff7ca54a8 <__GI___libc_free+200>
+push   %rbp
+lea    -0x10(%rdi),%rsi
+push   %rbx
+sub    $0x18,%rsp
+mov    0x174a12(%rip),%rbx        # 0x7ffff7e19e10
+mov    -0x8(%rdi),%rax
+mov    %fs:(%rbx),%ebp
+test   $0x2,%al
+jne    0x7ffff7ca5460 <__GI___libc_free+128>
+mov    0x174998(%rip),%rdx        # 0x7ffff7e19da8
+cmpq   $0x0,%fs:(%rdx)
+je     0x7ffff7ca54b0 <__GI___libc_free+208>
+lea    0x17585e(%rip),%rdi        # 0x7ffff7e1ac80 <main_arena>
+test   $0x4,%al
+je     0x7ffff7ca544c <__GI___libc_free+108>
+xor    %edx,%edx
+call   0x7ffff7ca26a0 <_int_free>
+push   %r15
+push   %r14
+push   %r13
+mov    %edx,%r13d
+push   %r12
+push   %rbp
+push   %rbx
+sub    $0x38,%rsp
+mov    0x8(%rsi),%rdx
+mov    %fs:0x28,%rax
+mov    %rax,0x28(%rsp)
+xor    %eax,%eax
+mov    %rdx,%rbx
+and    $0xfffffffffffffff8,%rbx
+mov    %rbx,%rcx
+neg    %rcx
+cmp    %rcx,%rsi
+ja     0x7ffff7ca2a38 <_int_free+920>
+mov    %rsi,%rbp
+test   $0xf,%sil
+jne    0x7ffff7ca2a38 <_int_free+920>
+cmp    $0x1f,%rbx
+jbe    0x7ffff7ca2a48 <_int_free+936>
+and    $0x8,%edx
+jne    0x7ffff7ca2a48 <_int_free+936>
+mov    0x1776a6(%rip),%rax        # 0x7ffff7e19da8
+mov    %rdi,%r12
+mov    %fs:(%rax),%rsi
+test   %rsi,%rsi
+je     0x7ffff7ca274b <_int_free+171>
+lea    -0x11(%rbx),%rcx
+shr    $0x4,%rcx
+cmp    %rcx,0x177cab(%rip)        # 0x7ffff7e1a3c8 <mp_+104>
+jbe    0x7ffff7ca274b <_int_free+171>
+mov    0x177cb2(%rip),%rdi        # 0x7ffff7e1a3d8 <mp_+120>
+mov    0x17edab(%rip),%r11        # 0x7ffff7e214d8 <tcache_key>
+lea    0x10(%rbp),%r8
+cmp    %r11,0x18(%rbp)
+je     0x7ffff7ca2de0 <_int_free+1856>
+movzwl (%rsi,%rcx,2),%edx
+mov    %rdx,%rax
+cmp    %rdi,%rdx
+jb     0x7ffff7ca2a00 <_int_free+864>
+mov    0x17ead1(%rip),%rdx        # 0x7ffff7e214d8 <tcache_key>
+add    $0x1,%eax
+mov    %rdx,0x18(%rbp)
+mov    %r8,%rdx
+shr    $0xc,%rdx
+xor    0x80(%rsi,%rcx,8),%rdx
+mov    %rdx,0x10(%rbp)
+mov    %r8,0x80(%rsi,%rcx,8)
+mov    %ax,(%rsi,%rcx,2)
+jmp    0x7ffff7ca27e8 <_int_free+328>
+mov    0x28(%rsp),%rax
+sub    %fs:0x28,%rax
+jne    0x7ffff7ca2fc8 <_int_free+2344>
+add    $0x38,%rsp
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+pop    %r14
+pop    %r15
+ret    
+mov    %ebp,%fs:(%rbx)
+add    $0x18,%rsp
+pop    %rbx
+pop    %rbp
+ret    
+add    $0x8,%rsp
+mov    %r12,%rax
+pop    %rbx
+pop    %rbp
+pop    %r12
+pop    %r13
+ret    
+mov    %rax,-0x98(%rbp)
+mov    -0xa8(%rbp),%eax
+imul   -0xa4(%rbp),%eax
+movslq %eax,%rdx
+mov    -0x98(%rbp),%rcx
+mov    -0xa0(%rbp),%rax
+mov    $0x1,%esi
+mov    %rax,%rdi
+call   0x5555555551a0 <fwrite@plt>
+endbr64 
+bnd jmp *0x3e1d(%rip)        # 0x555555558fc8 <fwrite@got.plt>
+endbr64 
+push   %r15
+push   %r14
+push   %r13
+push   %r12
+mov    %rsi,%r12
+push   %rbp
+imul   %rdx,%r12
+push   %rbx
+sub    $0x8,%rsp
+test   %r12,%r12
+je     0x7ffff7c80015 <__GI__IO_fwrite+245>
+mov    (%rcx),%eax
+mov    (%rcx),%eax

@@ -26,6 +26,8 @@ cmake und make:
 - apptasks mit cmake/Debug bauen
 cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Debug 
 -- ci.py nicht vergessen
+ cmake -DCMAKE_BUILD_TYPE=DEBUG build
+
 
 edgedetection:
 ./getfiles.sh aufrufen
