@@ -4,6 +4,7 @@
 #include "constants.h"
 #include "config.cpp"
 #include "estimation/measure.cpp"
+
 #include "math.h" //ceil
 #include "taskmapper/taskmapperresult.cpp"
 #include "taskmapper/taskclasses.cpp"
@@ -57,6 +58,7 @@ int main(int argc, char *argv[]) {
     while (
             //strcasecmp(parameter, "1")!=0 &&
             strcasecmp(parameter, "C")!=0 &&
+            strcasecmp(parameter, "I")!=0 &&
             strcasecmp(parameter, "A")!=0 &&
             strcasecmp(parameter, "B")!=0 &&
             strcasecmp(parameter, "D")!=0 &&
@@ -70,20 +72,24 @@ int main(int argc, char *argv[]) {
             strcasecmp(parameter, "V")!=0
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
-        printf("\t--------- Init -------------------------------------------------------------------\n");
-        printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
-        printf("\t--------- Taskmapper--------------------------------------------------------------\n");
 
+        printf("\t-------------------------- Init -------------------------------------------------------------------\n");
+        printf("\tI (=Init - Vorbedingungen für Experiment prüfen!)\n");
+        printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
+
+        printf("\t--------- Taskmapper--------------------------------------------------------------\n");
         printf("\tA (=Abbildung - 1 AnwTask auf 1 Prototyptask - Test)\n");
         printf("\tB (=Abbildung - 1 AnwTask auf 1 Prototyptask - alle)\n");
         printf("\tD (=Abbildung - 1 AnwTask auf N Prototyptasks - Test)\n");
         printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
-        printf("\t--------- Tasktype Estimator -----------------------------------------------------\n");
+        printf("\tT (=Transfer to epebench)\n");
+
+        printf("\t-------------------------- Tasktype Estimator -----------------------------------------------------\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
         printf("\tU (=Estimation)\n");
-        printf("\t--------- Sonstiges -----------------------------------------------------\n");
-        printf("\tT (=Test: Transfer to epebench)\n");
+
+        printf("\t-------------------------- Sonstiges --------------------------------------------------------------\n");
         printf("\tV (=Versuch...greyscale 1:N)\n");
         printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
@@ -94,9 +100,9 @@ int main(int argc, char *argv[]) {
 
     if (strcasecmp(parameter, "X")==0) {
         return 0;
-    } /*else if (strcasecmp(parameter, "1") == 0) {
-        printf("hallo");
-    }*/ else if (strcasecmp(parameter, "C") == 0) {
+    } else if (strcasecmp(parameter, "I") == 0) {
+        checkPreconditions();
+    } else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(true, true); // Konfigurationsdatei auslesen und Skripte erstellen
     } else if (strcasecmp(parameter, "R")==0) {
         measureAllPrototypTasks(3);
@@ -136,20 +142,7 @@ int main(int argc, char *argv[]) {
         selectCpuFrequency();
     }  else if (strcasecmp(parameter, "T")==0) {
         transferTaskMapToEpEBench();
-        //testDiffSearch();
-        //testPairSearch();
-        //testTripleSearch();
-        //selectCpuFrequency();
-        /*for (int i = 0; i < 10 ; i++) {
-            printf("\n%d %lu", i, measureIdle(1000));
-            //measureIdle(1000);
-            //printf("\nCounter: %lld\n",readEnergy_UJ());
-        }*/
-
-
-
     } else if (strcasecmp(parameter, "V")==0) {
-
         openMeasurLogFile();
         runAndMeasureScript(script_measure);
         closeMeasureLogFile();
@@ -160,6 +153,15 @@ int main(int argc, char *argv[]) {
         saveLineToTaskmapFile("neuesModell", " x=0.99");
         saveLineToTaskmapFile("neuesModell", " y=0.01");*/
 
+        //testDiffSearch();
+        //testPairSearch();
+        //testTripleSearch();
+        //selectCpuFrequency();
+        /*for (int i = 0; i < 10 ; i++) {
+            printf("\n%d %lu", i, measureIdle(1000));
+            //measureIdle(1000);
+            //printf("\nCounter: %lld\n",readEnergy_UJ());
+        }*/
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
         testEstimation();

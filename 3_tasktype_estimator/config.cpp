@@ -5,6 +5,8 @@
 #include "constants.h"
 #include <list>
 #include "vector"
+#include "tools.cpp"
+
 std::string section_tasktypes="TaskTypes";
 
 std::string section_apptasks="ApplicationTasks";
@@ -20,6 +22,8 @@ std::vector<std::string> apptypeVektor;
 std::vector<std::string> cpuFrequencyVektor;
 
 std::vector<std::string> parallelismVektor;
+
+
 
 void writeGenScript(const char* task) {
     FILE* filePointerScript;
@@ -96,7 +100,7 @@ void readConfigFile(bool showEntries, bool generateScripts) {
     mkdir(foldername_generated_scripts_tasktypes.c_str(), 0777);
     mkdir(foldername_generated_scripts_apptasks.c_str(), 0777);
 
-    std::ifstream file(config_filename2);
+    std::ifstream file(config_filename);
     std::string currentSection;
     std::string line;
 
@@ -147,9 +151,6 @@ void readConfigFile(bool showEntries, bool generateScripts) {
         }
     }
 
-
-
-
     if (showEntries) {
         std::cout << "\nFolgende Anwendungstasks sind konfiguriert:\n";
     }
@@ -180,5 +181,184 @@ void readConfigFile(bool showEntries, bool generateScripts) {
         }
 
     }
+}
+
+long unsigned  readEnergy_UJ() {
+    FILE *filePointer;
+    filePointer = popen("cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
+
+    long unsigned energy_ui=0;
+
+    fscanf(filePointer, "%lu", &energy_ui);
+
+    int status = pclose(filePointer);
+    if (WIFEXITED(status)) {
+        int exit_status = WEXITSTATUS(status);
+        if (exit_status == 1) {
+            std::cout << RED << "Fehler beim Lesen von intel-rapl/energy_uj! Root-User? "<< RESET;
+        }
+    }
+
+    return energy_ui;
+}
+
+void checkPreconditions() {
+    std::ifstream file(config_filename);
+
+    if (file.is_open()) {
+        std::cout << "Die Konfigurationsdatei " << config_filename << " ist vorhanden!\n";
+    } else {
+        std::cout << RED << "Die Konfigurationsdatei " << config_filename << " ist nicht vorhanden!" << RESET << "\n";
+    }
+
+    readConfigFile(false, false);
+
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+    std::cout << "Überprüfung generierter Skripte:" << "\n";
+    std::cout << "\tÜberprüfung: Ordner gen/tasktypes:" << "\n";
+    for (std::string s: tasktypeVektor) {
+        char* filename = searchTasktypeFile(s, foldername_generated_scripts_tasktypes);
+
+        if (filename==NULL) {
+            std::cout << RED << "\tFür den Tasktyp " << s << " wurde keine Datei gefunden! " << config_filename << " überprüfen und Config ausführen!" << RESET << "\n";
+        } else {
+            std::cout << "\tFür den Tasktypen " << s << " ist die Datei " << filename << " vorhanden\n";
+        }
+    }
+
+    std::cout << "\n\tÜberprüfung: Ordner gen/tasktypes/onetomany:" << "\n";
+    for (std::string s: apptypeVektor) {
+        char* filename = searchTasktypeFile(s, foldername_generated_scripts_tasktypes_onetomany);
+
+        if (filename==NULL) {
+            std::cout << RED << "\tFür den Tasktyp " << s << " ist im Ordner " << foldername_generated_scripts_tasktypes_onetomany << " keine Datei vorhanden! " << config_filename << " überprüfen und Config ausführen!" << RESET << "\n";
+        } else {
+            std::cout << "\tFür den Apptasks " << s << " ist im Ordner " << foldername_generated_scripts_tasktypes_onetomany << " die Datei " << filename << " vorhanden\n";
+        }
+    }
+
+    std::cout << "\nÜberprüfung: Ordner gen/apptasks:" << "\n";
+    for (std::string s: apptypeVektor) {
+        char* filename = searchTasktypeFile(s, foldername_generated_scripts_apptasks);
+        if (filename==NULL) {
+            std::cout << RED << "\tFür den Apptask " << s << " wurde keine Datei gefunden! " << config_filename << " überprüfen und Config ausführen!" << RESET << "\n";
+        } else {
+            std::cout << "\tFür den Apptasks " << s << " ist die Datei " << filename << " vorhanden\n";
+        }
+
+    }
+
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+    std::cout << "Überprüfung Taskmapper:" << "\n";
+    std::cout << "\nÜberprüfung: Ordner " << foldername_appseq << "\n";
+    for (std::string s: apptypeVektor) {
+        char* filename = searchTasktypeFile(s, foldername_appseq);
+        if (filename==NULL) {
+            std::cout << RED << "\tFür den Apptask " << s << " wurde keine Datei im Ordner " << foldername_appseq << " gefunden! Anwendung 2_apptask_analyzer ausführen!" << RESET << "\n";
+        } else {
+            std::cout << "\tFür den Apptasks " << s << " ist die Datei " << filename << " vorhanden\n";
+        }
+    }
+    std::cout << "\nÜberprüfung: Ordner " << foldername_seq << "\n";
+    for (std::string s: tasktypeVektor) {
+        char* filename = searchTasktypeFile(s, foldername_seq);
+        if (filename==NULL) {
+            std::cout << RED << "\tFür den Tasktyp " << s << " wurde keine Datei im Ordner " << foldername_seq << " gefunden! Anwendung 1_tasktype_analyzer ausführen!" << RESET << "\n";
+        } else {
+            std::cout << "\tFür den Tasktyp " << s << " ist die Datei " << filename << " vorhanden\n";
+        }
+    }
+
+    std::cout << "\nÜberprüfung Taskmapper Ergebnisdatei " << filename_taskmap_result << "\n";
+    for (std::string s: apptypeVektor) {
+        std::ifstream infile(filename_taskmap_result_from_folder);
+        std::string line;
+        std::string currentSection;
+        std::string currentModel;
+        bool one2one = false;
+        bool one2many = false;
+        while (std::getline(infile, line)) {
+            if (line[0] == '[' && line[line.length() - 1] == ']') {
+                currentSection = line.substr(1, line.length() - 2);
+                continue;
+            }
+            if (currentSection==result_section_one2one) {
+                size_t delimiterPos = line.find('=');
+                std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+                if (keyOfCurrentLine==s) {
+                    one2one=true;
+                }
+            }
+            if (currentSection==result_section_one2many) {
+                size_t delimiterPos = line.find('=');
+                std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+                std::string valueInLine = (delimiterPos!=0) ? line.substr(delimiterPos + 1):NULL;
+                if (keyOfCurrentLine == result_section_model) {
+                    currentModel = valueInLine;
+                }
+                if (currentModel == s) {
+                    one2many=true;
+                }
+            }
+
+        }
+
+        if (one2one) {
+            std::cout << "\tFür den appTask " << s << " ist eine 1:1-Abbildung vorhanden!\n";
+        } else {
+            std::cout << RED << "\tFür den appTask " << s << " ist keine 1:1-Abbildung vorhanden! Taskmapper ausführen!\n" << RESET;
+        }
+
+        if (one2many) {
+            std::cout << "\tFür den appTask " << s << " ist eine 1:N-Abbildung vorhanden.\n" << RESET;
+        } else {
+            std::cout << RED << "\tFür den appTask " << s << " ist keine 1:N-Abbildung vorhanden! Taskmapper ausführen!\n" << RESET;
+        }
+    }
+
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+    std::cout << "Überprüfung epEBench " << filename_epebench_ebmodels << "\n";
+
+    for (std::string s: apptypeVektor) {
+        std::ifstream infile(filename_epebench_ebmodels);
+        std::string currentModel;
+        std::string line;
+        bool found = false;
+
+        while (std::getline(infile, line)) {
+            size_t delimiterPos = line.find('=');
+            std::string keyInline = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+            std::string valueInLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+
+            if (keyInline == result_section_model) {
+                if (s == valueInLine) {
+                    found=true;
+                }
+            }
+        }
+
+        if (found) {
+            std::cout << "\tFür den appTask " << s << " ist eine 1:N-Abbildung in " << filename_epebench_ebmodels << " vorhanden!\n";
+        } else {
+            std::cout << RED << "\tFür den appTask " << s << " ist keine 1:N-Abbildung in " << filename_epebench_ebmodels << " vorhanden! Wurde die Taskmap nach epebench übertragen?\n" << RESET;
+        }
+    }
+
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+
+    std::cout << "Überprüfung Zugriff auf energy_uj:\n\n";
+    readEnergy_UJ();
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+
+    std::cout << "\n\nÜberprüfung Zugriff auf frequency-info\n";
+    system("cpupower frequency-info");
+
+
+
+    //./edgedetection imgfilenames $CORES checkcontrast
+
+
+
+
 }
 

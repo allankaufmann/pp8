@@ -5,14 +5,7 @@ std::vector<PrototypTask> prottaskVektor;
 std::vector<AnwTask> apptaskVektor;
 std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf Map
 std::ofstream logfileTaskmapper;
-static const char *const logfolder_taskmapper = "logs/taskmapper/";
 
-std::string result_section_log="Log";
-std::string result_section_one2one="OneToOne";
-std::string result_section_one2many="OneToMany";
-std::string result_section_model="model";
-std::string result_section_end_model="end_model";
-std::string result_section_end_model_space="end_model ";
 
 char* currentLogfileName;
 
@@ -138,7 +131,7 @@ void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmap
  * @param model das Modell, das entfernt werden soll
  */
 void dropModelInTaskmapFile(std::string model) {
-    std::ifstream infile(filename_taskmap_result);
+    std::ifstream infile(filename_taskmap_result_from_folder);
     std::list<std::string> lines;
     std::string currentSection;
     std::string currentModel;
@@ -166,7 +159,7 @@ void dropModelInTaskmapFile(std::string model) {
         }
     }
     infile.close();
-    std::ofstream oufile(filename_taskmap_result);
+    std::ofstream oufile(filename_taskmap_result_from_folder);
     for (std::string l : lines) {
         oufile << l << "\n";
     }
@@ -174,7 +167,7 @@ void dropModelInTaskmapFile(std::string model) {
 }
 
 void saveLineToTaskmapFile(std::string sectionToUpdate, std::string newLineToUpdate) {
-    std::ifstream infile(filename_taskmap_result);
+    std::ifstream infile(filename_taskmap_result_from_folder);
     std::set<std::string> logs;
     std::list<std::string> oneToOne;
     bool updateOneToOneKey = false;
@@ -339,7 +332,7 @@ AnwTask logBestTask(AnwTask appTask, bool percent, bool savetofile) {
 }
 
 void transferTaskMapToEpEBench() {
-    std::ifstream infile(filename_taskmap_result);
+    std::ifstream infile(filename_taskmap_result_from_folder);
     std::string currentSection;
     std::string currentModel;
 

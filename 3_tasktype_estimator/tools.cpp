@@ -1,10 +1,20 @@
 
-#include <set>
+
+#include <unistd.h>
+#include <fstream>
+#include "tools.hpp"
+
+#include <ctype.h>
+#include <sys/types.h>
+#include <sys/stat.h> //mkdir
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
 #include <vector>
+
+
+
 
 std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
     std::vector<char*> v;
@@ -82,4 +92,17 @@ void extractTaskNameFromFileName(const char* filename, char* taskname) {
     } else {
         taskname[0] = '\0'; // If no '/' and '.', return an empty string
     }
+}
+
+char* searchTasktypeFile(std::string tasktypename, std::string folder) {
+    std::vector<char*> v_filenames = readFilenamesFromDirectory(folder.c_str());
+
+    for (char* filename : v_filenames) {
+        char c_taskname[strlen(filename)];
+        extractTaskNameFromFileName(filename, c_taskname);
+        if (strcmp(c_taskname, tasktypename.c_str())==0) {
+            return filename;
+        }
+    }
+    return NULL;
 }

@@ -5,19 +5,16 @@
 std::ofstream resultFile;
 
 void openResultFile() {
-    resultFile.open(filename_estimation_result);
-    chmod(filename_estimation_result.c_str(), 0777);
+    resultFile.open(filename_estimation_result_from_folder);
+    chmod(filename_estimation_result_from_folder.c_str(), 0777);
 }
 
 void closeResultFile() {
     resultFile.close();
 }
 
-
-
-
 std::string readOneToOneMapping(std::string apptaskname) {
-    std::ifstream infile(filename_taskmap_result);
+    std::ifstream infile(filename_taskmap_result_from_folder);
     std::string line;
     std::string currentSection;
     while (std::getline(infile, line)) {

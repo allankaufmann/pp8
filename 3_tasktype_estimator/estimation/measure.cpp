@@ -8,7 +8,8 @@
 #include <ctype.h>
 #include "vector"
 #include "../constants.h"
-#include "../tools.cpp"
+
+
 #include <vector>
 #include <fstream>
 #include <unistd.h>
@@ -38,8 +39,6 @@ public:
     float powerOneToMany() {
         return energy_my_one_to_many/duration_one_to_many;
     }
-
-
 };
 
 
@@ -76,26 +75,6 @@ long long readCounterFromFile() {
 
 
     return counter;
-}
-
-long long  readEnergy_UJ_script_deprecated() {
-    system("./scripts/readEnergy_UJ.sh");
-    return readCounterFromFile();
-}
-
-
-
-long unsigned  readEnergy_UJ() {
-    FILE *filePointer;
-    filePointer = popen("cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
-
-    long unsigned energy_ui=0;
-
-    fscanf(filePointer, "%lu", &energy_ui);
-    //printf("%lu\n", energy_ui);
-
-    pclose(filePointer);
-    return energy_ui;
 }
 
 long unsigned  readEnergy_UJ_better_with_loop() {
@@ -163,9 +142,6 @@ void logMeasureNewLine() {
     fprintf(logfileMeasure, "\n");
 }
 
-
-
-
 void runCommand(const char* command) {
     std::cout << "Skript " << command << " wird gestartet" << std::endl;
     system(command);
@@ -214,20 +190,6 @@ void runAndMeasureScriptsFromDirectory(int count, const char* directory, const c
 }
 
 
-
-char* searchTasktypeFile(std::string tasktypename, std::string folder) {
-    std::vector<char*> v_filenames = readFilenamesFromDirectory(folder.c_str());
-
-    for (char* filename : v_filenames) {
-        char c_taskname[strlen(filename)];
-        extractTaskNameFromFileName(filename, c_taskname);
-        if (strcmp(c_taskname, tasktypename.c_str())==0) {
-            return filename;
-        }
-    }
-    return NULL;
-}
-
 std::string  getFilenameWithParam(char* filename, std::string cores) {
     std::string fileNameWithParam = filename;
     fileNameWithParam+= " " + cores;
@@ -236,8 +198,6 @@ std::string  getFilenameWithParam(char* filename, std::string cores) {
 
 MeasureResult estimateAppTask(std::string apptaskname, std::string taskname, std::string cpufreq, std::string cores) {
     char* filename = searchTasktypeFile(taskname, foldername_generated_scripts_tasktypes_from_folder);
-
-
 
     std::string fileWithParam = getFilenameWithParam(filename, cores);
 
@@ -248,7 +208,6 @@ MeasureResult estimateAppTask(std::string apptaskname, std::string taskname, std
 
     char* filenameOneToMany = searchTasktypeFile(apptaskname, foldername_generated_scripts_tasktypes_onetomany);
     std::string filenameOneToManyWithParam = getFilenameWithParam(filenameOneToMany, cores);
-
 
     MeasureResult resultOneToMany = runAndMeasureScript(filenameOneToManyWithParam.c_str());
     result.duration_one_to_many = resultOneToMany.duration;
