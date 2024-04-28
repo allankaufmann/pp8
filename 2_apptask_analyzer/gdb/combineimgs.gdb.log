@@ -223,7 +223,7 @@ getwidth (source=0x5555575c82d0, which=1) at /home/allan/git/pp8/2_apptask_analy
 0x0000555555555b91	182	            valh = (int)getpixel(imgh, x, y);
 0x0000555555555b93	182	            valh = (int)getpixel(imgh, x, y);
 0x0000555555555b96	182	            valh = (int)getpixel(imgh, x, y);
-getpixel (source=0x5555575c82d0, x=2, y=-9208) at /home/allan/git/pp8/2_apptask_analyzer/img.c:99
+getpixel (source=0x5555575c82d0, x=2, y=-9128) at /home/allan/git/pp8/2_apptask_analyzer/img.c:99
 99	{
 0x00005555555566bf	99	{
 0x00005555555566c0	99	{
@@ -35693,7 +35693,7 @@ combineimgs (imgh=0x5555575c82d0, imgv=0x5555575c84d0) at /home/allan/git/pp8/2_
 0x0000555555555c3b	191	}
 0x0000555555555c3c	191	}
 0x0000555555555c3d	191	}
-0x00005555555562b4 in main (argc=2, argv=0x7fffffffdc08) at /home/allan/git/pp8/2_apptask_analyzer/main.c:88
+0x00005555555562b4 in main (argc=2, argv=0x7fffffffdc58) at /home/allan/git/pp8/2_apptask_analyzer/main.c:88
 88	            combineimgs(imgh,imgv);
 108	    return 0;
 109	}
@@ -35701,7 +35701,7 @@ combineimgs (imgh=0x5555575c82d0, imgv=0x5555575c84d0) at /home/allan/git/pp8/2_
 0x00005555555563b5	109	}
 0x00005555555563bc	109	}
 0x00005555555563bd	109	}
-0x00007ffff7c29d90 in __libc_start_call_main (main=main@entry=0x555555555e57 <main>, argc=argc@entry=2, argv=argv@entry=0x7fffffffdc08) at ../sysdeps/nptl/libc_start_call_main.h:58
+0x00007ffff7c29d90 in __libc_start_call_main (main=main@entry=0x555555555e57 <main>, argc=argc@entry=2, argv=argv@entry=0x7fffffffdc58) at ../sysdeps/nptl/libc_start_call_main.h:58
 74	in ../sysdeps/nptl/libc_start_call_main.h
 __GI_exit (status=0) at ./stdlib/exit.c:142
 0x00007ffff7c455f4	142	in ./stdlib/exit.c
@@ -35970,7 +35970,7 @@ _dl_fini () at ./elf/dl-fini.c:73
 0x00007ffff7fc91b5	99	in ./elf/dl-fini.c
 0x00007ffff7fc91b8	99	in ./elf/dl-fini.c
 0x00007ffff7fc91bb	99	in ./elf/dl-fini.c
-_dl_sort_maps (maps=maps@entry=0x7fffffffd9f0, nmaps=nmaps@entry=5, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:290
+_dl_sort_maps (maps=maps@entry=0x7fffffffda40, nmaps=nmaps@entry=5, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:290
 0x00007ffff7fd6734	290	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6735	290	in ./elf/dl-sort-maps.c
 298	in ./elf/dl-sort-maps.c
@@ -36044,17 +36044,17 @@ _dl_sort_maps (maps=maps@entry=0x7fffffffd9f0, nmaps=nmaps@entry=5, skip=skip@en
 231	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a69 in dfs_traversal (do_reldeps=<optimized out>, map=<optimized out>, rpo=<optimized out>) at ./elf/dl-sort-maps.c:231
 231	in ./elf/dl-sort-maps.c
-0x00007ffff7fd6a6d in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:231
+0x00007ffff7fd6a6d in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:231
 231	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a70	231	in ./elf/dl-sort-maps.c
 235	in ./elf/dl-sort-maps.c
-dfs_traversal (do_reldeps=0x7fffffffd99f, map=0x7ffff7ffdaf0 <_rtld_global+2736>, rpo=0x7fffffffd9a0) at ./elf/dl-sort-maps.c:145
+dfs_traversal (do_reldeps=0x7fffffffd9ef, map=0x7ffff7ffdaf0 <_rtld_global+2736>, rpo=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:145
 145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
-dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffdaf0 <_rtld_global+2736>, do_reldeps=do_reldeps@entry=0x7fffffffd99f) at ./elf/dl-sort-maps.c:148
+dfs_traversal (rpo=rpo@entry=0x7fffffffd9f0, map=0x7ffff7ffdaf0 <_rtld_global+2736>, do_reldeps=do_reldeps@entry=0x7fffffffd9ef) at ./elf/dl-sort-maps.c:148
 148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
@@ -36082,20 +36082,20 @@ dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffdaf0 <_rtld_global+27
 0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
-_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:238
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:238
 238	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
 233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
 235	in ./elf/dl-sort-maps.c
-dfs_traversal (do_reldeps=0x7fffffffd99f, map=0x7ffff7fbb660, rpo=0x7fffffffd9a0) at ./elf/dl-sort-maps.c:145
+dfs_traversal (do_reldeps=0x7fffffffd9ef, map=0x7ffff7fbb660, rpo=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:145
 145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
-dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7fbb660, do_reldeps=do_reldeps@entry=0x7fffffffd99f) at ./elf/dl-sort-maps.c:148
+dfs_traversal (rpo=rpo@entry=0x7fffffffd9f0, map=0x7ffff7fbb660, do_reldeps=do_reldeps@entry=0x7fffffffd9ef) at ./elf/dl-sort-maps.c:148
 148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
@@ -36139,20 +36139,20 @@ dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7fbb660, do_reldeps=do_r
 0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
-_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:238
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:238
 238	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
 233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
 235	in ./elf/dl-sort-maps.c
-dfs_traversal (do_reldeps=0x7fffffffd99f, map=0x7ffff7fbb160, rpo=0x7fffffffd9a0) at ./elf/dl-sort-maps.c:145
+dfs_traversal (do_reldeps=0x7fffffffd9ef, map=0x7ffff7fbb160, rpo=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:145
 145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
-dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7fbb160, do_reldeps=do_reldeps@entry=0x7fffffffd99f) at ./elf/dl-sort-maps.c:148
+dfs_traversal (rpo=rpo@entry=0x7fffffffd9f0, map=0x7ffff7fbb160, do_reldeps=do_reldeps@entry=0x7fffffffd9ef) at ./elf/dl-sort-maps.c:148
 148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
@@ -36202,20 +36202,20 @@ dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7fbb160, do_reldeps=do_r
 0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
-_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:238
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:238
 238	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
 233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
 235	in ./elf/dl-sort-maps.c
-dfs_traversal (do_reldeps=0x7fffffffd99f, map=0x7ffff7ffe890, rpo=0x7fffffffd9a0) at ./elf/dl-sort-maps.c:145
+dfs_traversal (do_reldeps=0x7fffffffd9ef, map=0x7ffff7ffe890, rpo=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:145
 145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
-dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffe890, do_reldeps=do_reldeps@entry=0x7fffffffd99f) at ./elf/dl-sort-maps.c:148
+dfs_traversal (rpo=rpo@entry=0x7fffffffd9f0, map=0x7ffff7ffe890, do_reldeps=do_reldeps@entry=0x7fffffffd9ef) at ./elf/dl-sort-maps.c:148
 148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
@@ -36243,20 +36243,20 @@ dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffe890, do_reldeps=do_r
 0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
-_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:238
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:238
 238	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
 233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7c	233	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a7f	233	in ./elf/dl-sort-maps.c
 235	in ./elf/dl-sort-maps.c
-dfs_traversal (do_reldeps=0x7fffffffd99f, map=0x7ffff7ffe2e0, rpo=0x7fffffffd9a0) at ./elf/dl-sort-maps.c:145
+dfs_traversal (do_reldeps=0x7fffffffd9ef, map=0x7ffff7ffe2e0, rpo=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:145
 145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a90	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a92	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a95	145	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6a98	145	in ./elf/dl-sort-maps.c
-dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffe2e0, do_reldeps=do_reldeps@entry=0x7fffffffd99f) at ./elf/dl-sort-maps.c:148
+dfs_traversal (rpo=rpo@entry=0x7fffffffd9f0, map=0x7ffff7ffe2e0, do_reldeps=do_reldeps@entry=0x7fffffffd9ef) at ./elf/dl-sort-maps.c:148
 148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6622	148	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6625	148	in ./elf/dl-sort-maps.c
@@ -36312,7 +36312,7 @@ dfs_traversal (rpo=rpo@entry=0x7fffffffd9a0, map=0x7ffff7ffe2e0, do_reldeps=do_r
 0x00007ffff7fd6686	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6688	178	in ./elf/dl-sort-maps.c
 0x00007ffff7fd668a	178	in ./elf/dl-sort-maps.c
-_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffd9f0) at ./elf/dl-sort-maps.c:238
+_dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=5, maps=0x7fffffffda40) at ./elf/dl-sort-maps.c:238
 238	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6aa1	238	in ./elf/dl-sort-maps.c
 256	in ./elf/dl-sort-maps.c
@@ -36341,9 +36341,9 @@ memmove () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:212
 432	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
 memmove () at ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:433
 433	in ../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
-0x00007ffff7fd6b8c in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=19, maps=0x7fffffffd910) at ./elf/dl-sort-maps.c:276
+0x00007ffff7fd6b8c in _dl_sort_maps_dfs (skip=0, for_fini=<optimized out>, nmaps=19, maps=0x7fffffffd960) at ./elf/dl-sort-maps.c:276
 0x00007ffff7fd6afa	269	in ./elf/dl-sort-maps.c
-0x00007ffff7fd6afd in _dl_sort_maps (maps=maps@entry=0x7fffffffd9f0, nmaps=nmaps@entry=5, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:302
+0x00007ffff7fd6afd in _dl_sort_maps (maps=maps@entry=0x7fffffffda40, nmaps=nmaps@entry=5, skip=skip@entry=1, for_fini=for_fini@entry=true) at ./elf/dl-sort-maps.c:302
 302	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6870	302	in ./elf/dl-sort-maps.c
 0x00007ffff7fd6874	302	in ./elf/dl-sort-maps.c
@@ -36850,7 +36850,7 @@ _IO_flush_all_lockp (do_lock=do_lock@entry=0) at ./libio/genops.c:686
 691	in ./libio/genops.c
 0x00007ffff7c8e91d	691	in ./libio/genops.c
 691	in ./libio/genops.c
-__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd9a0) at ./nptl/libc-cleanup.c:24
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd9f0) at ./nptl/libc-cleanup.c:24
 27	in ./nptl/libc-cleanup.c
 27	in ./nptl/libc-cleanup.c
 30	in ./nptl/libc-cleanup.c
@@ -37097,7 +37097,7 @@ _IO_new_do_write (to_do=387, data=0x5555575c72a0 "Anzahl Argumente: 2\n0. Argume
 0x00007ffff7c8eab7	715	in ./libio/genops.c
 716	in ./libio/genops.c
 0x00007ffff7c8eabc	716	in ./libio/genops.c
-__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd9a0) at ./nptl/libc-cleanup.c:39
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd9f0) at ./nptl/libc-cleanup.c:39
 42	in ./nptl/libc-cleanup.c
 0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
 44	in ./nptl/libc-cleanup.c
@@ -37126,7 +37126,7 @@ _IO_unbuffer_all () at ./libio/genops.c:786
 786	in ./libio/genops.c
 0x00007ffff7c8eb94	786	in ./libio/genops.c
 786	in ./libio/genops.c
-__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffda20) at ./nptl/libc-cleanup.c:24
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffda70) at ./nptl/libc-cleanup.c:24
 27	in ./nptl/libc-cleanup.c
 27	in ./nptl/libc-cleanup.c
 30	in ./nptl/libc-cleanup.c
@@ -37337,7 +37337,7 @@ _IO_unbuffer_all () at ./libio/genops.c:826
 0x00007ffff7c8ed2f	842	in ./libio/genops.c
 843	in ./libio/genops.c
 0x00007ffff7c8ed34	843	in ./libio/genops.c
-__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffda20) at ./nptl/libc-cleanup.c:39
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffda70) at ./nptl/libc-cleanup.c:39
 42	in ./nptl/libc-cleanup.c
 0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
 44	in ./nptl/libc-cleanup.c
@@ -37369,5 +37369,5 @@ __GI__exit (status=status@entry=0) at ../sysdeps/unix/sysv/linux/_exit.c:27
 0x00007ffff7ceac15	31	in ../sysdeps/unix/sysv/linux/_exit.c
 30	in ../sysdeps/unix/sysv/linux/_exit.c
 0x00007ffff7ceac2f	30	in ../sysdeps/unix/sysv/linux/_exit.c
-[Inferior 1 (process 10575) exited normally]
+[Inferior 1 (process 9960) exited normally]
 Error 

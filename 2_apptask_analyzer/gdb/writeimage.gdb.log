@@ -2,7 +2,7 @@ Haltepunkt 1 at 0x1d54: file /home/allan/git/pp8/2_apptask_analyzer/edgedetectio
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
-Breakpoint 1, writeimage (img=0x5555575c82d0, filename=0x7fffffffdaa0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:210
+Breakpoint 1, writeimage (img=0x5555575c82d0, filename=0x7fffffffdaf0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:210
 210	{
 Haltepunkt 2 at 0x555555555e31: file /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c, line 226.
 0x0000555555555d5d	210	{
@@ -19,7 +19,7 @@ Haltepunkt 2 at 0x555555555e31: file /home/allan/git/pp8/2_apptask_analyzer/edge
 0x0000555555555d92	218	    snprintf(outfilename, sizeof(outfilename), "%s%s_COMBINED.bin", OUTPUTPATH, filename);
 0x0000555555555160 in snprintf@plt ()
 0x0000555555555164 in snprintf@plt ()
-__GI___snprintf (s=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=128, format=0x5555555570f6 "%s%s_COMBINED.bin") at ./stdio-common/snprintf.c:26
+__GI___snprintf (s=0x7fffffffda10 "h\270\341\367\377\177", maxlen=128, format=0x5555555570f6 "%s%s_COMBINED.bin") at ./stdio-common/snprintf.c:26
 0x00007ffff7c607c4	26	in ./stdio-common/snprintf.c
 0x00007ffff7c607cb	26	in ./stdio-common/snprintf.c
 0x00007ffff7c607d0	26	in ./stdio-common/snprintf.c
@@ -38,7 +38,7 @@ __GI___snprintf (s=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=128, format=0x
 0x00007ffff7c60844	30	in ./stdio-common/snprintf.c
 0x00007ffff7c6084c	30	in ./stdio-common/snprintf.c
 31	in ./stdio-common/snprintf.c
-__vsnprintf_internal (string=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=128, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:95
+__vsnprintf_internal (string=0x7fffffffda10 "h\270\341\367\377\177", maxlen=128, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:95
 0x00007ffff7c883f4	95	in ./libio/vsnprintf.c
 0x00007ffff7c883f6	95	in ./libio/vsnprintf.c
 0x00007ffff7c883f9	95	in ./libio/vsnprintf.c
@@ -66,7 +66,7 @@ __vsnprintf_internal (string=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=128,
 0x00007ffff7c88459	110	in ./libio/vsnprintf.c
 0x00007ffff7c8845c	110	in ./libio/vsnprintf.c
 110	in ./libio/vsnprintf.c
-_IO_no_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768, orientation=orientation@entry=-1, wd=wd@entry=0x0, jmp=jmp@entry=0x0) at ./libio/genops.c:563
+_IO_no_init (fp=fp@entry=0x7fffffffd780, flags=flags@entry=32768, orientation=orientation@entry=-1, wd=wd@entry=0x0, jmp=jmp@entry=0x0) at ./libio/genops.c:563
 564	in ./libio/genops.c
 0x00007ffff7c8e656	564	in ./libio/genops.c
 0x00007ffff7c8e659	564	in ./libio/genops.c
@@ -77,7 +77,7 @@ _IO_no_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768, orientation=or
 0x00007ffff7c8e663	564	in ./libio/genops.c
 0x00007ffff7c8e666	564	in ./libio/genops.c
 0x00007ffff7c8e66a	564	in ./libio/genops.c
-_IO_old_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768) at ./libio/genops.c:531
+_IO_old_init (fp=fp@entry=0x7fffffffd780, flags=flags@entry=32768) at ./libio/genops.c:531
 531	in ./libio/genops.c
 532	in ./libio/genops.c
 0x00007ffff7c8e5ea	532	in ./libio/genops.c
@@ -101,7 +101,7 @@ _IO_old_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768) at ./libio/ge
 555	in ./libio/genops.c
 0x00007ffff7c8e636	555	in ./libio/genops.c
 0x00007ffff7c8e647	558	in ./libio/genops.c
-_IO_no_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768, orientation=orientation@entry=-1, wd=wd@entry=0x0, jmp=jmp@entry=0x0) at ./libio/genops.c:565
+_IO_no_init (fp=fp@entry=0x7fffffffd780, flags=flags@entry=32768, orientation=orientation@entry=-1, wd=wd@entry=0x0, jmp=jmp@entry=0x0) at ./libio/genops.c:565
 565	in ./libio/genops.c
 566	in ./libio/genops.c
 0x00007ffff7c8e679	566	in ./libio/genops.c
@@ -114,7 +114,7 @@ _IO_no_init (fp=fp@entry=0x7fffffffd730, flags=flags@entry=32768, orientation=or
 0x00007ffff7c8e6b9	588	in ./libio/genops.c
 0x00007ffff7c8e6bb	588	in ./libio/genops.c
 0x00007ffff7c8e6bd	588	in ./libio/genops.c
-__vsnprintf_internal (string=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:111
+__vsnprintf_internal (string=0x7fffffffda10 "h\270\341\367\377\177", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:111
 0x00007ffff7c88469	111	in ./libio/vsnprintf.c
 0x00007ffff7c8846c	111	in ./libio/vsnprintf.c
 0x00007ffff7c8846f	111	in ./libio/vsnprintf.c
@@ -122,7 +122,7 @@ __vsnprintf_internal (string=0x7fffffffd9c0 "h\270\341\367\377\177", maxlen=<opt
 0x00007ffff7c88479	111	in ./libio/vsnprintf.c
 112	in ./libio/vsnprintf.c
 113	in ./libio/vsnprintf.c
-_IO_str_init_static_internal (sf=sf@entry=0x7fffffffd730, ptr=ptr@entry=0x7fffffffd9c0 "", size=size@entry=127, pstart=pstart@entry=0x7fffffffd9c0 "") at ./libio/strops.c:36
+_IO_str_init_static_internal (sf=sf@entry=0x7fffffffd780, ptr=ptr@entry=0x7fffffffda10 "", size=size@entry=127, pstart=pstart@entry=0x7fffffffda10 "") at ./libio/strops.c:36
 0x00007ffff7c8f9b4	36	in ./libio/strops.c
 0x00007ffff7c8f9b6	36	in ./libio/strops.c
 0x00007ffff7c8f9bb	36	in ./libio/strops.c
@@ -149,7 +149,7 @@ _IO_str_init_static_internal (sf=sf@entry=0x7fffffffd730, ptr=ptr@entry=0x7fffff
 0x00007ffff7c8f9f0	46	in ./libio/strops.c
 0x00007ffff7c8f9f3	46	in ./libio/strops.c
 0x00007ffff7c8f9f6	46	in ./libio/strops.c
-__GI__IO_setb (f=f@entry=0x7fffffffd730, b=b@entry=0x7fffffffd9c0 "", eb=eb@entry=0x7fffffffda3f "", a=a@entry=0) at ./libio/genops.c:329
+__GI__IO_setb (f=f@entry=0x7fffffffd780, b=b@entry=0x7fffffffda10 "", eb=eb@entry=0x7fffffffda8f "", a=a@entry=0) at ./libio/genops.c:329
 0x00007ffff7c8dc24	329	in ./libio/genops.c
 0x00007ffff7c8dc25	329	in ./libio/genops.c
 0x00007ffff7c8dc2a	329	in ./libio/genops.c
@@ -173,7 +173,7 @@ __GI__IO_setb (f=f@entry=0x7fffffffd730, b=b@entry=0x7fffffffd9c0 "", eb=eb@entr
 0x00007ffff7c8dc63	338	in ./libio/genops.c
 0x00007ffff7c8dc64	338	in ./libio/genops.c
 0x00007ffff7c8dc65	338	in ./libio/genops.c
-_IO_str_init_static_internal (sf=sf@entry=0x7fffffffd730, ptr=ptr@entry=0x7fffffffd9c0 "", size=size@entry=127, pstart=pstart@entry=0x7fffffffd9c0 "") at ./libio/strops.c:51
+_IO_str_init_static_internal (sf=sf@entry=0x7fffffffd780, ptr=ptr@entry=0x7fffffffda10 "", size=size@entry=127, pstart=pstart@entry=0x7fffffffda10 "") at ./libio/strops.c:51
 0x00007ffff7c8f9fe	51	in ./libio/strops.c
 0x00007ffff7c8fa00	51	in ./libio/strops.c
 0x00007ffff7c8fa03	50	in ./libio/strops.c
@@ -194,12 +194,12 @@ _IO_str_init_static_internal (sf=sf@entry=0x7fffffffd730, ptr=ptr@entry=0x7fffff
 0x00007ffff7c8fa46	64	in ./libio/strops.c
 0x00007ffff7c8fa48	65	in ./libio/strops.c
 0x00007ffff7c8fa4a	65	in ./libio/strops.c
-__vsnprintf_internal (string=0x7fffffffd9c0 "", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:114
+__vsnprintf_internal (string=0x7fffffffda10 "", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:114
 0x00007ffff7c8848c	114	in ./libio/vsnprintf.c
 0x00007ffff7c8848f	114	in ./libio/vsnprintf.c
 0x00007ffff7c88492	114	in ./libio/vsnprintf.c
 0x00007ffff7c88495	114	in ./libio/vsnprintf.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1180
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1180
 0x00007ffff7c75034	1180	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75036	1180	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75038	1180	in ./stdio-common/vfprintf-internal.c
@@ -231,7 +231,7 @@ __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f
 1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750b6 in __find_specmb (format=<optimized out>) at ./stdio-common/printf-parse.h:111
 0x00007ffff7c750bb	111	in ./stdio-common/printf-parse.h
-0x00007ffff7c750c0 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1244
+0x00007ffff7c750c0 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1244
 0x00007ffff7c750c4	1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750cc	1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750d0	1244	in ./stdio-common/vfprintf-internal.c
@@ -259,37 +259,37 @@ __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
 0x00007ffff7d9d448 in __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:79
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
-0x00007ffff7c750e2 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+0x00007ffff7c750e2 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
 0x00007ffff7c750ea in __find_specmb (format=0x5555555570f6 "%s%s_COMBINED.bin") at ./stdio-common/printf-parse.h:111
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
 0x00007ffff7c750f7	1259	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750fa	1259	in ./stdio-common/vfprintf-internal.c
 outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:1263
 1263	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75107 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:940
-0x00007ffff7c7510e in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+0x00007ffff7c7510e in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 0x00007ffff7c75113 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
 0x00007ffff7c7511a	940	in ../libio/libioP.h
-0x00007ffff7c75121 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+0x00007ffff7c75121 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 IO_validate_vtable (vtable=0x7ffff7e17300 <_IO_strn_jumps>) at ../libio/libioP.h:940
 0x00007ffff7c7512b	940	in ../libio/libioP.h
 943	in ../libio/libioP.h
 0x00007ffff7c75131	943	in ../libio/libioP.h
 0x00007ffff7c75134	943	in ../libio/libioP.h
 0x00007ffff7c75137	943	in ../libio/libioP.h
-outstring_func (done=0, length=0, string=0x5555555570f6 "%s%s_COMBINED.bin", s=0x7fffffffd730) at ../libio/libioP.h:947
+outstring_func (done=0, length=0, string=0x5555555570f6 "%s%s_COMBINED.bin", s=0x7fffffffd780) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c75142	947	in ../libio/libioP.h
 0x00007ffff7c75145	947	in ../libio/libioP.h
 0x00007ffff7c75148	947	in ../libio/libioP.h
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570f6, n=0) at ./libio/genops.c:371
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570f6, n=0) at ./libio/genops.c:371
 374	in ./libio/genops.c
 0x00007ffff7c8ddc7	374	in ./libio/genops.c
 0x00007ffff7c8dfa0 in __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:393
 393	in ./libio/genops.c
-0x00007ffff7c8dfa2 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570f6, n=0) at ./libio/genops.c:404
+0x00007ffff7c8dfa2 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570f6, n=0) at ./libio/genops.c:404
 404	in ./libio/genops.c
-0x00007ffff7c7514d in outstring_func (done=0, length=0, string=0x5555555570f6 "%s%s_COMBINED.bin", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c7514d in outstring_func (done=0, length=0, string=0x5555555570f6 "%s%s_COMBINED.bin", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75150	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=0, length=0) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -301,7 +301,7 @@ done_add_func (done=0, length=0) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c7516b	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7516e	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75170	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 1263	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75178	1263	in ./stdio-common/vfprintf-internal.c
 1267	in ./stdio-common/vfprintf-internal.c
@@ -351,7 +351,7 @@ __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f
 0x00007ffff7c75263	1303	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75269	1501	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75270 in read_int (pstr=<optimized out>) at ./stdio-common/printf-parse.h:88
-0x00007ffff7c75276 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
+0x00007ffff7c75276 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
 0x00007ffff7c7527a	1306	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75282	1302	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7528a	1352	in ./stdio-common/vfprintf-internal.c
@@ -402,24 +402,24 @@ __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:50
 90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
 0x00007ffff7d9d810 in __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:90
 90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
-0x00007ffff7c76d31 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+0x00007ffff7c76d31 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 0x00007ffff7c76d34	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758d9	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758de	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758e1	1517	in ./stdio-common/vfprintf-internal.c
-outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 239	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17300 <_IO_strn_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c76fee	943	in ../libio/libioP.h
 0x00007ffff7c76ff1	942	in ../libio/libioP.h
 0x00007ffff7c76ff4	943	in ../libio/libioP.h
 0x00007ffff7c76ff9	943	in ../libio/libioP.h
-outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd730) at ../libio/libioP.h:947
+outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd780) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c77002	947	in ../libio/libioP.h
 0x00007ffff7c77005	947	in ../libio/libioP.h
 0x00007ffff7c77008	947	in ../libio/libioP.h
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570e9, n=12) at ./libio/genops.c:371
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570e9, n=12) at ./libio/genops.c:371
 374	in ./libio/genops.c
 0x00007ffff7c8ddc7	374	in ./libio/genops.c
 0x00007ffff7c8ddcd	371	in ./libio/genops.c
@@ -431,11 +431,11 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570e9, n=12) at ./libio
 0x00007ffff7c8dddc	371	in ./libio/genops.c
 0x00007ffff7c8dddf	371	in ./libio/genops.c
 0x00007ffff7c8dde1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570e9, n=12) at ./libio/genops.c:371
+0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570e9, n=12) at ./libio/genops.c:371
 0x00007ffff7c8dde9 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570e9, n=12) at ./libio/genops.c:371
+0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570e9, n=12) at ./libio/genops.c:371
 0x00007ffff7c8ddf1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570e9, n=12) at ./libio/genops.c:371
+0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570e9, n=12) at ./libio/genops.c:371
 0x00007ffff7c8ddf8	371	in ./libio/genops.c
 __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:379
 379	in ./libio/genops.c
@@ -489,7 +489,7 @@ __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized o
 397	in ./libio/genops.c
 399	in ./libio/genops.c
 0x00007ffff7c8de0f	399	in ./libio/genops.c
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
 403	in ./libio/genops.c
 0x00007ffff7c8deb7	375	in ./libio/genops.c
 0x00007ffff7c8deba	404	in ./libio/genops.c
@@ -499,7 +499,7 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized ou
 0x00007ffff7c8dec0	404	in ./libio/genops.c
 0x00007ffff7c8dec2	404	in ./libio/genops.c
 0x00007ffff7c8dec4	404	in ./libio/genops.c
-0x00007ffff7c7700c in outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c7700c in outstring_func (done=0, length=12, string=0x5555555570e9 "./outimages/", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c7700f	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=0, length=12) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -515,12 +515,12 @@ done_add_func (done=0, length=12) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75cd7	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cda	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cdc	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ce4	1517	in ./stdio-common/vfprintf-internal.c
 1589	in ./stdio-common/vfprintf-internal.c
 __find_specmb (format=0x5555555570f8 "%s_COMBINED.bin") at ./stdio-common/printf-parse.h:111
-0x00007ffff7c75f89 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
+0x00007ffff7c75f89 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
 0x00007ffff7c75f8e in __find_specmb (format=0x5555555570f8 "%s_COMBINED.bin") at ./stdio-common/printf-parse.h:111
 0x00007ffff7c75f91	111	in ./stdio-common/printf-parse.h
 0x00007ffff7c284d0 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
@@ -547,27 +547,27 @@ __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
 0x00007ffff7c75f96 in outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75f9d in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
-0x00007ffff7c75fa4 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fa4 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 0x00007ffff7c75fa7 in __find_specmb (format=0x5555555570f8 "%s_COMBINED.bin") at ./stdio-common/printf-parse.h:111
 IO_validate_vtable (vtable=<optimized out>) at ./stdio-common/vfprintf-internal.c:1593
-0x00007ffff7c75fad in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fad in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17300 <_IO_strn_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c75fb3	943	in ../libio/libioP.h
 0x00007ffff7c75fb8	943	in ../libio/libioP.h
-outstring_func (done=12, length=0, string=0x5555555570f8 "%s_COMBINED.bin", s=0x7fffffffd730) at ../libio/libioP.h:947
+outstring_func (done=12, length=0, string=0x5555555570f8 "%s_COMBINED.bin", s=0x7fffffffd780) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c75fc1	947	in ../libio/libioP.h
 0x00007ffff7c75fc4	947	in ../libio/libioP.h
 0x00007ffff7c75fc7	947	in ../libio/libioP.h
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570f8, n=0) at ./libio/genops.c:371
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570f8, n=0) at ./libio/genops.c:371
 374	in ./libio/genops.c
 0x00007ffff7c8ddc7	374	in ./libio/genops.c
 0x00007ffff7c8dfa0 in __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:393
 393	in ./libio/genops.c
-0x00007ffff7c8dfa2 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570f8, n=0) at ./libio/genops.c:404
+0x00007ffff7c8dfa2 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570f8, n=0) at ./libio/genops.c:404
 404	in ./libio/genops.c
-0x00007ffff7c75fca in outstring_func (done=12, length=0, string=0x5555555570f8 "%s_COMBINED.bin", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c75fca in outstring_func (done=12, length=0, string=0x5555555570f8 "%s_COMBINED.bin", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75fcd	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=12, length=0) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -583,7 +583,7 @@ done_add_func (done=12, length=0) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75ff8	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffb	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffd	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c76005	1593	in ./stdio-common/vfprintf-internal.c
 1595	in ./stdio-common/vfprintf-internal.c
@@ -611,7 +611,7 @@ __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f
 0x00007ffff7c75263	1303	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75269	1501	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75270 in read_int (pstr=<optimized out>) at ./stdio-common/printf-parse.h:88
-0x00007ffff7c75276 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
+0x00007ffff7c75276 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
 0x00007ffff7c7527a	1306	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75282	1302	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7528a	1352	in ./stdio-common/vfprintf-internal.c
@@ -662,24 +662,24 @@ __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:50
 90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
 0x00007ffff7d9d810 in __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:90
 90	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
-0x00007ffff7c76d31 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+0x00007ffff7c76d31 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 0x00007ffff7c76d34	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758d9	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758de	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758e1	1517	in ./stdio-common/vfprintf-internal.c
-outstring_func (done=12, length=10, string=0x7fffffffdaa0 "Motorcycle", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+outstring_func (done=12, length=10, string=0x7fffffffdaf0 "Motorcycle", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 239	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17300 <_IO_strn_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c76fee	943	in ../libio/libioP.h
 0x00007ffff7c76ff1	942	in ../libio/libioP.h
 0x00007ffff7c76ff4	943	in ../libio/libioP.h
 0x00007ffff7c76ff9	943	in ../libio/libioP.h
-outstring_func (done=12, length=10, string=0x7fffffffdaa0 "Motorcycle", s=0x7fffffffd730) at ../libio/libioP.h:947
+outstring_func (done=12, length=10, string=0x7fffffffdaf0 "Motorcycle", s=0x7fffffffd780) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c77002	947	in ../libio/libioP.h
 0x00007ffff7c77005	947	in ../libio/libioP.h
 0x00007ffff7c77008	947	in ../libio/libioP.h
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=0x7fffffffdaa0, n=10) at ./libio/genops.c:371
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=0x7fffffffdaf0, n=10) at ./libio/genops.c:371
 374	in ./libio/genops.c
 0x00007ffff7c8ddc7	374	in ./libio/genops.c
 0x00007ffff7c8ddcd	371	in ./libio/genops.c
@@ -691,11 +691,11 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x7fffffffdaa0, n=10) at ./libio
 0x00007ffff7c8dddc	371	in ./libio/genops.c
 0x00007ffff7c8dddf	371	in ./libio/genops.c
 0x00007ffff7c8dde1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x7fffffffdaa0, n=10) at ./libio/genops.c:371
+0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x7fffffffdaf0, n=10) at ./libio/genops.c:371
 0x00007ffff7c8dde9 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x7fffffffdaa0, n=10) at ./libio/genops.c:371
+0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x7fffffffdaf0, n=10) at ./libio/genops.c:371
 0x00007ffff7c8ddf1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x7fffffffdaa0, n=10) at ./libio/genops.c:371
+0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x7fffffffdaf0, n=10) at ./libio/genops.c:371
 0x00007ffff7c8ddf8	371	in ./libio/genops.c
 __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:379
 379	in ./libio/genops.c
@@ -741,7 +741,7 @@ __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized o
 397	in ./libio/genops.c
 399	in ./libio/genops.c
 0x00007ffff7c8de0f	399	in ./libio/genops.c
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
 403	in ./libio/genops.c
 0x00007ffff7c8deb7	375	in ./libio/genops.c
 0x00007ffff7c8deba	404	in ./libio/genops.c
@@ -751,7 +751,7 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized ou
 0x00007ffff7c8dec0	404	in ./libio/genops.c
 0x00007ffff7c8dec2	404	in ./libio/genops.c
 0x00007ffff7c8dec4	404	in ./libio/genops.c
-0x00007ffff7c7700c in outstring_func (done=12, length=10, string=0x7fffffffdaa0 "Motorcycle", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c7700c in outstring_func (done=12, length=10, string=0x7fffffffdaf0 "Motorcycle", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c7700f	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=12, length=10) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -767,12 +767,12 @@ done_add_func (done=12, length=10) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75cd7	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cda	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cdc	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ce4	1517	in ./stdio-common/vfprintf-internal.c
 1589	in ./stdio-common/vfprintf-internal.c
 __find_specmb (format=0x5555555570fa "_COMBINED.bin") at ./stdio-common/printf-parse.h:111
-0x00007ffff7c75f89 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
+0x00007ffff7c75f89 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
 0x00007ffff7c75f8e in __find_specmb (format=0x5555555570fa "_COMBINED.bin") at ./stdio-common/printf-parse.h:111
 0x00007ffff7c75f91	111	in ./stdio-common/printf-parse.h
 0x00007ffff7c284d0 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
@@ -799,20 +799,20 @@ __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
 0x00007ffff7c75f96 in outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75f9d in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
-0x00007ffff7c75fa4 in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fa4 in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 0x00007ffff7c75fa7 in __find_specmb (format=0x5555555570fa "_COMBINED.bin") at ./stdio-common/printf-parse.h:111
 IO_validate_vtable (vtable=<optimized out>) at ./stdio-common/vfprintf-internal.c:1593
-0x00007ffff7c75fad in __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fad in __vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17300 <_IO_strn_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c75fb3	943	in ../libio/libioP.h
 0x00007ffff7c75fb8	943	in ../libio/libioP.h
-outstring_func (done=22, length=13, string=0x5555555570fa "_COMBINED.bin", s=0x7fffffffd730) at ../libio/libioP.h:947
+outstring_func (done=22, length=13, string=0x5555555570fa "_COMBINED.bin", s=0x7fffffffd780) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c75fc1	947	in ../libio/libioP.h
 0x00007ffff7c75fc4	947	in ../libio/libioP.h
 0x00007ffff7c75fc7	947	in ../libio/libioP.h
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570fa, n=13) at ./libio/genops.c:371
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570fa, n=13) at ./libio/genops.c:371
 374	in ./libio/genops.c
 0x00007ffff7c8ddc7	374	in ./libio/genops.c
 0x00007ffff7c8ddcd	371	in ./libio/genops.c
@@ -824,11 +824,11 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570fa, n=13) at ./libio
 0x00007ffff7c8dddc	371	in ./libio/genops.c
 0x00007ffff7c8dddf	371	in ./libio/genops.c
 0x00007ffff7c8dde1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570fa, n=13) at ./libio/genops.c:371
+0x00007ffff7c8dde8 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570fa, n=13) at ./libio/genops.c:371
 0x00007ffff7c8dde9 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570fa, n=13) at ./libio/genops.c:371
+0x00007ffff7c8ddf0 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570fa, n=13) at ./libio/genops.c:371
 0x00007ffff7c8ddf1 in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:940
-0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd730, data=0x5555555570fa, n=13) at ./libio/genops.c:371
+0x00007ffff7c8ddf4 in __GI__IO_default_xsputn (f=0x7fffffffd780, data=0x5555555570fa, n=13) at ./libio/genops.c:371
 0x00007ffff7c8ddf8	371	in ./libio/genops.c
 __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:379
 379	in ./libio/genops.c
@@ -886,7 +886,7 @@ __GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized o
 397	in ./libio/genops.c
 399	in ./libio/genops.c
 0x00007ffff7c8de0f	399	in ./libio/genops.c
-__GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
+__GI__IO_default_xsputn (f=0x7fffffffd780, data=<optimized out>, n=<optimized out>) at ./libio/genops.c:403
 403	in ./libio/genops.c
 0x00007ffff7c8deb7	375	in ./libio/genops.c
 0x00007ffff7c8deba	404	in ./libio/genops.c
@@ -896,7 +896,7 @@ __GI__IO_default_xsputn (f=0x7fffffffd730, data=<optimized out>, n=<optimized ou
 0x00007ffff7c8dec0	404	in ./libio/genops.c
 0x00007ffff7c8dec2	404	in ./libio/genops.c
 0x00007ffff7c8dec4	404	in ./libio/genops.c
-0x00007ffff7c75fca in outstring_func (done=22, length=13, string=0x5555555570fa "_COMBINED.bin", s=0x7fffffffd730) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c75fca in outstring_func (done=22, length=13, string=0x5555555570fa "_COMBINED.bin", s=0x7fffffffd780) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75fcd	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=22, length=13) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -912,7 +912,7 @@ done_add_func (done=22, length=13) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75ff8	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffb	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffd	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+__vfprintf_internal (s=s@entry=0x7fffffffd780, format=format@entry=0x5555555570f6 "%s%s_COMBINED.bin", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c76005	1593	in ./stdio-common/vfprintf-internal.c
 1595	in ./stdio-common/vfprintf-internal.c
@@ -934,7 +934,7 @@ __vfprintf_internal (s=s@entry=0x7fffffffd730, format=format@entry=0x5555555570f
 0x00007ffff7c7537b	1612	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7537d	1612	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7537f	1612	in ./stdio-common/vfprintf-internal.c
-__vsnprintf_internal (string=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:116
+__vsnprintf_internal (string=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", maxlen=<optimized out>, format=0x5555555570f6 "%s%s_COMBINED.bin", args=args@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./libio/vsnprintf.c:116
 0x00007ffff7c8849f	116	in ./libio/vsnprintf.c
 0x00007ffff7c884a4	116	in ./libio/vsnprintf.c
 117	in ./libio/vsnprintf.c
@@ -955,7 +955,7 @@ __GI___snprintf (s=<optimized out>, maxlen=<optimized out>, format=<optimized ou
 0x00007ffff7c60864	34	in ./stdio-common/snprintf.c
 0x00007ffff7c60866	34	in ./stdio-common/snprintf.c
 0x00007ffff7c6086d	34	in ./stdio-common/snprintf.c
-writeimage (img=0x5555575c82d0, filename=0x7fffffffdaa0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:219
+writeimage (img=0x5555575c82d0, filename=0x7fffffffdaf0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:219
 219	    printf("Writing image %s to disk...\n", outfilename);
 0x0000555555555d9e	219	    printf("Writing image %s to disk...\n", outfilename);
 0x0000555555555da1	219	    printf("Writing image %s to disk...\n", outfilename);
@@ -989,7 +989,7 @@ __printf (format=0x555555557108 "Writing image %s to disk...\n") at ./stdio-comm
 0x00007ffff7c6078f	33	in ./stdio-common/printf.c
 0x00007ffff7c60792	32	in ./stdio-common/printf.c
 0x00007ffff7c6079a	33	in ./stdio-common/printf.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1180
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1180
 0x00007ffff7c75034	1180	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75036	1180	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75038	1180	in ./stdio-common/vfprintf-internal.c
@@ -1021,7 +1021,7 @@ __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "
 1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750b6 in __find_specmb (format=<optimized out>) at ./stdio-common/printf-parse.h:111
 0x00007ffff7c750bb	111	in ./stdio-common/printf-parse.h
-0x00007ffff7c750c0 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1244
+0x00007ffff7c750c0 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1244
 0x00007ffff7c750c4	1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750cc	1244	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750d0	1244	in ./stdio-common/vfprintf-internal.c
@@ -1049,16 +1049,16 @@ __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
 0x00007ffff7d9d448 in __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:79
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
-0x00007ffff7c750e2 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+0x00007ffff7c750e2 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
 0x00007ffff7c750ea in __find_specmb (format=0x555555557108 "Writing image %s to disk...\n") at ./stdio-common/printf-parse.h:111
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1259
 0x00007ffff7c750f7	1259	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c750fa	1259	in ./stdio-common/vfprintf-internal.c
 1259	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7551f	1259	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75527	1259	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7552f	1259	in ./stdio-common/vfprintf-internal.c
-__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd430) at ./nptl/libc-cleanup.c:24
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd480) at ./nptl/libc-cleanup.c:24
 27	in ./nptl/libc-cleanup.c
 27	in ./nptl/libc-cleanup.c
 30	in ./nptl/libc-cleanup.c
@@ -1068,7 +1068,7 @@ __GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd430) at ./nptl/li
 31	in ./nptl/libc-cleanup.c
 33	in ./nptl/libc-cleanup.c
 0x00007ffff7c911f3	34	in ./nptl/libc-cleanup.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1260
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1260
 0x00007ffff7c75537	1260	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7553c	1260	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75542	1260	in ./stdio-common/vfprintf-internal.c
@@ -1086,10 +1086,10 @@ __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "
 outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:1263
 1263	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75107 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:940
-0x00007ffff7c7510e in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+0x00007ffff7c7510e in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 0x00007ffff7c75113 in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
 0x00007ffff7c7511a	940	in ../libio/libioP.h
-0x00007ffff7c75121 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+0x00007ffff7c75121 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:940
 0x00007ffff7c7512b	940	in ../libio/libioP.h
 943	in ../libio/libioP.h
@@ -1180,7 +1180,7 @@ done_add_func (done=0, length=14) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c7516b	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7516e	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75170	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1263
 1263	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75178	1263	in ./stdio-common/vfprintf-internal.c
 1267	in ./stdio-common/vfprintf-internal.c
@@ -1230,7 +1230,7 @@ __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "
 0x00007ffff7c75263	1303	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75269	1501	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75270 in read_int (pstr=<optimized out>) at ./stdio-common/printf-parse.h:88
-0x00007ffff7c75276 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
+0x00007ffff7c75276 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1352
 0x00007ffff7c7527a	1306	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75282	1302	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7528a	1352	in ./stdio-common/vfprintf-internal.c
@@ -1289,24 +1289,24 @@ __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:50
 137	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
 0x00007ffff7d9d82d in __strlen_avx2 () at ../sysdeps/x86_64/multiarch/strlen-avx2.S:137
 137	in ../sysdeps/x86_64/multiarch/strlen-avx2.S
-0x00007ffff7c76d31 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+0x00007ffff7c76d31 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 0x00007ffff7c76d34	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758d9	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758de	1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c758e1	1517	in ./stdio-common/vfprintf-internal.c
-outstring_func (done=14, length=35, string=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+outstring_func (done=14, length=35, string=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
 239	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c76fee	943	in ../libio/libioP.h
 0x00007ffff7c76ff1	942	in ../libio/libioP.h
 0x00007ffff7c76ff4	943	in ../libio/libioP.h
 0x00007ffff7c76ff9	943	in ../libio/libioP.h
-outstring_func (done=14, length=35, string=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ../libio/libioP.h:947
+outstring_func (done=14, length=35, string=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ../libio/libioP.h:947
 947	in ../libio/libioP.h
 0x00007ffff7c77002	947	in ../libio/libioP.h
 0x00007ffff7c77005	947	in ../libio/libioP.h
 0x00007ffff7c77008	947	in ../libio/libioP.h
-_IO_new_file_xsputn (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x7fffffffd9c0, n=35) at ./libio/fileops.c:1197
+_IO_new_file_xsputn (f=0x7ffff7e1b780 <_IO_2_1_stdout_>, data=0x7fffffffda10, n=35) at ./libio/fileops.c:1197
 1203	in ./libio/fileops.c
 0x00007ffff7c8b606	1203	in ./libio/fileops.c
 0x00007ffff7c8b608	1203	in ./libio/fileops.c
@@ -1372,7 +1372,7 @@ __memmove_avx_unaligned_erms () at ../sysdeps/x86_64/multiarch/memmove-vec-unali
 0x00007ffff7c8b67b	1267	in ./libio/fileops.c
 0x00007ffff7c8b67d	1267	in ./libio/fileops.c
 0x00007ffff7c8b67f	1267	in ./libio/fileops.c
-0x00007ffff7c7700c in outstring_func (done=14, length=35, string=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
+0x00007ffff7c7700c in outstring_func (done=14, length=35, string=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", s=0x7ffff7e1b780 <_IO_2_1_stdout_>) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c7700f	239	in ./stdio-common/vfprintf-internal.c
 done_add_func (done=14, length=35) at ./stdio-common/vfprintf-internal.c:127
 127	in ./stdio-common/vfprintf-internal.c
@@ -1388,12 +1388,12 @@ done_add_func (done=14, length=35) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75cd7	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cda	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75cdc	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1517
 1517	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ce4	1517	in ./stdio-common/vfprintf-internal.c
 1589	in ./stdio-common/vfprintf-internal.c
 __find_specmb (format=0x555555557118 " to disk...\n") at ./stdio-common/printf-parse.h:111
-0x00007ffff7c75f89 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
+0x00007ffff7c75f89 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1583
 0x00007ffff7c75f8e in __find_specmb (format=0x555555557118 " to disk...\n") at ./stdio-common/printf-parse.h:111
 0x00007ffff7c75f91	111	in ./stdio-common/printf-parse.h
 0x00007ffff7c284d0 in *ABS*+0xab010@plt () from /lib/x86_64-linux-gnu/libc.so.6
@@ -1420,10 +1420,10 @@ __strchrnul_avx2 () at ../sysdeps/x86_64/multiarch/strchr-avx2.S:51
 79	in ../sysdeps/x86_64/multiarch/strchr-avx2.S
 0x00007ffff7c75f96 in outstring_func (done=<optimized out>, length=<optimized out>, string=<optimized out>, s=<optimized out>) at ./stdio-common/vfprintf-internal.c:239
 0x00007ffff7c75f9d in IO_validate_vtable (vtable=<optimized out>) at ../libio/libioP.h:942
-0x00007ffff7c75fa4 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fa4 in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 0x00007ffff7c75fa7 in __find_specmb (format=0x555555557118 " to disk...\n") at ./stdio-common/printf-parse.h:111
 IO_validate_vtable (vtable=<optimized out>) at ./stdio-common/vfprintf-internal.c:1593
-0x00007ffff7c75fad in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+0x00007ffff7c75fad in __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 IO_validate_vtable (vtable=0x7ffff7e17600 <_IO_file_jumps>) at ../libio/libioP.h:943
 0x00007ffff7c75fb3	943	in ../libio/libioP.h
@@ -1516,7 +1516,7 @@ done_add_func (done=49, length=12) at ./stdio-common/vfprintf-internal.c:127
 0x00007ffff7c75ff8	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffb	127	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75ffd	127	in ./stdio-common/vfprintf-internal.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "Writing image %s to disk...\n", ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1593
 1593	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c76005	1593	in ./stdio-common/vfprintf-internal.c
 1595	in ./stdio-common/vfprintf-internal.c
@@ -1537,7 +1537,7 @@ __vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=0x555555557108 "
 0x00007ffff7c7534e	1609	in ./stdio-common/vfprintf-internal.c
 1609	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75590	1609	in ./stdio-common/vfprintf-internal.c
-__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd430) at ./nptl/libc-cleanup.c:39
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd480) at ./nptl/libc-cleanup.c:39
 42	in ./nptl/libc-cleanup.c
 0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
 44	in ./nptl/libc-cleanup.c
@@ -1545,7 +1545,7 @@ __GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd430) at ./nptl/l
 45	in ./nptl/libc-cleanup.c
 0x00007ffff7c9121f	45	in ./nptl/libc-cleanup.c
 0x00007ffff7c91221	47	in ./nptl/libc-cleanup.c
-__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=<optimized out>, ap=ap@entry=0x7fffffffd8b0, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1611
+__vfprintf_internal (s=0x7ffff7e1b780 <_IO_2_1_stdout_>, format=<optimized out>, ap=ap@entry=0x7fffffffd900, mode_flags=mode_flags@entry=0) at ./stdio-common/vfprintf-internal.c:1611
 0x00007ffff7c75354	1612	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c7535c	1612	in ./stdio-common/vfprintf-internal.c
 0x00007ffff7c75365	1612	in ./stdio-common/vfprintf-internal.c
@@ -1563,7 +1563,7 @@ __printf (format=<optimized out>) at ./stdio-common/printf.c:36
 0x00007ffff7c607ad	36	in ./stdio-common/printf.c
 0x00007ffff7c607af	36	in ./stdio-common/printf.c
 0x00007ffff7c607b6	36	in ./stdio-common/printf.c
-writeimage (img=0x5555575c82d0, filename=0x7fffffffdaa0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:221
+writeimage (img=0x5555575c82d0, filename=0x7fffffffdaf0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:221
 221	    xwidth = img->xwidth;
 0x0000555555555dbc	221	    xwidth = img->xwidth;
 0x0000555555555dbe	221	    xwidth = img->xwidth;
@@ -1580,18 +1580,18 @@ writeimage (img=0x5555575c82d0, filename=0x7fffffffdaa0 "Motorcycle") at /home/a
 0x0000555555555dfa	224	    fp = fopen(outfilename, "w");
 0x0000555555555190 in fopen@plt ()
 0x0000555555555194 in fopen@plt ()
-_IO_new_fopen (filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:85
+_IO_new_fopen (filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:85
 86	in ./libio/iofopen.c
 0x00007ffff7c7f636	86	in ./libio/iofopen.c
 0x00007ffff7c7f639	86	in ./libio/iofopen.c
 0x00007ffff7c7f63b	86	in ./libio/iofopen.c
 0x00007ffff7c7f63c	86	in ./libio/iofopen.c
-__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:58
+__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:58
 58	in ./libio/iofopen.c
-0x00007ffff7c7f644 in _IO_new_fopen (filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:85
+0x00007ffff7c7f644 in _IO_new_fopen (filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:85
 85	in ./libio/iofopen.c
 0x00007ffff7c7f645	85	in ./libio/iofopen.c
-0x00007ffff7c7f649 in __fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:65
+0x00007ffff7c7f649 in __fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:65
 65	in ./libio/iofopen.c
 0x00007ffff7c28380 in malloc@plt () from /lib/x86_64-linux-gnu/libc.so.6
 0x00007ffff7c28384 in malloc@plt () from /lib/x86_64-linux-gnu/libc.so.6
@@ -1642,7 +1642,7 @@ __GI___libc_malloc (bytes=bytes@entry=472) at ./malloc/malloc.c:3314
 0x00007ffff7ca5242	3314	in ./malloc/malloc.c
 0x00007ffff7ca5243	3347	in ./malloc/malloc.c
 0x00007ffff7ca5245	3347	in ./malloc/malloc.c
-__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:67
+__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:67
 0x00007ffff7c7f651	67	in ./libio/iofopen.c
 0x00007ffff7c7f657	67	in ./libio/iofopen.c
 70	in ./libio/iofopen.c
@@ -1711,7 +1711,7 @@ _IO_no_init (fp=fp@entry=0x5555575c82f0, flags=flags@entry=0, orientation=orient
 0x00007ffff7c8e6b9	588	in ./libio/genops.c
 0x00007ffff7c8e6bb	588	in ./libio/genops.c
 0x00007ffff7c8e6bd	588	in ./libio/genops.c
-__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:73
+__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:73
 0x00007ffff7c7f68c	74	in ./libio/iofopen.c
 0x00007ffff7c7f68f	73	in ./libio/iofopen.c
 74	in ./libio/iofopen.c
@@ -1745,7 +1745,7 @@ __GI__IO_link_in (fp=fp@entry=0x5555575c82f0) at ./libio/genops.c:87
 0x00007ffff7c8d33c	92	in ./libio/genops.c
 92	in ./libio/genops.c
 92	in ./libio/genops.c
-__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd8f0) at ./nptl/libc-cleanup.c:24
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd940) at ./nptl/libc-cleanup.c:24
 27	in ./nptl/libc-cleanup.c
 27	in ./nptl/libc-cleanup.c
 30	in ./nptl/libc-cleanup.c
@@ -1806,7 +1806,7 @@ __GI__IO_link_in (fp=fp@entry=0x5555575c82f0) at ./libio/genops.c:93
 0x00007ffff7c8d464	102	in ./libio/genops.c
 103	in ./libio/genops.c
 0x00007ffff7c8d469	103	in ./libio/genops.c
-__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd8f0) at ./nptl/libc-cleanup.c:39
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd940) at ./nptl/libc-cleanup.c:39
 42	in ./nptl/libc-cleanup.c
 0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
 44	in ./nptl/libc-cleanup.c
@@ -1828,12 +1828,12 @@ __GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd8f0) at ./nptl/l
 _IO_new_file_init_internal (fp=fp@entry=0x5555575c82f0) at ./libio/fileops.c:114
 0x00007ffff7c8be35	115	in ./libio/fileops.c
 0x00007ffff7c8be36	115	in ./libio/fileops.c
-__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:75
+__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:75
 0x00007ffff7c7f6a0	75	in ./libio/iofopen.c
 0x00007ffff7c7f6a3	75	in ./libio/iofopen.c
 0x00007ffff7c7f6a6	75	in ./libio/iofopen.c
 0x00007ffff7c7f6a9	75	in ./libio/iofopen.c
-_IO_new_file_fopen (fp=fp@entry=0x5555575c82f0, filename=filename@entry=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", mode=mode@entry=0x555555557125 "w", is32not64=is32not64@entry=1) at ./libio/fileops.c:213
+_IO_new_file_fopen (fp=fp@entry=0x5555575c82f0, filename=filename@entry=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", mode=mode@entry=0x555555557125 "w", is32not64=is32not64@entry=1) at ./libio/fileops.c:213
 0x00007ffff7c8c184	213	in ./libio/fileops.c
 0x00007ffff7c8c186	213	in ./libio/fileops.c
 0x00007ffff7c8c188	213	in ./libio/fileops.c
@@ -1869,7 +1869,7 @@ _IO_new_file_fopen (fp=fp@entry=0x5555575c82f0, filename=filename@entry=0x7fffff
 0x00007ffff7c8c405	280	in ./libio/fileops.c
 0x00007ffff7c8c40a	280	in ./libio/fileops.c
 0x00007ffff7c8c40d	280	in ./libio/fileops.c
-__GI__IO_file_open (fp=fp@entry=0x5555575c82f0, filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", posix_mode=577, prot=prot@entry=438, read_write=4, is32not64=1) at ./libio/fileops.c:182
+__GI__IO_file_open (fp=fp@entry=0x5555575c82f0, filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", posix_mode=577, prot=prot@entry=438, read_write=4, is32not64=1) at ./libio/fileops.c:182
 182	in ./libio/fileops.c
 184	in ./libio/fileops.c
 0x00007ffff7c8c096	185	in ./libio/fileops.c
@@ -1883,7 +1883,7 @@ __GI__IO_file_open (fp=fp@entry=0x5555575c82f0, filename=0x7fffffffd9c0 "./outim
 0x00007ffff7c8c0a7	184	in ./libio/fileops.c
 0x00007ffff7c8c0ab	184	in ./libio/fileops.c
 188	in ./libio/fileops.c
-__libc_open64 (file=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", oflag=577) at ../sysdeps/unix/sysv/linux/open64.c:30
+__libc_open64 (file=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", oflag=577) at ../sysdeps/unix/sysv/linux/open64.c:30
 0x00007ffff7d144e4	30	in ../sysdeps/unix/sysv/linux/open64.c
 0x00007ffff7d144e6	33	in ../sysdeps/unix/sysv/linux/open64.c
 0x00007ffff7d144e9	30	in ../sysdeps/unix/sysv/linux/open64.c
@@ -1933,7 +1933,7 @@ __libc_open64 (file=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", oflag=
 0x00007ffff7c8c153	207	in ./libio/fileops.c
 0x00007ffff7c8c154	207	in ./libio/fileops.c
 0x00007ffff7c8c156	207	in ./libio/fileops.c
-0x00007ffff7c8c412 in _IO_new_file_fopen (fp=fp@entry=0x5555575c82f0, filename=filename@entry=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", mode=<optimized out>, mode@entry=0x555555557125 "w", is32not64=is32not64@entry=1) at ./libio/fileops.c:280
+0x00007ffff7c8c412 in _IO_new_file_fopen (fp=fp@entry=0x5555575c82f0, filename=filename@entry=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", mode=<optimized out>, mode@entry=0x555555557125 "w", is32not64=is32not64@entry=1) at ./libio/fileops.c:280
 280	in ./libio/fileops.c
 283	in ./libio/fileops.c
 0x00007ffff7c8c418	283	in ./libio/fileops.c
@@ -1951,7 +1951,7 @@ __libc_open64 (file=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", oflag=
 0x00007ffff7c8c201	356	in ./libio/fileops.c
 0x00007ffff7c8c203	356	in ./libio/fileops.c
 0x00007ffff7c8c205	356	in ./libio/fileops.c
-0x00007ffff7c7f6ae in __fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:75
+0x00007ffff7c7f6ae in __fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:75
 0x00007ffff7c7f6b1	75	in ./libio/iofopen.c
 78	in ./libio/iofopen.c
 0x00007ffff7c7f703	80	in ./libio/iofopen.c
@@ -1977,7 +1977,7 @@ __GI__IO_un_link (fp=0x5555575c82f0) at ./libio/genops.c:52
 58	in ./libio/genops.c
 0x00007ffff7c8d0aa	58	in ./libio/genops.c
 58	in ./libio/genops.c
-__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd900) at ./nptl/libc-cleanup.c:24
+__GI___libc_cleanup_push_defer (buffer=buffer@entry=0x7fffffffd950) at ./nptl/libc-cleanup.c:24
 27	in ./nptl/libc-cleanup.c
 27	in ./nptl/libc-cleanup.c
 30	in ./nptl/libc-cleanup.c
@@ -2048,7 +2048,7 @@ __GI__IO_un_link (fp=0x5555575c82f0) at ./libio/genops.c:59
 0x00007ffff7c8d1c8	78	in ./libio/genops.c
 79	in ./libio/genops.c
 0x00007ffff7c8d1d1	79	in ./libio/genops.c
-__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd900) at ./nptl/libc-cleanup.c:39
+__GI___libc_cleanup_pop_restore (buffer=buffer@entry=0x7fffffffd950) at ./nptl/libc-cleanup.c:39
 42	in ./nptl/libc-cleanup.c
 0x00007ffff7c91208	42	in ./nptl/libc-cleanup.c
 44	in ./nptl/libc-cleanup.c
@@ -2065,7 +2065,7 @@ __GI__IO_un_link (fp=0x5555575c82f0) at ./libio/genops.c:79
 0x00007ffff7c8d1f0	82	in ./libio/genops.c
 0x00007ffff7c8d1f2	82	in ./libio/genops.c
 0x00007ffff7c8d1f4	82	in ./libio/genops.c
-__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:79
+__fopen_internal (is32=1, mode=0x555555557125 "w", filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin") at ./libio/iofopen.c:79
 0x00007ffff7c7f70e	79	in ./libio/iofopen.c
 0x00007ffff7c28370 in free@plt () from /lib/x86_64-linux-gnu/libc.so.6
 0x00007ffff7c28374 in free@plt () from /lib/x86_64-linux-gnu/libc.so.6
@@ -2162,14 +2162,14 @@ __GI___libc_free (mem=mem@entry=0x5555575c82f0) at ./malloc/malloc.c:3394
 0x00007ffff7ca545a	3395	in ./malloc/malloc.c
 0x00007ffff7ca545b	3395	in ./malloc/malloc.c
 0x00007ffff7ca545c	3395	in ./malloc/malloc.c
-_IO_new_fopen (filename=0x7fffffffd9c0 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:80
+_IO_new_fopen (filename=0x7fffffffda10 "./outimages/Motorcycle_COMBINED.bin", mode=0x555555557125 "w") at ./libio/iofopen.c:80
 0x00007ffff7c7f717	80	in ./libio/iofopen.c
 0x00007ffff7c7f71a	80	in ./libio/iofopen.c
 0x00007ffff7c7f71b	87	in ./libio/iofopen.c
 0x00007ffff7c7f71c	87	in ./libio/iofopen.c
 0x00007ffff7c7f71e	87	in ./libio/iofopen.c
 0x00007ffff7c7f720	87	in ./libio/iofopen.c
-0x0000555555555dff in writeimage (img=0x5555575c82d0, filename=0x7fffffffdaa0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:224
+0x0000555555555dff in writeimage (img=0x5555575c82d0, filename=0x7fffffffdaf0 "Motorcycle") at /home/allan/git/pp8/2_apptask_analyzer/edgedetection.c:224
 224	    fp = fopen(outfilename, "w");
 225	    fwrite(data,sizeof(unsigned char),xwidth*ywidth,fp);
 0x0000555555555e0c	225	    fwrite(data,sizeof(unsigned char),xwidth*ywidth,fp);
