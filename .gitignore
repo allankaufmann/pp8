@@ -5,7 +5,7 @@ GDBInstructionScanner/
 1_tasktype_analyzer/main
 1_tasktype_analyzer/seq/
 1_tasktype_analyzer/cmake-build-debug/
-1_tasktype_analyzer/CMakeFiles
+1_tasktype_analyzer/CMakeFiles/
 1_tasktype_analyzer/.idea/
 1_tasktype_analyzer/CMakeCache.txt
 1_tasktype_analyzer/cmake_install.cmake
