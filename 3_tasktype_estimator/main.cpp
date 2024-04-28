@@ -16,7 +16,7 @@
 #include "estimation/estimator.cpp"
 
 
-const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
+
 const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
 const char* script_sobolv = "./scripts/runsobelv.sh";
 const char* script_measure = "./scripts/measureGreyscale1N.sh";

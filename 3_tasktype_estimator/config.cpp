@@ -304,7 +304,7 @@ void checkPreconditions() {
         }
 
         if (one2one) {
-            std::cout << "\tFür den appTask " << s << " ist eine 1:1-Abbildung vorhanden!\n";
+            std::cout << "\tFür den appTask " << s << " ist eine 1:1-Abbildung vorhanden.\n";
         } else {
             std::cout << RED << "\tFür den appTask " << s << " ist keine 1:1-Abbildung vorhanden! Taskmapper ausführen!\n" << RESET;
         }
@@ -338,7 +338,7 @@ void checkPreconditions() {
         }
 
         if (found) {
-            std::cout << "\tFür den appTask " << s << " ist eine 1:N-Abbildung in " << filename_epebench_ebmodels << " vorhanden!\n";
+            std::cout << "\tFür den appTask " << s << " ist eine 1:N-Abbildung in " << filename_epebench_ebmodels << " vorhanden.\n";
         } else {
             std::cout << RED << "\tFür den appTask " << s << " ist keine 1:N-Abbildung in " << filename_epebench_ebmodels << " vorhanden! Wurde die Taskmap nach epebench übertragen?\n" << RESET;
         }
@@ -348,14 +348,15 @@ void checkPreconditions() {
 
     std::cout << "Überprüfung Zugriff auf energy_uj:\n\n";
     readEnergy_UJ();
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
-    std::cout << "\n\nÜberprüfung Zugriff auf frequency-info\n";
-    system("cpupower frequency-info");
+    std::cout << "\n\nÜberprüfung Zugriff auf cpupower frequency-set\n";
+    system("cpupower frequency-set");
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
+    std::cout << "\n\nÜberprüfung edgedetection\n";
+    system(script_Sample_Application);
 
-
-    //./edgedetection imgfilenames $CORES checkcontrast
 
 
 

@@ -31,6 +31,7 @@ std::string result_section_model="model";
 std::string result_section_end_model="end_model";
 std::string result_section_end_model_space="end_model ";
 static const char *const logfolder_taskmapper = "logs/taskmapper/";
+const char* script_Sample_Application = "./scripts/runSampleApplication.sh";
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
