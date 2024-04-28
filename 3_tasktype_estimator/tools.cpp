@@ -58,12 +58,6 @@ char* getFilename(const char *const folder) {
     return filename;
 }
 
-/*int main(int argc, char *argv[]) {
-    readFilenamesFromDirectory("gen");
-}*/
-
-
-
 void extractAppTaskNameFromFileName(const char* filename, char* taskname) {
     const char *start = strrchr(filename, '/');
     const char *end = strchr(filename, '.');

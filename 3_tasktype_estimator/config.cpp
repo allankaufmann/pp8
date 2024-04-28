@@ -24,33 +24,6 @@ std::vector<std::string> cpuFrequencyVektor;
 std::vector<std::string> parallelismVektor;
 
 
-
-void writeGenScript(const char* task) {
-    FILE* filePointerScript;
-    char* filename = (char*) malloc(sizeof(char) * (strlen(task)) + 10);
-    sprintf(filename,
-            "%s%s%s",
-            "gen/"
-            "run",
-            task,
-            ".sh");
-
-    filePointerScript = fopen(filename, "w");
-
-
-    fprintf(filePointerScript, "%s", "#!/bin/bash\n");
-    fprintf(filePointerScript, "%s", "cd ..\n");
-    fprintf(filePointerScript, "%s", "cd epEBench/bin/Release\n");
-    fprintf(filePointerScript, "%s%s%s", "./epebench -m ", task, " -t 1 -a 1 -n 1\n");
-    fprintf(filePointerScript, "%s%s%s", "mv epebench_loadlog.txt epebench_", task, ".log\n");
-    fprintf(filePointerScript, "%s", "cd ../../..\n");
-
-
-    fclose(filePointerScript);
-    chmod(filename, 0777);
-    free(filename);
-}
-
 void generateTaskTypeScripts(std::string folder, std::string task) {
     // $CORES ist der Parameter für Anzahl Kerne!
     std::string filename = folder + "/" + task + ".sh";
@@ -350,16 +323,18 @@ void checkPreconditions() {
     readEnergy_UJ();
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+
     std::cout << "\n\nÜberprüfung Zugriff auf cpupower frequency-set\n";
     system("cpupower frequency-set");
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
+    std::cout << "\n\nÜberprüfung epeBench\n";
+    system(script_test_epEBench);
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
     std::cout << "\n\nÜberprüfung edgedetection\n";
-    system(script_Sample_Application);
-
-
-
-
-
+    system(script_test_Edgedetection);
 }
 

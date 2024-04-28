@@ -16,35 +16,7 @@
 #include "estimation/estimator.cpp"
 
 
-
-const char* script_Sample_vmov = "./scripts/runvmov_SIMD.sh";
-const char* script_sobolv = "./scripts/runsobelv.sh";
 const char* script_measure = "./scripts/measureGreyscale1N.sh";
-const char* script_Sample_m4x4smul_SIMD = "./scripts/runm4x4smul_SIMD.sh";
-
-const char* script_testRapl = "./scripts/testRaplRead.sh";
-
-
-
-
-void testrapl() {
-    system(script_testRapl);
-}
-
-void testThreadWithRapl() {
-    testrapl();
-    std::cout << "Thread wird gestartet\n";
-
-    std::thread t1(runCommand, script_Sample_Application);
-    std::thread t2(testrapl);
-    t1.join();
-    t2.join();
-    logTime();
-}
-
-void runSomething() {
-    system("./scripts/runDadd.sh");
-}
 
 
 
