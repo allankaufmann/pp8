@@ -2221,5 +2221,5 @@ __GI__exit (status=status@entry=0) at ../sysdeps/unix/sysv/linux/_exit.c:27
 0x00007ffff7ceac15	31	in ../sysdeps/unix/sysv/linux/_exit.c
 30	in ../sysdeps/unix/sysv/linux/_exit.c
 0x00007ffff7ceac2f	30	in ../sysdeps/unix/sysv/linux/_exit.c
-[Inferior 1 (process 6399) exited normally]
+[Inferior 1 (process 7997) exited normally]
 Error 
