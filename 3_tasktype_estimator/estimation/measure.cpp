@@ -15,7 +15,9 @@
 #include <unistd.h>
 
 static const char *const logfolder_measure = "logs/measure/";
-FILE* logfileMeasure;
+//FILE* logfileMeasure;
+std::ofstream logfileMeasure;
+
 
 std::string currentCPUFreq;
 std::string currentParallelism;
@@ -33,11 +35,25 @@ public:
     long long energy_my_one_to_many;
 
     float power() {
-        return energy_mj/duration;
+        if (energy_mj == 0 || duration==0) {
+            return 0;
+        }
+        float power = (float) energy_mj/duration;
+        if (power==0) {
+            return -1;
+        }
+        return power;
     }
 
     float powerOneToMany() {
-        return energy_my_one_to_many/duration_one_to_many;
+        if (energy_mj == 0 || duration==0) {
+            return 0;
+        }
+        float power = (float) energy_my_one_to_many/duration_one_to_many;
+        if (power==0) {
+            return -1;
+        }
+        return power;
     }
 };
 
@@ -122,24 +138,28 @@ char* getFilename() {
 
 void openMeasurLogFile() {
     mkdir(logfolder_measure, 0777);
-    logfileMeasure = fopen(getFilename(), "w");
-    fprintf(logfileMeasure, "app;cpufreq;Parallelitätsgrad;Dauer; power;leistung\n");
+    logfileMeasure.open(getFilename());
+    logfileMeasure << "app;cpufreq;Parallelitätsgrad;Dauer; power;leistung\n";
 }
 
 void closeMeasureLogFile() {
-    fclose(logfileMeasure);
+    logfileMeasure.close();
 }
 
 void logMeasure(const char app[], long long  dauer, long long energy_mj) {
-    fprintf(logfileMeasure, "%s;%lld;%lld;%lld\n", app, dauer, energy_mj, energy_mj/dauer);
+    logfileMeasure << app << ";" << dauer << ";" << energy_mj << ";" << ((dauer!=0) ? energy_mj/dauer : 0) << "\n";
 }
 
 void logMeasure(MeasureResult res) {
-    fprintf(logfileMeasure, "%s;%s;%s,%lld;%lld;%f\n", res.taskname.c_str(), res.cpuFreq.c_str(), res.parallelism.c_str(),  res.duration, res.energy_mj, res.power());
+    logfileMeasure << res.taskname.c_str() << ";" << res.cpuFreq.c_str() << ";" << res.parallelism.c_str() << ";" <<  res.duration << ";" << res.energy_mj << ";" << res.power() << "\n";
 }
 
 void logMeasureNewLine() {
-    fprintf(logfileMeasure, "\n");
+    logfileMeasure << "\n";
+}
+
+void logMeasureFlush() {
+    logfileMeasure.flush();
 }
 
 void runCommand(const char* command) {
@@ -149,10 +169,10 @@ void runCommand(const char* command) {
 
 MeasureResult runAndMeasureScript(const char* script) {
     uint64_t timestamp_begin = timeSinceEpochMillisec();
-    long long counter_begin = readEnergy_UJ_better_with_loop();
+    long long counter_begin = read_power_usage();
     std::thread t1(runCommand, script);
     t1.join();
-    long long counter_end = readEnergy_UJ();
+    long long counter_end = read_power_usage();
     uint64_t timestamp_end = timeSinceEpochMillisec();
     uint64_t duration = timestamp_end - timestamp_begin;
     std::cout << "Dauer: " << duration << " MS" << std::endl;
@@ -165,6 +185,7 @@ MeasureResult runAndMeasureScript(const char* script) {
     result.energy_mj=energy_mj;
 
     logMeasure(script, duration, energy_mj);
+    logMeasureFlush();
     return result;
 }
 
@@ -197,11 +218,11 @@ std::string  getFilenameWithParam(char* filename, std::string cores) {
 }
 
 MeasureResult estimateAppTask(std::string apptaskname, std::string taskname, std::string cpufreq, std::string cores) {
-    char* filename = searchTasktypeFile(taskname, foldername_generated_scripts_tasktypes_from_folder);
+    char* filenameOneToOne = searchTasktypeFile(taskname, foldername_generated_scripts_tasktypes_from_folder);
 
-    std::string fileWithParam = getFilenameWithParam(filename, cores);
+    std::string filenameOntToOneWithParam = getFilenameWithParam(filenameOneToOne, cores);
 
-    MeasureResult result = runAndMeasureScript(fileWithParam.c_str());
+    MeasureResult result = runAndMeasureScript(filenameOntToOneWithParam.c_str());
     result.taskname=taskname;
     result.cpuFreq=cpufreq;
     result.parallelism=cores;
@@ -212,8 +233,7 @@ MeasureResult estimateAppTask(std::string apptaskname, std::string taskname, std
     MeasureResult resultOneToMany = runAndMeasureScript(filenameOneToManyWithParam.c_str());
     result.duration_one_to_many = resultOneToMany.duration;
     result.energy_my_one_to_many = resultOneToMany.energy_mj;
-
-    logMeasureNewLine();
+    logMeasureFlush();
 
     return result;
 }
@@ -225,38 +245,46 @@ MeasureResult measureAppTask(std::string apptaskname, std::string cpufreq, std::
 
     std::thread t1(runCommand, fileWithParam.c_str());
     t1.join();
-
     char* measureFilename = searchTasktypeFile(apptaskname, folder_measure);
 
-    std::ifstream measureFile(measureFilename);
-    std::string line;
-
     MeasureResult result;
-    while (std::getline(measureFile, line)) {
-        if (line.empty()) {
-            continue;
-        }
+    result.parallelism=-1;
+    result.duration=-1;
+    result.energy_mj=-1;
+    result.taskname=apptaskname;
+    result.cpuFreq=cpufreq;
 
-        size_t delimiterPos = line.find('=');
-        if (delimiterPos == std::string::npos) {
-            continue;
-        }
+    if (measureFilename!=NULL) {
+        std::ifstream measureAppTaskFile(measureFilename);
+        std::string line;
 
-        std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
-        std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+        while (std::getline(measureAppTaskFile, line)) {
+            if (line.empty()) {
+                continue;
+            }
 
-        if (keyOfCurrentLine=="parallelism") {
-            result.parallelism=valueOfCurrentLine;
-        } else if (keyOfCurrentLine=="duration") {
-            result.duration=stoi(valueOfCurrentLine);
-        } else if (keyOfCurrentLine=="counter_diff") {
-            result.energy_mj=stoll(valueOfCurrentLine);
+            size_t delimiterPos = line.find('=');
+            if (delimiterPos == std::string::npos) {
+                continue;
+            }
+
+            std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+            std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+
+            if (keyOfCurrentLine=="parallelism") {
+                result.parallelism=valueOfCurrentLine;
+            } else if (keyOfCurrentLine=="duration") {
+                result.duration=stoi(valueOfCurrentLine);
+            } else if (keyOfCurrentLine=="counter_diff") {
+                result.energy_mj=stoll(valueOfCurrentLine);
+            }
+            //std::cout << line << "\n";
         }
-        //std::cout << line << "\n";
+        measureAppTaskFile.close();
+        logMeasure(apptaskname.c_str(), result.duration, result.energy_mj);
+        logMeasureNewLine();
     }
 
-    logMeasure(apptaskname.c_str(), result.duration, result.energy_mj);
-    logMeasureNewLine();
     return result;
 }
 
@@ -297,8 +325,11 @@ void smtoff() {
     system("echo off > /sys/devices/system/cpu/smt/control");
 }
 
+void smton() {
+    system("echo on > /sys/devices/system/cpu/smt/control");
+}
+
 void measureAllPrototypTasks(int count) {
-    smtoff();
     readConfigFile(false, false);
     openMeasurLogFile();
 

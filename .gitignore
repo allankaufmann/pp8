@@ -29,6 +29,7 @@ uarch-configure/
 3_tasktype_estimator/main
 3_tasktype_estimator/tools
 3_tasktype_estimator/cmake_install.cmake
+3_tasktype_estimator/logs/output/
 2_apptask_analyzer/gdb/
 2_apptask_analyzer/main
 2_apptask_analyzer/cmake-build-debug/

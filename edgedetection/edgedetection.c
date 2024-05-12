@@ -39,6 +39,8 @@ typedef void (*FunctionPtrWithImgrgbAndImg)(MyIMG* imgrgb,MyIMG* img);
 typedef void (*FunctionPtrWithImg)(MyIMG* img);
 typedef void (*FunctionPtrWithImgAndChar)(MyIMG* img, char* filename);
 
+
+
 int maxim(int a, int b)
 {
     if (a > b)
@@ -253,7 +255,7 @@ void writeimage(MyIMG* img, char* filename)
 
 long unsigned  readEnergy_UJ() {
     FILE *filePointer;
-    filePointer = popen("echo allan | sudo -S cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
+    filePointer = popen("cat /sys/class/powercap/intel-rapl/intel-rapl\\:0/energy_uj", "r");
 
     long unsigned energy_ui=0;
 
@@ -278,7 +280,7 @@ void prepareParallelism(int parallelism) {
     //omp_set_num_threads(parallelism); // Parallelitätsgrad über OMP gesetzt.
     printf("dyn: %d\n", omp_get_dynamic());
     printf("num_treads: %d\n", omp_get_num_threads());
-    smtoff();
+    //smtoff();
 }
 
 unsigned long long  millisecondsSinceEpoch() {
@@ -297,6 +299,132 @@ bool checkDuration(unsigned long long timestamp_begin) {
     unsigned long long timestamp_end = millisecondsSinceEpoch();
     unsigned long long duration = timestamp_end - timestamp_begin;
     return duration > 5000;
+}
+
+// Struktur für die Thread-Parameter
+typedef struct {
+    char* taskname;
+    unsigned long long timestamp_begin;
+    char* paramFilename;
+    MyIMG* paramImgrgb;
+    MyIMG* paramImgh;
+    MyIMG  *imgv;
+    // Weitere Parameter hier hinzufügen, falls benötigt
+} ThreadParams;
+
+
+void *thread_function(void *arg) {
+    ThreadParams *params = (ThreadParams *)arg;
+    printf("Parameter 1: %s\n", params->taskname);
+    printf("Parameter 2: %d\n", params->timestamp_begin);
+    bool stop = false;
+
+
+    if(params->taskname == NULL) {
+        while(!stop) {
+            checkcontrast(params->paramImgh);
+            loadimage(params->paramImgrgb,params->paramFilename);
+            greyscale(params->paramImgrgb,params->paramImgh);
+            sharpencontrast(params->paramImgh);
+            copyimage(&params->imgv,params->paramImgh);
+            sobelh(params->paramImgh);
+            sobelv(params->imgv);
+            combineimgs(params->paramImgh,params->imgv);
+            writeimage(params->paramImgh,params->paramFilename);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_checkcontrast) == 0) {
+        while(!stop) {
+            checkcontrast(params->paramImgh);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_loadimage) == 0) {
+        while(!stop) {
+            loadimage(params->paramImgrgb,params->paramFilename);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_greyscale) == 0) {
+        while(!stop) {
+            greyscale(params->paramImgrgb,params->paramImgh);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_sharpencontrast) == 0) {
+        while(!stop) {
+            sharpencontrast(params->paramImgh);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_copyimage) == 0) {
+        while(!stop) {
+            copyimage(&params->imgv,params->paramImgh);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_sobelh) == 0) {
+        while(!stop) {
+            sobelh(params->paramImgh);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_sobelv) == 0) {
+
+        while(!stop) {
+            sobelv(params->imgv);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_combineimgs) == 0) {
+        while(!stop) {
+            combineimgs(params->paramImgh,params->imgv);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    } else if (strcmp(params->taskname, task_writeimage) == 0) {
+        while(!stop) {
+            writeimage(params->paramImgh,params->paramFilename);
+            stop= checkDuration(params->timestamp_begin);
+        }
+    }
+}
+
+ThreadParams prepareTask(ThreadParams params) {
+    loadimage(params.paramImgrgb,params.paramFilename);
+
+
+    if (strcmp(params.taskname, task_combineimgs) == 0) {
+        copyimage(params.imgv,params.paramImgh);
+    }
+    return params;
+}
+
+void measureAppTask(char* taskname, int parallelism, ThreadParams params) {
+    params = prepareTask(params);
+    prepareParallelism(parallelism);
+    unsigned long long timestamp_begin = millisecondsSinceEpoch();
+    long long counter_begin = readEnergy_UJ();
+    params.timestamp_begin=timestamp_begin;
+
+    pthread_t threads[parallelism];
+    for (int j = 0; j < parallelism; j++) {
+        pthread_create(&threads[j], NULL, thread_function, (void *)&params);
+    }
+    for (int j = 0; j < parallelism; j++) {
+        pthread_join(threads[j], NULL);
+    }
+
+
+
+    long long counter_end = readEnergy_UJ();
+    unsigned long long timestamp_end = millisecondsSinceEpoch();
+
+    long long counter_diff = counter_end - counter_begin;
+    unsigned long long duration = timestamp_end - timestamp_begin;
+    printf("dauer %llu, zähler %llu, power %llu\n", duration, counter_diff, counter_diff/duration);
+
+    mkdir("measure", 0777);
+    char* filename = (char*) malloc(sizeof(char) * 30);
+    sprintf(filename, "%s%s.log", "measure/", taskname);
+    FILE* log = fopen(filename, "w");
+    fprintf(log, "parallelism=%d\n", parallelism);
+    fprintf(log, "duration=%lld\n", duration);
+    fprintf(log, "counter_diff=%lld\n", counter_diff);
+    fclose(log);
+    free(filename);
 }
 
 void callFunctionWithImgrgbAndImg(char* taskname, FunctionPtrWithImgrgbAndImg functionPtrWithImgrgbAndImg, int parallelism, MyIMG* imgrgb,MyIMG* img) {
@@ -441,7 +569,16 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     FunctionPtrWithImgrgbAndImg combine = combineimgs;
     FunctionPtrWithImgAndChar wi = writeimage;
     FunctionPtrWithImgAndChar li = loadimage;
-    if (taskname==NULL) {
+
+    ThreadParams params;
+    params.taskname=taskname;
+    params.paramImgh=imgh;
+    params.paramFilename=filename;
+    params.paramImgrgb=imgrgb;
+    params.imgv=imgv;
+    params.timestamp_begin=0;
+    measureAppTask(taskname, parallelism, params);
+    /*if (taskname==NULL) {
         //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
         //greyscale(imgrgb,imgh);
@@ -473,7 +610,9 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
         //greyscale(imgrgb,imgh);
     } else if (strcmp(taskname, task_checkcontrast) == 0) {
         loadimage(imgrgb,filename);
-        callFunctionWithImg(taskname, cc, parallelism, imgh);
+
+        measureAppTask(taskname, parallelism, params);
+        //callFunctionWithImg(taskname, cc, parallelism, imgh);
         //checkcontrast(imgh);
     } else if (strcmp(taskname, task_sharpencontrast) == 0) {
         loadimage(imgrgb,filename);
@@ -503,8 +642,8 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     } else if (strcmp(taskname, task_loadimage) == 0) {
         //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
-    }
-    smton();
+    }*/
+    //smton();
 }
 
 int main(int argc,char *argv[])

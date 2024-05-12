@@ -1,12 +1,10 @@
 #include <sys/stat.h> //mkdir, chmod
-
-
-
 std::ofstream resultFile;
 
 void openResultFile() {
-    resultFile.open(filename_estimation_result_from_folder);
-    chmod(filename_estimation_result_from_folder.c_str(), 0777);
+    std::string filename = getFilename(folder_result, logfileres);
+    resultFile.open(filename);
+    chmod(filename.c_str(), 0777);
 }
 
 void closeResultFile() {
@@ -34,7 +32,7 @@ std::string readOneToOneMapping(std::string apptaskname) {
             }
         }
     }
-
+    infile.close();
     return NULL;
 }
 
@@ -47,12 +45,12 @@ void logEmptyline() {
 }
 
 void estimateApptask(std::string apptaskname) {
-    smtoff();
     std::string oneToOneTask = readOneToOneMapping(apptaskname);
 
     MeasureResult result = estimateAppTask(apptaskname, oneToOneTask, currentCPUFreq, currentParallelism);
-
     MeasureResult appTaskresult = measureAppTask(apptaskname, currentCPUFreq, currentParallelism);
+    logMeasureNewLine();
+    logMeasureFlush();
 
     resultFile << currentCPUFreq << ";";
     resultFile << currentParallelism << ";";
@@ -60,72 +58,64 @@ void estimateApptask(std::string apptaskname) {
     resultFile << appTaskresult.duration << " MS; ";
     resultFile << appTaskresult.power() << " MJ/MS:\t";
     resultFile << result.power() << " MJ/MS; ";
-    resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << "%;\t";
-    resultFile << result.powerOneToMany() << " MJ/MS;";
-    resultFile << (result.powerOneToMany()-appTaskresult.power())*100/appTaskresult.power() << "%;";
-    resultFile << "\n";
+    if (appTaskresult.power()!=0) {
+        resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << "%;\t";
+        resultFile << result.powerOneToMany() << " MJ/MS;";
+        resultFile << (result.powerOneToMany()-appTaskresult.power())*100/appTaskresult.power() << "%;";
+        resultFile << "\n";
+    } else {
+        resultFile << 0 << "%;\t";
+        resultFile << result.powerOneToMany() << " MJ/MS;";
+        resultFile << 0 << "%;\t";
+        resultFile << "\n";
+    }
+    resultFile.flush();
 }
 
-void testEstimation() {
+
+
+void estimateAppTask(std::string apptaskname, int repeats) {
+
+    for (std::string cpuFreq : cpuFrequencyVektor) {
+        setupCpuFrequenzlevel(cpuFreq);
+
+        for (std::string cores : parallelismVektor) {
+            setCurrentParallelism(cores);
+
+            for (int i = 0; i < repeats; i++) {
+                estimateApptask(apptaskname);
+            }
+            logEmptyline();
+        }
+    }
+}
+
+
+void startEstimation(int repeats) {
+    smtoff();
     openResultFile();
     logHeadline();
     openMeasurLogFile();
 
-    setupCpuFrequenzlevel(cpuFrequencyVektor[5]);
 
-    setCurrentParallelism(parallelismVektor[0]);
     for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
+        estimateAppTask(apptaskname, repeats);
     }
-
-    logEmptyline();
-    setCurrentParallelism(parallelismVektor[1]);
-    for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
-    }
-
-    logEmptyline();
-    setCurrentParallelism(parallelismVektor[2]);
-    for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
-    }
-
-    /*setupCpuFrequenzlevel(cpuFrequencyVektor[4]);
-
-    setCurrentParallelism(parallelismVektor[0]);
-    logEmptyline();
-    for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
-    }
-    setCurrentParallelism(parallelismVektor[1]);
-    for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
-    }
-    setCurrentParallelism(parallelismVektor[2]);
-    for (std::string apptaskname: apptypeVektor) {
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        estimateApptask(apptaskname);
-        logEmptyline();
-    }*/
-
-
 
     closeMeasureLogFile();
     closeResultFile();
+    smton();
+}
+
+void testEstimation(std::string apptaskname, int repeats) {
+    smtoff();
+    openResultFile();
+    logHeadline();
+    openMeasurLogFile();
+
+    estimateAppTask(apptaskname, repeats);
+
+    closeMeasureLogFile();
+    closeResultFile();
+    smton();
 }

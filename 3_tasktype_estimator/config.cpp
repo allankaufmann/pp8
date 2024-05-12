@@ -155,6 +155,37 @@ void readConfigFile(bool showEntries, bool generateScripts) {
 
     }
 }
+#include <fcntl.h>
+#define MAX_BUF_SIZE 256
+// Funktion zum Lesen der Leistungsaufnahme
+long long read_power_usage() {
+    int fd;
+    char buf[MAX_BUF_SIZE];
+    long long power_usage;
+
+    // Öffnen des powercap-Dateisystems
+    fd = open("/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj", O_RDONLY);
+    if (fd == -1) {
+        perror("Fehler beim Öffnen der Datei");
+        exit(1);
+    }
+
+    // Lesen des Energieverbrauchs aus der Datei
+    if (read(fd, buf, MAX_BUF_SIZE) == -1) {
+        perror("Fehler beim Lesen der Datei");
+        close(fd);
+        exit(1);
+    }
+
+    // Konvertierung des gelesenen Wertes in eine long long Ganzzahl
+    power_usage = atoll(buf);
+
+    // Schließen der Datei
+    close(fd);
+
+    return power_usage;
+}
+
 
 long unsigned  readEnergy_UJ() {
     FILE *filePointer;
@@ -163,7 +194,7 @@ long unsigned  readEnergy_UJ() {
     long unsigned energy_ui=0;
 
     fscanf(filePointer, "%lu", &energy_ui);
-
+    std::cout << energy_ui << "\n";
     int status = pclose(filePointer);
     if (WIFEXITED(status)) {
         int exit_status = WEXITSTATUS(status);
@@ -171,6 +202,7 @@ long unsigned  readEnergy_UJ() {
             std::cout << RED << "Fehler beim Lesen von intel-rapl/energy_uj! Root-User? "<< RESET;
         }
     }
+    pclose(filePointer);
 
     return energy_ui;
 }

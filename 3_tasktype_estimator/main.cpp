@@ -22,9 +22,13 @@ const char* script_measure = "./scripts/measureGreyscale1N.sh";
 
 int main(int argc, char *argv[]) {
     char *parameter;
+    int testAppTaskIndex = -1;
 
     if (argc==2) {
         parameter= argv[1];
+    } else if (argc==3) {
+        parameter= argv[1];
+        testAppTaskIndex=std::stoi(argv[2]);
     }
 
     while (
@@ -39,6 +43,7 @@ int main(int argc, char *argv[]) {
             strcasecmp(parameter, "S")!=0 &&
             strcasecmp(parameter, "T")!=0 &&
             strcasecmp(parameter, "U")!=0 &&
+            strcasecmp(parameter, "Z")!=0 &&
             strcasecmp(parameter, "X")!=0 &&
             strcasecmp(parameter, "W")!=0 &&
             strcasecmp(parameter, "V")!=0
@@ -59,7 +64,8 @@ int main(int argc, char *argv[]) {
         printf("\t-------------------------- Tasktype Estimator -----------------------------------------------------\n");
         printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
         printf("\tS (=Anw. Tasks messen)\n");
-        printf("\tU (=Estimation)\n");
+        printf("\tU (=Estimation - alle)\n");
+        printf("\tZ (=Estimation - TEST)\n");
 
         printf("\t-------------------------- Sonstiges --------------------------------------------------------------\n");
         printf("\tV (=Versuch...greyscale 1:N)\n");
@@ -136,7 +142,33 @@ int main(int argc, char *argv[]) {
         }*/
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
-        testEstimation();
+        //testEstimation();
+        startEstimation(3);
+    } else if (strcasecmp(parameter, "Z")==0) {
+        readConfigFile(false, false);
+        initTaskVektors();
+
+        if (testAppTaskIndex == -1) {
+            printf("Folende AppTasks sind konfiguriert, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+
+            for (int i = 0; i < apptaskVektor.size(); i++) {
+                printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
+            }
+            int index = 0;
+            if (scanf("%d", &index) == 1) {
+                testEstimation(apptaskVektor[index].taskname, 3);
+            }
+        } else {
+            testEstimation(apptaskVektor[testAppTaskIndex].taskname, 3);
+        }
+
+
+
+
+
+
+
+
     }
     return 0;
 }

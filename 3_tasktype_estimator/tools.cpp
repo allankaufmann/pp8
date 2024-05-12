@@ -30,12 +30,12 @@ std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
             sprintf(filename, "%s/%s", directoryname, file);
             v.push_back(filename);
         }
-        //printf("%lu", v.size());
+        closedir (dir);
     }
     return v;
 };
 
-char* getFilename(const char *const folder) {
+char* getFilename(const char *const folder, const char* ext) {
     time_t mytime = time(NULL);
     tm local_tm = *localtime(&mytime);
 
@@ -43,7 +43,7 @@ char* getFilename(const char *const folder) {
     int month = local_tm.tm_mon+1;
 
     char* filename = (char*) malloc(sizeof(char) * 30);
-    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d.log",
+    sprintf(filename, "%s%d%s%d%s%d%s%d%s%d%s",
             folder,
             year,
             (month<10) ? "0" : "",
@@ -53,7 +53,8 @@ char* getFilename(const char *const folder) {
             (local_tm.tm_hour<10) ? "0" : "",
             local_tm.tm_hour,
             (local_tm.tm_min<10) ? "0" : "",
-            local_tm.tm_min);
+            local_tm.tm_min,
+            ext);
 
     return filename;
 }
@@ -92,6 +93,7 @@ char* searchTasktypeFile(std::string tasktypename, std::string folder) {
     std::vector<char*> v_filenames = readFilenamesFromDirectory(folder.c_str());
 
     for (char* filename : v_filenames) {
+        std::cout << filename << "\n" << std::endl;
         char c_taskname[strlen(filename)];
         extractTaskNameFromFileName(filename, c_taskname);
         if (strcmp(c_taskname, tasktypename.c_str())==0) {

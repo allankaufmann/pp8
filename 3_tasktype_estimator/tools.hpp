@@ -8,5 +8,5 @@
 #include <vector>
 
 std::vector<char*> readFilenamesFromDirectory(const char* directoryname);
-char* getFilename(const char *const folder);
+char* getFilename(const char *const folder, const char* ext);
 #endif //EXPERIMENT_TOOLS_HPP

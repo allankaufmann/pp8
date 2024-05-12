@@ -105,7 +105,7 @@ bool checkSequenzfiles() {
 
 void openLogfileTaskmapper() {
     mkdir(logfolder_taskmapper, 0777);
-    currentLogfileName = getFilename(logfolder_taskmapper);
+    currentLogfileName = getFilename(logfolder_taskmapper, logfileext);
     logfileTaskmapper.open(currentLogfileName);
 }
 
