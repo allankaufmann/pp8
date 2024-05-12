@@ -26,6 +26,8 @@ static const char *const task_combineimgs = "combineimgs";
 static const char *const task_writeimage = "writeimage";
 static const char *const task_loadimage = "loadimage";
 
+bool withPThread = false; // try pthread for more cores
+
 void greyscale(MyIMG* imgrgb,MyIMG* img);
 int checkcontrast(MyIMG* img);
 void sharpencontrast(MyIMG* img);
@@ -280,7 +282,7 @@ void prepareParallelism(int parallelism) {
     //omp_set_num_threads(parallelism); // Parallelitätsgrad über OMP gesetzt.
     printf("dyn: %d\n", omp_get_dynamic());
     printf("num_treads: %d\n", omp_get_num_threads());
-    //smtoff();
+    smtoff();
 }
 
 unsigned long long  millisecondsSinceEpoch() {
@@ -392,7 +394,7 @@ ThreadParams prepareTask(ThreadParams params) {
     return params;
 }
 
-void measureAppTask(char* taskname, int parallelism, ThreadParams params) {
+void measureAppTaskWithPThread(char* taskname, int parallelism, ThreadParams params) {
     params = prepareTask(params);
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
@@ -406,8 +408,6 @@ void measureAppTask(char* taskname, int parallelism, ThreadParams params) {
     for (int j = 0; j < parallelism; j++) {
         pthread_join(threads[j], NULL);
     }
-
-
 
     long long counter_end = readEnergy_UJ();
     unsigned long long timestamp_end = millisecondsSinceEpoch();
@@ -577,8 +577,14 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     params.paramImgrgb=imgrgb;
     params.imgv=imgv;
     params.timestamp_begin=0;
-    measureAppTask(taskname, parallelism, params);
-    /*if (taskname==NULL) {
+
+    if (withPThread) {
+        measureAppTaskWithPThread(taskname, parallelism, params);
+        smton();
+        return;
+    }
+
+    if (taskname==NULL) {
         //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
         //greyscale(imgrgb,imgh);
@@ -610,9 +616,7 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
         //greyscale(imgrgb,imgh);
     } else if (strcmp(taskname, task_checkcontrast) == 0) {
         loadimage(imgrgb,filename);
-
-        measureAppTask(taskname, parallelism, params);
-        //callFunctionWithImg(taskname, cc, parallelism, imgh);
+        callFunctionWithImg(taskname, cc, parallelism, imgh);
         //checkcontrast(imgh);
     } else if (strcmp(taskname, task_sharpencontrast) == 0) {
         loadimage(imgrgb,filename);
@@ -642,8 +646,8 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     } else if (strcmp(taskname, task_loadimage) == 0) {
         //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
-    }*/
-    //smton();
+    }
+    smton();
 }
 
 int main(int argc,char *argv[])
