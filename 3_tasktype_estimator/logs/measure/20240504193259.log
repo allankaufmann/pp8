@@ -1,0 +1,361 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/m4x4smul.sh 1;5043;13023160;2582
+gen/tasktypes/onetomany/greyscale.sh 1;5028;12659025;2517
+greyscale;5125;12206878;2381
+
+
+./gen/tasktypes/m4x4smul.sh 1;5031;12835843;2551
+gen/tasktypes/onetomany/greyscale.sh 1;5035;12443572;2471
+greyscale;5125;12056854;2352
+
+
+./gen/tasktypes/m4x4smul.sh 1;5029;12532500;2492
+gen/tasktypes/onetomany/greyscale.sh 1;5028;12757109;2537
+greyscale;5125;11936432;2329
+
+
+./gen/tasktypes/m4x4smul.sh 2;5045;19017102;3769
+gen/tasktypes/onetomany/greyscale.sh 2;5040;18604445;3691
+greyscale;5085;17378495;3417
+
+
+./gen/tasktypes/m4x4smul.sh 2;5045;19219190;3809
+gen/tasktypes/onetomany/greyscale.sh 2;5040;18533217;3677
+greyscale;5073;17619767;3473
+
+
+./gen/tasktypes/m4x4smul.sh 2;5040;19318981;3833
+gen/tasktypes/onetomany/greyscale.sh 2;5040;18822766;3734
+greyscale;5062;17488114;3454
+
+
+./gen/tasktypes/m4x4smul.sh 3;5048;25524898;5056
+gen/tasktypes/onetomany/greyscale.sh 3;5048;25055295;4963
+greyscale;5141;24479125;4761
+
+
+./gen/tasktypes/m4x4smul.sh 3;5038;26548516;5269
+gen/tasktypes/onetomany/greyscale.sh 3;5047;23632874;4682
+greyscale;5137;24937986;4854
+
+
+./gen/tasktypes/m4x4smul.sh 3;5040;26691399;5295
+gen/tasktypes/onetomany/greyscale.sh 3;5044;25315121;5018
+greyscale;5138;24961179;4858
+
+
+./gen/tasktypes/m4x4smul.sh 4;5036;32822670;6517
+gen/tasktypes/onetomany/greyscale.sh 4;5048;31037641;6148
+greyscale;5159;30965375;6002
+
+
+./gen/tasktypes/m4x4smul.sh 4;5043;31641765;6274
+gen/tasktypes/onetomany/greyscale.sh 4;5045;29703721;5887
+greyscale;5164;30353560;5877
+
+
+./gen/tasktypes/m4x4smul.sh 4;5046;33030982;6545
+gen/tasktypes/onetomany/greyscale.sh 4;5044;31729410;6290
+greyscale;5164;30261641;5860
+
+
+./gen/tasktypes/m4x4smul.sh 1;5025;16736956;3330
+gen/tasktypes/onetomany/greyscale.sh 1;5032;16833026;3345
+greyscale;5077;15493917;3051
+
+
+./gen/tasktypes/m4x4smul.sh 1;5041;16734149;3319
+gen/tasktypes/onetomany/greyscale.sh 1;5028;15975118;3177
+greyscale;5077;15660482;3084
+
+
+./gen/tasktypes/m4x4smul.sh 1;5033;16658100;3309
+gen/tasktypes/onetomany/greyscale.sh 1;5024;16036397;3191
+greyscale;5077;15609824;3074
+
+
+./gen/tasktypes/m4x4smul.sh 2;5041;27079276;5371
+gen/tasktypes/onetomany/greyscale.sh 2;5033;25584346;5083
+greyscale;5017;24162536;4816
+
+
+./gen/tasktypes/m4x4smul.sh 2;5032;27195609;5404
+gen/tasktypes/onetomany/greyscale.sh 2;5032;26340631;5234
+greyscale;5119;24790403;4842
+
+
+./gen/tasktypes/m4x4smul.sh 2;5042;27125480;5379
+gen/tasktypes/onetomany/greyscale.sh 2;5037;25855098;5133
+greyscale;5053;24537047;4855
+
+
+./gen/tasktypes/m4x4smul.sh 3;5031;35445649;7045
+gen/tasktypes/onetomany/greyscale.sh 3;5035;35201570;6991
+greyscale;5088;34173558;6716
+
+
+./gen/tasktypes/m4x4smul.sh 3;5041;37027371;7345
+gen/tasktypes/onetomany/greyscale.sh 3;5039;32090433;6368
+greyscale;5092;34235691;6723
+
+
+./gen/tasktypes/m4x4smul.sh 3;5038;36608243;7266
+gen/tasktypes/onetomany/greyscale.sh 3;5037;35514130;7050
+greyscale;5090;34381565;6754
+
+
+./gen/tasktypes/m4x4smul.sh 4;5035;47950683;9523
+gen/tasktypes/onetomany/greyscale.sh 4;5044;44921516;8905
+greyscale;5120;44262948;8645
+
+
+./gen/tasktypes/m4x4smul.sh 4;5044;47789184;9474
+gen/tasktypes/onetomany/greyscale.sh 4;5032;44837898;8910
+greyscale;5116;44181222;8635
+
+
+./gen/tasktypes/m4x4smul.sh 4;5034;48185668;9572
+gen/tasktypes/onetomany/greyscale.sh 4;5036;45064643;8948
+greyscale;5116;44171579;8634
+
+
+./gen/tasktypes/m4x4smul.sh 1;5034;20075632;3988
+gen/tasktypes/onetomany/greyscale.sh 1;5024;19233289;3828
+greyscale;5025;18553663;3692
+
+
+./gen/tasktypes/m4x4smul.sh 1;5042;19832041;3933
+gen/tasktypes/onetomany/greyscale.sh 1;5024;19032666;3788
+greyscale;5025;17917983;3565
+
+
+./gen/tasktypes/m4x4smul.sh 1;5042;19502269;3867
+gen/tasktypes/onetomany/greyscale.sh 1;5032;18851942;3746
+greyscale;5026;18306838;3642
+
+
+./gen/tasktypes/m4x4smul.sh 2;5041;31916300;6331
+gen/tasktypes/onetomany/greyscale.sh 2;5036;30318587;6020
+greyscale;5111;30171981;5903
+
+
+./gen/tasktypes/m4x4smul.sh 2;5033;32011575;6360
+gen/tasktypes/onetomany/greyscale.sh 2;5032;30497115;6060
+greyscale;5079;29742721;5856
+
+
+./gen/tasktypes/m4x4smul.sh 2;5042;32255776;6397
+gen/tasktypes/onetomany/greyscale.sh 2;5032;30626570;6086
+greyscale;5071;29839889;5884
+
+
+./gen/tasktypes/m4x4smul.sh 3;5034;44794990;8898
+gen/tasktypes/onetomany/greyscale.sh 3;5033;41789749;8303
+greyscale;5045;41156206;8157
+
+
+./gen/tasktypes/m4x4smul.sh 3;5038;44773384;8887
+gen/tasktypes/onetomany/greyscale.sh 3;5033;42251051;8394
+greyscale;5029;40990618;8150
+
+
+./gen/tasktypes/m4x4smul.sh 3;5047;44969734;8910
+gen/tasktypes/onetomany/greyscale.sh 3;5033;42371046;8418
+greyscale;5037;40641436;8068
+
+
+./gen/tasktypes/m4x4smul.sh 4;5033;57099646;11345
+gen/tasktypes/onetomany/greyscale.sh 4;5036;53707077;10664
+greyscale;5098;52534411;10304
+
+
+./gen/tasktypes/m4x4smul.sh 4;5040;57587377;11426
+gen/tasktypes/onetomany/greyscale.sh 4;5036;54019332;10726
+greyscale;5095;52542041;10312
+
+
+./gen/tasktypes/m4x4smul.sh 4;5041;58054844;11516
+gen/tasktypes/onetomany/greyscale.sh 4;5040;51866628;10290
+greyscale;5091;52318408;10276
+
+
+./gen/tasktypes/m4x4smul.sh 1;5030;23515076;4674
+gen/tasktypes/onetomany/greyscale.sh 1;5020;22254399;4433
+greyscale;5072;21961614;4329
+
+
+./gen/tasktypes/m4x4smul.sh 1;5030;23370668;4646
+gen/tasktypes/onetomany/greyscale.sh 1;5028;22176640;4410
+greyscale;5072;22104863;4358
+
+
+./gen/tasktypes/m4x4smul.sh 1;5022;23544557;4688
+gen/tasktypes/onetomany/greyscale.sh 1;5027;22231083;4422
+greyscale;5071;21909306;4320
+
+
+./gen/tasktypes/m4x4smul.sh 2;5033;37782862;7507
+gen/tasktypes/onetomany/greyscale.sh 2;5036;35695161;7087
+greyscale;5019;34728244;6919
+
+
+./gen/tasktypes/m4x4smul.sh 2;5030;38940696;7741
+gen/tasktypes/onetomany/greyscale.sh 2;5036;35629914;7075
+greyscale;5081;34697787;6828
+
+
+./gen/tasktypes/m4x4smul.sh 2;5035;37659693;7479
+gen/tasktypes/onetomany/greyscale.sh 2;5032;35824188;7119
+greyscale;5016;34786410;6935
+
+
+./gen/tasktypes/m4x4smul.sh 3;5034;53204088;10568
+gen/tasktypes/onetomany/greyscale.sh 3;5036;49979364;9924
+greyscale;5078;49328121;9714
+
+
+./gen/tasktypes/m4x4smul.sh 3;5036;53505844;10624
+gen/tasktypes/onetomany/greyscale.sh 3;5036;51574941;10241
+greyscale;5083;49498591;9738
+
+
+./gen/tasktypes/m4x4smul.sh 3;5035;54858807;10895
+gen/tasktypes/onetomany/greyscale.sh 3;5038;51533438;10228
+greyscale;5077;49347164;9719
+
+
+./gen/tasktypes/m4x4smul.sh 4;5038;63395102;12583
+gen/tasktypes/onetomany/greyscale.sh 4;5041;61680994;12235
+greyscale;5046;62668663;12419
+
+
+./gen/tasktypes/m4x4smul.sh 4;5026;66891125;13309
+gen/tasktypes/onetomany/greyscale.sh 4;5042;63288656;12552
+greyscale;5046;62877829;12460
+
+
+./gen/tasktypes/m4x4smul.sh 4;5043;67383250;13361
+gen/tasktypes/onetomany/greyscale.sh 4;5036;63116416;12533
+greyscale;5049;62758079;12429
+
+
+./gen/tasktypes/m4x4smul.sh 1;5026;25192440;5012
+gen/tasktypes/onetomany/greyscale.sh 1;5029;23797058;4731
+greyscale;5049;23566407;4667
+
+
+./gen/tasktypes/m4x4smul.sh 1;5029;24926572;4956
+gen/tasktypes/onetomany/greyscale.sh 1;5024;23712830;4719
+greyscale;5048;23440492;4643
+
+
+./gen/tasktypes/m4x4smul.sh 1;5028;24830869;4938
+gen/tasktypes/onetomany/greyscale.sh 1;5024;23729187;4723
+greyscale;5048;23305666;4616
+
+
+./gen/tasktypes/m4x4smul.sh 2;5033;40661639;8079
+gen/tasktypes/onetomany/greyscale.sh 2;5035;39810811;7906
+greyscale;5077;37933253;7471
+
+
+./gen/tasktypes/m4x4smul.sh 2;5032;42989026;8543
+gen/tasktypes/onetomany/greyscale.sh 2;5028;40135334;7982
+greyscale;5066;37697413;7441
+
+
+./gen/tasktypes/m4x4smul.sh 2;5040;41083391;8151
+gen/tasktypes/onetomany/greyscale.sh 2;5038;38910484;7723
+greyscale;5090;38283349;7521
+
+
+./gen/tasktypes/m4x4smul.sh 3;5033;60108672;11942
+gen/tasktypes/onetomany/greyscale.sh 3;5030;55838480;11101
+greyscale;5079;53543259;10542
+
+
+./gen/tasktypes/m4x4smul.sh 3;5035;58488315;11616
+gen/tasktypes/onetomany/greyscale.sh 3;5038;54549298;10827
+greyscale;5075;53302537;10502
+
+
+./gen/tasktypes/m4x4smul.sh 3;5038;59940704;11897
+gen/tasktypes/onetomany/greyscale.sh 3;5040;54653852;10844
+greyscale;5083;53380967;10501
+
+
+./gen/tasktypes/m4x4smul.sh 4;5037;73726557;14636
+gen/tasktypes/onetomany/greyscale.sh 4;5040;60221952;11948
+greyscale;5082;68572884;13493
+
+
+./gen/tasktypes/m4x4smul.sh 4;5036;73385249;14572
+gen/tasktypes/onetomany/greyscale.sh 4;5037;68594429;13618
+greyscale;5029;68235421;13568
+
+
+./gen/tasktypes/m4x4smul.sh 4;5030;73417658;14595
+gen/tasktypes/onetomany/greyscale.sh 4;5033;68886359;13686
+greyscale;5032;68343392;13581
+
+
+./gen/tasktypes/m4x4smul.sh 1;5029;36319792;7222
+gen/tasktypes/onetomany/greyscale.sh 1;5028;34155369;6793
+greyscale;5028;34340000;6829
+
+
+./gen/tasktypes/m4x4smul.sh 1;5038;36162932;7178
+gen/tasktypes/onetomany/greyscale.sh 1;5028;34127049;6787
+greyscale;5029;33092078;6580
+
+
+./gen/tasktypes/m4x4smul.sh 1;5036;36012970;7151
+gen/tasktypes/onetomany/greyscale.sh 1;5024;33858556;6739
+greyscale;5029;33065590;6574
+
+
+./gen/tasktypes/m4x4smul.sh 2;5038;59776885;11865
+gen/tasktypes/onetomany/greyscale.sh 2;5035;55929422;11108
+greyscale;5079;55937784;11013
+
+
+./gen/tasktypes/m4x4smul.sh 2;5035;60387174;11993
+gen/tasktypes/onetomany/greyscale.sh 2;5036;56251321;11169
+greyscale;5015;55468120;11060
+
+
+./gen/tasktypes/m4x4smul.sh 2;5033;60322111;11985
+gen/tasktypes/onetomany/greyscale.sh 2;5034;57827367;11487
+greyscale;5058;55851602;11042
+
+
+./gen/tasktypes/m4x4smul.sh 3;5035;84290495;16740
+gen/tasktypes/onetomany/greyscale.sh 3;5042;77869063;15444
+greyscale;5042;79608866;15789
+
+
+./gen/tasktypes/m4x4smul.sh 3;5034;84883083;16861
+gen/tasktypes/onetomany/greyscale.sh 3;5042;78461652;15561
+greyscale;5040;80506996;15973
+
+
+./gen/tasktypes/m4x4smul.sh 3;5035;85832849;17047
+gen/tasktypes/onetomany/greyscale.sh 3;5034;80059853;15903
+greyscale;5035;80011942;15891
+
+
+./gen/tasktypes/m4x4smul.sh 4;5034;111037862;22057
+gen/tasktypes/onetomany/greyscale.sh 4;5042;104736121;20772
+greyscale;5038;100213184;19891
+
+
+./gen/tasktypes/m4x4smul.sh 4;5030;112580522;22381
+gen/tasktypes/onetomany/greyscale.sh 4;5034;103490519;20558
+greyscale;5083;102966594;20257
+
+
+./gen/tasktypes/m4x4smul.sh 4;5034;114010999;22648
+gen/tasktypes/onetomany/greyscale.sh 4;5032;105690464;21003
+greyscale;5076;103264262;20343
+
+
