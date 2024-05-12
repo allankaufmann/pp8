@@ -69,7 +69,43 @@ Die Tasks der Anwendungen sind häufig unter 1sek, weshalb erhebliche Unterschie
 Die Anwendung wurde nun so geändert, dass mehrere Bilder berechnet werden, damit Ausführungszeiten von >1000MS erreicht werden.
 Es gibt beim Vergleich der Messungen anw-task zu prottyptask durchaus Abweichungen (etwa im 30% Bereich). Es wird daher geprüft, ob ein Mix (also unterschiedliche Modelle) dem gewünschten Ergebnis bzw. der Präzision näher kommt.
 
+Der Task nop enthält 1999 Einträge
+Der Task vconvert_SIMD enthält 2090 Einträge
+Der Task imov enthält 1996 Einträge
+Der Task imem enthält 2080 Einträge
+Der Task icompare enthält 2095 Einträge
+Der Task branch enthält 1997 Einträge
+Der Task bitbyte enthält 2037 Einträge
+Der Task v1x4smul_SIMD enthält 2287 Einträge
+Der Task dmem enthält 2091 Einträge
+Der Task dsub64_SIMD enthält 2114 Einträge
+Der Task dadd enthält 2062 Einträge
+Der Task m4x4smul_SIMD enthält 2328 Einträge
+Der Task dmul64_SIMD enthält 2114 Einträge
+Der Task dmul enthält 2062 Einträge
+Der Task m4x4smul enthält 3199 Einträge
+Der Task iadd enthält 2039 Einträge
+Der Task logic enthält 2036 Einträge
+Der Task imul enthält 2071 Einträge
+Der Task dmem64_SIMD enthält 2081 Einträge
+Der Task ssub32_SIMD enthält 2114 Einträge
+Der Task vmov_SIMD enthält 2157 Einträge
+Der Task smul32_SIMD enthält 2114 Einträge
+Der Task shift enthält 1996 Einträge
 
+Der Task sobelv enthält 17432 Einträge
+Der Task checkcontrast enthält 1922 Einträge
+Der Task copyimage enthält 3590 Einträge
+Der Task testWithNopBitByteShiftIMulLogic enthält 10139 Einträge
+Der Task testWithNopAndBitByteAndShift enthält 6032 Einträge
+Der Task testWithNopAndBitByte enthält 4036 Einträge
+Der Task combineimgs enthält 8295 Einträge
+Der Task sharpencontrast enthält 17599 Einträge
+Der Task loadimage enthält 4951 Einträge
+Der Task sobelh enthält 17432 Einträge
+Der Task writeimage enthält 5340 Einträge
+Der Task greyscale enthält 18296 Einträge
+Der Task testWithNop enthält 1999 Einträge
 
 
 
