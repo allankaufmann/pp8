@@ -1,4 +1,11 @@
 #include <sys/stat.h> //mkdir, chmod
+#include <fstream>
+#include <string>
+#include "../constants.h"
+#include "../tools.hpp"
+#include "MeasureResult.h"
+#include "measure.h"
+#include "../config.h"
 std::ofstream resultFile;
 
 void openResultFile() {

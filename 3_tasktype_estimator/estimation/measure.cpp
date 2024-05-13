@@ -8,54 +8,20 @@
 #include <ctype.h>
 #include "vector"
 #include "../constants.h"
-
-
+#include <chrono>
+#include <iostream>
 #include <vector>
 #include <fstream>
 #include <unistd.h>
-
+#include "../config.h"
+#include "../tools.hpp"
+#include <thread>
+#include <cstring>
+#include "MeasureResult.h"
+#include "measure.h"
 static const char *const logfolder_measure = "logs/measure/";
 //FILE* logfileMeasure;
-std::ofstream logfileMeasure;
 
-
-std::string currentCPUFreq;
-std::string currentParallelism;
-
-class MeasureResult {
-public:
-
-    std::string taskname;
-    long long  duration;
-    long long energy_mj;
-    std::string cpuFreq;
-    std::string parallelism;
-
-    long long duration_one_to_many;
-    long long energy_my_one_to_many;
-
-    float power() {
-        if (energy_mj == 0 || duration==0) {
-            return 0;
-        }
-        float power = (float) energy_mj/duration;
-        if (power==0) {
-            return -1;
-        }
-        return power;
-    }
-
-    float powerOneToMany() {
-        if (energy_mj == 0 || duration==0) {
-            return 0;
-        }
-        float power = (float) energy_my_one_to_many/duration_one_to_many;
-        if (power==0) {
-            return -1;
-        }
-        return power;
-    }
-};
 
 
 
@@ -93,22 +59,22 @@ long long readCounterFromFile() {
     return counter;
 }
 
-long unsigned  readEnergy_UJ_better_with_loop() {
+/*long unsigned  readEnergy_UJ_better_with_loop() {
     long unsigned energy_ui = readEnergy_UJ();
     long unsigned new_energy_ui = readEnergy_UJ();
     while (new_energy_ui == energy_ui) {
         new_energy_ui = readEnergy_UJ();
     }
     return new_energy_ui;
-}
+}*/
 
 
-long unsigned  measureIdle(int milliseconds) {
+/*long unsigned  measureIdle(int milliseconds) {
     long unsigned  counter_beginn = readEnergy_UJ();
     std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
     long unsigned counter_end = readEnergy_UJ();
     return counter_end - counter_beginn;
-}
+}*/
 
 char* getFilename() {
     time_t mytime = time(NULL);

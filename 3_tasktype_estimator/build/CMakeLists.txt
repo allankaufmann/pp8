@@ -10,8 +10,6 @@ add_executable(
         estimation/measure.cpp
         constants.h
         tools.cpp
-        taskmapper/taskmapperresult.cpp
-        taskmapper/taskclasses.cpp
         taskmapper/taskmapperOneToOne.cpp
         taskmapper/taskmapperLog.cpp
         taskmapper/taskmapperOneToMany.cpp

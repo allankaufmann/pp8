@@ -1,3 +1,10 @@
+#include <string>
+#include <vector>
+#include <map>
+#include "Result.h"
+
+#ifndef INC_3_TASKTYPE_ESTIMATOR_TASKCLASSES_H
+#define INC_3_TASKTYPE_ESTIMATOR_TASKCLASSES_H
 
 class Task {
 public:
@@ -155,3 +162,4 @@ public:
 
 
 };
+#endif //INC_3_TASKTYPE_ESTIMATOR_TASKCLASSES_H

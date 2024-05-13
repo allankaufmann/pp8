@@ -26,7 +26,7 @@ static const char *const task_combineimgs = "combineimgs";
 static const char *const task_writeimage = "writeimage";
 static const char *const task_loadimage = "loadimage";
 
-bool withPThread = false; // try pthread for more cores
+bool withPThread = true; // try pthread for more cores
 
 void greyscale(MyIMG* imgrgb,MyIMG* img);
 int checkcontrast(MyIMG* img);
@@ -387,9 +387,10 @@ void *thread_function(void *arg) {
 ThreadParams prepareTask(ThreadParams params) {
     loadimage(params.paramImgrgb,params.paramFilename);
 
-
-    if (strcmp(params.taskname, task_combineimgs) == 0) {
-        copyimage(params.imgv,params.paramImgh);
+    MyIMG *imgv;
+    if (strcmp(params.taskname, task_combineimgs) == 0 || strcmp(params.taskname, task_sobelv) == 0) {
+        copyimage(&imgv,params.paramImgh);
+        params.imgv=imgv;
     }
     return params;
 }

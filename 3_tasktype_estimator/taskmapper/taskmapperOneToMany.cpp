@@ -1,6 +1,10 @@
 
 #include <string.h>
-
+#include "Result.h"
+#include "taskclasses.h"
+#include "taskmapperLog.h"
+#include <thread>
+#include "math.h" //ceil
 AnwTask calcBestTaskMany(AnwTask appTask) {
 
     for (const auto& kv : appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname]) {

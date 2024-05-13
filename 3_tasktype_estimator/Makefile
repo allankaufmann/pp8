@@ -201,30 +201,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-taskmapper/taskclasses.o: taskmapper/taskclasses.cpp.o
-.PHONY : taskmapper/taskclasses.o
-
-# target to build an object file
-taskmapper/taskclasses.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskclasses.cpp.o
-.PHONY : taskmapper/taskclasses.cpp.o
-
-taskmapper/taskclasses.i: taskmapper/taskclasses.cpp.i
-.PHONY : taskmapper/taskclasses.i
-
-# target to preprocess a source file
-taskmapper/taskclasses.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskclasses.cpp.i
-.PHONY : taskmapper/taskclasses.cpp.i
-
-taskmapper/taskclasses.s: taskmapper/taskclasses.cpp.s
-.PHONY : taskmapper/taskclasses.s
-
-# target to generate assembly for a file
-taskmapper/taskclasses.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskclasses.cpp.s
-.PHONY : taskmapper/taskclasses.cpp.s
-
 taskmapper/taskmapperDiffsearch.o: taskmapper/taskmapperDiffsearch.cpp.o
 .PHONY : taskmapper/taskmapperDiffsearch.o
 
@@ -345,30 +321,6 @@ taskmapper/taskmapperPairsearch.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskmapperPairsearch.cpp.s
 .PHONY : taskmapper/taskmapperPairsearch.cpp.s
 
-taskmapper/taskmapperresult.o: taskmapper/taskmapperresult.cpp.o
-.PHONY : taskmapper/taskmapperresult.o
-
-# target to build an object file
-taskmapper/taskmapperresult.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskmapperresult.cpp.o
-.PHONY : taskmapper/taskmapperresult.cpp.o
-
-taskmapper/taskmapperresult.i: taskmapper/taskmapperresult.cpp.i
-.PHONY : taskmapper/taskmapperresult.i
-
-# target to preprocess a source file
-taskmapper/taskmapperresult.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskmapperresult.cpp.i
-.PHONY : taskmapper/taskmapperresult.cpp.i
-
-taskmapper/taskmapperresult.s: taskmapper/taskmapperresult.cpp.s
-.PHONY : taskmapper/taskmapperresult.s
-
-# target to generate assembly for a file
-taskmapper/taskmapperresult.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/config.cpp.dir/build.make CMakeFiles/config.cpp.dir/taskmapper/taskmapperresult.cpp.s
-.PHONY : taskmapper/taskmapperresult.cpp.s
-
 tools.o: tools.cpp.o
 .PHONY : tools.o
 
@@ -411,9 +363,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... taskmapper/taskclasses.o"
-	@echo "... taskmapper/taskclasses.i"
-	@echo "... taskmapper/taskclasses.s"
 	@echo "... taskmapper/taskmapperDiffsearch.o"
 	@echo "... taskmapper/taskmapperDiffsearch.i"
 	@echo "... taskmapper/taskmapperDiffsearch.s"
@@ -429,9 +378,6 @@ help:
 	@echo "... taskmapper/taskmapperPairsearch.o"
 	@echo "... taskmapper/taskmapperPairsearch.i"
 	@echo "... taskmapper/taskmapperPairsearch.s"
-	@echo "... taskmapper/taskmapperresult.o"
-	@echo "... taskmapper/taskmapperresult.i"
-	@echo "... taskmapper/taskmapperresult.s"
 	@echo "... tools.o"
 	@echo "... tools.i"
 	@echo "... tools.s"

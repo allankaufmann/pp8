@@ -6,8 +6,8 @@
 #include "estimation/measure.cpp"
 
 #include "math.h" //ceil
-#include "taskmapper/taskmapperresult.cpp"
-#include "taskmapper/taskclasses.cpp"
+#include "taskmapper/Result.h"
+#include "taskmapper/taskclasses.h"
 #include "taskmapper/taskmapperLog.cpp"
 #include "taskmapper/taskmapperOneToOne.cpp"
 #include "taskmapper/taskmapperOneToMany.cpp"

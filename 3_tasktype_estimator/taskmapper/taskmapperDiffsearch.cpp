@@ -1,6 +1,8 @@
+#include "taskclasses.h"
+#include <vector>
+#include <string>
+#include "taskmapperLog.h"
 
-
-PrototypTask currentPrototypTask;
 std::vector<std::string> similarTasks;
 
 PrototypTask compareProtTaskSequenEntries(int indexToCompare, PrototypTask protTypTaskToCompare) {

@@ -1,5 +1,7 @@
-
-
+#include "Result.h"
+#include "taskclasses.h"
+#include "taskmapperLog.h"
+#include <thread>
 Result resultOneToOne;
 
 /**

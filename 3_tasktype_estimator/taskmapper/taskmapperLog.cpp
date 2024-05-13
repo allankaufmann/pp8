@@ -1,11 +1,10 @@
 
 #include <set>
-
-std::vector<PrototypTask> prottaskVektor;
-std::vector<AnwTask> apptaskVektor;
-std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf Map
-std::ofstream logfileTaskmapper;
-
+#include "taskmapperLog.h"
+#include <string.h> //strtok
+#include "../tools.hpp"
+#include "../constants.h"
+#include <sys/stat.h> //mkdir, chmod
 
 char* currentLogfileName;
 
@@ -113,10 +112,7 @@ void closeLogFileTaskmapper() {
     logfileTaskmapper.close();
 }
 
-/**
- * Für die Abbildung 1:N werden die Tasks parallel geprüft. Aus diesem Grund werden die Zwischenergebnisse hier zusammengeführt.
- */
-Result resultOneToMany;
+
 
 void logMessageOnTaskmapperFileAndCout(std::string text, bool withLogFileTaskmapper){
     std::cout << text;
