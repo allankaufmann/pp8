@@ -202,7 +202,6 @@ long unsigned  readEnergy_UJ() {
             std::cout << RED << "Fehler beim Lesen von intel-rapl/energy_uj! Root-User? "<< RESET;
         }
     }
-    pclose(filePointer);
 
     return energy_ui;
 }

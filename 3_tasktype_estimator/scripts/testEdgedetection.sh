@@ -3,4 +3,4 @@
 cd ..
 cd edgedetection
 echo "$PWD"
-./edgedetection imgfilenames checkcontrast
+./edgedetection imgfilenames 1 checkcontrast
