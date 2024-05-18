@@ -1,11 +1,12 @@
+#include "../include/estimator.h"
 #include <sys/stat.h> //mkdir, chmod
 #include <fstream>
 #include <string>
-#include "../constants.h"
-#include "../tools.hpp"
-#include "MeasureResult.h"
-#include "measure.h"
-#include "../config.h"
+#include "../include/constants.h"
+#include "../include/tools.hpp"
+#include "../include/MeasureResult.h"
+#include "../include/measure.h"
+#include "../include/config.h"
 std::ofstream resultFile;
 
 void openResultFile() {

@@ -1,28 +1,28 @@
-//
-// Created by allan on 27.01.24.
-//
+#include "../include/measure.h"
 #include <stdio.h>
 #include <sys/stat.h> //mkdir
 #include <sys/types.h>
 #include <dirent.h>
 #include <ctype.h>
 #include "vector"
-#include "../constants.h"
+#include "../include/constants.h"
 #include <chrono>
 #include <iostream>
 #include <vector>
 #include <fstream>
 #include <unistd.h>
-#include "../config.h"
-#include "../tools.hpp"
+#include "../include/config.h"
+#include "../include/tools.hpp"
 #include <thread>
 #include <cstring>
-#include "MeasureResult.h"
-#include "measure.h"
+#include "../include/MeasureResult.h"
+#include "../include/measure.h"
 static const char *const logfolder_measure = "logs/measure/";
 //FILE* logfileMeasure;
 
-
+std::ofstream logfileMeasure;
+std::string currentCPUFreq;
+std::string currentParallelism;
 
 
 
@@ -260,7 +260,7 @@ void selectCpuFrequency() {
         readConfigFile(false, false);
     }
 
-    printf("In der Konfigurationsdatei experiment.config sind %d CPU-Level hinterlegt, bitte durch Eingabe auswählen!\n", cpuFrequencyVektor.size());
+    printf("In der Konfigurationsdatei experiment.config sind %lu CPU-Level hinterlegt, bitte durch Eingabe auswählen!\n", cpuFrequencyVektor.size());
 
     for (int i = 0; i < cpuFrequencyVektor.size(); i++) {
         printf("[%d]: %s\n", i, cpuFrequencyVektor[i].c_str());

@@ -1,6 +1,6 @@
 #include <vector>
-#include "taskclasses.h"
-#include "taskmapperLog.h"
+#include "../include/taskclasses.h"
+#include "../include/taskmapperLog.h"
 #include <iostream>
 
 std::vector<PrototypTask> newprottaskVektor;

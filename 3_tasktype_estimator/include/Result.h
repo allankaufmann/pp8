@@ -1,10 +1,11 @@
+
+
+#ifndef INC_3_TASKTYPE_ESTIMATOR_RESULT_H
+#define INC_3_TASKTYPE_ESTIMATOR_RESULT_H
 #include <iostream>
 #include <map>
 #include <list>
 #include <vector>
-
-#ifndef INC_3_TASKTYPE_ESTIMATOR_RESULT_H
-#define INC_3_TASKTYPE_ESTIMATOR_RESULT_H
 class Result {
 public:
     std::map<std::string, std::map<std::string, int>> protTaskAnzTrefferMap; // <AnwTask, <Prottask, Treffer>>

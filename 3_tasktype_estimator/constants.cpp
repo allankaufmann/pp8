@@ -1,10 +1,5 @@
-//
-// Created by allan on 28.01.24.
-//
-#include <string>
 
-#ifndef EXPERIMENT_CONSTANTS_H
-#define EXPERIMENT_CONSTANTS_H
+#include "include/constants.h"
 const char* config_filename = "experiment.config";
 const char* foldername_generated_scripts = "gen";
 std::string foldername_generated_scripts_tasktypes = "gen/tasktypes";
@@ -30,13 +25,9 @@ std::string result_section_one2many="OneToMany";
 std::string result_section_model="model";
 std::string result_section_end_model="end_model";
 std::string result_section_end_model_space="end_model ";
-static const char *const logfolder_taskmapper = "logs/taskmapper/";
+const char* logfolder_taskmapper = "logs/taskmapper/";
 const char* script_test_Edgedetection = "./scripts/testEdgedetection.sh";
 const char* script_test_epEBench = "./scripts/testepEBench.sh";
 const char* folder_result = "././results/";
 const char* logfileext = ".log";
 const char* logfileres = ".result";
-
-#define RESET   "\033[0m"
-#define RED     "\033[31m"
-#endif //EXPERIMENT_CONSTANTS_H

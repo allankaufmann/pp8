@@ -1,7 +1,8 @@
-#include "taskclasses.h"
+
+#include "../include/taskclasses.h"
 #include <vector>
 #include <string>
-#include "taskmapperLog.h"
+#include "../include/taskmapperLog.h"
 
 std::vector<std::string> similarTasks;
 

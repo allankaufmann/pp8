@@ -1,8 +1,5 @@
 
-#include <string.h>
-#include "Result.h"
-#include "taskclasses.h"
-#include "taskmapperLog.h"
+#include "../include/taskmapperOneToMany.h"
 #include <thread>
 #include "math.h" //ceil
 AnwTask calcBestTaskMany(AnwTask appTask) {

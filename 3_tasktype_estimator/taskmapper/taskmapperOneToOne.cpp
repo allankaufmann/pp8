@@ -1,8 +1,8 @@
-#include "Result.h"
-#include "taskclasses.h"
-#include "taskmapperLog.h"
+#include "../include/Result.h"
+#include "../include/taskclasses.h"
+#include "../include/taskmapperLog.h"
 #include <thread>
-Result resultOneToOne;
+Result tempResultOneToOne;
 
 /**
  * Überprüfung, ob Assemblerbefehl aus Prototyptask im Assemblercode der Anwendungstask vorkommt. Dabei werden bereits verwendete Codestellen übersprungen.
@@ -87,7 +87,7 @@ AnwTask prepareAnwTaskAndProtTypTaskForCompareOneToOne(AnwTask appTask, Prototyp
     logMessageOnTaskmapperFileAndCout("Vergleich " + appTask.taskname + " mit protTypTask " + protTypTask.taskname + "\n",
                                       false);
     appTask = compareAppTaskWithPrototypTasks(appTask, protTypTask);
-    resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname];
+    tempResultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname]=appTask.resultOneToOne.protTaskAnzTrefferMap[appTask.taskname][protTypTask.taskname];
     return appTask;
 }
 
@@ -111,7 +111,7 @@ AnwTask analyseAppTask(AnwTask appTask) {
         myThreads[j].join();
     }
 
-    appTask.resultOneToOne=resultOneToOne;
+    appTask.resultOneToOne=tempResultOneToOne;
 
     return appTask;
 }

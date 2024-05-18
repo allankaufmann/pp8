@@ -1,12 +1,18 @@
 
 #include <set>
-#include "taskmapperLog.h"
+#include "../include/taskmapperLog.h"
 #include <string.h> //strtok
-#include "../tools.hpp"
-#include "../constants.h"
+#include "../include/tools.hpp"
+#include "../include/constants.h"
 #include <sys/stat.h> //mkdir, chmod
 
 char* currentLogfileName;
+std::vector<AnwTask> apptaskVektor;
+std::map<std::string, AnwTask> apptaskMap; // Abbildung der Anwendungstask auf Map
+std::ofstream logfileTaskmapper;
+PrototypTask currentPrototypTask;//für Diff/Paarsuche
+std::vector<PrototypTask> prottaskVektor;
+Result resultOneToMany;
 
 std::vector<std::string> readSeqFile(const char* file, Task t) {
     std::vector<std::string> sequenzen;
@@ -62,7 +68,7 @@ void initProttaskVektor() {
     for (char* seqname : taskseqnames) {
         PrototypTask t = readProttypTaskSeqfile(seqname);
         prottaskVektor.push_back(t);
-        printf("Der Task %s enthält %d Einträge\n", t.taskname.c_str(), t.sequenzen.size());
+        printf("Der Task %s enthält %lu Einträge\n", t.taskname.c_str(), t.sequenzen.size());
     }
     printf("%s", "\n");
 }
@@ -77,7 +83,7 @@ void initAppTaskCollections() {
         //t.initIndexOfMap();
         apptaskVektor.push_back(t);
         apptaskMap[t.taskname]=t;
-        printf("Der Task %s enthält %d Einträge\n", t.taskname.c_str(), t.sequenzen.size());
+        printf("Der Task %s enthält %lu Einträge\n", t.taskname.c_str(), t.sequenzen.size());
     }
     printf("%s", "\n");
 }

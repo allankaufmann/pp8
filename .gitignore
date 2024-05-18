@@ -21,6 +21,7 @@ sampleapp/ci.py
 sampleapp/sampleapp.gdb.log
 sampleapp/sampleapp.seq
 uarch-configure/
+3_tasktype_estimator/CMakeCache.txt
 3_tasktype_estimator/build/
 3_tasktype_estimator/.idea/
 3_tasktype_estimator/CMakeFiles/

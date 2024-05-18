@@ -1,11 +1,15 @@
+#include "include/config.h"
+#include "string"
 #include <iostream>
 #include <string.h> //strtok
 #include <sys/stat.h> //mkdir, chmod
 #include <fstream>
-#include "constants.h"
+#include "include/constants.h"
 #include <list>
 #include "vector"
-#include "tools.cpp"
+#include "include/tools.hpp"
+#include "thread"
+#include <unistd.h>
 
 std::string section_tasktypes="TaskTypes";
 
@@ -215,7 +219,7 @@ void checkPreconditions() {
         std::cout << RED << "Die Konfigurationsdatei " << config_filename << " ist nicht vorhanden!" << RESET << "\n";
     }
 
-    readConfigFile(false, false);
+    readConfigFile(true, false);
 
     std::cout << "---------------------------------------------------------------------------------------------------------------" << "\n";
     std::cout << "Überprüfung generierter Skripte:" << "\n";

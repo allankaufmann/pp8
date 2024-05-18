@@ -1,19 +1,21 @@
 #include <iostream>
 #include <thread>
-#include <string.h> //strtok
-#include "constants.h"
-#include "config.cpp"
-#include "estimation/measure.cpp"
+//#include <string.h> //strtok
+#include "include/constants.h"
+#include "include/config.h"
 
-#include "math.h" //ceil
-#include "taskmapper/Result.h"
-#include "taskmapper/taskclasses.h"
-#include "taskmapper/taskmapperLog.cpp"
-#include "taskmapper/taskmapperOneToOne.cpp"
-#include "taskmapper/taskmapperOneToMany.cpp"
-#include "taskmapper/taskmapperDiffsearch.cpp"
-#include "taskmapper/taskmapperPairsearch.cpp"
-#include "estimation/estimator.cpp"
+
+#include "include/measure.h"
+
+//#include "math.h" //ceil
+//#include "include/Result.h"
+//#include "include/taskclasses.h"
+#include "include/taskmapperLog.h"
+#include "include/taskmapperOneToOne.h"
+#include "include/taskmapperOneToMany.h"
+//#include "taskmapper/taskmapperDiffsearch.cpp"
+#include "include/taskmapperPairsearch.h"
+#include "include/estimator.h"
 
 
 const char* script_measure = "./scripts/measureGreyscale1N.sh";
@@ -21,7 +23,7 @@ const char* script_measure = "./scripts/measureGreyscale1N.sh";
 
 
 int main(int argc, char *argv[]) {
-    char *parameter;
+    char *parameter = nullptr;
     int testAppTaskIndex = -1;
 
     if (argc==2) {
@@ -32,21 +34,21 @@ int main(int argc, char *argv[]) {
     }
 
     while (
-            //strcasecmp(parameter, "1")!=0 &&
-            strcasecmp(parameter, "C")!=0 &&
-            strcasecmp(parameter, "I")!=0 &&
-            strcasecmp(parameter, "A")!=0 &&
-            strcasecmp(parameter, "B")!=0 &&
-            strcasecmp(parameter, "D")!=0 &&
-            strcasecmp(parameter, "E")!=0 &&
-            strcasecmp(parameter, "R")!=0 &&
-            strcasecmp(parameter, "S")!=0 &&
-            strcasecmp(parameter, "T")!=0 &&
-            strcasecmp(parameter, "U")!=0 &&
-            strcasecmp(parameter, "Z")!=0 &&
-            strcasecmp(parameter, "X")!=0 &&
-            strcasecmp(parameter, "W")!=0 &&
-            strcasecmp(parameter, "V")!=0
+            parameter == nullptr || (
+                    strcasecmp(parameter, "C")!=0 &&
+                    strcasecmp(parameter, "I")!=0 &&
+                    strcasecmp(parameter, "A")!=0 &&
+                    strcasecmp(parameter, "B")!=0 &&
+                    strcasecmp(parameter, "D")!=0 &&
+                    strcasecmp(parameter, "E")!=0 &&
+                    strcasecmp(parameter, "R")!=0 &&
+                    strcasecmp(parameter, "S")!=0 &&
+                    strcasecmp(parameter, "T")!=0 &&
+                    strcasecmp(parameter, "U")!=0 &&
+                    strcasecmp(parameter, "Z")!=0 &&
+                    strcasecmp(parameter, "X")!=0 &&
+                    strcasecmp(parameter, "W")!=0 &&
+                    strcasecmp(parameter, "V")!=0)
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
 
@@ -90,7 +92,7 @@ int main(int argc, char *argv[]) {
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         initTaskVektors();
-        printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+        printf("Im Ordner taskmapper/appseq sind %lu Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
 
         for (int i = 0; i < apptaskVektor.size(); i++) {
             printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
@@ -104,7 +106,7 @@ int main(int argc, char *argv[]) {
         compareAppTaskProtTasksOneToOne();
     }   else if (strcasecmp(parameter, "D")==0) {
         initTaskVektors();
-        printf("Im Ordner taskmapper/appseq sind %d Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+        printf("Im Ordner taskmapper/appseq sind %lu Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
 
         for (int i = 0; i < apptaskVektor.size(); i++) {
             printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
@@ -149,7 +151,7 @@ int main(int argc, char *argv[]) {
         initTaskVektors();
 
         if (testAppTaskIndex == -1) {
-            printf("Folende AppTasks sind konfiguriert, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
+            printf("Folende AppTasks sind konfiguriert, bitte durch Eingabe auswählen!\n");
 
             for (int i = 0; i < apptaskVektor.size(); i++) {
                 printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());

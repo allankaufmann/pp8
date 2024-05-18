@@ -1,9 +1,9 @@
 
 
-#include <string>
+
 #ifndef INC_3_TASKTYPE_ESTIMATOR_MEASURERESULT_H
 #define INC_3_TASKTYPE_ESTIMATOR_MEASURERESULT_H
-
+#include <string>
 class MeasureResult {
 public:
 
