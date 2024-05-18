@@ -16,4 +16,5 @@ add_executable(main
         estimation/estimator.cpp
         taskmapper/taskmapperDiffsearch.cpp
         taskmapper/taskmapperPairsearch.cpp
+        include/taskmapperDiffsearch.h
 )

@@ -98,7 +98,7 @@ AnwTask analyseAppTaskPair(AnwTask anwTak) {
         }
     }
 
-    logMessageOnTaskmapperFileAndCout("Für den Anwendungstask " + anwTak.taskname + " ist der Tasktyp " + anwTak.bestName + " bei Paarsuche am ähnlichsten: " + std::to_string(anwTak.besthit) + "Treffer!\n\n", true);
+    logMessageOnTaskmapperFileAndCout("Für den Anwendungstask " + anwTak.taskname + " ist der Tasktyp " + anwTak.bestName + " bei Paarsuche am ähnlichsten: " + std::to_string(anwTak.besthit) + " Treffer!\n\n", true);
 
     return anwTak;
 }
@@ -134,7 +134,7 @@ void testTripleSearch() {
         return;
     }
 
-    currentPrototypTask = prottaskVektor[0];
+    currentPrototypTask = prottaskVektor[1];
     currentPrototypTask.initHit();
 
     std::string prevPrevEntry = currentPrototypTask.sequenzen[0];
@@ -142,8 +142,6 @@ void testTripleSearch() {
     std::string currentEntry;
 
     std::map<std::string, std::map<std::string, std::map<std::string, bool>>> myMap;
-
-
 
     for (int i = 2; i < currentPrototypTask.sequenzen.size(); i++) {
         currentEntry=currentPrototypTask.sequenzen[i];
@@ -172,8 +170,6 @@ void testTripleSearch() {
         }
     }
 
-
-
     std::map<std::string, std::map<std::string, std::map<std::string, bool>>> ::iterator it;
     std::cout << "Nicht gefunden wurden folgende Kombinationen:\n";
     int counter = 0;
@@ -199,8 +195,7 @@ void testTripleSearch() {
             }
         }
     }
-
-    std::cout << "Demnach sind insgesamt " << counter << " Kombinationen eindeutig,  nicht eindeutig sind: " << counterNot;
+    std::cout << "Demnach sind im Tasktyp '" << currentPrototypTask.taskname << "' insgesamt " << counter << " Kombinationen eindeutig,  nicht eindeutig sind: " << counterNot << "\n";
     // im Test wurden 570 eindeutige und 1224 nicht eindeutige gefunden. Triple sind nicht geeignet!
 
 }

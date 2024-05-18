@@ -1,24 +1,12 @@
-#include <iostream>
-#include <thread>
-//#include <string.h> //strtok
 #include "include/constants.h"
 #include "include/config.h"
-
-
 #include "include/measure.h"
-
-//#include "math.h" //ceil
-//#include "include/Result.h"
-//#include "include/taskclasses.h"
 #include "include/taskmapperLog.h"
 #include "include/taskmapperOneToOne.h"
 #include "include/taskmapperOneToMany.h"
-//#include "taskmapper/taskmapperDiffsearch.cpp"
-#include "include/taskmapperPairsearch.h"
 #include "include/estimator.h"
-
-
-const char* script_measure = "./scripts/measureGreyscale1N.sh";
+#include "include/taskmapperDiffsearch.h"
+#include "include/taskmapperPairsearch.h"
 
 
 
@@ -47,7 +35,9 @@ int main(int argc, char *argv[]) {
                     strcasecmp(parameter, "U")!=0 &&
                     strcasecmp(parameter, "Z")!=0 &&
                     strcasecmp(parameter, "X")!=0 &&
+                    strcasecmp(parameter, "Y")!=0 &&
                     strcasecmp(parameter, "W")!=0 &&
+                    strcasecmp(parameter, "Q")!=0 &&
                     strcasecmp(parameter, "V")!=0)
             )  {
         printf("Bitte einen der folgenden Parameter eingeben: \n");
@@ -56,21 +46,23 @@ int main(int argc, char *argv[]) {
         printf("\tI (=Init - Vorbedingungen für Experiment prüfen!)\n");
         printf("\tC (=Config - Konfigurationsdatei auslesen und Skripte für prototyptasks erstellen)\n");
 
-        printf("\t--------- Taskmapper--------------------------------------------------------------\n");
-        printf("\tA (=Abbildung - 1 AnwTask auf 1 Prototyptask - Test)\n");
-        printf("\tB (=Abbildung - 1 AnwTask auf 1 Prototyptask - alle)\n");
-        printf("\tD (=Abbildung - 1 AnwTask auf N Prototyptasks - Test)\n");
-        printf("\tE (=Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
+        printf("\t----------------------- Taskmapper-----------------------------------------------------------------\n");
+        printf("\tA (Abbildung - 1 AnwTask auf 1 Prototyptask - Test)\n");
+        printf("\tB (Abbildung - 1 AnwTask auf 1 Prototyptask - alle)\n");
+        printf("\tD (Abbildung - 1 AnwTask auf N Prototyptasks - Test)\n");
+        printf("\tE (Abbildung - 1 AnwTask auf N Prototyptasks - alle)\n");
         printf("\tT (=Transfer to epebench)\n");
 
-        printf("\t-------------------------- Tasktype Estimator -----------------------------------------------------\n");
-        printf("\tR (=Run - Leistungsaufnahme aller prototyptasks messen)\n");
-        printf("\tS (=Anw. Tasks messen)\n");
-        printf("\tU (=Estimation - alle)\n");
-        printf("\tZ (=Estimation - TEST)\n");
+        printf("\t---------------------- Tasktype Estimator ---------------------------------------------------------\n");
+        printf("\tR (Run - Leistungsaufnahme aller prototyptasks messen)\n");
+        printf("\tS (Anw. Tasks messen)\n");
+        printf("\tU (Estimation - alle)\n");
+        printf("\tZ (Estimation - TEST)\n");
 
-        printf("\t-------------------------- Sonstiges --------------------------------------------------------------\n");
-        printf("\tV (=Versuch...greyscale 1:N)\n");
+        printf("\t---------------------------- Sonstiges ------------------------------------------------------------\n");
+        printf("\tV (Alternative Abbildung - Diffsuche)\n");
+        printf("\tY (Alternative Abbildung - Paarsuche)\n");
+        printf("\tQ (Alternative Abbildung - Drillingsuche)\n");
         printf("\tW (CPU Frequence)\n");
         printf("\tX (=Exit)\n");
         char inputParameter[1];
@@ -78,18 +70,10 @@ int main(int argc, char *argv[]) {
         parameter=inputParameter;
     }
 
-    if (strcasecmp(parameter, "X")==0) {
-        return 0;
-    } else if (strcasecmp(parameter, "I") == 0) {
+    if (strcasecmp(parameter, "I") == 0) {
         checkPreconditions();
     } else if (strcasecmp(parameter, "C") == 0) {
         readConfigFile(true, true); // Konfigurationsdatei auslesen und Skripte erstellen
-    } else if (strcasecmp(parameter, "R")==0) {
-        measureAllPrototypTasks(3);
-        //runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
-    } else if (strcasecmp(parameter, "S")==0) {
-        runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
-        printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "A")==0) {
         initTaskVektors();
         printf("Im Ordner taskmapper/appseq sind %lu Skripte hinterlegt, bitte durch Eingabe auswählen!\n", apptaskVektor.size());
@@ -118,30 +102,14 @@ int main(int argc, char *argv[]) {
         }
     } else if (strcasecmp(parameter, "E")==0) {
         compareAppTaskProtTasksOneToMany();
-    } else if (strcasecmp(parameter, "W")==0) {
-        selectCpuFrequency();
-    }  else if (strcasecmp(parameter, "T")==0) {
+    } else if (strcasecmp(parameter, "T")==0) {
         transferTaskMapToEpEBench();
-    } else if (strcasecmp(parameter, "V")==0) {
-        openMeasurLogFile();
-        runAndMeasureScript(script_measure);
-        closeMeasureLogFile();
-
-        /*openLogfileTaskmapper();
-        saveLineToTaskmapFile("greyscale", " dadd=0.13");
-        saveLineToTaskmapFile("greyscale", " x=0.99");
-        saveLineToTaskmapFile("neuesModell", " x=0.99");
-        saveLineToTaskmapFile("neuesModell", " y=0.01");*/
-
-        //testDiffSearch();
-        //testPairSearch();
-        //testTripleSearch();
-        //selectCpuFrequency();
-        /*for (int i = 0; i < 10 ; i++) {
-            printf("\n%d %lu", i, measureIdle(1000));
-            //measureIdle(1000);
-            //printf("\nCounter: %lld\n",readEnergy_UJ());
-        }*/
+    } else if (strcasecmp(parameter, "R")==0) {
+        measureAllPrototypTasks(3);
+        //runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
+    } else if (strcasecmp(parameter, "S")==0) {
+        runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
+        printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
         //testEstimation();
@@ -163,14 +131,22 @@ int main(int argc, char *argv[]) {
         } else {
             testEstimation(apptaskVektor[testAppTaskIndex].taskname, 3);
         }
-
-
-
-
-
-
-
-
+    } else if (strcasecmp(parameter, "V")==0) {
+        openMeasurLogFile();
+        testDiffSearch();
+        closeMeasureLogFile();
+    } else if (strcasecmp(parameter, "Y")==0) {
+        openMeasurLogFile();
+        testPairSearch();
+        closeMeasureLogFile();
+    } else if (strcasecmp(parameter, "Q")==0) {
+        openMeasurLogFile();
+        testTripleSearch();
+        closeMeasureLogFile();
+    }  else if (strcasecmp(parameter, "W")==0) {
+        selectCpuFrequency();
+    }  else if (strcasecmp(parameter, "X")==0) {
+        return 0;
     }
     return 0;
 }

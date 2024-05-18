@@ -1,9 +1,5 @@
 
-#include "../include/taskclasses.h"
-#include <vector>
-#include <string>
-#include "../include/taskmapperLog.h"
-
+#include "../include/taskmapperDiffsearch.h"
 std::vector<std::string> similarTasks;
 
 PrototypTask compareProtTaskSequenEntries(int indexToCompare, PrototypTask protTypTaskToCompare) {
@@ -46,35 +42,30 @@ void testDiffSearch() {
     if (checkSequenzfiles()==false) {
         return;
     }
-
-    currentPrototypTask = prottaskVektor[1];
+    currentPrototypTask = prottaskVektor[3];
+    std::cout << "Der Tasktyp " << currentPrototypTask.taskname << " wird mit den anderen Tasktypen verglichen!\n";
     currentPrototypTask.initHit();
-
-
 
     for (PrototypTask ptt : prottaskVektor) {
         if (currentPrototypTask.taskname == ptt.taskname) {
             continue;
         }
-        std::cout << "Vergleiche " << currentPrototypTask.taskname << " mit " << ptt.taskname << "\n";
+        //std::cout << "Vergleiche " << currentPrototypTask.taskname << " mit " << ptt.taskname << "\n";
         ptt.initHit();
         comparePrototypTaskWithOtherPrototypTask(ptt);
 
-        std::cout << "nicht enthalten sind:\n";
+        /*std::cout << "nicht enthalten sind:\n";
         for (int i = 0; i < currentPrototypTask.sequenzen.size(); i++) {
             if (!currentPrototypTask.hit[i]) {
                 std::cout << currentPrototypTask.sequenzen[i] << "\n";
             }
-        }
+        }*/
 
-        std::cout << "Das sind " << currentPrototypTask.countNotFound() << " von " << currentPrototypTask.sequenzen.size() << "\n";
-        if (currentPrototypTask.countNotFound() < 25) {
-            std::cout << "Der Tasktyp " << ptt.taskname << " ist zu ähnlich und wird bei der Diffsuche nicht berücksichtigt!\n";
-            similarTasks.push_back(ptt.taskname);
-        }
+        std::cout << "  Aus " << currentPrototypTask.taskname << " sind in " << ptt.taskname << " nicht enthalten: " << currentPrototypTask.countNotFound() << " von " << currentPrototypTask.sequenzen.size() << "\n";
         currentPrototypTask.initHit();
     }
 
+    std::cout << "\nEs wird nun geprüft, ob der Tasktyp '" << currentPrototypTask.taskname << "' Sequenzen enthält, die in keinem anderen Tasktyp vorkommen!\n";
     for (PrototypTask ptt : prottaskVektor) {
         if (currentPrototypTask.taskname == ptt.taskname) {
             continue;
@@ -86,6 +77,7 @@ void testDiffSearch() {
         std::cout << "Vergleiche " << currentPrototypTask.taskname << " mit " << ptt.taskname << "\n";
         ptt.initHit();
         comparePrototypTaskWithOtherPrototypTask(ptt);
+        std::cout << "  Aus dem Tasktypen '" << currentPrototypTask.taskname << "' wurden bisher " << currentPrototypTask.countNotFound() << " nicht gefunden!\n";
     }
 
     std::cout << "Insgesamt nicht enthalten sind:\n";
