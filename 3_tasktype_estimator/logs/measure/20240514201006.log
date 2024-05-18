@@ -1,0 +1,3 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5031;14078272;2798
+gen/tasktypes/onetomany/checkcontrast.sh 1;5022;12535063;2496

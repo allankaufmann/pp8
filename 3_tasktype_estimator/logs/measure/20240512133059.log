@@ -1,0 +1,361 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/vmov_SIMD.sh 1;5019;13449429;2679
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5029;14313806;2846
+sharpencontrast;5040;14867088;2949
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5015;28882922;5759
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5020;34405185;6853
+sharpencontrast;5040;14444909;2866
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5014;28092153;5602
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5021;34109165;6793
+sharpencontrast;5040;14448571;2866
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5015;43026318;8579
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5025;54332869;10812
+sharpencontrast;5155;21794256;4227
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5015;42959546;8566
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5024;54698651;10887
+sharpencontrast;5156;21852910;4238
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5026;43266918;8608
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5026;54906232;10924
+sharpencontrast;5113;21594854;4223
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5028;58502047;11635
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5024;75404958;15008
+sharpencontrast;5071;28224964;5565
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5021;59214265;11793
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5024;76349048;15196
+sharpencontrast;5074;28550952;5626
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5034;59771210;11873
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5024;75836720;15094
+sharpencontrast;5072;28126881;5545
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5029;73240413;14563
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5042;95085938;18858
+sharpencontrast;5113;35570038;6956
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5037;73173335;14527
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5030;95782775;19042
+sharpencontrast;5112;35526093;6949
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5022;72788632;14493
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5037;96428464;19144
+sharpencontrast;5110;35764923;6999
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5018;15512350;3091
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5025;17788285;3539
+sharpencontrast;5040;19000379;3769
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5014;15444236;3080
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5024;17739212;3530
+sharpencontrast;5037;18886671;3749
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5018;15417502;3072
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5025;17625321;3507
+sharpencontrast;5041;18891980;3747
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5022;21604986;4302
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5030;26345087;5237
+sharpencontrast;5109;29050646;5686
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5022;21730657;4327
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5026;26318292;5236
+sharpencontrast;5119;29040087;5673
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5021;21560247;4294
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5031;26419366;5251
+sharpencontrast;5111;28864672;5647
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5021;27890371;5554
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5032;35225190;7000
+sharpencontrast;5078;38263818;7535
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5025;27904103;5553
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5032;35262361;7007
+sharpencontrast;5075;38229577;7532
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5017;27804555;5542
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5029;35334870;7026
+sharpencontrast;5074;38226343;7533
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5025;34507602;6867
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5036;43959055;8728
+sharpencontrast;5107;48670468;9530
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5019;34026402;6779
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5032;43993112;8742
+sharpencontrast;5106;48569578;9512
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5037;34834445;6915
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5033;43960275;8734
+sharpencontrast;5103;48615049;9526
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5018;17727433;3532
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5023;20348703;4051
+sharpencontrast;5040;21666998;4299
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5017;16909319;3370
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5024;20252390;4031
+sharpencontrast;5042;21588202;4281
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5017;16990679;3386
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5023;20026988;3987
+sharpencontrast;5041;21607733;4286
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5020;24503782;4881
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5028;30457381;6057
+sharpencontrast;5101;33777318;6621
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5020;24571409;4894
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5029;30723371;6109
+sharpencontrast;5096;33599524;6593
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5031;24823178;4934
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5032;30674482;6095
+sharpencontrast;5098;33750280;6620
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5019;33031592;6581
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5032;41468094;8240
+sharpencontrast;5085;45371527;8922
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5020;32926734;6559
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5033;41601700;8265
+sharpencontrast;5075;45030158;8872
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5034;32972877;6550
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5028;41408525;8235
+sharpencontrast;5084;45218024;8894
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5016;33104529;6599
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5029;52267261;10393
+sharpencontrast;5110;57368505;11226
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5018;40597858;8090
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5048;47358521;9381
+sharpencontrast;5109;57660497;11286
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5019;40964312;8161
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5038;52452929;10411
+sharpencontrast;5108;57901341;11335
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5017;19660961;3918
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5022;23444642;4668
+sharpencontrast;5043;24732786;4904
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5016;19584728;3904
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5023;23177797;4614
+sharpencontrast;5046;24641600;4883
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5016;19581310;3903
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5022;23222231;4624
+sharpencontrast;5034;24673033;4901
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5019;28767687;5731
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5027;35625580;7086
+sharpencontrast;5087;39284568;7722
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5019;28669360;5712
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5027;35688386;7099
+sharpencontrast;5098;39312521;7711
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5018;28713305;5722
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5026;35851349;7133
+sharpencontrast;5012;38281763;7638
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5032;38614525;7673
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5027;48506895;9649
+sharpencontrast;5091;53589463;10526
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5019;38860862;7742
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5027;48937863;9735
+sharpencontrast;5091;53992293;10605
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5019;38805260;7731
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5043;49118221;9739
+sharpencontrast;5092;54036361;10612
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5017;48304746;9628
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5045;62112024;12311
+sharpencontrast;5022;67932321;13526
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5017;49047970;9776
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5048;61890955;12260
+sharpencontrast;5102;68429085;13412
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5018;49014340;9767
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5045;62013635;12292
+sharpencontrast;5024;67409984;13417
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5015;21207160;4228
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5022;25011899;4980
+sharpencontrast;5044;26316400;5217
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5022;21092841;4200
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5022;24850278;4948
+sharpencontrast;5041;26262506;5209
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5012;21087714;4207
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5022;24727049;4923
+sharpencontrast;5045;26277032;5208
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5017;30233077;6026
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5027;38196679;7598
+sharpencontrast;5100;41840530;8204
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5017;30590864;6097
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5026;38433373;7646
+sharpencontrast;5102;41742264;8181
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5014;30553267;6093
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5027;38526696;7663
+sharpencontrast;5103;42316726;8292
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5032;41545303;8256
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5033;52474964;10426
+sharpencontrast;5093;57252600;11241
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5034;41659317;8275
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5027;52900439;10523
+sharpencontrast;5094;57583105;11304
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5017;41793411;8330
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5027;53153551;10573
+sharpencontrast;5097;58339328;11445
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5018;52155568;10393
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5028;66289564;13184
+sharpencontrast;5031;73340083;14577
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5017;52211780;10406
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5027;67136059;13355
+sharpencontrast;5025;73296443;14586
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5017;52405627;10445
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5027;66446546;13217
+sharpencontrast;5102;73986811;14501
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5015;28981920;5779
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5018;34560581;6887
+sharpencontrast;5050;37184842;7363
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5015;28533313;5689
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5019;34408481;6855
+sharpencontrast;5032;37084500;7369
+
+
+./gen/tasktypes/vmov_SIMD.sh 1;5015;28459338;5674
+gen/tasktypes/onetomany/sharpencontrast.sh 1;5019;34176244;6809
+sharpencontrast;5049;37047024;7337
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5025;43043163;8565
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5024;54931561;10933
+sharpencontrast;5080;60869778;11982
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5024;44262277;8810
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5026;55365581;11015
+sharpencontrast;5018;60122100;11981
+
+
+./gen/tasktypes/vmov_SIMD.sh 2;5017;44328805;8835
+gen/tasktypes/onetomany/sharpencontrast.sh 2;5024;55490886;11045
+sharpencontrast;5013;60898648;12148
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5017;59777069;11914
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5027;75248953;14968
+sharpencontrast;5023;83597564;16642
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5024;59813384;11905
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5031;75703541;15047
+sharpencontrast;5030;83668609;16633
+
+
+./gen/tasktypes/vmov_SIMD.sh 3;5018;60726895;12101
+gen/tasktypes/onetomany/sharpencontrast.sh 3;5032;76052479;15113
+sharpencontrast;5024;83822112;16684
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5030;74843314;14879
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5050;95998961;19009
+sharpencontrast;5053;106625886;21101
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5030;74936026;14897
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5027;97402461;19375
+sharpencontrast;5049;106431735;21079
+
+
+./gen/tasktypes/vmov_SIMD.sh 4;5015;75503103;15055
+gen/tasktypes/onetomany/sharpencontrast.sh 4;5027;81842503;16280
+sharpencontrast;5049;106422518;21077
+
+

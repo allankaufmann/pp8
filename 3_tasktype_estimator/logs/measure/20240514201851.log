@@ -1,0 +1,2 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5025;13983790;2782
