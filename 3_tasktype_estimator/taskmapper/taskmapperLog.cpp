@@ -381,6 +381,8 @@ void transferTaskMapToEpEBench() {
         std::cout << "epEBench-ebmodels-Datei " << filename_epebench_ebmodels << " gefunden!\n";
     }
 
+    std::set<std::string> modellsInepeBench;
+
     bool skipModel = false;
     while (std::getline(ebmodelsfile, line)) {
         size_t delimiterPos = line.find('=');
@@ -389,13 +391,13 @@ void transferTaskMapToEpEBench() {
 
         if (keyInline == result_section_model) {
             currentModel = valueInLine;
-
-            if (mapOfLine[valueInLine].size()==0){
+            modellsInepeBench.insert(currentModel);
+            if (mapOfLine[currentModel].size()==0){
                 linesEbmodels.push_back(line);
                 continue;
             } else if (!skipModel){
                 skipModel=true;
-                for (std::string s : mapOfLine[valueInLine]) {
+                for (std::string s : mapOfLine[currentModel]) {
                     linesEbmodels.push_back(s);
                 }
             }
@@ -411,12 +413,24 @@ void transferTaskMapToEpEBench() {
     }
     ebmodelsfile.close();
 
+    // Fehlende Modelle hinzufügen!
+    std::map<std::string, std::list<std::string>>::iterator it;
+    for (it = mapOfLine.begin(); it != mapOfLine.end(); ++it) {
+        std::string key = it->first;
+        std::list<std::string> values = it->second;
+        if (modellsInepeBench.find(key) == modellsInepeBench.end()) {
+            std::cout << key << " wird übertragen!\n";
+            linesEbmodels.insert(linesEbmodels.end(), values.begin(), values.end());
+        }
+
+    }
+
     std::ofstream oufile(filename_epebench_ebmodels);
     for (std::string s : linesEbmodels) {
         oufile << s << "\n";
     }
     oufile.close();
-    std::cout << "Taskmap wurde nach epEBench übertragen!";
+    std::cout << "Taskmap wurde nach epEBench übertragen!\n";
 }
 
 
