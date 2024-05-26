@@ -341,6 +341,12 @@ void transferTaskMapToEpEBench() {
     std::string line;
     std::map<std::string, std::list<std::string>> mapOfLine;
 
+    if (!infile.is_open()) {
+        std::cout << "Taskmapdatei " << filename_taskmap_result_from_folder << " nicht gefunden!\n";
+        return;
+    } else {
+        std::cout << "Taskmapdatei " << filename_taskmap_result_from_folder << " gefunden!\n";
+    }
 
     while (std::getline(infile, line)) {
         size_t delimiterPos = line.find('=');
@@ -367,6 +373,14 @@ void transferTaskMapToEpEBench() {
 
     currentModel = "";
     std::ifstream ebmodelsfile(filename_epebench_ebmodels);
+
+    if (!ebmodelsfile.is_open()) {
+        std::cout << "epEBench-ebmodels-Datei " << filename_epebench_ebmodels << " nicht gefunden!\n";
+        return;
+    } else {
+        std::cout << "epEBench-ebmodels-Datei " << filename_epebench_ebmodels << " gefunden!\n";
+    }
+
     bool skipModel = false;
     while (std::getline(ebmodelsfile, line)) {
         size_t delimiterPos = line.find('=');
@@ -402,6 +416,7 @@ void transferTaskMapToEpEBench() {
         oufile << s << "\n";
     }
     oufile.close();
+    std::cout << "Taskmap wurde nach epEBench übertragen!";
 }
 
 
