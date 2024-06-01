@@ -37,7 +37,6 @@ PrototypTask analyseTaskType(PrototypTask prototypTask) {
     }
 
     std::map<std::string, std::map<std::string, bool>>::iterator it;
-    //std::cout << "Nicht gefunden wurden folgende Kombinationen:\n";
     int counter = 0;
     int counterNot = 0;
     for (it = pairEntryMap.begin(); it != pairEntryMap.end(); it++) {
@@ -50,7 +49,6 @@ PrototypTask analyseTaskType(PrototypTask prototypTask) {
             if (b) {
                 currentPrototypTask.uniqueEntryPairMap[prev][current]=true;
                 counter++;
-                //std::cout << "[" << prev << "/" << current << "]\n";
             } else {
                 counterNot++;
             }
@@ -196,6 +194,4 @@ void testTripleSearch() {
         }
     }
     std::cout << "Demnach sind im Tasktyp '" << currentPrototypTask.taskname << "' insgesamt " << counter << " Kombinationen eindeutig,  nicht eindeutig sind: " << counterNot << "\n";
-    // im Test wurden 570 eindeutige und 1224 nicht eindeutige gefunden. Triple sind nicht geeignet!
-
 }

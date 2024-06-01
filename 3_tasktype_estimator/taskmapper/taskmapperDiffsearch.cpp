@@ -50,16 +50,9 @@ void testDiffSearch() {
         if (currentPrototypTask.taskname == ptt.taskname) {
             continue;
         }
-        //std::cout << "Vergleiche " << currentPrototypTask.taskname << " mit " << ptt.taskname << "\n";
+
         ptt.initHit();
         comparePrototypTaskWithOtherPrototypTask(ptt);
-
-        /*std::cout << "nicht enthalten sind:\n";
-        for (int i = 0; i < currentPrototypTask.sequenzen.size(); i++) {
-            if (!currentPrototypTask.hit[i]) {
-                std::cout << currentPrototypTask.sequenzen[i] << "\n";
-            }
-        }*/
 
         std::cout << "  Aus " << currentPrototypTask.taskname << " sind in " << ptt.taskname << " nicht enthalten: " << currentPrototypTask.countNotFound() << " von " << currentPrototypTask.sequenzen.size() << "\n";
         currentPrototypTask.initHit();

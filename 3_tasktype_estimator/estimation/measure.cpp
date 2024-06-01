@@ -1,30 +1,21 @@
 #include "../include/measure.h"
 #include <stdio.h>
 #include <sys/stat.h> //mkdir
-#include <sys/types.h>
 #include <dirent.h>
-#include <ctype.h>
 #include "vector"
 #include "../include/constants.h"
 #include <chrono>
 #include <iostream>
-#include <vector>
 #include <fstream>
-#include <unistd.h>
 #include "../include/config.h"
 #include "../include/tools.hpp"
 #include <thread>
 #include <cstring>
-#include "../include/MeasureResult.h"
-#include "../include/measure.h"
 static const char *const logfolder_measure = "logs/measure/";
-//FILE* logfileMeasure;
 
 std::ofstream logfileMeasure;
 std::string currentCPUFreq;
 std::string currentParallelism;
-
-
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
 uint64_t timeSinceEpochMillisec() {
@@ -44,8 +35,6 @@ long long readCounterFromFile() {
 
     filePointer = fopen("logs/counter.txt", "r");
 
-    //printf("/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj:\n");
-
     long long counter = -1;
 
     while(fgets(buffer, bufferLength, filePointer)) {
@@ -54,27 +43,8 @@ long long readCounterFromFile() {
 
     fclose(filePointer);
 
-
-
     return counter;
 }
-
-/*long unsigned  readEnergy_UJ_better_with_loop() {
-    long unsigned energy_ui = readEnergy_UJ();
-    long unsigned new_energy_ui = readEnergy_UJ();
-    while (new_energy_ui == energy_ui) {
-        new_energy_ui = readEnergy_UJ();
-    }
-    return new_energy_ui;
-}*/
-
-
-/*long unsigned  measureIdle(int milliseconds) {
-    long unsigned  counter_beginn = readEnergy_UJ();
-    std::this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
-    long unsigned counter_end = readEnergy_UJ();
-    return counter_end - counter_beginn;
-}*/
 
 char* getFilename() {
     time_t mytime = time(NULL);
@@ -301,7 +271,6 @@ void measureAllPrototypTasks(int count) {
 
     std::string cpuFrequency = cpuFrequencyVektor[5];
 
-    //for (std::string cpuFrequency : cpuFrequencyVektor) {
         for (std::string parallelism : parallelismVektor) {
             for(std::string tasktype: tasktypeVektor) {
                 for (int i = 0; i < count; i++) {
@@ -316,23 +285,7 @@ void measureAllPrototypTasks(int count) {
                 logMeasureNewLine();
             }
         }
-    //}
 
-    /*cpuFrequency = cpuFrequencyVektor[4];
-    for (std::string parallelism : parallelismVektor) {
-        for(std::string tasktype: tasktypeVektor) {
-            for (int i = 0; i < count; i++) {
-                char* filename = searchTasktypeFile(tasktype, foldername_generated_scripts_tasktypes);
-                std::string fileWithParam = getFilenameWithParam(filename, parallelism);
-                MeasureResult result = runAndMeasureScript(fileWithParam.c_str());
-                result.taskname=tasktype;
-                result.cpuFreq=cpuFrequency;
-                result.parallelism=parallelism;
-                logMeasure(result);
-            }
-            logMeasureNewLine();
-        }
-    }*/
     closeMeasureLogFile();
 }
 

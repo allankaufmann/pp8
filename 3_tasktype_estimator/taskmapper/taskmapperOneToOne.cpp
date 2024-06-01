@@ -23,7 +23,6 @@ AnwTask compareProtTaskSequenEntryWithAppTaskEntry(std::string protTaskSequenceE
 
         if (appTask.sequenzen[i].compare(protTaskSequenceEntry) == 0) {
             appTask.found[i]=true; // Sequenz gefunden, wird auf true gesetzt!
-            //std::cout << "Sequenzeintrag " << protTaskSequenceEntry << " gefunden! (" << i << ". Position in appTask)\n";
             return appTask;
         }
     }
@@ -98,7 +97,6 @@ AnwTask prepareAnwTaskAndProtTypTaskForCompareOneToOne(AnwTask appTask, Prototyp
  */
 AnwTask analyseAppTask(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout("\nAppTask " + appTask.taskname + " wird geprüft!\n", true);
-    //std::cout << "\nAppTask " << appTask.taskfilename << " wird geprüft!\n";
 
     std::thread myThreads[prottaskVektor.size()];
     int counter = 0;

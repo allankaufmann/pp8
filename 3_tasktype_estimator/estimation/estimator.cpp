@@ -2,11 +2,6 @@
 #include <sys/stat.h> //mkdir, chmod
 #include <fstream>
 #include <string>
-#include "../include/constants.h"
-#include "../include/tools.hpp"
-#include "../include/MeasureResult.h"
-#include "../include/measure.h"
-#include "../include/config.h"
 std::ofstream resultFile;
 
 void openResultFile() {
@@ -80,8 +75,6 @@ void estimateApptask(std::string apptaskname) {
     resultFile.flush();
 }
 
-
-
 void estimateAppTask(std::string apptaskname, int repeats) {
 
     for (std::string cpuFreq : cpuFrequencyVektor) {
@@ -97,7 +90,6 @@ void estimateAppTask(std::string apptaskname, int repeats) {
         }
     }
 }
-
 
 void startEstimation(int repeats) {
     smtoff();

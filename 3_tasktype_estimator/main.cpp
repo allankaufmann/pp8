@@ -106,13 +106,11 @@ int main(int argc, char *argv[]) {
         transferTaskMapToEpEBench();
     } else if (strcasecmp(parameter, "R")==0) {
         measureAllPrototypTasks(3);
-        //runAndMeasureScriptsFromDirectory(3, foldername_generated_scripts_tasktypes.c_str(), "1"); // Messungen der Tasks
     } else if (strcasecmp(parameter, "S")==0) {
         runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
-        //testEstimation();
         startEstimation(3);
     } else if (strcasecmp(parameter, "Z")==0) {
         readConfigFile(false, false);

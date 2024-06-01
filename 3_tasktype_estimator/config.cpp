@@ -5,7 +5,6 @@
 #include <sys/stat.h> //mkdir, chmod
 #include <fstream>
 #include "include/constants.h"
-#include <list>
 #include "vector"
 #include "include/tools.hpp"
 #include "thread"

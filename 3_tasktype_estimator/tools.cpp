@@ -1,20 +1,13 @@
 
 
-#include <unistd.h>
-#include <fstream>
-#include "include/tools.hpp"
 
-#include <ctype.h>
-#include <sys/types.h>
+#include "include/tools.hpp"
 #include <sys/stat.h> //mkdir
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
 #include <vector>
-
-
-
 
 std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
     std::vector<char*> v;
