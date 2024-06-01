@@ -262,8 +262,6 @@ long unsigned  readEnergy_UJ() {
     long unsigned energy_ui=0;
 
     fscanf(filePointer, "%lu", &energy_ui);
-    //printf("%lu\n", energy_ui);
-
     pclose(filePointer);
     return energy_ui;
 }
@@ -277,9 +275,6 @@ void smton() {
 }
 
 void prepareParallelism(int parallelism) {
-    //printf("%s\n", "start");
-    //omp_set_
-    //omp_set_num_threads(parallelism); // Parallelitätsgrad über OMP gesetzt.
     printf("dyn: %d\n", omp_get_dynamic());
     printf("num_treads: %d\n", omp_get_num_threads());
     smtoff();
@@ -311,7 +306,6 @@ typedef struct {
     MyIMG* paramImgrgb;
     MyIMG* paramImgh;
     MyIMG  *imgv;
-    // Weitere Parameter hier hinzufügen, falls benötigt
 } ThreadParams;
 
 
@@ -429,14 +423,6 @@ void measureAppTaskWithPThread(char* taskname, int parallelism, ThreadParams par
 }
 
 void callFunctionWithImgrgbAndImg(char* taskname, FunctionPtrWithImgrgbAndImg functionPtrWithImgrgbAndImg, int parallelism, MyIMG* imgrgb,MyIMG* img) {
-
-    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
-    functionPtrWithImgrgbAndImg(imgrgb, img);
-    unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
-    unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
-
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
-
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
@@ -473,13 +459,6 @@ void callFunctionWithImgrgbAndImg(char* taskname, FunctionPtrWithImgrgbAndImg fu
 }
 
 void callFunctionWithImg(char* taskname, FunctionPtrWithImg functionPtrWithImg, int parallelism, MyIMG* img) {
-    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
-    functionPtrWithImg(img);
-    unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
-    unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
-
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
-
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
@@ -516,13 +495,6 @@ void callFunctionWithImg(char* taskname, FunctionPtrWithImg functionPtrWithImg, 
 }
 
 void callFunctionWithImgAndChar(char* taskname, FunctionPtrWithImgAndChar functionPtrWithImgAndChar, int parallelism, MyIMG* img, char* filename) {
-    /*unsigned long long temp_timestamp_begin = millisecondsSinceEpoch();
-    functionPtrWithImgAndChar(img, filename);
-    unsigned long long temp_timestamp_end = millisecondsSinceEpoch();
-    unsigned long long estimateduration = temp_timestamp_end - temp_timestamp_begin;
-
-    int durchgaenge = (estimateduration>0) ? 5000 / estimateduration: 7500;*/
-
     prepareParallelism(parallelism);
     unsigned long long timestamp_begin = millisecondsSinceEpoch();
     long long counter_begin = readEnergy_UJ();
@@ -586,66 +558,41 @@ void runEdgedetection(char* taskname, int parallelism, char* filename, MyIMG* im
     }
 
     if (taskname==NULL) {
-        //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
-        //greyscale(imgrgb,imgh);
         callFunctionWithImgrgbAndImg(task_greyscale, gs, parallelism, imgrgb,imgh);
-
-        //checkcontrast(imgh);
         callFunctionWithImg(task_checkcontrast, cc, parallelism, imgh);
-
-        //sharpencontrast(imgh);
         callFunctionWithImg(task_sharpencontrast, sc, parallelism, imgh);
-
-        //copyimage(&imgv,imgh);
         callFunctionWithImgrgbAndImg(task_copyimage, ci, parallelism, &imgv,imgh);
-
-        //sobelh(imgh);
         callFunctionWithImg(task_sobelh, sh, parallelism, imgh);
-
-        //sobelv(imgv);
         callFunctionWithImg(task_sobelv, sv, parallelism, imgh);
-
-        //combineimgs(imgh,imgv);
         callFunctionWithImgrgbAndImg(task_combineimgs, combine,parallelism,  imgh,imgv);
-
-        //writeimage(imgh,filename);
         callFunctionWithImgAndChar(task_writeimage, wi, parallelism,  imgh,filename);
     } else if (strcmp(taskname, task_greyscale) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImgrgbAndImg(taskname, gs, parallelism, imgrgb,imgh);
-        //greyscale(imgrgb,imgh);
     } else if (strcmp(taskname, task_checkcontrast) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, cc, parallelism, imgh);
-        //checkcontrast(imgh);
     } else if (strcmp(taskname, task_sharpencontrast) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sc, parallelism, imgh);
-        //sharpencontrast(imgh);
     } else if (strcmp(taskname, task_copyimage) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImgrgbAndImg(taskname, ci, parallelism, &imgv,imgh);
-        //copyimage(&imgv,imgh);
     } else if (strcmp(taskname, task_sobelh) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sh, parallelism, imgh);
-        //sobelh(imgh);
     } else if (strcmp(taskname, task_sobelv) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImg(taskname, sv, parallelism, imgh);
-        //sobelv(imgv);
     } else if (strcmp(taskname, task_combineimgs) == 0) {
         loadimage(imgrgb,filename);
         copyimage(&imgv,imgh);
         callFunctionWithImgrgbAndImg(taskname, combine, parallelism, imgh,imgv);
-        //combineimgs(imgh,imgv);
     } else if (strcmp(taskname, task_writeimage) == 0) {
         loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(taskname, wi, parallelism, imgh,filename);
-        //writeimage(imgh,filename);
     } else if (strcmp(taskname, task_loadimage) == 0) {
-        //loadimage(imgrgb,filename);
         callFunctionWithImgAndChar(task_loadimage, li, parallelism,  imgrgb,filename);
     }
     smton();
@@ -665,11 +612,9 @@ int main(int argc,char *argv[])
     int parallelism = (argc>2) ? atoi(argv[2]) : 1;
     char* taskname = (argc>3) ? argv[3] : NULL;
 
-
     printf("Parallelitätsgrad: %d\n", parallelism);
     printf("Task: %s\n", taskname);
     char filenames[23][64];
-
     int imageCounter = 0;
     while(fgets(filename, sizeof(filename), fp) != NULL) {
         filename[strcspn(filename, "\n")] = 0;
