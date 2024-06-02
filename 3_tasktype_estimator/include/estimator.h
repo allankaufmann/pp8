@@ -15,8 +15,8 @@ void closeResultFile();
 std::string readOneToOneMapping(std::string apptaskname);
 void logHeadline();
 void logEmptyline();
-void estimateApptask(std::string apptaskname);
-void estimateAppTask(std::string apptaskname, int repeats);
+void startApptaskEstimation(std::string apptaskname);
+void repeateEstimationsForAppTask(std::string apptaskname, int repeats);
 void startEstimation(int repeats);
 void testEstimation(std::string apptaskname, int repeats);
 
