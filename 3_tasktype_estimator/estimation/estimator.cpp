@@ -14,30 +14,6 @@ void closeResultFile() {
     resultFile.close();
 }
 
-std::string readOneToOneMapping(std::string apptaskname) {
-    std::ifstream infile(filename_taskmap_result_from_folder);
-    std::string line;
-    std::string currentSection;
-    while (std::getline(infile, line)) {
-        if (line.empty()) {
-            continue;
-        }
-        if (line[0] == '[' && line[line.length() - 1] == ']') {
-            currentSection = line.substr(1, line.length() - 2);
-            continue;
-        }
-        if (currentSection==result_section_one2one) {
-            size_t delimiterPos = line.find('=');
-            std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
-            std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
-            if (keyOfCurrentLine == apptaskname) {
-                return valueOfCurrentLine;
-            }
-        }
-    }
-    infile.close();
-    return NULL;
-}
 
 void logHeadline() {
     resultFile << "CPUFrequency;Parallelism;apptask;apptaskduration;apptaskpower:\testimationOneToOne;diffOneToOne;\testimationOneToMany;diffOneToMany\n";
@@ -48,9 +24,7 @@ void logEmptyline() {
 }
 
 void startApptaskEstimation(std::string apptaskname) {
-    std::string oneToOneTask = readOneToOneMapping(apptaskname);
-
-    MeasureResult result = estimateAppTask(apptaskname, oneToOneTask, currentCPUFreq, currentParallelism);
+    MeasureResult result = estimateAppTask(apptaskname, currentCPUFreq, currentParallelism);
     MeasureResult appTaskresult = measureAppTask(apptaskname, currentCPUFreq, currentParallelism);
     logMeasureNewLine();
     logMeasureFlush();
@@ -75,7 +49,7 @@ void startApptaskEstimation(std::string apptaskname) {
     resultFile.flush();
 }
 
-void repeateEstimationsForAppTask(std::string apptaskname, int repeats) {
+void repeatEstimationsForAppTask(std::string apptaskname, int repeats) {
 
     for (std::string cpuFreq : cpuFrequencyVektor) {
         setupCpuFrequenzlevel(cpuFreq);
@@ -99,7 +73,7 @@ void startEstimation(int repeats) {
 
 
     for (std::string apptaskname: apptypeVektor) {
-        repeateEstimationsForAppTask(apptaskname, repeats);
+        repeatEstimationsForAppTask(apptaskname, repeats);
     }
 
     closeMeasureLogFile();
@@ -113,7 +87,7 @@ void testEstimation(std::string apptaskname, int repeats) {
     logHeadline();
     openMeasurLogFile();
 
-    repeateEstimationsForAppTask(apptaskname, repeats);
+    repeatEstimationsForAppTask(apptaskname, repeats);
 
     closeMeasureLogFile();
     closeResultFile();

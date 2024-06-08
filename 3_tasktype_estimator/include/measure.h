@@ -11,7 +11,7 @@ extern std::ofstream logfileMeasure;
 extern std::string currentCPUFreq;
 extern std::string currentParallelism;
 
-MeasureResult estimateAppTask(std::string apptaskname, std::string taskname, std::string cpufreq, std::string cores);
+MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores);
 MeasureResult measureAppTask(std::string apptaskname, std::string cpufreq, std::string cores);
 void logMeasureNewLine();
 void logMeasureFlush();

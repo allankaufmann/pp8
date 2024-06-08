@@ -1,6 +1,6 @@
 
 
-
+#include "constants.h"
 #include "include/tools.hpp"
 #include <sys/stat.h> //mkdir
 #include <dirent.h>
@@ -8,6 +8,7 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
+#include <fstream>
 
 std::vector<char*> readFilenamesFromDirectory(const char* directoryname) {
     std::vector<char*> v;
@@ -93,5 +94,30 @@ char* searchTasktypeFile(std::string tasktypename, std::string folder) {
             return filename;
         }
     }
+    return NULL;
+}
+
+std::string readOneToOneMapping(std::string apptaskname) {
+    std::ifstream infile(filename_taskmap_result_from_folder);
+    std::string line;
+    std::string currentSection;
+    while (std::getline(infile, line)) {
+        if (line.empty()) {
+            continue;
+        }
+        if (line[0] == '[' && line[line.length() - 1] == ']') {
+            currentSection = line.substr(1, line.length() - 2);
+            continue;
+        }
+        if (currentSection==result_section_one2one) {
+            size_t delimiterPos = line.find('=');
+            std::string keyOfCurrentLine = (delimiterPos != 0) ? line.substr(0, delimiterPos) : NULL;
+            std::string valueOfCurrentLine = (delimiterPos != 0) ? line.substr(delimiterPos + 1) : NULL;
+            if (keyOfCurrentLine == apptaskname) {
+                return valueOfCurrentLine;
+            }
+        }
+    }
+    infile.close();
     return NULL;
 }
