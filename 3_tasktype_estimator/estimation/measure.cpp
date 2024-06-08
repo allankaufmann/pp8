@@ -154,13 +154,13 @@ std::string  getFilenameWithParam(char* filename, std::string cores) {
 }
 
 MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores) {
-    std::string oneToOneTask = readOneToOneMapping(apptaskname);
-    char* filenameOneToOne = searchTasktypeFile(oneToOneTask, foldername_generated_scripts_tasktypes_from_folder);
+    std::string oneToOneTaskname = readOneToOneMapping(apptaskname);
+    char* filenameOneToOne = searchTasktypeFile(oneToOneTaskname, foldername_generated_scripts_tasktypes_from_folder);
 
-    std::string filenameOntToOneWithParam = getFilenameWithParam(filenameOneToOne, cores);
+    std::string filenameOneToOneWithParam = getFilenameWithParam(filenameOneToOne, cores);
 
-    MeasureResult result = runAndMeasureScript(filenameOntToOneWithParam.c_str());
-    result.taskname=oneToOneTask;
+    MeasureResult result = runAndMeasureScript(filenameOneToOneWithParam.c_str());
+    result.taskname=oneToOneTaskname;
     result.cpuFreq=cpufreq;
     result.parallelism=cores;
 
