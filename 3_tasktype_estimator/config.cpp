@@ -197,7 +197,6 @@ long unsigned  readEnergy_UJ() {
     long unsigned energy_ui=0;
 
     fscanf(filePointer, "%lu", &energy_ui);
-    std::cout << energy_ui << "\n";
     int status = pclose(filePointer);
     if (WIFEXITED(status)) {
         int exit_status = WEXITSTATUS(status);
@@ -205,8 +204,16 @@ long unsigned  readEnergy_UJ() {
             std::cout << RED << "Fehler beim Lesen von intel-rapl/energy_uj! Root-User? "<< RESET;
         }
     }
-
     return energy_ui;
+}
+
+long unsigned  readEnergy_UJ_with_loop() {
+    long unsigned energy_ui = readEnergy_UJ();
+    long unsigned new_energy_ui = readEnergy_UJ();
+    while (new_energy_ui == energy_ui) {
+        new_energy_ui = readEnergy_UJ();
+    }
+    return new_energy_ui;
 }
 
 void checkPreconditions() {

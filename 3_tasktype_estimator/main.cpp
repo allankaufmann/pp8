@@ -105,13 +105,13 @@ int main(int argc, char *argv[]) {
     } else if (strcasecmp(parameter, "T")==0) {
         transferTaskMapToEpEBench();
     } else if (strcasecmp(parameter, "R")==0) {
-        measureAllPrototypTasks(3);
+        measureAllPrototypTasks(measure_repeats);
     } else if (strcasecmp(parameter, "S")==0) {
         runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
         printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
-        startEstimation(3);
+        startEstimation(measure_repeats);
     } else if (strcasecmp(parameter, "Z")==0) {
         readConfigFile(false, false);
         initTaskVektors();
@@ -124,10 +124,10 @@ int main(int argc, char *argv[]) {
             }
             int index = 0;
             if (scanf("%d", &index) == 1) {
-                testEstimation(apptaskVektor[index].taskname, 3);
+                testEstimation(apptaskVektor[index].taskname, measure_repeats);
             }
         } else {
-            testEstimation(apptaskVektor[testAppTaskIndex].taskname, 3);
+            testEstimation(apptaskVektor[testAppTaskIndex].taskname, measure_repeats);
         }
     } else if (strcasecmp(parameter, "V")==0) {
         openMeasurLogFile();

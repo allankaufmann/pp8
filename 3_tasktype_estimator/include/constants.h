@@ -35,6 +35,7 @@ extern const char* script_test_epEBench;
 extern const char* folder_result;
 extern const char* logfileext;
 extern const char* logfileres;
+extern const int measure_repeats;
 
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
