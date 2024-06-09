@@ -1,0 +1,2 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/nop.sh 1;5024;12058929;2400
