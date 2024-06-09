@@ -1,23 +1,6 @@
 [Log]
-logs/taskmapper/202405181258.log
-logs/taskmapper/202404021746.log
-logs/taskmapper/202404021815.log
-logs/taskmapper/202404021956.log
-logs/taskmapper/202404022103.log
-logs/taskmapper/202404022108.log
-logs/taskmapper/202404091539.log
-logs/taskmapper/202404091559.log
-logs/taskmapper/202404091619.log
-logs/taskmapper/202404091651.log
-logs/taskmapper/202404101919.log
-logs/taskmapper/202404110957.log
-logs/taskmapper/202404110958.log
-logs/taskmapper/202404110959.log
-logs/taskmapper/202404221612.log
-logs/taskmapper/202404221826.log
-logs/taskmapper/202405141947.log
-logs/taskmapper/202405181257.log
-logs/taskmapper/202405181258.log
+logs/taskmapper/202404101919.log 1:N
+logs/taskmapper/202404110959.log 1:1
 
 [OneToOne]
 sobelv=m4x4smul
