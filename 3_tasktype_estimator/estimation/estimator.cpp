@@ -16,7 +16,7 @@ void closeResultFile() {
 
 
 void logHeadline() {
-    resultFile << "CPUFrequency;Parallelism;apptask;apptaskduration;apptaskpower:\testimationOneToOne;diffOneToOne;\testimationOneToMany;diffOneToMany\n";
+    resultFile << "CPUFrequency;Parallelism;apptask;apptaskduration(MS);apptaskpower(MJ/MS);\testimationOneToOne(MJ/MS);diffOneToOne(%);\testimationOneToMany(MJ/MS);diffOneToMany(%)\n";
 }
 
 void logEmptyline() {
@@ -32,18 +32,18 @@ void startApptaskEstimation(std::string apptaskname) {
     resultFile << currentCPUFreq << ";";
     resultFile << currentParallelism << ";";
     resultFile << apptaskname << ";";
-    resultFile << appTaskresult.duration << " MS; ";
-    resultFile << appTaskresult.power() << " MJ/MS:\t";
-    resultFile << result.power() << " MJ/MS; ";
+    resultFile << appTaskresult.duration << ";";
+    resultFile << appTaskresult.power() << ";";
+    resultFile << result.power() << ";";
     if (appTaskresult.power()!=0) {
-        resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << "%;\t";
-        resultFile << result.powerOneToMany() << " MJ/MS;";
-        resultFile << (result.powerOneToMany()-appTaskresult.power())*100/appTaskresult.power() << "%;";
+        resultFile << (result.power()-appTaskresult.power())*100/appTaskresult.power() << ";\t";
+        resultFile << result.powerOneToMany() << ";";
+        resultFile << (result.powerOneToMany()-appTaskresult.power())*100/appTaskresult.power() << ";";
         resultFile << "\n";
     } else {
-        resultFile << 0 << "%;\t";
-        resultFile << result.powerOneToMany() << " MJ/MS;";
-        resultFile << 0 << "%;\t";
+        resultFile << 0 << ";\t";
+        resultFile << result.powerOneToMany() << ";";
+        resultFile << 0 << ";\t";
         resultFile << "\n";
     }
     resultFile.flush();

@@ -31,3 +31,4 @@ const char* script_test_epEBench = "./scripts/testepEBench.sh";
 const char* folder_result = "././results/";
 const char* logfileext = ".log";
 const char* logfileres = ".result";
+const int measure_repeats = 5;

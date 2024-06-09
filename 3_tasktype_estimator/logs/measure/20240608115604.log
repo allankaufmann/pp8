@@ -1,0 +1,361 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/dmem.sh 1;5025;14586999;2902
+gen/tasktypes/onetomany/writeimage.sh 1;5029;14965477;2975
+writeimage;5003;26660149;5328
+
+
+./gen/tasktypes/dmem.sh 1;5030;15849264;3150
+gen/tasktypes/onetomany/writeimage.sh 1;5028;11907257;2368
+writeimage;5005;26519708;5298
+
+
+./gen/tasktypes/dmem.sh 1;1211;3966970;3275
+gen/tasktypes/onetomany/writeimage.sh 1;5024;14598412;2905
+writeimage;5026;35740936;7111
+
+
+./gen/tasktypes/dmem.sh 2;5056;32979529;6522
+gen/tasktypes/onetomany/writeimage.sh 2;5033;22884463;4546
+writeimage;5016;38896690;7754
+
+
+./gen/tasktypes/dmem.sh 2;5030;22949587;4562
+gen/tasktypes/onetomany/writeimage.sh 2;5036;21148506;4199
+writeimage;5016;30221237;6024
+
+
+./gen/tasktypes/dmem.sh 2;5047;28551380;5657
+gen/tasktypes/onetomany/writeimage.sh 2;5032;18902295;3756
+writeimage;5015;26778496;5339
+
+
+./gen/tasktypes/dmem.sh 3;5039;26907280;5339
+gen/tasktypes/onetomany/writeimage.sh 3;5034;18865919;3747
+writeimage;5013;24319701;4851
+
+
+./gen/tasktypes/dmem.sh 3;5041;26845451;5325
+gen/tasktypes/onetomany/writeimage.sh 3;5035;18881727;3750
+writeimage;5015;24297606;4844
+
+
+./gen/tasktypes/dmem.sh 3;5039;27423209;5442
+gen/tasktypes/onetomany/writeimage.sh 3;5036;19281262;3828
+writeimage;5003;24761351;4949
+
+
+./gen/tasktypes/dmem.sh 4;5040;32474954;6443
+gen/tasktypes/onetomany/writeimage.sh 4;5041;22614871;4486
+writeimage;5017;24734007;4930
+
+
+./gen/tasktypes/dmem.sh 4;5053;33867772;6702
+gen/tasktypes/onetomany/writeimage.sh 4;5044;22730349;4506
+writeimage;5014;24612669;4908
+
+
+./gen/tasktypes/dmem.sh 4;5038;32589944;6468
+gen/tasktypes/onetomany/writeimage.sh 4;5042;22788394;4519
+writeimage;5015;25155026;5015
+
+
+./gen/tasktypes/dmem.sh 1;5026;19638866;3907
+gen/tasktypes/onetomany/writeimage.sh 1;5020;18837354;3752
+writeimage;5006;26104731;5214
+
+
+./gen/tasktypes/dmem.sh 1;5026;19357251;3851
+gen/tasktypes/onetomany/writeimage.sh 1;5018;14630821;2915
+writeimage;5007;25757441;5144
+
+
+./gen/tasktypes/dmem.sh 1;5026;18797071;3739
+gen/tasktypes/onetomany/writeimage.sh 1;5021;14182947;2824
+writeimage;5003;25626155;5122
+
+
+./gen/tasktypes/dmem.sh 2;5026;27869375;5545
+gen/tasktypes/onetomany/writeimage.sh 2;5028;19995737;3976
+writeimage;5004;29069689;5809
+
+
+./gen/tasktypes/dmem.sh 2;5028;27440176;5457
+gen/tasktypes/onetomany/writeimage.sh 2;5028;19934031;3964
+writeimage;5004;29152513;5825
+
+
+./gen/tasktypes/dmem.sh 2;5025;27766592;5525
+gen/tasktypes/onetomany/writeimage.sh 2;5022;19885020;3959
+writeimage;5004;29058154;5806
+
+
+./gen/tasktypes/dmem.sh 3;5035;35991241;7148
+gen/tasktypes/onetomany/writeimage.sh 3;5023;25651118;5106
+writeimage;5008;30539778;6098
+
+
+./gen/tasktypes/dmem.sh 3;5030;35991485;7155
+gen/tasktypes/onetomany/writeimage.sh 3;5024;25505795;5076
+writeimage;5009;29689988;5927
+
+
+./gen/tasktypes/dmem.sh 3;5030;35602021;7077
+gen/tasktypes/onetomany/writeimage.sh 3;5024;25655208;5106
+writeimage;5012;30432845;6071
+
+
+./gen/tasktypes/dmem.sh 4;5027;44327767;8817
+gen/tasktypes/onetomany/writeimage.sh 4;5037;30858686;6126
+writeimage;5009;31130535;6214
+
+
+./gen/tasktypes/dmem.sh 4;5031;44141977;8773
+gen/tasktypes/onetomany/writeimage.sh 4;5025;28786303;5728
+writeimage;5008;31288983;6247
+
+
+./gen/tasktypes/dmem.sh 4;5031;43574351;8661
+gen/tasktypes/onetomany/writeimage.sh 4;5027;29895065;5946
+writeimage;5006;30917157;6176
+
+
+./gen/tasktypes/dmem.sh 1;5026;21186469;4215
+gen/tasktypes/onetomany/writeimage.sh 1;5021;16321918;3250
+writeimage;5006;27793691;5552
+
+
+./gen/tasktypes/dmem.sh 1;5024;20200754;4020
+gen/tasktypes/onetomany/writeimage.sh 1;5021;16112690;3209
+writeimage;5005;28232105;5640
+
+
+./gen/tasktypes/dmem.sh 1;5025;20436959;4067
+gen/tasktypes/onetomany/writeimage.sh 1;5016;16151448;3219
+writeimage;5005;27665579;5527
+
+
+./gen/tasktypes/dmem.sh 2;5028;30893658;6144
+gen/tasktypes/onetomany/writeimage.sh 2;5022;22950137;4569
+writeimage;5011;31781351;6342
+
+
+./gen/tasktypes/dmem.sh 2;5027;34396152;6842
+gen/tasktypes/onetomany/writeimage.sh 2;5026;22731998;4522
+writeimage;5005;32901344;6573
+
+
+./gen/tasktypes/dmem.sh 2;5027;31238445;6214
+gen/tasktypes/onetomany/writeimage.sh 2;5022;24288696;4836
+writeimage;5005;32536477;6500
+
+
+./gen/tasktypes/dmem.sh 3;5029;40945329;8141
+gen/tasktypes/onetomany/writeimage.sh 3;5023;31555034;6282
+writeimage;5007;39767110;7942
+
+
+./gen/tasktypes/dmem.sh 3;5035;45624944;9061
+gen/tasktypes/onetomany/writeimage.sh 3;5033;36059966;7164
+writeimage;5012;42717115;8522
+
+
+./gen/tasktypes/dmem.sh 3;5032;43261425;8597
+gen/tasktypes/onetomany/writeimage.sh 3;5027;33006324;6565
+writeimage;5010;40122517;8008
+
+
+./gen/tasktypes/dmem.sh 4;5032;51155387;10166
+gen/tasktypes/onetomany/writeimage.sh 4;5023;40415240;8046
+writeimage;5003;41300858;8255
+
+
+./gen/tasktypes/dmem.sh 4;5035;52604174;10447
+gen/tasktypes/onetomany/writeimage.sh 4;5032;37075467;7367
+writeimage;5014;35671356;7114
+
+
+./gen/tasktypes/dmem.sh 4;5031;52765063;10487
+gen/tasktypes/onetomany/writeimage.sh 4;5026;38503991;7660
+writeimage;5011;35477815;7079
+
+
+./gen/tasktypes/dmem.sh 1;5016;22921572;4569
+gen/tasktypes/onetomany/writeimage.sh 1;5021;21980291;4377
+writeimage;5007;36140350;7217
+
+
+./gen/tasktypes/dmem.sh 1;5024;26669243;5308
+gen/tasktypes/onetomany/writeimage.sh 1;5030;32479409;6457
+writeimage;5006;30978376;6188
+
+
+./gen/tasktypes/dmem.sh 1;5016;19960093;3979
+gen/tasktypes/onetomany/writeimage.sh 1;5015;18458998;3680
+writeimage;5005;30492353;6092
+
+
+./gen/tasktypes/dmem.sh 2;5027;33972813;6758
+gen/tasktypes/onetomany/writeimage.sh 2;5023;26323114;5240
+writeimage;5004;47442872;9480
+
+
+./gen/tasktypes/dmem.sh 2;5030;36685453;7293
+gen/tasktypes/onetomany/writeimage.sh 2;5025;26501824;5273
+writeimage;5004;35921539;7178
+
+
+./gen/tasktypes/dmem.sh 2;5025;35600861;7084
+gen/tasktypes/onetomany/writeimage.sh 2;5020;26527337;5284
+writeimage;5004;36486784;7291
+
+
+./gen/tasktypes/dmem.sh 3;5027;47461365;9441
+gen/tasktypes/onetomany/writeimage.sh 3;5020;34897616;6951
+writeimage;5008;38825523;7752
+
+
+./gen/tasktypes/dmem.sh 3;5029;48642759;9672
+gen/tasktypes/onetomany/writeimage.sh 3;5021;35677521;7105
+writeimage;5007;39008933;7790
+
+
+./gen/tasktypes/dmem.sh 3;5028;48715756;9688
+gen/tasktypes/onetomany/writeimage.sh 3;5021;35293123;7029
+writeimage;5006;39043296;7799
+
+
+./gen/tasktypes/dmem.sh 4;5034;59811553;11881
+gen/tasktypes/onetomany/writeimage.sh 4;5025;43554515;8667
+writeimage;5011;39251364;7833
+
+
+./gen/tasktypes/dmem.sh 4;5029;60645047;12059
+gen/tasktypes/onetomany/writeimage.sh 4;5020;43517284;8668
+writeimage;5010;38834861;7751
+
+
+./gen/tasktypes/dmem.sh 4;5029;60249723;11980
+gen/tasktypes/onetomany/writeimage.sh 4;5036;43688548;8675
+writeimage;5004;39838643;7961
+
+
+./gen/tasktypes/dmem.sh 1;5019;21502692;4284
+gen/tasktypes/onetomany/writeimage.sh 1;5016;20270333;4041
+writeimage;5006;32707741;6533
+
+
+./gen/tasktypes/dmem.sh 1;5022;20861701;4154
+gen/tasktypes/onetomany/writeimage.sh 1;5015;19975169;3983
+writeimage;5006;30609114;6114
+
+
+./gen/tasktypes/dmem.sh 1;5023;20597665;4100
+gen/tasktypes/onetomany/writeimage.sh 1;5019;19819651;3948
+writeimage;5006;30720075;6136
+
+
+./gen/tasktypes/dmem.sh 2;5029;34306004;6821
+gen/tasktypes/onetomany/writeimage.sh 2;5025;28507678;5673
+writeimage;5004;38215784;7637
+
+
+./gen/tasktypes/dmem.sh 2;5033;36393278;7230
+gen/tasktypes/onetomany/writeimage.sh 2;5024;28471790;5667
+writeimage;5004;37680872;7530
+
+
+./gen/tasktypes/dmem.sh 2;5024;34541477;6875
+gen/tasktypes/onetomany/writeimage.sh 2;5023;28698168;5713
+writeimage;5005;37598171;7512
+
+
+./gen/tasktypes/dmem.sh 3;5028;52099903;10361
+gen/tasktypes/onetomany/writeimage.sh 3;5024;38096521;7582
+writeimage;5004;40937456;8180
+
+
+./gen/tasktypes/dmem.sh 3;5028;52150074;10371
+gen/tasktypes/onetomany/writeimage.sh 3;5023;38061365;7577
+writeimage;5009;40505756;8086
+
+
+./gen/tasktypes/dmem.sh 3;5033;51663625;10264
+gen/tasktypes/onetomany/writeimage.sh 3;5019;38621849;7695
+writeimage;5007;41552872;8298
+
+
+./gen/tasktypes/dmem.sh 4;5030;65727921;13067
+gen/tasktypes/onetomany/writeimage.sh 4;5038;38287560;7599
+writeimage;5005;42042373;8400
+
+
+./gen/tasktypes/dmem.sh 4;5026;64583514;12849
+gen/tasktypes/onetomany/writeimage.sh 4;5019;47766846;9517
+writeimage;5007;41310380;8250
+
+
+./gen/tasktypes/dmem.sh 4;5037;64999467;12904
+gen/tasktypes/onetomany/writeimage.sh 4;5039;47798828;9485
+writeimage;5007;43097912;8607
+
+
+./gen/tasktypes/dmem.sh 1;5016;22460208;4477
+gen/tasktypes/onetomany/writeimage.sh 1;5019;27234916;5426
+writeimage;5003;39004966;7796
+
+
+./gen/tasktypes/dmem.sh 1;5021;20811897;4144
+gen/tasktypes/onetomany/writeimage.sh 1;5019;27246695;5428
+writeimage;5006;38790367;7748
+
+
+./gen/tasktypes/dmem.sh 1;5020;21288153;4240
+gen/tasktypes/onetomany/writeimage.sh 1;5015;27074638;5398
+writeimage;5006;34844637;6960
+
+
+./gen/tasktypes/dmem.sh 2;5027;49648676;9876
+gen/tasktypes/onetomany/writeimage.sh 2;5021;40606891;8087
+writeimage;5002;48922787;9780
+
+
+./gen/tasktypes/dmem.sh 2;5026;40728961;8103
+gen/tasktypes/onetomany/writeimage.sh 2;5024;40640216;8089
+writeimage;5003;47301820;9454
+
+
+./gen/tasktypes/dmem.sh 2;5024;38569176;7676
+gen/tasktypes/onetomany/writeimage.sh 2;5022;40679339;8100
+writeimage;5009;47948791;9572
+
+
+./gen/tasktypes/dmem.sh 3;5026;65329545;12998
+gen/tasktypes/onetomany/writeimage.sh 3;5021;55378276;11029
+writeimage;5003;53939254;10781
+
+
+./gen/tasktypes/dmem.sh 3;5026;64292194;12791
+gen/tasktypes/onetomany/writeimage.sh 3;5029;55909464;11117
+writeimage;5008;56339211;11249
+
+
+./gen/tasktypes/dmem.sh 3;5027;69313299;13788
+gen/tasktypes/onetomany/writeimage.sh 3;5034;55749064;11074
+writeimage;5006;56276407;11241
+
+
+./gen/tasktypes/dmem.sh 4;5024;89367874;17788
+gen/tasktypes/onetomany/writeimage.sh 4;5042;68026498;13491
+writeimage;5007;53609116;10706
+
+
+./gen/tasktypes/dmem.sh 4;5027;89839369;17871
+gen/tasktypes/onetomany/writeimage.sh 4;5033;68500741;13610
+writeimage;5011;56599037;11294
+
+
+./gen/tasktypes/dmem.sh 4;5025;88639178;17639
+gen/tasktypes/onetomany/writeimage.sh 4;5036;68635505;13628
+writeimage;5009;58171665;11613
+
+

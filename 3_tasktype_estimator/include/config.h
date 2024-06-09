@@ -18,5 +18,6 @@ void readConfigFile(bool showEntries, bool generateScripts);
 void generateTaskTypeScripts(std::string folder, std::string task);
 void generateAppTaskScripts(std::string task);
 long unsigned  readEnergy_UJ();
+long unsigned  readEnergy_UJ_with_loop();
 void checkPreconditions();
 #endif //INC_3_TASKTYPE_ESTIMATOR_CONFIG_H

@@ -1,0 +1,481 @@
+app;cpufreq;Parallelitätsgrad;Dauer; power;leistung
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5046;14350122;2843
+gen/tasktypes/onetomany/checkcontrast.sh 1;5029;12634672;2512
+checkcontrast;5028;15813680;3145
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5021;66328505;13210
+gen/tasktypes/onetomany/checkcontrast.sh 1;5016;56831459;11330
+checkcontrast;5005;15249229;3046
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5018;67963083;13543
+gen/tasktypes/onetomany/checkcontrast.sh 1;5017;57408300;11442
+checkcontrast;5005;14708214;2938
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5023;67475840;13433
+gen/tasktypes/onetomany/checkcontrast.sh 1;5023;57095802;11366
+checkcontrast;5009;14581017;2910
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5035;108233427;21496
+gen/tasktypes/onetomany/checkcontrast.sh 2;5017;90574536;18053
+checkcontrast;5022;15638509;3114
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5033;108652065;21587
+gen/tasktypes/onetomany/checkcontrast.sh 2;5020;91245249;18176
+checkcontrast;5022;15849813;3156
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5030;109462854;21761
+gen/tasktypes/onetomany/checkcontrast.sh 2;5019;91458994;18222
+checkcontrast;5028;15672445;3117
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5032;109721094;21804
+gen/tasktypes/onetomany/checkcontrast.sh 2;5019;91931344;18316
+checkcontrast;5026;15718832;3127
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5030;130865632;26017
+gen/tasktypes/onetomany/checkcontrast.sh 3;5030;106909028;21254
+checkcontrast;5018;15852620;3159
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5053;133966088;26512
+gen/tasktypes/onetomany/checkcontrast.sh 3;5031;105979649;21065
+checkcontrast;5028;15863179;3154
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5050;134279381;26589
+gen/tasktypes/onetomany/checkcontrast.sh 3;5028;107775420;21435
+checkcontrast;5003;15901632;3178
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5050;133738122;26482
+gen/tasktypes/onetomany/checkcontrast.sh 3;5034;109771570;21806
+checkcontrast;5019;16041524;3196
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5025;176692053;35162
+gen/tasktypes/onetomany/checkcontrast.sh 4;5029;142905030;28416
+checkcontrast;5015;16850787;3360
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5017;175812355;35043
+gen/tasktypes/onetomany/checkcontrast.sh 4;5039;145456353;28866
+checkcontrast;5024;16914996;3366
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5039;171517872;34038
+gen/tasktypes/onetomany/checkcontrast.sh 4;5031;143542358;28531
+checkcontrast;5008;16908709;3376
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5027;168193479;33458
+gen/tasktypes/onetomany/checkcontrast.sh 4;5042;142093386;28181
+checkcontrast;5023;16911211;3366
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5031;18987928;3774
+gen/tasktypes/onetomany/checkcontrast.sh 1;5024;16364643;3257
+checkcontrast;5004;20435312;4083
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5030;17642899;3507
+gen/tasktypes/onetomany/checkcontrast.sh 1;5020;15901205;3167
+checkcontrast;5009;20820991;4156
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5039;17464616;3465
+gen/tasktypes/onetomany/checkcontrast.sh 1;5025;15747641;3133
+checkcontrast;5007;19361767;3866
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5038;17477617;3469
+gen/tasktypes/onetomany/checkcontrast.sh 1;5024;15736959;3132
+checkcontrast;5002;19521862;3902
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5047;25783015;5108
+gen/tasktypes/onetomany/checkcontrast.sh 2;5026;22072759;4391
+checkcontrast;5017;19536449;3894
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5044;25790339;5113
+gen/tasktypes/onetomany/checkcontrast.sh 2;5026;22237065;4424
+checkcontrast;5005;19418652;3879
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5036;25903315;5143
+gen/tasktypes/onetomany/checkcontrast.sh 2;5026;22385014;4453
+checkcontrast;5011;19439708;3879
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5036;26073115;5177
+gen/tasktypes/onetomany/checkcontrast.sh 2;5026;22147954;4406
+checkcontrast;5008;19596752;3913
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5045;34723239;6882
+gen/tasktypes/onetomany/checkcontrast.sh 3;5027;28985521;5765
+checkcontrast;5006;19536144;3902
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5050;34968844;6924
+gen/tasktypes/onetomany/checkcontrast.sh 3;5029;29072008;5780
+checkcontrast;5020;19788951;3942
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5046;35011324;6938
+gen/tasktypes/onetomany/checkcontrast.sh 3;5040;26540338;5265
+checkcontrast;5020;19659801;3916
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5036;35062654;6962
+gen/tasktypes/onetomany/checkcontrast.sh 3;5036;29160264;5790
+checkcontrast;5005;19030286;3802
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5042;43469494;8621
+gen/tasktypes/onetomany/checkcontrast.sh 4;5037;35310151;7010
+checkcontrast;5012;19967479;3983
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5049;43346203;8585
+gen/tasktypes/onetomany/checkcontrast.sh 4;5029;35823090;7123
+checkcontrast;5007;20352060;4064
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5038;43082409;8551
+gen/tasktypes/onetomany/checkcontrast.sh 4;5030;35949798;7147
+checkcontrast;5020;20352976;4054
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5035;43133740;8566
+gen/tasktypes/onetomany/checkcontrast.sh 4;5030;35992400;7155
+checkcontrast;5010;19635570;3919
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5028;20445504;4066
+gen/tasktypes/onetomany/checkcontrast.sh 1;5023;17791275;3541
+checkcontrast;5011;22690860;4528
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5028;20227610;4022
+gen/tasktypes/onetomany/checkcontrast.sh 1;5023;17931351;3569
+checkcontrast;5004;22477848;4491
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5028;20347177;4046
+gen/tasktypes/onetomany/checkcontrast.sh 1;5023;17786209;3540
+checkcontrast;5002;22202458;4438
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5029;20251413;4026
+gen/tasktypes/onetomany/checkcontrast.sh 1;5022;17796769;3543
+checkcontrast;5019;22313846;4445
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5034;29944382;5948
+gen/tasktypes/onetomany/checkcontrast.sh 2;5024;25882319;5151
+checkcontrast;5018;22344608;4452
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5033;29976364;5955
+gen/tasktypes/onetomany/checkcontrast.sh 2;5021;25820308;5142
+checkcontrast;5006;22275455;4449
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5034;30003341;5960
+gen/tasktypes/onetomany/checkcontrast.sh 2;5024;25801692;5135
+checkcontrast;5016;22736148;4532
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5039;29863266;5926
+gen/tasktypes/onetomany/checkcontrast.sh 2;5022;25821162;5141
+checkcontrast;5013;22983889;4584
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5052;41162309;8147
+gen/tasktypes/onetomany/checkcontrast.sh 3;5038;33864659;6721
+checkcontrast;5013;22952150;4578
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5047;41090410;8141
+gen/tasktypes/onetomany/checkcontrast.sh 3;5038;33989782;6746
+checkcontrast;5005;22912783;4577
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5048;40751116;8072
+gen/tasktypes/onetomany/checkcontrast.sh 3;5037;33990147;6748
+checkcontrast;5010;23008120;4592
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5031;41381425;8225
+gen/tasktypes/onetomany/checkcontrast.sh 3;5029;34047581;6770
+checkcontrast;5004;22787845;4553
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5049;51590628;10217
+gen/tasktypes/onetomany/checkcontrast.sh 4;5044;42279982;8382
+checkcontrast;5009;22781680;4548
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5030;41083879;8167
+gen/tasktypes/onetomany/checkcontrast.sh 4;5024;42486341;8456
+checkcontrast;5020;22805484;4542
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5045;51682912;10244
+gen/tasktypes/onetomany/checkcontrast.sh 4;5040;42147720;8362
+checkcontrast;5019;23128480;4608
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5041;52139637;10343
+gen/tasktypes/onetomany/checkcontrast.sh 4;5040;42332289;8399
+checkcontrast;5019;23153139;4613
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5032;23096376;4589
+gen/tasktypes/onetomany/checkcontrast.sh 1;5022;20121348;4006
+checkcontrast;5016;26268366;5236
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5036;22944278;4556
+gen/tasktypes/onetomany/checkcontrast.sh 1;5022;20087107;3999
+checkcontrast;5013;26308526;5248
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5037;23195436;4605
+gen/tasktypes/onetomany/checkcontrast.sh 1;5021;19982371;3979
+checkcontrast;5005;26240289;5242
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5036;22915346;4550
+gen/tasktypes/onetomany/checkcontrast.sh 1;5022;19957224;3973
+checkcontrast;5006;26343988;5262
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5042;35222993;6985
+gen/tasktypes/onetomany/checkcontrast.sh 2;5023;29763657;5925
+checkcontrast;5007;26325128;5257
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5043;35232576;6986
+gen/tasktypes/onetomany/checkcontrast.sh 2;5023;29963852;5965
+checkcontrast;5005;26318902;5258
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5047;35268037;6987
+gen/tasktypes/onetomany/checkcontrast.sh 2;5023;30001693;5972
+checkcontrast;5017;26316888;5245
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5039;35560700;7057
+gen/tasktypes/onetomany/checkcontrast.sh 2;5023;29964157;5965
+checkcontrast;5004;26425897;5280
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5032;48124267;9563
+gen/tasktypes/onetomany/checkcontrast.sh 3;5036;39784749;7900
+checkcontrast;5007;26388787;5270
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5032;47981811;9535
+gen/tasktypes/onetomany/checkcontrast.sh 3;5036;39478781;7839
+checkcontrast;5008;26301568;5251
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5046;48061644;9524
+gen/tasktypes/onetomany/checkcontrast.sh 3;5037;39789571;7899
+checkcontrast;5005;26232721;5241
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5044;48700315;9655
+gen/tasktypes/onetomany/checkcontrast.sh 3;5029;39942647;7942
+checkcontrast;5004;26208429;5237
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5043;60160003;11929
+gen/tasktypes/onetomany/checkcontrast.sh 4;5031;49584223;9855
+checkcontrast;5019;26230890;5226
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5041;59801788;11863
+gen/tasktypes/onetomany/checkcontrast.sh 4;5022;50086481;9973
+checkcontrast;5006;26300104;5253
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5047;60040984;11896
+gen/tasktypes/onetomany/checkcontrast.sh 4;5042;42348891;8399
+checkcontrast;5015;26193476;5223
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5041;59967681;11895
+gen/tasktypes/onetomany/checkcontrast.sh 4;5038;47282838;9385
+checkcontrast;5007;26360101;5264
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5026;24915830;4957
+gen/tasktypes/onetomany/checkcontrast.sh 1;5021;22093266;4400
+checkcontrast;5009;26464654;5283
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5026;24661802;4906
+gen/tasktypes/onetomany/checkcontrast.sh 1;5020;22016301;4385
+checkcontrast;5009;27973195;5584
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5026;24838498;4942
+gen/tasktypes/onetomany/checkcontrast.sh 1;5021;21764776;4334
+checkcontrast;5012;27933583;5573
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5025;24657530;4906
+gen/tasktypes/onetomany/checkcontrast.sh 1;5021;21743292;4330
+checkcontrast;5018;26307611;5242
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5031;38542138;7660
+gen/tasktypes/onetomany/checkcontrast.sh 2;5024;32100748;6389
+checkcontrast;5006;27914723;5576
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5031;38323998;7617
+gen/tasktypes/onetomany/checkcontrast.sh 2;5024;32157022;6400
+checkcontrast;5009;28052662;5600
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5043;38556481;7645
+gen/tasktypes/onetomany/checkcontrast.sh 2;5025;32196207;6407
+checkcontrast;5012;28108876;5608
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5031;38337426;7620
+gen/tasktypes/onetomany/checkcontrast.sh 2;5021;32133707;6399
+checkcontrast;5018;28058889;5591
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5032;52485156;10430
+gen/tasktypes/onetomany/checkcontrast.sh 3;5042;41128557;8157
+checkcontrast;5003;26290033;5254
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5031;52577625;10450
+gen/tasktypes/onetomany/checkcontrast.sh 3;5036;43002453;8539
+checkcontrast;5003;27998707;5596
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5050;52403492;10376
+gen/tasktypes/onetomany/checkcontrast.sh 3;5022;43125623;8587
+checkcontrast;5011;27911611;5570
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5034;52654955;10459
+gen/tasktypes/onetomany/checkcontrast.sh 3;5024;43249829;8608
+checkcontrast;5006;28085499;5610
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5057;65250566;12903
+gen/tasktypes/onetomany/checkcontrast.sh 4;5032;54345625;10800
+checkcontrast;5012;28645374;5715
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5038;65779556;13056
+gen/tasktypes/onetomany/checkcontrast.sh 4;5041;54176681;10747
+checkcontrast;5013;27954763;5576
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5041;64917253;12877
+gen/tasktypes/onetomany/checkcontrast.sh 4;5031;54058089;10744
+checkcontrast;5010;27763967;5541
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5036;64777056;12862
+gen/tasktypes/onetomany/checkcontrast.sh 4;5029;43185131;8587
+checkcontrast;5011;27998829;5587
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5037;34122471;6774
+gen/tasktypes/onetomany/checkcontrast.sh 1;5019;29416916;5861
+checkcontrast;5007;38155481;7620
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5031;34127720;6783
+gen/tasktypes/onetomany/checkcontrast.sh 1;5019;29294237;5836
+checkcontrast;5007;38057337;7600
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5032;33871312;6731
+gen/tasktypes/onetomany/checkcontrast.sh 1;5019;29497300;5877
+checkcontrast;5009;38115869;7609
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 1;5036;33796056;6710
+gen/tasktypes/onetomany/checkcontrast.sh 1;5020;29332689;5843
+checkcontrast;5010;38494653;7683
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5036;55056805;10932
+gen/tasktypes/onetomany/checkcontrast.sh 2;5020;45743474;9112
+checkcontrast;5005;39156210;7823
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5023;55435893;11036
+gen/tasktypes/onetomany/checkcontrast.sh 2;5020;45820744;9127
+checkcontrast;5004;39240500;7841
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5027;55039715;10948
+gen/tasktypes/onetomany/checkcontrast.sh 2;5020;45836309;9130
+checkcontrast;5013;39080771;7795
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 2;5027;54938580;10928
+gen/tasktypes/onetomany/checkcontrast.sh 2;5020;45624212;9088
+checkcontrast;5012;38166345;7614
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5028;73805109;14678
+gen/tasktypes/onetomany/checkcontrast.sh 3;5021;62347436;12417
+checkcontrast;5003;38955650;7786
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5053;74836112;14810
+gen/tasktypes/onetomany/checkcontrast.sh 3;5031;61595912;12243
+checkcontrast;5011;39151999;7813
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5033;72916622;14487
+gen/tasktypes/onetomany/checkcontrast.sh 3;5029;61823267;12293
+checkcontrast;5008;39178000;7823
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 3;5028;74236443;14764
+gen/tasktypes/onetomany/checkcontrast.sh 3;5029;62446983;12417
+checkcontrast;5005;38579308;7708
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5038;75307913;14947
+gen/tasktypes/onetomany/checkcontrast.sh 4;5043;76646471;15198
+checkcontrast;5010;38912926;7767
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5024;75663869;15060
+gen/tasktypes/onetomany/checkcontrast.sh 4;5035;77733627;15438
+checkcontrast;5011;39032554;7789
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5049;96817013;19175
+gen/tasktypes/onetomany/checkcontrast.sh 4;5030;77038682;15315
+checkcontrast;5004;38961753;7786
+
+
+./gen/tasktypes/m4x4smul_SIMD.sh 4;5030;97306453;19345
+gen/tasktypes/onetomany/checkcontrast.sh 4;5046;77460434;15350
+checkcontrast;5007;39329062;7854
+
+

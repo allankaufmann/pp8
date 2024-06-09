@@ -105,10 +105,10 @@ void runCommand(const char* command) {
 
 MeasureResult runAndMeasureScript(const char* script) {
     uint64_t timestamp_begin = timeSinceEpochMillisec();
-    long long counter_begin = read_power_usage();
+    long long counter_begin = readEnergy_UJ_with_loop();
     std::thread t1(runCommand, script);
     t1.join();
-    long long counter_end = read_power_usage();
+    long long counter_end = readEnergy_UJ_with_loop();
     uint64_t timestamp_end = timeSinceEpochMillisec();
     uint64_t duration = timestamp_end - timestamp_begin;
     std::cout << "Dauer: " << duration << " MS" << std::endl;
