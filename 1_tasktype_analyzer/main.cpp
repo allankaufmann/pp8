@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-
+// Define constant strings for SIMD operations
 static const char *const m4x4smul_SIMD = "m4x4smul_SIMD";
 
 static const char *const v1x4smul_SIMD = "v1x4smul_SIMD";
@@ -24,6 +24,7 @@ static const char *const vmov_SIMD = "vmov_SIMD";
 
 static const char *const vconvert_SIMD = "vconvert_SIMD";
 
+// Define constant strings for other operations
 static const char *const m4x4smul = "m4x4smul";
 
 static const char *const dmul = "dmul";
@@ -54,11 +55,12 @@ static const char *const nop = "nop";
 
 static const char *const empty = "empty";
 
+// Function to run empty task
 void* run_empty() {
     return NULL;
 }
 
-
+// Main function
 int main(int argc, char *argv[]) {
     int i;
     printf("Anzahl Argumente: %d\n",argc);
@@ -66,11 +68,12 @@ int main(int argc, char *argv[]) {
     {
         printf("%d. Argument: %s\n",i, argv[i]);
     }
-
+    // If there are two arguments, the first one is evaluated
     if (argc==2) {
         printf("Es wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\n");
         char* taskname = argv[1];
 
+        // Check the task name and run the corresponding function
         if (strcmp(taskname, empty) == 0)
         {
             run_empty();

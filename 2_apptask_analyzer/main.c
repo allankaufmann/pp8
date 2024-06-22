@@ -6,6 +6,7 @@
 #define INPUTPATH "./images/"
 #define OUTPUTPATH "./outimages/"
 
+// Define constant strings for application tasks
 static const char *const task_loadimage = "loadimage";
 static const char *const task_greyscale = "greyscale";
 static const char *const task_checkcontrast = "checkcontrast";
@@ -18,7 +19,7 @@ static const char *const task_writeimage = "writeimage";
 
 
 
-
+// Main function
 int main(int argc,char *argv[]) {
 
     int i;
@@ -28,6 +29,7 @@ int main(int argc,char *argv[]) {
         printf("%d. Argument: %s\n",i, argv[i]);
     }
 
+    // Check if the number of arguments is 2
     if (argc==2) {
         printf("Es wurden zwei Argumente uebergeben, das 1. Element wird ausgewertet!\n");
         char* taskname = argv[1];
@@ -36,12 +38,9 @@ int main(int argc,char *argv[]) {
         FILE *fp;
         MyIMG *imgrgb, *imgh, *imgv;
 
-        //listfilename = argv[1];
-        //fp = fopen(listfilename, "r");
         imgrgb = createimagergb(XWIDTH, YWIDTH);
         imgh = createimage(XWIDTH, YWIDTH);
 
-        //sharpencontrast copyimage sobelh sobelv combineimgs writeimage
         if (strcmp(taskname, task_loadimage) == 0) {
             loadimage(imgrgb,filename);
         } else if (strcmp(taskname, task_greyscale) == 0) {
