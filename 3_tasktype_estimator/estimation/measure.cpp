@@ -23,29 +23,6 @@ uint64_t timeSinceEpochMillisec() {
     return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
 }
 
-void logTime() {
-    std::time_t result = std::time(nullptr);
-    std::cout << std::ctime(&result);
-}
-
-long long readCounterFromFile() {
-    FILE* filePointer;
-    int bufferLength = 255;
-    char buffer[bufferLength];
-
-    filePointer = fopen("logs/counter.txt", "r");
-
-    long long counter = -1;
-
-    while(fgets(buffer, bufferLength, filePointer)) {
-        counter = strtol(buffer, NULL, 10);
-    }
-
-    fclose(filePointer);
-
-    return counter;
-}
-
 char* getFilename() {
     time_t mytime = time(NULL);
     tm local_tm = *localtime(&mytime);
@@ -105,10 +82,10 @@ void runCommand(const char* command) {
 
 MeasureResult runAndMeasureScript(const char* script) {
     uint64_t timestamp_begin = timeSinceEpochMillisec();
-    long long counter_begin = readEnergy_UJ_with_loop();
+    long long counter_begin = readEnergy_UJ_secure();
     std::thread t1(runCommand, script);
     t1.join();
-    long long counter_end = readEnergy_UJ_with_loop();
+    long long counter_end = readEnergy_UJ_secure();
     uint64_t timestamp_end = timeSinceEpochMillisec();
     uint64_t duration = timestamp_end - timestamp_begin;
     std::cout << "Dauer: " << duration << " MS" << std::endl;

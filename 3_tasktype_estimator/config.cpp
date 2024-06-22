@@ -207,7 +207,7 @@ long unsigned  readEnergy_UJ() {
     return energy_ui;
 }
 
-long unsigned  readEnergy_UJ_with_loop() {
+long unsigned  readEnergy_UJ_secure() {
     long unsigned energy_ui = readEnergy_UJ();
     long unsigned new_energy_ui = readEnergy_UJ();
     while (new_energy_ui == energy_ui) {

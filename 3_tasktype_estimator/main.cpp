@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
         measureAllPrototypTasks(measure_repeats);
     } else if (strcasecmp(parameter, "S")==0) {
         runAndMeasureScriptsFromDirectory(1, foldername_generated_scripts_apptasks.c_str(), "1");
-        printf("%s", "Beispielanwendung wurde gemessen, Ergebniss siehe logs-Ordner!");
+        printf("%s", "Beispielanwendung wurde gemessen, Ergebnisse siehe logs-Ordner!");
     } else if (strcasecmp(parameter, "U")==0) {
         readConfigFile(false, false);
         startEstimation(measure_repeats);
@@ -117,7 +117,7 @@ int main(int argc, char *argv[]) {
         initTaskVektors();
 
         if (testAppTaskIndex == -1) {
-            printf("Folende AppTasks sind konfiguriert, bitte durch Eingabe auswählen!\n");
+            printf("Folgende AppTasks sind konfiguriert, bitte durch Eingabe auswählen!\n");
 
             for (int i = 0; i < apptaskVektor.size(); i++) {
                 printf("[%d]: %s\n", i, apptaskVektor[i].taskname.c_str());
