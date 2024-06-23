@@ -192,7 +192,6 @@ MeasureResult measureAppTask(std::string apptaskname, std::string cpufreq, std::
             } else if (keyOfCurrentLine=="counter_diff") {
                 result.energy_mj=stoll(valueOfCurrentLine);
             }
-            //std::cout << line << "\n";
         }
         measureAppTaskFile.close();
         logMeasure(apptaskname.c_str(), result.duration, result.energy_mj);
