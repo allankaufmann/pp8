@@ -26,7 +26,7 @@ static const char *const task_combineimgs = "combineimgs";
 static const char *const task_writeimage = "writeimage";
 static const char *const task_loadimage = "loadimage";
 
-bool withPThread = true; // try pthread for more cores
+bool withPThread = false; // try pthread for more cores
 
 void greyscale(MyIMG* imgrgb,MyIMG* img);
 int checkcontrast(MyIMG* img);
