@@ -18,8 +18,7 @@ std::ofstream logfileMeasure;
 std::string currentCPUFreq;
 std::string currentParallelism;
 
-std::map<std::string, std::map<std::string, std::map<std::string, std::map<int, MeasureResult>>>> measureResultMaps;
-
+std::map<std::string, std::map<std::string, std::map<std::string, std::map<int, MeasureResult>>>> measureResultMap;
 
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
@@ -144,14 +143,14 @@ MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std:
     std::string filenameOneToOneWithParam = getFilenameWithParam(filenameOneToOne, cores);
 
     MeasureResult result;
-    if (measureResultMaps[oneToOneTaskname][cpufreq][cores].find(repeat) != measureResultMaps[oneToOneTaskname][cpufreq][cores].end()) {
-        result = measureResultMaps[oneToOneTaskname][cpufreq][cores][repeat];
+    if (measureResultMap[oneToOneTaskname][cpufreq][cores].find(repeat) != measureResultMap[oneToOneTaskname][cpufreq][cores].end()) {
+        result = measureResultMap[oneToOneTaskname][cpufreq][cores][repeat];
     } else {
         result = runAndMeasureScript(filenameOneToOneWithParam.c_str());
         result.taskname=oneToOneTaskname;
         result.cpuFreq=cpufreq;
         result.parallelism=cores;
-        measureResultMaps[oneToOneTaskname][cpufreq][cores][repeat]=result;
+        measureResultMap[oneToOneTaskname][cpufreq][cores][repeat]=result;
     }
     
     char* filenameOneToMany = searchTasktypeFile(apptaskname, foldername_generated_scripts_tasktypes_onetomany);
