@@ -7,6 +7,8 @@
 #include <string>
 #include <fstream>
 #include "MeasureResult.h"
+#include <list>
+#include <map>
 
 // Log file for measurements
 extern std::ofstream logfileMeasure;
@@ -17,14 +19,18 @@ extern std::string currentCPUFreq;
 // Current parallelism level
 extern std::string currentParallelism;
 
+// Map to store the measurement results
+extern std::map<std::string, std::map<std::string, std::map<std::string, std::map<int, MeasureResult>>>> measureResultMap;
+
 /**
  * Function to estimate application task
  * @param apptaskname - name of the application task
  * @param cpufreq - CPU frequency
  * @param cores - number of cores
+ * @param repeat - number of times to repeat the estimation
  * @return MeasureResult - result of the measurement
  */
-MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores);
+MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores, int repeat);
 
 /**
  * Function to measure application task

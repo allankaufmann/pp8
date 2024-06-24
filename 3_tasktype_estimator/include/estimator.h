@@ -36,8 +36,9 @@ void logEmptyline();
 /**
  * Function to start application task estimation
  * @param apptaskname - name of the application task
+ * @param repeat - number of times to repeat the estimation
  */
-void startApptaskEstimation(std::string apptaskname);
+void startApptaskEstimation(std::string apptaskname, int repeat);
 
 /**
  * Function to repeat estimations for an application task

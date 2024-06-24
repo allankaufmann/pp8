@@ -11,11 +11,16 @@
 #include "../include/tools.hpp"
 #include <thread>
 #include <cstring>
+
 static const char *const logfolder_measure = "logs/measure/";
 
 std::ofstream logfileMeasure;
 std::string currentCPUFreq;
 std::string currentParallelism;
+
+std::map<std::string, std::map<std::string, std::map<std::string, std::map<int, MeasureResult>>>> measureResultMaps;
+
+
 
 // https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
 uint64_t timeSinceEpochMillisec() {
@@ -130,17 +135,25 @@ std::string  getFilenameWithParam(char* filename, std::string cores) {
     return fileNameWithParam;
 }
 
-MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores) {
+
+
+MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std::string cores, int repeat) {
     std::string oneToOneTaskname = readOneToOneMapping(apptaskname);
     char* filenameOneToOne = searchTasktypeFile(oneToOneTaskname, foldername_generated_scripts_tasktypes_from_folder);
 
     std::string filenameOneToOneWithParam = getFilenameWithParam(filenameOneToOne, cores);
 
-    MeasureResult result = runAndMeasureScript(filenameOneToOneWithParam.c_str());
-    result.taskname=oneToOneTaskname;
-    result.cpuFreq=cpufreq;
-    result.parallelism=cores;
-
+    MeasureResult result;
+    if (measureResultMaps[oneToOneTaskname][cpufreq][cores].find(repeat) != measureResultMaps[oneToOneTaskname][cpufreq][cores].end()) {
+        result = measureResultMaps[oneToOneTaskname][cpufreq][cores][repeat];
+    } else {
+        result = runAndMeasureScript(filenameOneToOneWithParam.c_str());
+        result.taskname=oneToOneTaskname;
+        result.cpuFreq=cpufreq;
+        result.parallelism=cores;
+        measureResultMaps[oneToOneTaskname][cpufreq][cores][repeat]=result;
+    }
+    
     char* filenameOneToMany = searchTasktypeFile(apptaskname, foldername_generated_scripts_tasktypes_onetomany);
     std::string filenameOneToManyWithParam = getFilenameWithParam(filenameOneToMany, cores);
 
@@ -148,6 +161,8 @@ MeasureResult estimateAppTask(std::string apptaskname, std::string cpufreq, std:
     result.duration_one_to_many = resultOneToMany.duration;
     result.energy_my_one_to_many = resultOneToMany.energy_mj;
     logMeasureFlush();
+
+
 
     return result;
 }

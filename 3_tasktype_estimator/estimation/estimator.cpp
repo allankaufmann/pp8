@@ -23,8 +23,8 @@ void logEmptyline() {
     resultFile << "\n";
 }
 
-void startApptaskEstimation(std::string apptaskname) {
-    MeasureResult result = estimateAppTask(apptaskname, currentCPUFreq, currentParallelism);
+void startApptaskEstimation(std::string apptaskname, int repeat) {
+    MeasureResult result = estimateAppTask(apptaskname, currentCPUFreq, currentParallelism, repeat);
     MeasureResult appTaskresult = measureAppTask(apptaskname, currentCPUFreq, currentParallelism);
     logMeasureNewLine();
     logMeasureFlush();
@@ -58,7 +58,7 @@ void repeatEstimationsForAppTask(std::string apptaskname, int repeats) {
             setCurrentParallelism(cores);
 
             for (int i = 0; i < repeats; i++) {
-                startApptaskEstimation(apptaskname);
+                startApptaskEstimation(apptaskname, i);
             }
             logEmptyline();
         }

@@ -14,7 +14,7 @@ public:
     std::string taskname;
 
     // Duration of the task
-    long long  duration;
+    long long  duration=-1;
 
     // Energy used by the task in microjoules
     long long energy_mj;
