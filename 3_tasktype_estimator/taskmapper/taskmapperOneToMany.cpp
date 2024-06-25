@@ -166,7 +166,7 @@ AnwTask analyse(AnwTask appTask) {
 AnwTask analyseAppTaskMany(AnwTask appTask) {
     logMessageOnTaskmapperFileAndCout("\nAppTask " + appTask.taskname + " wird geprüft!\n", true);
 
-    int sizeAppDivProt = ceil(float(appTask.sequenzen.size() / calcSequenzSize()))+1; // Produkt wird immer aufgerundet!
+    int sizeAppDivProt = ceil(float(appTask.sequenzen.size() / calcSequenzSize()))+1; // Der Faktor wird immer aufgerundet!
 
     for (int i = 0; i< sizeAppDivProt; i++) {
         resultOneToMany=appTask.resultOneToOne;
