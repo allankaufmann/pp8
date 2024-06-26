@@ -7,7 +7,24 @@
 #####Der Taskmapper verwendet zwei Abbildungsverfahren, um Tasks einer Anwendung auf Task-Typen zu kategorisieren. 
 #####Der Estimator schätzt die Leistungsaufnahme der einzelnen Anwendungstasks auf Grundlage der Task-Typen. 
 
+Um das Testsystem für den Betrieb der Anwendungen Tasktypeanalyzer, Apptaskanalyzer und Tasktypeestimator vorzubereiten, kann das Shellskript init.sh aufgerufen werden. 
+Ggfls. muss vorher noch das Ausführungsrecht durch chmod +x init.sh erteilt werden, anschließend mit ./init.sh aufrufen.
 
-Auf dem System muss make, cmake und git installiert sein.
+Mit dem Aufruf des init-Skriptes wird:
+- make installiert
+- der Benchmark epEBench ausgecheckt, gebaut und vorbereitet
+- die Anwendung cpupower installiert
+- die Anwendung edgedetection vorbereitet und gebaut
+- die Anwendung cmake für den Build des Tasktypeestimator installiert
+- der Build der drei Artefakte ausgeführt
 
-Um die Anwendungen herunterzuladen, ist das Shellskript mit dem Befehl sh init.sh auszuführen!
+1_tasktype_analyzer:
+- Skript run_all_tasks.sh ausführen um Sequenzen für Task-Typen zu erstellen
+
+2_apptask_analyzer:
+- Skript run_all_tasks.sh ausführen um Sequenzen für Edgedetection zu erstellen
+
+3_tasktype_estimator
+- ./main - um die Anwendung zu starten
+- run_checkpreconditions.sh - um Vorbedingungen vor Schätzung der Leistungsaufnahme zu überprüfen und zu protokollieren
+- run_estimation.sh - um das Experiment zu starten

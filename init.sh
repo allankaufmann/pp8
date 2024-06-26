@@ -1,3 +1,8 @@
+#make installieren
+sudo apt-get update
+sudo apt-get -y install make
+
+# epEBench auschecken und bauen
 git -C epEBench pull || git clone https://github.com/RobertMueller/epEBench.git
 cd epEBench
 
@@ -19,16 +24,22 @@ cd ..
 #git -C uarch-configure pull || git clone https://github.com/deater/uarch-configure.git
 
 
-#cpupower
+#Installation von cpupower
 #uname -r Prüfen des Kernels, dann folgende Version installieren
 sudo apt install linux-tools-6.5.0-27-generic
+
+#edgedetection bauen und vorbereiten
 cd edgedetection
 make
 ./getfiles.sh
 sudo apt install python3-pil
 sudo apt install python3-numpy
-cd --
+cd ..
+
+#cmake installieren
 sudo apt-get install cmake
+
+#Artefakte bauen
 cd 1_tasktype_analyzer
 make
 cd ..
