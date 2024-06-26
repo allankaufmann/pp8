@@ -1,14 +1,14 @@
 # PP8: Schätzung der Leistungsaufnahme der CPU anhand von Task-Typen
-##Zur Reduzierung des Ressourceneinsatzes benötigen einige statische Scheduler Informationen über die Leistungsaufnahme der CPU, bei Ausführung einer Task, die mittels Benchmarking zu erheben sind. 
-###Um den Aufwand zu reduzieren wurde ein Vorgehen zur Schätzung der Leistungsaufnahme der CPU, anhand von Task-Typen evaluiert und in drei Artefakten implementiert: 
-####Der Tasktypeanalyzer erstellt die Suchkriterien von Task-Typen. 
-####Der Apptaskanalyzer erstellt die Suchkriterien aus Tasks einer  Beispielanwendung. 
-####Der Tasktypeestimator besteht aus den Modulen Taskmapper und Estimator. 
-#####Der Taskmapper verwendet zwei Abbildungsverfahren, um Tasks einer Anwendung auf Task-Typen zu kategorisieren. 
-#####Der Estimator schätzt die Leistungsaufnahme der einzelnen Anwendungstasks auf Grundlage der Task-Typen. 
+Zur Reduzierung des Ressourceneinsatzes benötigen einige statische Scheduler Informationen über die Leistungsaufnahme der CPU, bei Ausführung einer Task, die mittels Benchmarking zu erheben sind. 
+Um den Aufwand zu reduzieren wurde ein Vorgehen zur Schätzung der Leistungsaufnahme der CPU, anhand von Task-Typen evaluiert und in drei Artefakten implementiert: 
+- Der Tasktypeanalyzer erstellt die Suchkriterien von Task-Typen. 
+- Der Apptaskanalyzer erstellt die Suchkriterien aus Tasks einer  Beispielanwendung. 
+- Der Tasktypeestimator besteht aus den Modulen Taskmapper und Estimator. 
+Der Taskmapper verwendet zwei Abbildungsverfahren, um Tasks einer Anwendung auf Task-Typen zu kategorisieren. 
+Der Estimator schätzt die Leistungsaufnahme der einzelnen Anwendungstasks auf Grundlage der Task-Typen. 
 
-Um das Testsystem für den Betrieb der Anwendungen Tasktypeanalyzer, Apptaskanalyzer und Tasktypeestimator vorzubereiten, kann das Shellskript init.sh aufgerufen werden. 
-Ggfls. muss vorher noch das Ausführungsrecht durch chmod +x init.sh erteilt werden, anschließend mit ./init.sh aufrufen.
+Um das Testsystem für den Betrieb der Anwendungen vorzubereiten, wird das Shellskript init.sh aufgerufen. 
+Ggfls. muss vorher noch das Ausführungsrecht durch 'chmod +x init.sh' erteilt werden, anschließend wird es mit dem Befehl './init.sh' aufgerufen.
 
 Mit dem Aufruf des init-Skriptes wird:
 - make installiert
