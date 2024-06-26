@@ -28,3 +28,5 @@ Mit dem Aufruf des init-Skriptes wird:
 - ./main - um die Anwendung zu starten
 - run_checkpreconditions.sh - um Vorbedingungen vor Schätzung der Leistungsaufnahme zu überprüfen und zu protokollieren
 - run_estimation.sh - um das Experiment zu starten
+
+WICHTIG: Für die Durchführung des Experiments werden Root-Berechtigungen benötigt!
