@@ -27,3 +27,17 @@ make
 ./getfiles.sh
 sudo apt install python3-pil
 sudo apt install python3-numpy
+cd --
+sudo apt-get install cmake
+cd 1_tasktype_analyzer
+make
+cd ..
+
+cd 2_apptask_analyzer
+make
+cd ..
+
+cd 3_tasktype_estimator
+./run_build.sh
+
+
