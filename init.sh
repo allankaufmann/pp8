@@ -1,11 +1,21 @@
 git -C epEBench pull || git clone https://github.com/RobertMueller/epEBench.git
 cd epEBench
+
+# Im Benchmark epEBench lässt sich der Task-Typ m4x4smul nicht mehr ausführen, da ein cach-Fehler provoziert wird, der zum Abbruch führt. 
+# Dies wurde auskommentiert, da dieser Fehler für das Experiment nicht relevant ist.
+sed -i '/idx = (idx + 16) % MEM_SIZE-20;/c\idx = (idx + 16) % MEM_SIZE/*-20*/;' ebloads.cpp
+
+# In der Konfigurationsdatei von epEBench fehlt das Tasktyp ssub32_SIMD als einzelnes Modell. Dieses wird hier eingefügt.
+echo "model=ssub32_SIMD" >> ebmodels.ini
+echo " ssub32_SIMD=1" >> ebmodels.ini
+echo "end_model" >> ebmodels.ini
 make
 cd ..
-git -C GDBInstructionScanner pull || git clone https://gitlab.abo.fi/sholmbac/GDBInstructionScanner.git
-#cp GDBInstructionScanner/ci.py tests/ci.py
+
+## Die Quelldatei für den GDBInstructionScanner heißt ci.py und wurde bereits mit den Artefakten eingecheckt. Die Quelldatei muss daher nicht mehr ausgecheckt werden.
+#git -C GDBInstructionScanner pull || git clone https://gitlab.abo.fi/sholmbac/GDBInstructionScanner.git
+
 #cp GDBInstructionScanner/ci.py sampleapp/ci.py
-#cp GDBInstructionScanner/test.c tests/test.c
 #git -C uarch-configure pull || git clone https://github.com/deater/uarch-configure.git
 
 
